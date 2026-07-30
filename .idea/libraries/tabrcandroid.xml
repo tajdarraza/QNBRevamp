@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="tabrcandroid">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/resources/customlibs/lib/tabrcandroid/konylogger.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/customlibs/lib/tabrcandroid/binary.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/customlibs/lib/tabrcandroid/jama-1.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/customlibs/lib/tabrcandroid/volley.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/customlibs/lib/tabrcandroid/BlobStoreUtil.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/customlibs/lib/tabrcandroid/Task.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

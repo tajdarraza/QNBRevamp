@@ -1,0 +1,153 @@
+{
+    "NativeFunctionAPI": {
+        "Android": {
+            "4.0": {
+                "Kony_FileStorage-Android-4.0": {
+                    "title": "Kony_FileStorage",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "ci": true,
+                    "isDefault": true,
+                    "filename": "Kony_FileStorage-Android-4.0.zip",
+                    "enable": true
+                },
+                "Kony_SDKCommons-Android-4.0": {
+                    "title": "Kony_SDKCommons",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "ci": true,
+                    "isDefault": true,
+                    "filename": "Kony_SDKCommons-Android-4.0.zip",
+                    "enable": true
+                },
+                "Kony_SyncV2-Android-4.0": {
+                    "title": "Kony_SyncV2",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "ci": true,
+                    "isDefault": true,
+                    "filename": "Kony_SyncV2-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.accounts-Android-4.0": {
+                    "title": "android.accounts",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "isDefault": false,
+                    "filename": "android.accounts-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.webkit-Android-4.0": {
+                    "title": "android.webkit",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "isDefault": false,
+                    "filename": "android.webkit-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.net-Android-4.0": {
+                    "title": "android.net",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "isDefault": false,
+                    "filename": "android.net-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.content-Android-4.0": {
+                    "title": "android.content",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "isDefault": false,
+                    "filename": "android.content-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.os-Android-4.0": {
+                    "title": "android.os",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "isDefault": false,
+                    "filename": "android.os-Android-4.0.zip",
+                    "enable": true
+                },
+                "java.lang-Android-4.0": {
+                    "title": "java.lang",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "isDefault": false,
+                    "filename": "java.lang-Android-4.0.zip",
+                    "enable": true
+                }
+            }
+        },
+        "iOS": {
+            "16.0": {
+                "Kony_FileStorage-iOS-16.0": {
+                    "title": "Kony_FileStorage",
+                    "platform": "iOS",
+                    "os": "16.0",
+                    "ci": true,
+                    "isDefault": true,
+                    "filename": "Kony_FileStorage-iOS-16.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                },
+                "Kony_SDKCommons-iOS-16.0": {
+                    "title": "Kony_SDKCommons",
+                    "platform": "iOS",
+                    "os": "16.0",
+                    "ci": true,
+                    "isDefault": true,
+                    "filename": "Kony_SDKCommons-iOS-16.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                },
+                "Kony_SyncV2-iOS-16.0": {
+                    "title": "Kony_SyncV2",
+                    "platform": "iOS",
+                    "os": "16.0",
+                    "ci": true,
+                    "isDefault": true,
+                    "filename": "Kony_SyncV2-iOS-16.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                }
+            },
+            "14.0": {
+                "Foundation-iOS-14.0": {
+                    "title": "Foundation",
+                    "platform": "iOS",
+                    "os": "14.0",
+                    "isDefault": false,
+                    "filename": "Foundation-iOS-14.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                },
+                "UIKit-iOS-14.0": {
+                    "title": "UIKit",
+                    "platform": "iOS",
+                    "os": "14.0",
+                    "isDefault": false,
+                    "filename": "UIKit-iOS-14.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                }
+            },
+            "15.0": {
+                "QNBFuturaeSDK-iOS-15.0": {
+                    "title": "QNBFuturaeSDK",
+                    "platform": "iOS",
+                    "os": "15.0",
+                    "isDefault": false,
+                    "filename": "QNBFuturaeSDK-iOS-15.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                }
+            }
+        }
+    },
+    "Metadata": {
+        "Version": {
+            "iOS": "3.0"
+        }
+    }
+}

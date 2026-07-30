@@ -1,0 +1,57 @@
+{
+    "splashScreen": {
+        "desktop": {
+            "desktopweb": {},
+            "kiosk": {}
+        },
+        "mobile": {
+            "android": {
+                "animationDuration": 2,
+                "continueNativeSplashScreen": false,
+                "showKonySplashScreen": false,
+                "splashImage": "splash_screen.png",
+                "splashVideo": "splashvideo.mp4",
+                "videoInterruptible": false
+            },
+            "iphone": {
+                "animationDuration": 2,
+                "splashConfig": {
+                    "children": [],
+                    "skin": {
+                        "backgroundColor": "ffffff00"
+                    }
+                },
+                "splashVideo": "splashvideo.mp4"
+            },
+            "showLoadingIndicator": false
+        },
+        "tablet": {
+            "android": {},
+            "ipad": {
+                "landscape": {},
+                "splashConfig": {
+                    "children": [
+                        {
+                            "UIElementType": "imageUIElement",
+                            "contentMode": "scaleToFill",
+                            "height": "100%",
+                            "left": "0dp",
+                            "source": "splash.png",
+                            "top": "0dp",
+                            "visible": true,
+                            "width": "100%"
+                        }
+                    ],
+                    "skin": {
+                        "backgroundColor": "ffffff00"
+                    }
+                }
+            },
+            "spa": {},
+            "spaandroidtablet": {},
+            "spaipad": {},
+            "spawindowstablet": {},
+            "windows8": {}
+        }
+    }
+}

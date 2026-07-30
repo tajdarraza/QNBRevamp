@@ -1,0 +1,69 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "56dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "0,00. QAR",
+    "_right_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_skin_": "s0c9964d99414ecc8d3f7df5aab22213",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "300dp"
+    },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "focusskin": "s0332eafbec54ca5aafde25b83ceaff4",
+    "id": "txtPayAmt",
+    "info": null,
+    "iphone": {},
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardstyle": "number",
+    "keyboardtype": "A",
+    "kuid": "afcb2b579c314559a4d57d6467b71572",
+    "mode": "N",
+    "name": "kony.ui.TextBox2",
+    "parent": "flxPayAmt",
+    "pf": "frmPayCard",
+    "placeholderskin": "sf0102011c9141079071596e7acfe48c",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": false,
+    "textinputmode": "N",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField"
+}

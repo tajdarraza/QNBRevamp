@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="iphone">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/resources/customlibs/lib/iphone/konyLogger.zip!/" />
+      <root url="jar://$PROJECT_DIR$/resources/customlibs/lib/iphone/FFIZip.zip!/" />
+      <root url="jar://$PROJECT_DIR$/resources/customlibs/lib/iphone/keychainFFI.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

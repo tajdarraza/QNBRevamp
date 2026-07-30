@@ -1,0 +1,65 @@
+{
+    "FontDarkBlue": {
+        "color": {
+            "value": "1d2652ff"
+        },
+        "colorType": {
+            "value": "one"
+        },
+        "type": "color"
+    },
+    "FrenchPlum": {
+        "color": {
+            "value": "7b074cff"
+        },
+        "colorType": {
+            "value": "one"
+        },
+        "type": "color"
+    },
+    "Red": {
+        "color": {
+            "value": "ff0000ff"
+        },
+        "colorType": {
+            "value": "one"
+        },
+        "type": "color"
+    },
+    "White": {
+        "color": {
+            "value": "ffffffff"
+        },
+        "colorType": {
+            "value": "one"
+        },
+        "type": "color"
+    },
+    "colorThickGray5A606E": {
+        "color": {
+            "value": "5a606e7f"
+        },
+        "colorType": {
+            "value": "one"
+        },
+        "type": "color"
+    },
+    "font1": {
+        "color": {
+            "value": "000000ff"
+        },
+        "name": {
+            "value": "QNBSansAR"
+        },
+        "size": {
+            "value": 150
+        },
+        "style": {
+            "value": "normal"
+        },
+        "type": "font",
+        "weight": {
+            "value": "normal"
+        }
+    }
+}

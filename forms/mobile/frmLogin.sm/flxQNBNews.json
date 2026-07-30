@@ -1,0 +1,67 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "92dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "8dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s9bbadaa38704a43a525b4508a9eeb6a",
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "109dp"
+    },
+    "allboxes": [],
+    "android": {
+        "enableHapticFeedback": true
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "imgNews",
+        "lblNews"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "disabledSkins": {},
+    "enablehapticfeedback": true,
+    "enablescrolling": true,
+    "focusskin": "sdd8b69dc32541a79daf7782e7dfb62e",
+    "id": "flxQNBNews",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "a238dbbd4ded417cb199bf417f80fdb6",
+    "layouttype": 4,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxMenus",
+    "pf": "frmLogin",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 5
+}

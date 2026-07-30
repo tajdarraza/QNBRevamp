@@ -1,0 +1,696 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        {
+            "imgCard": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "qnb_visa.png"
+            },
+            "imgFlipBack": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "invert.png"
+            },
+            "imgFlipFrontCard": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "invert.png"
+            },
+            "imgMenu1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder2.png"
+            },
+            "imgMenu2": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder3.png"
+            },
+            "imgMenu3": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder4.png"
+            },
+            "imgMenu4": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder5.png"
+            },
+            "imgVisiblity": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "eyevisible.png"
+            },
+            "lblAvlblBal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Available balance"
+            },
+            "lblBackCard": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "4657 6757 7667 6768"
+            },
+            "lblBackCardNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Card number"
+            },
+            "lblBal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10,000.00 QAR"
+            },
+            "lblCardName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Main credit card"
+            },
+            "lblCardNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "****0000"
+            },
+            "lblCardUser": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "James Lee"
+            },
+            "lblCreditCard": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Credit card"
+            },
+            "lblCreditCardBack": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Main credit card"
+            },
+            "lblExpirationDate": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Expiration Date"
+            },
+            "lblExpiryDate": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "04/29"
+            },
+            "lblMenu1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Pay Card"
+            },
+            "lblMenu2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Smart installments"
+            },
+            "lblMenu3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Case speed"
+            },
+            "lblMenu4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Menu"
+            },
+            "lblNameBackCard": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "James Lee"
+            }
+        },
+        {
+            "imgCard": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "qnb_visa.png"
+            },
+            "imgFlipBack": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "invert.png"
+            },
+            "imgFlipFrontCard": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "invert.png"
+            },
+            "imgMenu1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder2.png"
+            },
+            "imgMenu2": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder3.png"
+            },
+            "imgMenu3": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder4.png"
+            },
+            "imgMenu4": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder5.png"
+            },
+            "imgVisiblity": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "eyevisible.png"
+            },
+            "lblAvlblBal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Available balance"
+            },
+            "lblBackCard": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "4657 6757 7667 6768"
+            },
+            "lblBackCardNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Card number"
+            },
+            "lblBal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10,000.00 QAR"
+            },
+            "lblCardName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Main credit card"
+            },
+            "lblCardNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "****0000"
+            },
+            "lblCardUser": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "James Lee"
+            },
+            "lblCreditCard": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Credit card"
+            },
+            "lblCreditCardBack": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Main credit card"
+            },
+            "lblExpirationDate": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Expiration Date"
+            },
+            "lblExpiryDate": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "04/29"
+            },
+            "lblMenu1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Pay Card"
+            },
+            "lblMenu2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Smart installments"
+            },
+            "lblMenu3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Case speed"
+            },
+            "lblMenu4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Menu"
+            },
+            "lblNameBackCard": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "James Lee"
+            }
+        },
+        {
+            "imgCard": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "qnb_visa.png"
+            },
+            "imgFlipBack": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "invert.png"
+            },
+            "imgFlipFrontCard": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "invert.png"
+            },
+            "imgMenu1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder2.png"
+            },
+            "imgMenu2": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder3.png"
+            },
+            "imgMenu3": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder4.png"
+            },
+            "imgMenu4": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder5.png"
+            },
+            "imgVisiblity": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "eyevisible.png"
+            },
+            "lblAvlblBal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Available balance"
+            },
+            "lblBackCard": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "4657 6757 7667 6768"
+            },
+            "lblBackCardNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Card number"
+            },
+            "lblBal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10,000.00 QAR"
+            },
+            "lblCardName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Main credit card"
+            },
+            "lblCardNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "****0000"
+            },
+            "lblCardUser": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "James Lee"
+            },
+            "lblCreditCard": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Credit card"
+            },
+            "lblCreditCardBack": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Main credit card"
+            },
+            "lblExpirationDate": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Expiration Date"
+            },
+            "lblExpiryDate": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "04/29"
+            },
+            "lblMenu1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Pay Card"
+            },
+            "lblMenu2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Smart installments"
+            },
+            "lblMenu3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Case speed"
+            },
+            "lblMenu4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Menu"
+            },
+            "lblNameBackCard": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "James Lee"
+            }
+        },
+        {
+            "imgCard": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "qnb_visa.png"
+            },
+            "imgFlipBack": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "invert.png"
+            },
+            "imgFlipFrontCard": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "invert.png"
+            },
+            "imgMenu1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder2.png"
+            },
+            "imgMenu2": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder3.png"
+            },
+            "imgMenu3": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder4.png"
+            },
+            "imgMenu4": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconplaceholder5.png"
+            },
+            "imgVisiblity": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "eyevisible.png"
+            },
+            "lblAvlblBal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Available balance"
+            },
+            "lblBackCard": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "4657 6757 7667 6768"
+            },
+            "lblBackCardNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Card number"
+            },
+            "lblBal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10,000.00 QAR"
+            },
+            "lblCardName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Main credit card"
+            },
+            "lblCardNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "****0000"
+            },
+            "lblCardUser": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "James Lee"
+            },
+            "lblCreditCard": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Credit card"
+            },
+            "lblCreditCardBack": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Main credit card"
+            },
+            "lblExpirationDate": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Expiration Date"
+            },
+            "lblExpiryDate": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "04/29"
+            },
+            "lblMenu1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Pay Card"
+            },
+            "lblMenu2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Smart installments"
+            },
+            "lblMenu3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Case speed"
+            },
+            "lblMenu4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Menu"
+            },
+            "lblNameBackCard": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "James Lee"
+            }
+        }
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "91%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "03",
+    "focusedindex": null,
+    "focuseditem": {
+        "CopyLabel0a6ea17babc8c4b": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "James Lee"
+        },
+        "Image0a1ddf95f4c264b": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "invert.png"
+        },
+        "Image0df0209537af742": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "qnb_visa.png"
+        },
+        "Label0bcc1fa651ad945": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Available balance"
+        },
+        "Label0eacf89cf0f8943": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "****0000"
+        },
+        "Label0ede02a5f3bd941": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Main credit card"
+        },
+        "Label0g4854a51bd124a": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "10,000.00 QAR"
+        },
+        "Label0h0cf225062f646": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Credit card"
+        },
+        "imgMenu1": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "iconplaceholder2.png"
+        },
+        "imgMenu2": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "iconplaceholder3.png"
+        },
+        "imgMenu3": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "iconplaceholder4.png"
+        },
+        "imgMenu4": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "iconplaceholder5.png"
+        },
+        "lblCurrent": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Current"
+        },
+        "lblMenu1": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Pay Card"
+        },
+        "lblMenu2": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Smart installments"
+        },
+        "lblMenu3": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Case speed"
+        },
+        "lblMenu4": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Menu"
+        },
+        "lblSavings": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Savings"
+        }
+    },
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segCards",
+    "info": null,
+    "invokedProperty": "pageOffDotImage",
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "editStyle": "none",
+            "indicator": "none"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "d53d4ced0120429daa21cbd8a14de8cc",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": false,
+    "pageoffdotimage": "pageondot.png",
+    "pageondotimage": "pageoffdot.png",
+    "paginationconfig": {
+        "position": "bottom",
+        "vdistance": 1
+    },
+    "parent": "flxTopInfo",
+    "pf": "frmCards",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": true,
+    "rowTemplateId": "g3d9c660a3004613a02cac3d4bc9fa85",
+    "rowcounter": 3,
+    "rowexpandable": false,
+    "rowfocusskin": "s2954acbe692423388f2177837594cc7",
+    "rowskin": "s3a7002b27554ed2a58a79b6ab1f399b",
+    "rowtemplate": "flxCardDashboard",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s28a7bd0c54c4f64808927aba209e384",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": [
+        0,
+        0
+    ],
+    "selectedindices": null,
+    "selecteditems": {
+        "CopyLabel0a6ea17babc8c4b": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "James Lee"
+        },
+        "Image0a1ddf95f4c264b": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "invert.png"
+        },
+        "Image0df0209537af742": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "qnb_visa.png"
+        },
+        "Label0bcc1fa651ad945": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Available balance"
+        },
+        "Label0eacf89cf0f8943": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "****0000"
+        },
+        "Label0ede02a5f3bd941": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Main credit card"
+        },
+        "Label0g4854a51bd124a": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "10,000.00 QAR"
+        },
+        "Label0h0cf225062f646": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Credit card"
+        },
+        "imgMenu1": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "iconplaceholder2.png"
+        },
+        "imgMenu2": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "iconplaceholder3.png"
+        },
+        "imgMenu3": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "iconplaceholder4.png"
+        },
+        "imgMenu4": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "iconplaceholder5.png"
+        },
+        "lblCurrent": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Current"
+        },
+        "lblMenu1": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Pay Card"
+        },
+        "lblMenu2": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Smart installments"
+        },
+        "lblMenu3": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Case speed"
+        },
+        "lblMenu4": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Menu"
+        },
+        "lblSavings": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Savings"
+        }
+    },
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "selectionbehaviorconfig": null,
+    "separatorrequired": false,
+    "separatorthickness": 0,
+    "showscrollbars": false,
+    "swipeContext": {
+        "currentPage": 0,
+        "imageWidth": 1173,
+        "widthRatio": 0
+    },
+    "viewtype": "pageview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxBottomCardFrontView": "flxBottomCardFrontView",
+        "flxCardBackView": "flxCardBackView",
+        "flxCardDashboard": "flxCardDashboard",
+        "flxCardFrontView": "flxCardFrontView",
+        "flxCardRight": "flxCardRight",
+        "flxContainer": "flxContainer",
+        "flxContainerNumber": "flxContainerNumber",
+        "flxCreditCard": "flxCreditCard",
+        "flxCreditCardlbl": "flxCreditCardlbl",
+        "flxExpirationDate": "flxExpirationDate",
+        "flxHiddenCard": "flxHiddenCard",
+        "flxIconMenu1": "flxIconMenu1",
+        "flxIconMenu2": "flxIconMenu2",
+        "flxIconMenu3": "flxIconMenu3",
+        "flxIconMenu4": "flxIconMenu4",
+        "flxMenu1": "flxMenu1",
+        "flxMenu2": "flxMenu2",
+        "flxMenu3": "flxMenu3",
+        "flxMenu4": "flxMenu4",
+        "flxMenuOptions": "flxMenuOptions",
+        "flxMidCardFrontView": "flxMidCardFrontView",
+        "flxTopCardBackView": "flxTopCardBackView",
+        "flxTopCardBottomView": "flxTopCardBottomView",
+        "flxTopCardFrontView": "flxTopCardFrontView",
+        "flxTopInfo": "flxTopInfo",
+        "imgCard": "imgCard",
+        "imgFlipBack": "imgFlipBack",
+        "imgFlipFrontCard": "imgFlipFrontCard",
+        "imgMenu1": "imgMenu1",
+        "imgMenu2": "imgMenu2",
+        "imgMenu3": "imgMenu3",
+        "imgMenu4": "imgMenu4",
+        "imgVisiblity": "imgVisiblity",
+        "lblAvlblBal": "lblAvlblBal",
+        "lblBackCard": "lblBackCard",
+        "lblBackCardNumber": "lblBackCardNumber",
+        "lblBal": "lblBal",
+        "lblCardName": "lblCardName",
+        "lblCardNumber": "lblCardNumber",
+        "lblCardUser": "lblCardUser",
+        "lblCreditCard": "lblCreditCard",
+        "lblCreditCardBack": "lblCreditCardBack",
+        "lblExpirationDate": "lblExpirationDate",
+        "lblExpiryDate": "lblExpiryDate",
+        "lblMenu1": "lblMenu1",
+        "lblMenu2": "lblMenu2",
+        "lblMenu3": "lblMenu3",
+        "lblMenu4": "lblMenu4",
+        "lblNameBackCard": "lblNameBackCard"
+    }
+}

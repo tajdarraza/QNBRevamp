@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="windows10">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/resources/customlibs/lib/windows10/BinaryDataManager.zip!/" />
+      <root url="jar://$PROJECT_DIR$/resources/customlibs/lib/windows10/konyLogger.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

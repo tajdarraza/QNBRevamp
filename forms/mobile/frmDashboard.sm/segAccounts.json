@@ -1,0 +1,615 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        {
+            "imgAccType": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "eyevisible1.png"
+            },
+            "imgAllAccount": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconright1.png"
+            },
+            "imgMenu1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button.png"
+            },
+            "imgMenu2": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button1.png"
+            },
+            "imgMenu3": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button2.png"
+            },
+            "imgMenu4": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button3.png"
+            },
+            "lblAccBalane": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "4,066"
+            },
+            "lblAccountType": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current account"
+            },
+            "lblActualBal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Actual Balance  "
+            },
+            "lblAllAccounts": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "All accounts"
+            },
+            "lblBalance": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "9,754.00 QAR"
+            },
+            "lblCurr": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "QAR"
+            },
+            "lblCurrent": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current"
+            },
+            "lblDecimal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ".71"
+            },
+            "lblMenu1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Fawran"
+            },
+            "lblMenu2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Pay Bill"
+            },
+            "lblMenu3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Pay card"
+            },
+            "lblMenu4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Menu"
+            },
+            "lblSavings": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Savings"
+            }
+        },
+        {
+            "imgAccType": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "eyevisible1.png"
+            },
+            "imgAllAccount": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconright1.png"
+            },
+            "imgMenu1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button.png"
+            },
+            "imgMenu2": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button1.png"
+            },
+            "imgMenu3": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button2.png"
+            },
+            "imgMenu4": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button3.png"
+            },
+            "lblAccBalane": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "4,066"
+            },
+            "lblAccountType": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current account"
+            },
+            "lblActualBal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Actual Balance  "
+            },
+            "lblAllAccounts": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "All accounts"
+            },
+            "lblBalance": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "9,754.00 QAR"
+            },
+            "lblCurr": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "QAR"
+            },
+            "lblCurrent": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current"
+            },
+            "lblDecimal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ".71"
+            },
+            "lblMenu1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Fawran"
+            },
+            "lblMenu2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Pay Bill"
+            },
+            "lblMenu3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Pay card"
+            },
+            "lblMenu4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Menu"
+            },
+            "lblSavings": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Savings"
+            }
+        },
+        {
+            "imgAccType": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "eyevisible1.png"
+            },
+            "imgAllAccount": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconright1.png"
+            },
+            "imgMenu1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button.png"
+            },
+            "imgMenu2": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button1.png"
+            },
+            "imgMenu3": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button2.png"
+            },
+            "imgMenu4": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button3.png"
+            },
+            "lblAccBalane": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "4,066"
+            },
+            "lblAccountType": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current account"
+            },
+            "lblActualBal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Actual Balance  "
+            },
+            "lblAllAccounts": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "All accounts"
+            },
+            "lblBalance": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "9,754.00 QAR"
+            },
+            "lblCurr": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "QAR"
+            },
+            "lblCurrent": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current"
+            },
+            "lblDecimal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ".71"
+            },
+            "lblMenu1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Fawran"
+            },
+            "lblMenu2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Pay Bill"
+            },
+            "lblMenu3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Pay card"
+            },
+            "lblMenu4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Menu"
+            },
+            "lblSavings": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Savings"
+            }
+        },
+        {
+            "imgAccType": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "eyevisible1.png"
+            },
+            "imgAllAccount": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "iconright1.png"
+            },
+            "imgMenu1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button.png"
+            },
+            "imgMenu2": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button1.png"
+            },
+            "imgMenu3": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button2.png"
+            },
+            "imgMenu4": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "icon_button3.png"
+            },
+            "lblAccBalane": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "4,066"
+            },
+            "lblAccountType": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current account"
+            },
+            "lblActualBal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Actual Balance  "
+            },
+            "lblAllAccounts": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "All accounts"
+            },
+            "lblBalance": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "9,754.00 QAR"
+            },
+            "lblCurr": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "QAR"
+            },
+            "lblCurrent": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current"
+            },
+            "lblDecimal": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ".71"
+            },
+            "lblMenu1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Fawran"
+            },
+            "lblMenu2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Pay Bill"
+            },
+            "lblMenu3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Pay card"
+            },
+            "lblMenu4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Menu"
+            },
+            "lblSavings": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Savings"
+            }
+        }
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "03",
+    "focusedindex": null,
+    "focuseditem": {
+        "imgAccType": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "eyevisible1.png"
+        },
+        "imgAllAccount": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "iconright1.png"
+        },
+        "imgMenu1": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "icon_button.png"
+        },
+        "imgMenu2": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "icon_button1.png"
+        },
+        "imgMenu3": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "icon_button2.png"
+        },
+        "imgMenu4": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "icon_button3.png"
+        },
+        "lblAccBalane": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "4,066"
+        },
+        "lblAccountType": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Current account"
+        },
+        "lblActualBal": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Actual Balance  "
+        },
+        "lblAllAccounts": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "All accounts"
+        },
+        "lblBalance": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "9,754.00 QAR"
+        },
+        "lblCurr": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "QAR"
+        },
+        "lblCurrent": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Current"
+        },
+        "lblDecimal": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": ".71"
+        },
+        "lblMenu1": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Fawran"
+        },
+        "lblMenu2": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Pay Bill"
+        },
+        "lblMenu3": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Pay card"
+        },
+        "lblMenu4": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Menu"
+        },
+        "lblSavings": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Savings"
+        }
+    },
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segAccounts",
+    "info": null,
+    "invokedProperty": "pageOffDotImage",
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "editStyle": "none",
+            "indicator": "none"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "edc7e8a0b4fa4287ad6b5f714bfff874",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": false,
+    "pageoffdotimage": "pageondot.png",
+    "pageondotimage": "pageoffdot.png",
+    "paginationconfig": {
+        "position": "bottom",
+        "vdistance": 1
+    },
+    "parent": "flxTopInfo",
+    "pf": "frmDashboard",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": true,
+    "rowTemplateId": "e5df4f9a3b3a4a81ab573589523a0b72",
+    "rowcounter": 3,
+    "rowexpandable": false,
+    "rowfocusskin": "s2954acbe692423388f2177837594cc7",
+    "rowskin": "s3a7002b27554ed2a58a79b6ab1f399b",
+    "rowtemplate": "flxDashboards",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s28a7bd0c54c4f64808927aba209e384",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": [
+        0,
+        0
+    ],
+    "selectedindices": null,
+    "selecteditems": {
+        "imgAccType": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "eyevisible1.png"
+        },
+        "imgAllAccount": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "iconright1.png"
+        },
+        "imgMenu1": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "icon_button.png"
+        },
+        "imgMenu2": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "icon_button1.png"
+        },
+        "imgMenu3": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "icon_button2.png"
+        },
+        "imgMenu4": {
+            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+            "src": "icon_button3.png"
+        },
+        "lblAccBalane": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "4,066"
+        },
+        "lblAccountType": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Current account"
+        },
+        "lblActualBal": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Actual Balance  "
+        },
+        "lblAllAccounts": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "All accounts"
+        },
+        "lblBalance": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "9,754.00 QAR"
+        },
+        "lblCurr": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "QAR"
+        },
+        "lblCurrent": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Current"
+        },
+        "lblDecimal": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": ".71"
+        },
+        "lblMenu1": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Fawran"
+        },
+        "lblMenu2": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Pay Bill"
+        },
+        "lblMenu3": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Pay card"
+        },
+        "lblMenu4": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Menu"
+        },
+        "lblSavings": {
+            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+            "text": "Savings"
+        }
+    },
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "selectionbehaviorconfig": null,
+    "separatorrequired": false,
+    "separatorthickness": 0,
+    "showscrollbars": false,
+    "swipeContext": {
+        "currentPage": 0,
+        "imageWidth": 1179,
+        "widthRatio": 0
+    },
+    "viewtype": "pageview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxAccountType": "flxAccountType",
+        "flxActualBalance": "flxActualBalance",
+        "flxAllAccounts": "flxAllAccounts",
+        "flxBalance": "flxBalance",
+        "flxCircle1": "flxCircle1",
+        "flxCircle2": "flxCircle2",
+        "flxContainer": "flxContainer",
+        "flxCreditBal": "flxCreditBal",
+        "flxDashboards": "flxDashboards",
+        "flxGraphics": "flxGraphics",
+        "flxLabel": "flxLabel",
+        "flxLblCredit": "flxLblCredit",
+        "flxLblSavings": "flxLblSavings",
+        "flxMenu1": "flxMenu1",
+        "flxMenu2": "flxMenu2",
+        "flxMenu3": "flxMenu3",
+        "flxMenu4": "flxMenu4",
+        "flxMenuOptions": "flxMenuOptions",
+        "flxSavingBal": "flxSavingBal",
+        "flxSavings": "flxSavings",
+        "flxTopInfo": "flxTopInfo",
+        "imgAccType": "imgAccType",
+        "imgAllAccount": "imgAllAccount",
+        "imgMenu1": "imgMenu1",
+        "imgMenu2": "imgMenu2",
+        "imgMenu3": "imgMenu3",
+        "imgMenu4": "imgMenu4",
+        "lblAccBalane": "lblAccBalane",
+        "lblAccountType": "lblAccountType",
+        "lblActualBal": "lblActualBal",
+        "lblAllAccounts": "lblAllAccounts",
+        "lblBalance": "lblBalance",
+        "lblCurr": "lblCurr",
+        "lblCurrent": "lblCurrent",
+        "lblDecimal": "lblDecimal",
+        "lblMenu1": "lblMenu1",
+        "lblMenu2": "lblMenu2",
+        "lblMenu3": "lblMenu3",
+        "lblMenu4": "lblMenu4",
+        "lblSavings": "lblSavings"
+    }
+}

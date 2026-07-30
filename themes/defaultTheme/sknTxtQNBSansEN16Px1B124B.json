@@ -1,0 +1,79 @@
+{
+  "android": {
+    "border_color": "333333ff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "font_name": "QNBSansAR",
+    "font_size": 111,
+    "isForked": true
+  },
+  "androidwearos": {
+    "border_color": "333333ff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "isForked": true
+  },
+  "background_color": "ffffffff",
+  "bg_type": "one",
+  "border_color": "333333ff",
+  "border_style": "plain",
+  "border_type": 0,
+  "border_width": 1,
+  "desktopweb": {
+    "border_color": "333333ff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "bottom_left_border_color": "333333ff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "333333ff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "isForked": true,
+    "top_left_border_color": "333333ff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "333333ff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
+  },
+  "fontSizeInPx": true,
+  "font_color": "1b124bff",
+  "font_name": "iphoneSystem",
+  "font_size": 125,
+  "font_style": "normal",
+  "font_weight": "400",
+  "ipad": {
+    "border_color": "333333ff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "font_name": "System",
+    "font_size": 179,
+    "isForked": true
+  },
+  "iphone": {
+    "border_color": "333333ff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "font_name": "QNBSansAR",
+    "font_size": 125,
+    "isForked": true
+  },
+  "isDefaultSkin": false,
+  "kuid": "sc357d3a346145fab3825ccfe850309a",
+  "tabrcandroid": {
+    "border_color": "333333ff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "font_name": "default",
+    "font_size": 296,
+    "isForked": true
+  },
+  "wType": "TextField"
+}

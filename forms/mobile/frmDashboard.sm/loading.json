@@ -1,0 +1,138 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "flxCard": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "gdff1a029c014a358e449223cab6ad9f",
+                "srcKUID": "d69fcfe5d0e449209e4b8095712c1415",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxDot1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "fd14ab685ac54f1e88b121892a6c29fe",
+                "srcKUID": "f23a8d00a7e14fa9ae310f48a2bbd8f6",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxDot2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "e01a043288e842b6b49fb5b9791f85f8",
+                "srcKUID": "ffcd8b9bd83641ceaac6b4754ca6a575",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxDot3": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "fb560fb2d4334d588159aeb92de8fd85",
+                "srcKUID": "f3de8fbeb2b14d66852ee5add331fd49",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxDotsContainer": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "f5d5ebbbf75d43ba8b14181201e6b1ff",
+                "srcKUID": "bec2afdf03364fcf8ec45c640a01104e",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxOverlay": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ic09d05a49f240a4b28538e57dc5792b",
+                "srcKUID": "hc8138bff0624f68a2765e2866f5b1c1",
+                "wType": "FlexContainer"
+            }
+        },
+        "imgLoader": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ca817f23db85427bb89bea59d2eaa9a3",
+                "srcKUID": "aca0140da74546cf86b723d44814abb3",
+                "wType": "Image"
+            },
+            "src": "qnb_anim.gif"
+        },
+        "lblLoading": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "j150e3b74e8741689a881085c1b9e4d8",
+                "srcKUID": "ffaa234d00364ae8a7947e05d01fb604",
+                "wType": "Label"
+            }
+        },
+        "loading": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "hf0f58927e1f4dba9b615de061030c88",
+                "srcKUID": "i8ec01de54a34119968598b719bc2dff",
+                "wType": "FlexContainer"
+            },
+            "isVisible": false
+        }
+    },
+    "enablescrolling": true,
+    "id": "loading",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": false,
+    "kuid": "hf0f58927e1f4dba9b615de061030c88",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxParent",
+    "pf": "frmDashboard",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "i8ec01de54a34119968598b719bc2dff",
+    "wType": "UserWidgetInstance",
+    "zindex": 100003
+}

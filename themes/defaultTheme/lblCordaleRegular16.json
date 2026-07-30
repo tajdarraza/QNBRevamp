@@ -1,0 +1,87 @@
+{
+    "android": {
+        "font_color": "1d2652ff",
+        "font_name": "CordaleCorp-Regular",
+        "font_size": 89,
+        "isForked": true
+    },
+    "androidwearos": {
+        "font_color": "1d2652ff",
+        "font_name": "CordaleCorp-Regular",
+        "font_size": 107,
+        "isForked": true
+    },
+    "background_color": "00000000",
+    "bg_type": "one",
+    "border_color": "424242ff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "delinkedPltfrms": {
+        "androidwear": [],
+        "desktop": [],
+        "mobile": [
+            "iphone",
+            "android"
+        ],
+        "tablet": [
+            "tabrcandroid",
+            "ipad"
+        ],
+        "watch": []
+    },
+    "desktopweb": {
+        "bottom_left_border_color": "424242ff",
+        "bottom_left_border_style": "plain",
+        "bottom_left_border_width": 0,
+        "bottom_right_border_color": "424242ff",
+        "bottom_right_border_style": "plain",
+        "bottom_right_border_width": 0,
+        "font_color": "1d2652ff",
+        "font_name": "CordaleArabic-Regular",
+        "font_size": 188,
+        "isForked": true,
+        "top_left_border_color": "424242ff",
+        "top_left_border_style": "plain",
+        "top_left_border_width": 0,
+        "top_right_border_color": "424242ff",
+        "top_right_border_style": "plain",
+        "top_right_border_width": 0
+    },
+    "fontSizeInPx": true,
+    "font_color": "1d2652ff",
+    "font_name": "iphoneSystem",
+    "font_size": 62,
+    "font_style": "normal",
+    "font_weight": "400",
+    "ipad": {
+        "font_color": "1d2652ff",
+        "font_name": "CordaleCorp-Regular",
+        "font_size": 100,
+        "font_style": "normal",
+        "font_weight": 400,
+        "isForked": true
+    },
+    "iphone": {
+        "font_color": "1d2652ff",
+        "font_name": "CordaleCorp-Regular",
+        "font_size": 103,
+        "font_style": "normal",
+        "font_weight": 400,
+        "isForked": true
+    },
+    "isDefaultSkin": false,
+    "kuid": "scfb147925804b4fb8111e344ab3be06",
+    "tabrcandroid": {
+        "font_name": "CordaleCorp-Regular",
+        "font_size": 107,
+        "isForked": true
+    },
+    "wType": "Label",
+    "watchos": {
+        "font_color": "1d2652ff",
+        "font_name": "CordaleArabic-Regular",
+        "font_size": 107,
+        "isForked": true
+    }
+}

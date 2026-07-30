@@ -1,0 +1,82 @@
+{
+  "androidwearos": {
+    "background_color": "ffffffff",
+    "bg_type": "one",
+    "border_style": "custom",
+    "font_name": "default",
+    "isForked": true
+  },
+  "background_color": "f4f3f600",
+  "bg_type": "one",
+  "border_color": "fafafaff",
+  "border_style": "plain",
+  "border_type": 0,
+  "border_width": 0,
+  "desktopweb": {
+    "background_color": "ffffffff",
+    "bg_type": "one",
+    "bottom_left_border_color": "fafafaff",
+    "bottom_left_border_radius": 16,
+    "bottom_left_border_style": "rc",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "fafafaff",
+    "bottom_right_border_radius": 16,
+    "bottom_right_border_style": "rc",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000000",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    },
+    "top_left_border_color": "fafafaff",
+    "top_left_border_radius": 16,
+    "top_left_border_style": "rc",
+    "top_left_border_width": 1,
+    "top_right_border_color": "fafafaff",
+    "top_right_border_radius": 16,
+    "top_right_border_style": "rc",
+    "top_right_border_width": 1
+  },
+  "ipad": {
+    "background_color": "ffffffff",
+    "bg_type": "one",
+    "border_radius": 0,
+    "border_style": "custom",
+    "font_name": "System",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000000",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "isDefaultSkin": false,
+  "kuid": "s71f76b13b9747259fa80396af897ac1",
+  "tabrcandroid": {
+    "background_color": "ffffffff",
+    "bg_type": "one",
+    "border_style": "custom",
+    "font_name": "default",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000000",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "wType": "FlexScrollContainer",
+  "watchos": {
+    "font_name": "System"
+  }
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">@android:color/transparent</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <!-- Secure PIN pad colors -->
+    <color name="secure_pin_pad_color_1">#fff</color>
+    <color name="secure_pin_pad_color_2">#000000</color>
+    <color name="secure_pin_pad_color_3">#aaaaaa</color>
+    <color name="secure_pin_pad_color_4">#0088ff</color>
+    <color name="secure_pin_pad_color_5">#999999</color>
+    <color name="secure_pin_pad_color_6">#f1f1f1</color>
+
+    <color name="lightGrey">#D3D3D3</color>
+    <color name="blueColor">#010f34</color>
+    <color name="marron">#7D1350</color>
+
+    <color name="text_color_1">#000000</color>
+    <color name="text_color_5">#e74c3c</color>
+    <color name="red">#FF0000</color>
+        <color name="facesdk_button_disabled">#7B074C</color>
+    <color name="facesdk_button_enabled">#5C0638</color>
+    <color name="facesdk_buttons_background">@android:color/transparent</color>
+    <color name="facesdk_close_button">#7B074C</color>
+    <color name="facesdk_grey">#E8E8E8</color>
+    <color name="facesdk_icon_background">#F4F4F4</color>
+    <color name="facesdk_icon_fill">#FFFFFF</color>
+    <color name="facesdk_icon_line">#000000</color>
+    <color name="facesdk_icon_red">#DC4343</color>
+    <color name="facesdk_main_background">#FFFFFF</color>
+    <color name="facesdk_notification_view_solid_dark">#E8E8E8</color>
+    <color name="facesdk_notification_view_solid_white">#E8E8E8</color>
+    <color name="facesdk_notification_view_stroke_dark">@android:color/transparent</color>
+    <color name="facesdk_notification_view_stroke_white">@android:color/transparent</color>
+    <color name="facesdk_notification_view_text_color_light_off">#262626</color>
+    <color name="facesdk_notification_view_text_color_light_on">#262626</color>
+    <color name="facesdk_overlay_background_dark">#A6000000</color>
+    <color name="facesdk_overlay_background_white">#F0FFFFFF</color>
+    <color name="facesdk_overlay_border_active">#7B074C</color>
+    <color name="facesdk_overlay_border_default">#7B074C</color>
+    <color name="facesdk_processing_background">@android:color/black</color>
+    <color name="facesdk_progress_bar">#7B074C</color>
+    <color name="facesdk_sector_view_border_color">#7B074C</color>
+    <color name="facesdk_sector_view_current_sector_fill">#EAEAEA</color>
+    <color name="facesdk_sector_view_current_sector_fill_active">#25DEA8</color>
+    <color name="facesdk_sector_view_target_sector_fill">#8FF9DA</color>
+    <color name="facesdk_text">#262626</color>
+    <color name="facesdk_text_grey">#595959</color>
+    <color name="transparentgr">#FFFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

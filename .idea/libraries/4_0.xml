@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="4.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/nativebindings/Android/4.0/Kony_SyncV2-Android-4.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/nativebindings/Android/4.0/android.accounts-Android-4.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/nativebindings/Android/4.0/Kony_SDKCommons-Android-4.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/nativebindings/Android/4.0/Kony_FileStorage-Android-4.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/nativebindings/Android/4.0/android.content-Android-4.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/nativebindings/Android/4.0/android.net-Android-4.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/nativebindings/Android/4.0/android.os-Android-4.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/nativebindings/Android/4.0/java.lang-Android-4.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/nativebindings/Android/4.0/android.webkit-Android-4.0.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

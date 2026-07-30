@@ -1,0 +1,70 @@
+{
+    "DNDConfig": null,
+    "_blur_": {
+        "enabled": false,
+        "value": 0
+    },
+    "_height_": {
+        "type": "string",
+        "value": "92dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s020b63d001546d1be001021e91b2b67",
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "109dp"
+    },
+    "activeNativeBorderCornerRadiusControl": "centerControl",
+    "allboxes": [],
+    "android": {},
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "imgLifeRewards",
+        "lblLifeRewards"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "disabledSkins": {},
+    "enablehapticfeedback": false,
+    "enablescrolling": true,
+    "focusskin": "s0e9285c775f450db99ac6be41aa1dc2",
+    "id": "flxLifeRewards",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "ife293c7f0cb4ff4b8e6b7ba2e77915c",
+    "layouttype": 4,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxMenus",
+    "pf": "frmLogin",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 5
+}

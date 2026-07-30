@@ -1,0 +1,94 @@
+{
+  "android": {
+    "font_name": "default",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "31c46c",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "androidwearos": {
+    "font_name": "default"
+  },
+  "background_color": "31c46cff",
+  "bg_type": "one",
+  "border_color": "31c46cff",
+  "border_radius": 72,
+  "border_style": "custom",
+  "border_type": 0,
+  "border_width": 1,
+  "desktopweb": {
+    "bottom_left_border_color": "31c46cff",
+    "bottom_left_border_radius": 72,
+    "bottom_left_border_style": "rc",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "31c46cff",
+    "bottom_right_border_radius": 72,
+    "bottom_right_border_style": "rc",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "31c46c",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    },
+    "top_left_border_color": "31c46cff",
+    "top_left_border_radius": 72,
+    "top_left_border_style": "rc",
+    "top_left_border_width": 1,
+    "top_right_border_color": "31c46cff",
+    "top_right_border_radius": 72,
+    "top_right_border_style": "rc",
+    "top_right_border_width": 1
+  },
+  "ipad": {
+    "font_name": "System",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "31c46c",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "iphone": {
+    "font_name": "System",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "31c46c",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "isDefaultSkin": false,
+  "kuid": "sf6b324d92fc4d4ca03c1ad83bf5ba7b",
+  "tabrcandroid": {
+    "font_name": "default",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "31c46c",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "wType": "FlexContainer",
+  "watchos": {
+    "font_name": "System"
+  }
+}

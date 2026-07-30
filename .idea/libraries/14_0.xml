@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="14.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/nativebindings/iOS/14.0/Foundation-iOS-14.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/nativebindings/iOS/14.0/UIKit-iOS-14.0.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="androidwearos">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/resources/customlibs/lib/androidwearos/konylogger.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/customlibs/lib/androidwearos/volley.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

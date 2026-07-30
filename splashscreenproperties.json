@@ -1,0 +1,68 @@
+{
+    "splashScreen": {
+        "desktop": {
+            "desktopweb": {},
+            "kiosk": {}
+        },
+        "mobile": {
+            "iphone": {
+                "splashConfig": {
+                    "children": [],
+                    "_skin_": "sfbe0b910dfe4363bf286a9d2ada7748"
+                },
+                "splashVideo": "splashvideo.mp4",
+                "animationDuration": 2
+            },
+            "android": {
+                "splashVideo": "splashvideo.mp4",
+                "videoInterruptible": false,
+                "animationDuration": 2,
+                "showKonySplashScreen": false,
+                "continueNativeSplashScreen": false,
+                "splashImage": "splash_screen.png"
+            },
+            "showLoadingIndicator": false
+        },
+        "tablet": {
+            "android": {},
+            "ipad": {
+                "landscape": {},
+                "splashConfig": {
+                    "_skin_": "sfbe0b910dfe4363bf286a9d2ada7748",
+                    "children": [
+                        {
+                            "UIElementType": "Image",
+                            "_height_": {
+                                "type": "string",
+                                "value": "100%"
+                            },
+                            "_left_": {
+                                "type": "string",
+                                "value": "0dp"
+                            },
+                            "_src_": "splash.png",
+                            "_top_": {
+                                "type": "string",
+                                "value": "0dp"
+                            },
+                            "_width_": {
+                                "type": "string",
+                                "value": "100%"
+                            },
+                            "contentmode": 0,
+                            "id": "splashImage",
+                            "isvisible": true,
+                            "kuid": "h4430297896440e096f5247f337d6e33",
+                            "wType": "Image"
+                        }
+                    ]
+                }
+            },
+            "spa": {},
+            "spaandroidtablet": {},
+            "spaipad": {},
+            "spawindowstablet": {},
+            "windows8": {}
+        }
+    }
+}

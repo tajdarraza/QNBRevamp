@@ -1,0 +1,63 @@
+{
+    "android": {
+        "font_color": "1d2652ff",
+        "font_name": "CordaleCorp-Bold",
+        "font_size": 122,
+        "font_weight": "bold",
+        "isForked": true
+    },
+    "background_color": "00000000",
+    "bg_type": "one",
+    "border_color": "424242ff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "constants": {
+        "android": {
+            "font_color": {
+                "key": "color",
+                "value": "${themes.FontDarkBlue}"
+            }
+        }
+    },
+    "delinkedPltfrms": {
+        "androidwear": [],
+        "desktop": [],
+        "mobile": [],
+        "tablet": [
+            "ipad",
+            "tabrcandroid"
+        ],
+        "watch": []
+    },
+    "fontSizeInPx": true,
+    "font_color": "1d2652ff",
+    "font_name": "iphoneSystem",
+    "font_size": 100,
+    "font_style": "normal",
+    "font_weight": "400",
+    "ipad": {
+        "font_color": "1d2652ff",
+        "font_name": "CordaleCorp-Bold",
+        "font_size": 121,
+        "isForked": true
+    },
+    "iphone": {
+        "font_color": "1d2652ff",
+        "font_name": "CordaleCorp-Bold",
+        "font_size": 152,
+        "font_style": "normal",
+        "font_weight": 400,
+        "isForked": true
+    },
+    "isDefaultSkin": false,
+    "kuid": "s03a8432929d4c61bf56a6cd886574dc",
+    "tabrcandroid": {
+        "font_color": "1d2652ff",
+        "font_name": "CordaleCorp-Bold",
+        "font_size": 148,
+        "font_weight": "bold",
+        "isForked": true
+    },
+    "wType": "Label"
+}
