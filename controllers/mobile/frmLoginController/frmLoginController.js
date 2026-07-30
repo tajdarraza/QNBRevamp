@@ -105,7 +105,7 @@ define({
 
     localeChange: function () {
 
-        var callAAR = java.import("com.qnb.localeupdate.LocaleUpdate");
+try{        var callAAR = java.import("com.qnb.localeupdate.LocaleUpdate");
         callAAR.updateLocale("ar");
         this.dummy ="Raza";
         this.view.loading.show(this, "Loading..");
@@ -149,7 +149,11 @@ define({
         function onLocaleChangeFailure() {
             alert("fail")
             kony.print("Failed to change locale.");
-        };
+        };}
+catch(e){
+    alert(e)
+}
+
     },
 
 hideLoader: function(){
