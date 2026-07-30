@@ -3,7 +3,7 @@ define({
     isMask: true,
     isSwitchOn: false,
     isExpanded: true,
-    dummy:"",
+    dummy: "",
 
     onNavigate: function (params) {
         this.view.init = this.onInit;
@@ -105,63 +105,64 @@ define({
 
     localeChange: function () {
 
-try{        var callAAR = java.import("com.qnb.localeupdate.LocaleUpdate");
-        callAAR.updateLocale("ar");
-        this.dummy ="Raza";
-        this.view.loading.show(this, "Loading..");
-        var currentLocale = kony.i18n.getCurrentLocale();
-        var set_locale = "";
-        if (currentLocale == "en") {
-            set_locale = "ar";
-        } else {
-            set_locale = "en";
-        }
-        // kony.i18n.setCurrentLocaleAsync(
-        //     set_locale,
-        //     onLocaleChangeSuccess,
-        //     onLocaleChangeFailure
-        // );
-
-         function onLocaleChangeSuccess() {
-        var nav = new kony.mvc.Navigation("frmDummy");
-            nav.navigate(); 
-            kony.application.destroyForm("frmLogin");
-            kony.application.destroyForm("frmWelcomeScreen");
-            kony.application.destroyForm("frmDashboard");
+        try {        //var callAAR = java.import("com.qnb.localeupdate.LocaleUpdate");
+            //callAAR.updateLocale("ar");
+            this.dummy = "Raza";
+            this.view.loading.show(this, "Loading..");
             var currentLocale = kony.i18n.getCurrentLocale();
-            kony.store.setItem("current_locale", currentLocale)
-            //     kony.application.destroyForm("frmLogin");
-            // new kony.mvc.Navigation("frmLogin").navigate();
+            var set_locale = "";
+            if (currentLocale == "en") {
+                set_locale = "ar";
+            } else {
+                set_locale = "en";
+            }
+            kony.i18n.setCurrentLocaleAsync(
+                set_locale,
+                onLocaleChangeSuccess,
+                onLocaleChangeFailure
+            );
 
-            kony.timer.schedule("languageChangeTimer", function () {
-
-                var nav = new kony.mvc.Navigation("frmLogin");
+            function onLocaleChangeSuccess() {
+                var nav = new kony.mvc.Navigation("frmDummy");
                 nav.navigate();
+                kony.application.destroyForm("frmLogin");
+                kony.application.destroyForm("frmWelcomeScreen");
+                kony.application.destroyForm("frmDashboard");
+                var currentLocale = kony.i18n.getCurrentLocale();
+                kony.store.setItem("current_locale", currentLocale)
+                //     kony.application.destroyForm("frmLogin");
+                // new kony.mvc.Navigation("frmLogin").navigate();
 
-                kony.timer.cancel("languageChangeTimer");
+                kony.timer.schedule("languageChangeTimer", function () {
 
-            }, 2, false);
+                    var nav = new kony.mvc.Navigation("frmLogin");
+                    nav.navigate();
 
-        };
+                    kony.timer.cancel("languageChangeTimer");
+
+                }, 2, false);
+
+            };
 
 
 
-        function onLocaleChangeFailure() {
-            alert("fail")
-            kony.print("Failed to change locale.");
-        };}
-catch(e){
-    alert(e)
-}
+            function onLocaleChangeFailure() {
+                alert("fail")
+                kony.print("Failed to change locale.");
+            };
+        }
+        catch (e) {
+            alert(e)
+        }
 
     },
 
-hideLoader: function(){
+    hideLoader: function () {
 
-this.view.loading.hideLoader(this);
-},
+        this.view.loading.hideLoader(this);
+    },
 
-    btnLogin: function() {
+    btnLogin: function () {
         var pass = this.view.txtPassword.text;
         var user = this.view.txtUsername.text;
         if (pass === "abc") {
