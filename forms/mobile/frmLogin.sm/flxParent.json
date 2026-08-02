@@ -38,7 +38,8 @@
         "flxHeader",
         "flxMainContent",
         "flxBottomSheet",
-        "loading"
+        "loading",
+        "actionsheet"
     ],
     "clipbounds": true,
     "containerweight": 100,

@@ -72,7 +72,8 @@ define({
 
     },
     preShow: function () {
-        this.view.flxChckbox.skin = "CopyslFbox0b6c72520c80849";
+        //this.view.flxChckbox.skin = "CopyslFbox0b6c72520c80849";
+        this.view.imgCheck.src = "uncheckbox.png";
         this.view.imgVisibility.src = "trailing_icon.png";
         this.view.flxUsername.skin = "CopyslFbox0gb7ddbb0a9d54d";
         this.view.flxPassword.skin = "CopyslFbox0gb7ddbb0a9d54d";
@@ -102,6 +103,7 @@ define({
         this.view.flxQNBNews.skin = "CopyslFbox0a60b503bd4fd4b";
         this.hideLoader(this);
     },
+
 
     localeChange: function () {
 
@@ -223,10 +225,12 @@ define({
         this.isChecked = !this.isChecked;
 
         if (this.isChecked) {
-            this.view.flxChckbox.skin = "CopyslFbox0f087fc2268764e";
+            this.view.imgCheck.src = "checkbox.png";
+           // this.view.flxChckbox.skin = "CopyslFbox0f087fc2268764e";
             //this.view.imgCheckbox.src = "checkbox_checked.png";
         } else {
-            this.view.flxChckbox.skin = "CopyslFbox0b6c72520c80849";
+            this.view.imgCheck.src = "uncheckbox.png";
+            //this.view.flxChckbox.skin = "CopyslFbox0b6c72520c80849";
             // this.view.imgCheckbox.src = "checkbox_unchecked.png";
         }
 

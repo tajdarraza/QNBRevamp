@@ -1,12 +1,16 @@
 {
     "DNDConfig": null,
-    "_height_": {
+    "_bottom_": {
         "type": "string",
         "value": "20dp"
     },
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
     "_left_": {
         "type": "string",
-        "value": "4dp"
+        "value": "5%"
     },
     "_margin_": [
         0,
@@ -23,44 +27,51 @@
     ],
     "_percent_": true,
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
-    "_top_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_width_": {
         "type": "string",
-        "value": "20dp"
+        "value": "90%"
     },
     "allboxes": [],
-    "autogrowmode": 0,
+    "autogrowmode": 1,
     "canUpdateUI": true,
-    "centery": {
+    "centerx": {
         "type": "string",
         "value": "50%"
     },
     "children": [
-        "imgCheck"
+        "flxActionSheetOptions",
+        "flxCancel"
     ],
     "clipbounds": true,
     "containerweight": 100,
-    "disabledSkins": {
-        "focusSkin": "s675003e121c4ea296f992472ea81841"
-    },
     "enablescrolling": true,
-    "id": "flxChckbox",
+    "id": "flxActionSheetContent",
     "info": null,
-    "iscustomlayout": false,
+    "ipad": {
+        "width": {
+            "type": "string",
+            "value": "30%"
+        }
+    },
     "isvisible": true,
-    "kuid": "c963f883984a4e3b966242cd0da96c39",
-    "layouttype": 2,
+    "kuid": "u6ed7fb87115460b90b87f43f7cf4168",
+    "layouttype": 4,
+    "maxheight": {
+        "type": "string",
+        "value": "100%"
+    },
     "name": "kony.ui.FlexContainer",
-    "parent": "flxUserCreds",
-    "pf": "frmLogin",
-    "retaincontentalignment": false,
-    "retainflexpositionproperties": false,
-    "retainflowhorizontalalignment": false,
+    "parent": "actionsheet",
+    "pf": "userwidgetmodel",
     "snapgridsize": 10,
     "snaptogrid": true,
+    "tabrcandroid": {
+        "width": {
+            "type": "string",
+            "value": "30%"
+        }
+    },
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 2
 }

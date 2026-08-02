@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "20dp"
+        "value": "51dp"
     },
     "_left_": {
         "type": "string",
-        "value": "4dp"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -22,45 +22,41 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_skin_": "s4de55e518fd43b4b82ce0cda2126f50",
     "_top_": {
         "type": "string",
         "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "20dp"
+        "value": "100%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "children": [
-        "imgCheck"
+        "lblTitleText",
+        "lblDescriptionText",
+        "lblHeaderUnderline"
     ],
-    "clipbounds": true,
+    "clipbounds": false,
     "containerweight": 100,
-    "disabledSkins": {
-        "focusSkin": "s675003e121c4ea296f992472ea81841"
-    },
     "enablescrolling": true,
-    "id": "flxChckbox",
+    "id": "flxSelect",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c963f883984a4e3b966242cd0da96c39",
-    "layouttype": 2,
+    "kuid": "u2692043070a4d97afe52553e18b955e",
+    "layouttype": 4,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxUserCreds",
-    "pf": "frmLogin",
+    "parent": "flxActionSheetOptions",
+    "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 2
 }

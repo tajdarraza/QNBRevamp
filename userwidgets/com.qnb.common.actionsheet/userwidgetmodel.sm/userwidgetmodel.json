@@ -1,0 +1,71 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizForm",
+    "DNDConfig": null,
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sfbe0b910dfe4363bf286a9d2ada7748",
+    "_title_": null,
+    "addWidgetsdone": false,
+    "allboxes": [],
+    "breakpointInfo": {
+        "b1": {
+            "width": 1366
+        },
+        "b2": {
+            "width": 1024
+        },
+        "b3": {
+            "width": 640
+        }
+    },
+    "canUpdateUI": true,
+    "children": [
+        "actionsheet"
+    ],
+    "containerweight": 100,
+    "currentLocale": "default",
+    "device": "Pixel3",
+    "displayorientation": 3,
+    "enabledforidletimeout": false,
+    "globalUserWidgetRefs": [
+        "ue43805690da4a0c8c373b888488a1c1",
+        "u34a74b5086f424b8a1a27205c330b6e"
+    ],
+    "id": "userwidgetmodel",
+    "info": null,
+    "initdone": false,
+    "inputaccessoryviewtype": 4,
+    "intransitionconfig": {
+        "formTransition": "None"
+    },
+    "isvisible": true,
+    "kuid": "uebaff24400649688c7f50a45bac2550",
+    "layouttype": 2,
+    "masterType": 1,
+    "name": "kony.ui.Form2",
+    "needappmenu": true,
+    "outtransitionconfig": {
+        "formTransition": "None"
+    },
+    "paddinginpixel": false,
+    "platform": "android",
+    "prevDevice": "iPhone16",
+    "prevPlatform": "iphone",
+    "retainscrollposition": false,
+    "titleBarSkin": "s7c2028af1a84384b11825e5ea71b5d2",
+    "titlebar": true,
+    "type": 3,
+    "wType": "Form"
+}
