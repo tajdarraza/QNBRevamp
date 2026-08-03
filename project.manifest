@@ -1,0 +1,9 @@
+{
+    "dependencies": [
+        {
+            "name": "QNBMBCommon",
+            "isHidden": false,
+            "excludeFromBuild": false
+        }
+    ]
+}
