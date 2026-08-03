@@ -48,7 +48,9 @@ define({
             lblCurrent: "lblCurrent",
 
             flxGraphics: "flxGraphics",
-            flxMenuOptions: "flxMenuOptions"
+            flxMenuOptions: "flxMenuOptions",
+
+            flxMenu1: "flxMenu1",
         };
     },
 
@@ -189,8 +191,25 @@ define({
             }
         }
 
+        for (var i = 0; i < segData.length; i++) {
+
+            segData[i].flxMenu1 = {
+                onTouchEnd: this.onMenu1Click.bind(this)
+            };
+        }
         this.view.segAccounts.setData(segData);
         this.updateDashboard(0);
+    },
+    onMenu1Click: function (widget, context) {
+        try {
+
+            new kony.mvc.Navigation("frmMoreActions").navigate();
+
+        } catch (e) {
+            alert(e)
+        }
+
+
     },
     updateDashboard: function () {
 
@@ -295,26 +314,26 @@ define({
     },
 
     imgFooter2: function () {
-                    this.view.loading.show(this, "Loading...");
+        this.view.loading.show(this, "Loading...");
 
-            var response = {
-                status: "SUCCESS",
-                message: "Data fetched successfully",
-                accounts: [
-                    {
-                        accountNo: "1234567890",
-                        balance: "QAR 12,450.75"
-                    }
-                ]
-            };
-            serviceCall(response, function (res) {
-                var isLoggedIn = kony.store.getItem("isLoggedIn");
-                //kony.application.dismissLoadingScreen();
+        var response = {
+            status: "SUCCESS",
+            message: "Data fetched successfully",
+            accounts: [
+                {
+                    accountNo: "1234567890",
+                    balance: "QAR 12,450.75"
+                }
+            ]
+        };
+        serviceCall(response, function (res) {
+            var isLoggedIn = kony.store.getItem("isLoggedIn");
+            //kony.application.dismissLoadingScreen();
 
-                this.view.loading.hideLoader(this);
-                kony.store.setItem("isLoggedIn", true);
-new kony.mvc.Navigation("frmCards").navigate();                //alert(JSON.stringify(res));
-            }.bind(this), 4);
+            this.view.loading.hideLoader(this);
+            kony.store.setItem("isLoggedIn", true);
+            new kony.mvc.Navigation("frmCards").navigate();                //alert(JSON.stringify(res));
+        }.bind(this), 4);
 
 
         //new kony.mvc.Navigation("frmCards").navigate();
@@ -559,7 +578,7 @@ new kony.mvc.Navigation("frmCards").navigate();                //alert(JSON.stri
 
     },
     onSwipeAccounts: function (eventobject, sectionNumber, rowNumber) {
-        this.view.lblNoti.text = Math.floor(rowNumber+1).toString();
+        this.view.lblNoti.text = Math.floor(rowNumber + 1).toString();
 
         this.accountPage = rowNumber;
 

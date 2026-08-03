@@ -85,6 +85,12 @@ define({
         this.view.imgLangLogo.onTouchEnd = this.localeChange;
         this.view.flxHideBalance.isVisible = false;
         this.view.lblUsername.text = i18n.get("LBL_USERNAME");
+        this.view.lblUsernameLogin.text = i18n.get("USER_NAME");
+        this.view.lblRememberMe.text = i18n.get("LBL_REMEMBER_ME");
+        this.view.lblWelcome.text = i18n.get("MSG_WELCOME");
+        this.view.btnLogin.text = i18n.get("BTN_LOGIN");
+        this.view.lblHideBalance.text = i18n.get("LBL_HIDE_BAL");
+        
 
         var isLoggedIn = kony.store.getItem("isLoggedIn");
         if (isLoggedIn) {
