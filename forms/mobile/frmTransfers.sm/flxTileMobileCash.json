@@ -1,0 +1,60 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "scabe65ba445fde12ab8931b11e213f",
+    "_top_": {
+        "type": "string",
+        "value": "310dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "27%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "imgTileMobileCash",
+        "lblTileMobileCash"
+    ],
+    "clipbounds": false,
+    "containerweight": 100,
+    "enablescrolling": false,
+    "id": "flxTileMobileCash",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "b498bbaa1722969361dafc0fd097d109",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxContent",
+    "pf": "frmTransfers",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1
+}
