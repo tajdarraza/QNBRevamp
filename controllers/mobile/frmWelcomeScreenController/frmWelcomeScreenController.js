@@ -21,8 +21,19 @@ define({
         this.view.flxQNBNews.onTouchStart = this.onTouchStart2;
         this.view.flxQNBNews.onTouchEnd = this.onTouchEnd2;
         this.view.btnLogin.onClick = this.btnLogin;
+        //Was a dead tap. No registration/onboarding journey exists in this POC.
+        this.view.btnStarted.onClick = this.btnStarted;
 
 
+    },
+
+    btnStarted: function () {
+        kony.ui.Alert({
+            message: "Account opening isn't part of this prototype yet.",
+            alertType: constants.ALERT_TYPE_INFO,
+            alertTitle: "Get started",
+            yesLabel: "OK"
+        }, {});
     },
 
     isLoggedIn: function () {

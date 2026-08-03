@@ -8,6 +8,19 @@ define({
         this.view.preShow = this.preShow;
         this.view.onDeviceBack = this.backNav;
         this.view.flxBack.onTouchEnd = this.backNav;
+
+        //Footer exists on this form but was never wired — reachable from the dashboard's Pay Now.
+        this.view.imgFooter1.onTouchEnd = function () {
+            new kony.mvc.Navigation("frmDashboard").navigate();
+        };
+        this.view.imgFooter2.onTouchEnd = function () {
+            new kony.mvc.Navigation("frmCards").navigate();
+        };
+        this.view.imgFooter3.onTouchEnd = function () { pocNotBuilt("Payments"); };
+        this.view.imgFooter4.onTouchEnd = function () {
+            new kony.mvc.Navigation("frmTransfers").navigate();
+        };
+        this.view.imgFooter5.onTouchEnd = function () { pocNotBuilt("Menu"); };
     },
 
     onInit: function () {
@@ -58,7 +71,17 @@ define({
     },
 
     preShow: function () {
-        this.setProgress();
+        var self = this;
+        //Service-driven. The inline cardData below is only a fallback if the call returns nothing.
+        pocFetchCards(function (rows) {
+            if (rows && rows.length) {
+                self.cardData = pocMapCardsForChooser(rows);
+                kony.print("POC CHOOSE: rendering " + rows.length + " real cards");
+            } else {
+                kony.print("POC CHOOSE: no server cards — using fallback");
+            }
+            self.setProgress();
+        });
     },
 
     backNav: function() {
@@ -99,8 +122,34 @@ define({
             flxProgressBar: "flxProgressBar"
         };
 
+        //The list had no onRowClick, so this screen was a dead end — Dashboard "Pay Now" led here and
+        //the journey stopped. Selecting a row now carries its limits forward to frmPayCard, which
+        //expects utilisedAmount/totalLimit.
+        this.view.segChooseCard.onRowClick = this.onCardSelected;
+
         this.view.segChooseCard.setData(this.cardData);
 
+    },
+
+    onCardSelected: function () {
+        try {
+            var idx = 0;
+            var sel = this.view.segChooseCard.selectedRowIndex;
+            if (sel && sel.length > 1) { idx = sel[1]; }
+
+            var card = this.cardData[idx];
+            if (!card) { return; }
+
+            new kony.mvc.Navigation("frmPayCard").navigate({
+                utilisedAmount: card.utilised,
+                totalLimit: card.limit,
+                lblCardName: card.lblCardName,
+                lblHolderName: card.lblHolderName,
+                lblCardNumber: card.lblCardNumber
+            });
+        } catch (e) {
+            kony.print("onCardSelected :: " + e);
+        }
     }
 
 });

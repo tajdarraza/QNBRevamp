@@ -3,11 +3,51 @@ define({
     onNavigate: function (navData) {
         this.view.init = this.onInit;
         this.view.preShow = this.preShow;
-        this.view.postShow = this.onPostShow;
+        //Was this.onPostShow, which does not exist on this controller — postShow never fired.
+        this.view.postShow = this.postShow;
         this.view.onDeviceBack = this.onDeviceBack;
         this.view.imgFooter1.onTouchEnd = this.imgFooter1;
+
+        //Only Home was wired; the rest were dead taps on a screen that is in the demo path.
+        this.view.imgFooter2.onTouchEnd = this.onFooterCards;
+        this.view.imgFooter3.onTouchEnd = this.onFooterPayments;
+        this.view.imgFooter4.onTouchEnd = this.onFooterTransfers;
+        this.view.imgFooter5.onTouchEnd = this.onFooterMenu;
+
         this.view.segCards.onSwipe = this.onSwipeCards;
         this.data = navData;
+    },
+
+    //onDeviceBack was assigned above but never defined, so hardware back did nothing here.
+    onDeviceBack: function () {
+        new kony.mvc.Navigation("frmDashboard").navigate();
+    },
+
+    onFooterCards: function () {
+        //Already here.
+    },
+
+    onFooterPayments: function () {
+        pocNotBuilt("Payments");
+    },
+
+    onFooterTransfers: function () {
+        //Guarded until frmTransfers has been opened/rebuilt in Visualizer.
+        try {
+            new kony.mvc.Navigation("frmTransfers").navigate();
+        } catch (e) {
+            kony.print("frmTransfers not available yet :: " + e);
+            pocNotBuilt("Transfers");
+        }
+    },
+
+    onFooterMenu: function () {
+        try {
+            new kony.mvc.Navigation("frmMenu").navigate();
+        } catch (e) {
+            kony.print("frmMenu not available yet :: " + e);
+            pocNotBuilt("Menu");
+        }
     },
 
     onInit: function () {
@@ -110,8 +150,37 @@ define({
         ];
     },
     preShow: function () {
-        this.setCardData();
-        this.createIndicators();
+        var self = this;
+        applyHeaderIdentity(this.view);
+        this.hideUnwiredSections();
+
+        //Service-driven. The inline cardData in onInit is only a fallback if the call returns
+        //nothing; setCardData() re-attaches the flip/menu handlers either way.
+        pocFetchCards(function (rows) {
+            if (rows && rows.length) {
+                self.cardData = pocMapCardsForCardsScreen(rows);
+                kony.print("POC CARDS SCREEN: rendering " + rows.length + " real cards");
+            } else {
+                kony.print("POC CARDS SCREEN: no server cards — using fallback");
+            }
+            self.setCardData();
+            self.createIndicators();
+        });
+    },
+
+    //frmCards carries a copy of the dashboard's "My cards" scroller plus an accounts segment and tab
+    //strip. None of it is wired by this controller, none of it appears on the Cards screen in the
+    //design, and it renders the form's design-time defaults ("Tajdar Raza", 2325-4564-3456-3971).
+    //Hide it rather than show fabricated card holders next to the real ones.
+    hideUnwiredSections: function () {
+        var ids = ["flxCardsHeader", "flxScrollCards", "flxThreeTab", "flxScrollAccounts"];
+        for (var i = 0; i < ids.length; i++) {
+            try {
+                if (this.view[ids[i]]) { this.view[ids[i]].setVisibility(false); }
+            } catch (e) {
+                kony.print("hideUnwiredSections " + ids[i] + " :: " + e);
+            }
+        }
     },
     postShow: function () {
 
@@ -120,7 +189,10 @@ define({
         new kony.mvc.Navigation("frmDashboard").navigate();
     },
     onClickPayCard: function () {
-        new kony.mvc.Navigation("frmPayCard").navigate();
+        //Design flow is Cards -> Pay card -> CHOOSE YOUR CARD -> Pay card. Going straight to
+        //frmPayCard skipped the selection, so it had no card and fell back to the hardcoded
+        //45,000/60,000 figures.
+        new kony.mvc.Navigation("frmChooseCard").navigate();
     },
     
 
