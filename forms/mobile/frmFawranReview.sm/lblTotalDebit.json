@@ -3,11 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "22dp"
+        "value": "26dp"
     },
     "_left_": {
         "type": "string",
-        "value": "55%"
+        "value": "5%"
     },
     "_margin_": [
         1,
@@ -21,15 +21,15 @@
         0,
         0
     ],
-    "_skin_": "sffbbf6dcdcf47309e9090c6422f3859",
+    "_skin_": "s18e15efc4242ac98da8fd41f9452262",
     "_text_": "\u2014",
     "_top_": {
         "type": "string",
-        "value": "264dp"
+        "value": "288dp"
     },
     "_width_": {
         "type": "string",
-        "value": "40%"
+        "value": "90%"
     },
     "_wrapping_": 2,
     "android": {
@@ -40,7 +40,7 @@
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "contentalignment": 6,
+    "contentalignment": 4,
     "id": "lblTotalDebit",
     "info": null,
     "ipad": {

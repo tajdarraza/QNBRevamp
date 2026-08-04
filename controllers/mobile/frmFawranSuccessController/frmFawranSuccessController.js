@@ -54,7 +54,9 @@ define({
         var cur = fawranDraft.currency || "QAR";
         var acc = (fawranDraft.debitAccount && nullCheck(fawranDraft.debitAccount.acNoF))
             ? fawranDraft.debitAccount.acNoF : "—";
-        var lines = [
+        var lines = [];
+        if (nullCheck(r._message)) { lines.push(r._message, ""); }
+        lines = lines.concat([
             "Transaction reference no.",
             nullCheck(r.refId) ? r.refId : "—",
             "",
@@ -69,7 +71,7 @@ define({
             "",
             "Total debit amount",
             formatAmount(fawranTotalDebit()) + " " + cur
-        ];
+        ]);
         kony.ui.Alert({
             message: lines.join("\n"),
             alertType: constants.ALERT_TYPE_INFO,
@@ -84,11 +86,10 @@ define({
 
         kony.print("POC FAWRAN SUCCESS: receipt fields = " + JSON.stringify(r).substring(0, 500));
 
-        //RTP_0012 / RTP_0014 are accepted-but-qualified outcomes, and the server's own wording says
-        //what the qualification is ("initiated" rather than "sent"). That is more accurate than the
-        //design's flat "Money transfer successfully", so it wins whenever the server supplies it.
-        this.safeText("lblSuccessMsg",
-            nullCheck(r._message) ? r._message : "Money transfer successfully");
+        //Fixed heading, per the design. RTP_0012 / RTP_0014 are accepted-but-qualified outcomes and
+        //the server's own wording ("initiated" rather than "sent") is more precise, so it is not
+        //discarded — it is shown under Get receipt instead of on the headline.
+        this.safeText("lblSuccessMsg", "Money transfer successfully");
 
         //Card mirrors the design: beneficiary alias, main purpose, sub-purpose, total debit.
         this.safeText("lblTxnRef", nullCheck(fawranDraft.aliasValue) ? fawranDraft.aliasValue : "—");

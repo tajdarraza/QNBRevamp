@@ -3,11 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "20dp"
+        "value": "22dp"
     },
     "_left_": {
         "type": "string",
-        "value": "53%"
+        "value": "45%"
     },
     "_margin_": [
         1,
@@ -21,15 +21,15 @@
         0,
         0
     ],
-    "_skin_": "s4a68898d4ea4ae584e70f2eabab914a",
+    "_skin_": "s18e15efc4242ac98da8fd41f9452262",
     "_text_": "\u2014",
     "_top_": {
         "type": "string",
-        "value": "22dp"
+        "value": "12dp"
     },
     "_width_": {
         "type": "string",
-        "value": "44%"
+        "value": "52%"
     },
     "_wrapping_": 2,
     "android": {

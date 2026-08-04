@@ -430,6 +430,12 @@ define({
             self.hideLoginLoader();
             kony.store.setItem("isLoggedIn", true);
 
+            //Drop every per-session cache before the new customer's data loads. Module state
+            //outlives a logout, and a stale Fawran account uid fails with "Account Details not
+            //Found" — which reads like a beneficiary problem but is the debit account.
+            try { fawranResetSession(); } catch (e) { kony.print("fawranResetSession :: " + e); }
+            try { pocResetCards(); } catch (e) { kony.print("pocResetCards :: " + e); }
+
             //"Remember me" decides whether we keep the username. Keeping it drives the returning-user
             //layout (password-only + "Welcome <name>"); clearing it returns to the full login form.
             if (self.isChecked) {

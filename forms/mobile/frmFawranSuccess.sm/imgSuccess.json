@@ -23,10 +23,10 @@
         0
     ],
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
-    "_src_": "paymenttick.png",
+    "_src_": "successtick.png",
     "_top_": {
         "type": "string",
-        "value": "32dp"
+        "value": "24dp"
     },
     "_width_": {
         "type": "string",

@@ -35,30 +35,30 @@
     "fontSizeInPx": true,
     "font_color": "1b124bff",
     "font_name": "iphoneSystem",
-    "font_size": 150,
+    "font_size": 75,
     "font_style": "normal",
     "font_weight": "400",
     "ipad": {
         "font_name": "System",
-        "font_size": 250,
+        "font_size": 125,
         "isForked": true
     },
     "iphone": {
         "font_name": "QNBSansEN-Bold",
-        "font_size": 200,
+        "font_size": 100,
         "isForked": true
     },
     "isDefaultSkin": false,
     "kuid": "s18e15efc4242ac98da8fd41f9452262",
     "tabrcandroid": {
         "font_name": "default",
-        "font_size": 415,
+        "font_size": 208,
         "isForked": true
     },
     "wType": "Label",
     "watchos": {
         "font_name": "System",
-        "font_size": 250,
+        "font_size": 125,
         "isForked": true
     }
 }

@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "52dp"
+        "value": "76dp"
     },
     "_left_": {
         "type": "string",
@@ -36,7 +36,10 @@
     "canUpdateUI": true,
     "children": [
         "lblPickRow0",
-        "flxPickDiv0"
+        "flxPickDiv0",
+        "lblPickSub0",
+        "lblPickAmt0",
+        "lblPickCur0"
     ],
     "clipbounds": false,
     "containerweight": 100,

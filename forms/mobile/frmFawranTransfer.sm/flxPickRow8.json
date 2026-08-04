@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "52dp"
+        "value": "76dp"
     },
     "_left_": {
         "type": "string",
@@ -25,7 +25,7 @@
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "416dp"
+        "value": "608dp"
     },
     "_width_": {
         "type": "string",
@@ -36,7 +36,10 @@
     "canUpdateUI": true,
     "children": [
         "lblPickRow8",
-        "flxPickDiv8"
+        "flxPickDiv8",
+        "lblPickSub8",
+        "lblPickAmt8",
+        "lblPickCur8"
     ],
     "clipbounds": false,
     "containerweight": 100,
