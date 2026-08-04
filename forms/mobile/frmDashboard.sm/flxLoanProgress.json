@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "208dp"
     },
     "_left_": {
         "type": "string",
@@ -22,56 +22,43 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s3f4128c95894aa2a394917cad02f19f",
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "-8dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "90%"
     },
     "allboxes": [],
-    "allowhorizontalbounce": true,
-    "allowverticalbounce": false,
-    "bounces": false,
+    "autogrowmode": 0,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
         "value": "50%"
     },
     "children": [
-        "flxThreeTab",
-        "flxAccountsSegment",
-        "flxLoanProgress",
-        "flxLoanBanner"
+        "lblMyLoan",
+        "flxLoanProgressBar"
     ],
     "clipbounds": true,
     "containerweight": 100,
-    "decelerat": false,
-    "dragg": false,
     "enablescrolling": true,
-    "horizontalscrollindicator": false,
-    "id": "flxScrollAccounts",
+    "id": "flxLoanProgress",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c3bc3c0e883e4409a0240a8a92798528",
+    "kuid": "ha4d733e705a4e8887533d249c332bb2",
     "layouttype": 4,
-    "name": "kony.ui.FlexScrollContainer",
-    "pagingenabled": false,
-    "parent": "flxParentScroll",
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxScrollAccounts",
     "pf": "frmDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
-    "reverselayoutdirection": false,
-    "scrolldirection": 2,
     "snapgridsize": 10,
-    "snaptogrid": false,
-    "track": false,
-    "verticalscrollindicator": false,
-    "wType": "FlexScrollContainer",
-    "widgetalignment": 1,
-    "zindex": 10
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1
 }

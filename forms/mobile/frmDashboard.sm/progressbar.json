@@ -1,0 +1,66 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizBrowser",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_type_": 5,
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "androidwearos": {
+        "render": false
+    },
+    "canUpdateUI": true,
+    "containerweight": 69,
+    "contentLoadsKonyWeb": false,
+    "detecttelnumber": true,
+    "enablenativecommunication": false,
+    "htmlstring": "<div class=\"progress\">\n    <svg width=\"220\" height=\"220\">\n        <circle\n            cx=\"110\"\n            cy=\"110\"\n            r=\"90\"\n            class=\"bg\"/>\n\n        <circle\n            id=\"progress\"\n            cx=\"110\"\n            cy=\"110\"\n            r=\"90\"\n            class=\"fg\"/>\n    </svg>\n\n    <div class=\"center\">\n        <div id=\"percent\">65%</div>\n        <div>paid</div>\n    </div>\n</div>",
+    "id": "progressbar",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "a0a89e6266d441ce895b0220930e4e53",
+    "localurl": "w4aa2cd1a51b4d399e2acbaf550e27a9",
+    "margininpixel": false,
+    "method": "get",
+    "name": "kony.ui.Browser",
+    "paddinginpixel": false,
+    "parent": "flxProgressIndicator",
+    "pf": "frmDashboard",
+    "requesturlconfig": {
+        "URL": "",
+        "requestMethod": "get"
+    },
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "screenlevelwidget": false,
+    "url": "",
+    "vizProps": {
+        "runJS": true
+    },
+    "wType": "Browser"
+}

@@ -18,7 +18,7 @@
     "_pxMenuIndex": [
         0,
         1,
-        2
+        5
     ],
     "_skin_": "sfbe0b910dfe4363bf286a9d2ada7748",
     "_title_": null,
@@ -55,7 +55,7 @@
     "desktopweb": {
         "needAppMenu": false
     },
-    "device": "iPhone16",
+    "device": "Pixel3",
     "displayorientation": 1,
     "enabledforidletimeout": true,
     "extendbottom": true,
@@ -117,9 +117,9 @@
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
-    "platform": "iphone",
-    "prevDevice": "Pixel3XL",
-    "prevPlatform": "android",
+    "platform": "android",
+    "prevDevice": "iPhone16",
+    "prevPlatform": "iphone",
     "requiresBottomSafeAreaInset": false,
     "requiresTopSafeAreaInset": true,
     "retaincontentalignment": false,

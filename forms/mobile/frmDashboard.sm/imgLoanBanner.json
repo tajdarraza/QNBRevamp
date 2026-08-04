@@ -4,11 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "48dp"
+        "value": "96dp"
     },
     "_left_": {
         "type": "string",
-        "value": "26dp"
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -23,26 +23,26 @@
         0
     ],
     "_skin_": "s46f4cc5af674c87a6552260c65fd4ef",
-    "_src_": "cardsnav.png",
+    "_src_": "promobanner.png",
     "_top_": {
         "type": "string",
-        "value": "12dp"
+        "value": "0"
     },
     "_width_": {
         "type": "string",
-        "value": "36dp"
+        "value": "100%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "id": "imgFooter2",
+    "id": "imgLoanBanner",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "cb2e75cedd0c426ea30461e91d49f831",
+    "kuid": "bf569f85a8364f20a70b0104a3b2c135",
     "name": "kony.ui.Image2",
-    "parent": "flxFooter",
+    "parent": "flxLoanBanner",
     "pf": "frmDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

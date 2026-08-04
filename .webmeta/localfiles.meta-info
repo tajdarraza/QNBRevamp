@@ -1,9 +1,42 @@
 {
     "HEAD": "w934f6554f95465281a77d96af20fa1a",
+    "w4aa2cd1a51b4d399e2acbaf550e27a9": {
+        "extension": "html",
+        "kuid": "w4aa2cd1a51b4d399e2acbaf550e27a9",
+        "name": "progressbar.html",
+        "parent": "w934f6554f95465281a77d96af20fa1a",
+        "type": "F"
+    },
+    "w6411c44975c4b5492d34252ccc96997": {
+        "extension": "css",
+        "kuid": "w6411c44975c4b5492d34252ccc96997",
+        "name": "progressbar.css",
+        "parent": "w934f6554f95465281a77d96af20fa1a",
+        "type": "F"
+    },
     "w934f6554f95465281a77d96af20fa1a": {
-        "children": [],
+        "children": [
+            "w967ebcf5daf494eb8bc42e08ee35fc4",
+            "w4aa2cd1a51b4d399e2acbaf550e27a9",
+            "w6411c44975c4b5492d34252ccc96997",
+            "wb73cdd2782843c5a44b0528f59129be"
+        ],
         "kuid": "w934f6554f95465281a77d96af20fa1a",
         "name": "localfiles",
         "type": "L"
+    },
+    "w967ebcf5daf494eb8bc42e08ee35fc4": {
+        "extension": "js",
+        "kuid": "w967ebcf5daf494eb8bc42e08ee35fc4",
+        "name": "progressbar.js",
+        "parent": "w934f6554f95465281a77d96af20fa1a",
+        "type": "F"
+    },
+    "wb73cdd2782843c5a44b0528f59129be": {
+        "extension": "ttf",
+        "kuid": "wb73cdd2782843c5a44b0528f59129be",
+        "name": "QNBSansSemiBold.ttf",
+        "parent": "w934f6554f95465281a77d96af20fa1a",
+        "type": "F"
     }
 }

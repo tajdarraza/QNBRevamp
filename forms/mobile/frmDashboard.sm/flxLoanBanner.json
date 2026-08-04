@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "120dp"
     },
     "_left_": {
         "type": "string",
@@ -22,56 +22,42 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s3f4128c95894aa2a394917cad02f19f",
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "-8dp"
+        "value": "32dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "90%"
     },
     "allboxes": [],
-    "allowhorizontalbounce": true,
-    "allowverticalbounce": false,
-    "bounces": false,
+    "autogrowmode": 0,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
         "value": "50%"
     },
     "children": [
-        "flxThreeTab",
-        "flxAccountsSegment",
-        "flxLoanProgress",
-        "flxLoanBanner"
+        "imgLoanBanner"
     ],
-    "clipbounds": true,
+    "clipbounds": false,
     "containerweight": 100,
-    "decelerat": false,
-    "dragg": false,
     "enablescrolling": true,
-    "horizontalscrollindicator": false,
-    "id": "flxScrollAccounts",
+    "id": "flxLoanBanner",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c3bc3c0e883e4409a0240a8a92798528",
-    "layouttype": 4,
-    "name": "kony.ui.FlexScrollContainer",
-    "pagingenabled": false,
-    "parent": "flxParentScroll",
+    "kuid": "d0b3aee4a79e4f989b4069888e59a6bb",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxScrollAccounts",
     "pf": "frmDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
-    "reverselayoutdirection": false,
-    "scrolldirection": 2,
     "snapgridsize": 10,
-    "snaptogrid": false,
-    "track": false,
-    "verticalscrollindicator": false,
-    "wType": "FlexScrollContainer",
-    "widgetalignment": 1,
-    "zindex": 10
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1
 }
