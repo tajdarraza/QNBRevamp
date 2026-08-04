@@ -21,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "s5147430b3014bdc8eb4930b2541e01f",
+    "_skin_": "s9d5091755d4463c8d2a15cfd5ab8a95",
     "_text_": "6 active loans",
     "_top_": {
         "type": "string",
-        "value": "16dp"
+        "value": "10dp"
     },
     "_width_": {
         "type": "ref",

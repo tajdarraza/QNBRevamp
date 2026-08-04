@@ -55,7 +55,7 @@
     "desktopweb": {
         "needAppMenu": false
     },
-    "device": "Pixel3",
+    "device": "iPhone16",
     "displayorientation": 1,
     "enabledforidletimeout": true,
     "extendbottom": true,
@@ -117,9 +117,9 @@
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
-    "platform": "android",
-    "prevDevice": "iPhone16",
-    "prevPlatform": "iphone",
+    "platform": "iphone",
+    "prevDevice": "Pixel3",
+    "prevPlatform": "android",
     "requiresBottomSafeAreaInset": false,
     "requiresTopSafeAreaInset": true,
     "retaincontentalignment": false,

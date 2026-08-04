@@ -21,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "s6c148d5eff64853bf05008a57e98a0f",
+    "_skin_": "s7d9af7483d14b93b38382b7cf49466c",
     "_text_": "Total remaining balance",
     "_top_": {
         "type": "string",
-        "value": "16dp"
+        "value": "6dp"
     },
     "_width_": {
         "type": "ref",
