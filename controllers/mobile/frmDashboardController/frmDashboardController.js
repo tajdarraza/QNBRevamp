@@ -107,7 +107,7 @@ define({
         if (this.pendingCalls > 0) { return; }
         this.cancelDashWatchdog();
         this.dataLoaded = true;
-        // try { this.view.loading.hideLoader(this); } catch (e) { }
+        try { this.view.loading.hideLoader(this); } catch (e) { }
         //Re-render once, synchronously, with whatever landed.
         this.renderAll();
     },
@@ -202,7 +202,7 @@ define({
             kony.print("POC DASH: timed out with " + self.pendingCalls + " call(s) unanswered — " +
                 "keeping fallback data. If POC_BYPASS_OTP is true, the pre-OTP token was likely rejected.");
             self.pendingCalls = 0;
-            //try { self.view.loading.hideLoader(self); } catch (e) { }
+            try { self.view.loading.hideLoader(self); } catch (e) { }
         }, 45, false);
     },
 
@@ -601,7 +601,7 @@ define({
         //the cached server rows rather than re-issuing three calls into widgets that renderAll() is
         //simultaneously tearing down and rebuilding.
         if (!USE_MOCK_SERVICES && !this.dataLoaded && this.pendingCalls === 0) {
-            // try { this.view.loading.show(this, "Loading..."); } catch (e) { }
+            try { this.view.loading.show(this, "Loading..."); } catch (e) { }
             this.loadServerData();
         }
     },
