@@ -573,7 +573,27 @@ define({
         //it is the better landing until those two are service-backed. Swiping still reaches Home.
         this.updateAccountScrollView(0);
     },
+
+    initProgressView: function () {
+        var paid = 35000;
+        var total = 100000;
+
+        var percent = (paid / total) * 100;
+        //this.view.progressBar.evaluateJavaScript("JSON.stringify(animateTo(20+3))");
+        this.view.progressbar.onSuccess = function () {
+
+            percent = 75;
+
+            this.view.progressbar.evaluateJavaScript(
+                "animateTo(" + percent + ");"
+            );
+
+        }.bind(this);
+    },
     preShow: function () {
+
+        this.initProgressView();
+
         //Render immediately from whatever data we have, so the screen is never blank.
         this.renderAll();
 
