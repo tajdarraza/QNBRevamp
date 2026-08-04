@@ -4,7 +4,7 @@
 
 const CENTER_X = 60;
 const CENTER_Y = 60;
-const RADIUS = 44;
+const RADIUS = 46;
 
 const START_ANGLE = -90;
 
