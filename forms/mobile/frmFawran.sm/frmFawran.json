@@ -15,6 +15,11 @@
         0
     ],
     "_percent_": true,
+    "_pxMenuIndex": [
+        0,
+        1,
+        7
+    ],
     "_skin_": "s627deddb33d4efda69ae0bfa64563b8",
     "_title_": null,
     "addWidgetsdone": false,
@@ -38,7 +43,7 @@
         }
     },
     "currentLocale": "default",
-    "device": "GalaxyNote",
+    "device": "Pixel2XL",
     "displayorientation": 1,
     "enabledforidletimeout": true,
     "id": "frmFawran",
@@ -51,6 +56,31 @@
     },
     "iphone": {
         "needAppMenu": false,
+        "psp": {
+            "titleBarAttributes": {
+                "barStyle": 0,
+                "hidesBackButton": false,
+                "kuid": "dd9b40548d0c4c70be3594e6c4cd3641",
+                "leftBarButtonItems": [],
+                "leftItemsSupplementBackButton": true,
+                "prompt": "",
+                "renderTitleText": true,
+                "rightBarButtonItems": [
+                    {
+                        "enabled": true,
+                        "info": {
+                            "title": "Edit"
+                        },
+                        "kuid": "f961a0c01b434171b5bb1de2aee829ad",
+                        "style": 0,
+                        "tintColor": "4b88f100",
+                        "type": 1
+                    }
+                ],
+                "tintColor": "4b88f100",
+                "translucent": true
+            }
+        },
         "titleBar": false
     },
     "iscustomlayout": false,
@@ -61,6 +91,8 @@
     "needappmenu": false,
     "paddinginpixel": false,
     "platform": "android",
+    "prevDevice": "GalaxyNote",
+    "prevPlatform": "android",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,

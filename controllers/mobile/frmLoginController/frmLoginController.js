@@ -106,8 +106,7 @@ define({
         //"Remember me" reflects whether a username is currently remembered, rather than resetting to
         //unchecked on every visit. It was previously a skin swap with no effect on anything.
         this.isChecked = nullCheck(kony.store.getItem("pocUserName"));
-        this.view.flxChckbox.skin = this.isChecked ?
-            "CopyslFbox0f087fc2268764e" : "CopyslFbox0b6c72520c80849";
+        this.view.flxChckbox.src = this.isChecked ? "checkbox.png":"uncheckbox.png";
 
         //Single-market POC — no country picker behaviour, per product decision.
         this.view.lblCountry.text = "Qatar";
