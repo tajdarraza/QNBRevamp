@@ -36,7 +36,9 @@ var fawranDraft = {
     aliasValue: "",
     purposeCode: "",          //-> rtpPayPreprocess "p"
     purposeDesc: "",          //-> rtpPayPreprocess "pd"
-    subPurposeDesc: "",       //design shows a second dropdown; rtpPurpose returns no sub-list
+    purposeItem: null,        //the whole rtpPurpose row, so its subPur[] survives the selection
+    subPurposeDesc: "",       //-> "pd"  (sub item's subDesc)
+    subPurposeCode: "",       //-> "p"   (sub item's fullCode) when a sub-purpose is chosen
     amount: "",
     currency: "QAR",
     preprocessed: null,       //rtpPayPreprocess response data — fees, resolved beneficiary name
@@ -53,7 +55,9 @@ function fawranResetDraft() {
     fawranDraft.aliasValue = "";
     fawranDraft.purposeCode = "";
     fawranDraft.purposeDesc = "";
+    fawranDraft.purposeItem = null;
     fawranDraft.subPurposeDesc = "";
+    fawranDraft.subPurposeCode = "";
     fawranDraft.amount = "";
     fawranDraft.preprocessed = null;
     fawranDraft.otpLength = 6;
@@ -63,6 +67,21 @@ function fawranResetDraft() {
 }
 
 //Shared guard: every Fawran op needs an auth token and reports transport failures the same way.
+//Every cached thing here is SESSION-scoped. rtpAccList mints fresh account uids per session, so a
+//list cached under one login is meaningless under the next — the server answers G-00009
+//"Account Details not Found" for a stale auid. Nothing cleared these on logout, so switching test
+//users inside one app run silently kept the previous customer's accounts.
+function fawranResetSession() {
+    fawranInfo = null;
+    fawranAccounts = [];
+    fawranPurposes = [];
+    fawranProbed = false;
+    fawranNotiAcked = false;
+    fawranIsSme = false;
+    fawranResetDraft();
+    kony.print("POC FAWRAN: session caches cleared");
+}
+
 function fawranGuard(callback) {
     if (typeof gblQNB === "undefined" || !nullCheck(gblQNB) || !nullCheck(gblQNB.atkn)) {
         kony.print("POC FAWRAN: no auth token");
@@ -260,24 +279,99 @@ function fawranFetchAccounts(callback) {
 }
 
 //--- 3. remittance purposes ----------------------------------------------------------------------
+//Production branches here (frmInstaPayController.js:1985-1989):
+//
+//    gblQNB.tahweelMenu && gblQNB.tahweelPOP  ->  TahweelPOP   : data.dto[] with a REAL hierarchy,
+//                                                  { mainDesc, subPur:[{subDesc, fullCode}] }
+//    otherwise                                ->  rtpPurpose   : flat, no sub-purposes at all
+//
+//That is why the two dropdowns showed identical values: we only ever called rtpPurpose, whose rows
+//carry no subPur. Both responses are normalised to one shape so the screen does not care which
+//branch produced it:
+//
+//    { label, code, subs: [ { label, code } ] }
+function fawranNormalisePurposes(rows, fromTahweel) {
+    var out = [], i, j;
+    for (i = 0; i < rows.length; i++) {
+        var r = rows[i];
+        if (fromTahweel) {
+            var subs = [];
+            var sp = r.subPur || [];
+            for (j = 0; j < sp.length; j++) {
+                subs.push({ label: sp[j].subDesc, code: sp[j].fullCode });
+            }
+            out.push({ label: r.mainDesc, code: r.mainCode || r.fullCode || "", subs: subs, raw: r });
+        } else {
+            out.push({ label: r.purposeDesc, code: r.purposeCode, subs: [], raw: r });
+        }
+    }
+    return out;
+}
+
 function fawranFetchPurposes(callback) {
     if (!fawranGuard(callback)) { return; }
     if (fawranPurposes.length) { callback(true, fawranPurposes); return; }
+
+    //gblQNB.tahweelMenu / .tahweelPOP are READ in five places in production and ASSIGNED in none —
+    //they come from a config source this POC does not replicate, so they arrive undefined. Undefined
+    //is not "disabled", it is "unknown". The live SIT app serves the hierarchical list, so when the
+    //flags are unknown we probe TahweelPOP and fall back to the flat rtpPurpose if it yields
+    //nothing. Explicitly-false flags are still honoured.
+    var useTahweel = true;
+    try {
+        if (typeof gblQNB !== "undefined" && gblQNB &&
+            gblQNB.tahweelMenu !== undefined && gblQNB.tahweelPOP !== undefined) {
+            useTahweel = !!(gblQNB.tahweelMenu && gblQNB.tahweelPOP);
+        }
+    } catch (e) { }
+
+    var op = useTahweel ? QNBConstants.serviceName.TahweelPOP : QNBConstants.serviceName.rtpPurpose;
+    //Different bodies: TahweelPOP is keyed on `flow`, rtpPurpose on `rc`. Both enveloped.
+    var body = useTahweel ? { flow: "RTP" } : { rc: "RTP" };
+
+    kony.print("POC FAWRAN: purposes via " + (useTahweel ? "TahweelPOP (hierarchical)" : "rtpPurpose (flat)") +
+        "  tahweelMenu=" + (gblQNB ? gblQNB.tahweelMenu : "?") +
+        " tahweelPOP=" + (gblQNB ? gblQNB.tahweelPOP : "?"));
+
     try {
         var headers = createHeaderObj("", true);
-        var data = { e: encUtilA(JSON.stringify({ rc: "RTP" })) };
+        var data = { e: encUtilA(JSON.stringify(body)) };
 
-        invokeServiceAsync(QNBConstants.serviceName.rtpPurpose, headers, data, function (status, res) {
-            kony.print("POC FAWRAN: rtpPurpose status=" + status +
+        invokeServiceAsync(op, headers, data, function (status, res) {
+            kony.print("POC FAWRAN: " + op + " status=" + status +
                 " code=" + (res && res.status ? res.status.code : "?"));
-            if (fawranOk(res) && res.data && res.data.length) {
-                fawranPurposes = res.data;
-                kony.print("POC FAWRAN: " + res.data.length + " purposes");
-                callback(true, fawranPurposes);
-            } else {
-                kony.print("POC FAWRAN: no purposes :: " + JSON.stringify(res).substring(0, 600));
-                callback(false, res);
+
+            //TahweelPOP nests its list under data.dto; rtpPurpose returns data as the array.
+            var rows = null;
+            if (fawranOk(res) && res.data) {
+                rows = useTahweel ? res.data.dto : res.data;
             }
+
+            if (rows && rows.length) {
+                fawranPurposes = fawranNormalisePurposes(rows, useTahweel);
+                kony.print("POC FAWRAN: " + fawranPurposes.length + " purposes, raw[0] = " +
+                    JSON.stringify(rows[0]).substring(0, 400));
+                callback(true, fawranPurposes);
+                return;
+            }
+
+            //If the hierarchical call comes back empty, fall back to the flat list rather than
+            //leaving the screen with no purposes at all.
+            if (useTahweel) {
+                kony.print("POC FAWRAN: TahweelPOP gave nothing (code=" +
+                    ((res && res.status) ? res.status.code : "?") + ") — falling back to rtpPurpose");
+                var d2 = { e: encUtilA(JSON.stringify({ rc: "RTP" })) };
+                invokeServiceAsync(QNBConstants.serviceName.rtpPurpose, headers, d2,
+                    function (st2, r2) {
+                        if (fawranOk(r2) && r2.data && r2.data.length) {
+                            fawranPurposes = fawranNormalisePurposes(r2.data, false);
+                            callback(true, fawranPurposes);
+                        } else { callback(false, r2); }
+                    });
+                return;
+            }
+            kony.print("POC FAWRAN: no purposes :: " + JSON.stringify(res).substring(0, 600));
+            callback(false, res);
         });
     } catch (e) {
         kony.print("POC FAWRAN: fawranFetchPurposes :: " + e);
@@ -308,8 +402,8 @@ function fawranPreprocess(callback) {
             aV: d.aliasValue,
             c: d.currency,
             amt: ("" + d.amount).split(",").join(""),   //server wants an unformatted amount
-            p: d.purposeCode,
-            pd: d.purposeDesc,
+            p: nullCheck(d.subPurposeCode) ? d.subPurposeCode : d.purposeCode,
+            pd: nullCheck(d.subPurposeDesc) ? d.subPurposeDesc : d.purposeDesc,
             auid: d.debitAccount.auid,
             isAFSHF: "N",
             isNotiCkReq: fawranNotiAcked ? "N" : "Y",   //see fawranNotiAcked
