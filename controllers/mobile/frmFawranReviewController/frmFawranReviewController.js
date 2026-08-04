@@ -82,7 +82,9 @@ define({
         if (a) {
             this.safeText("lblFromAlias", nullCheck(a.acNoF) ? a.acNoF : "");
             this.safeText("lblFromAccType", nullCheck(a.atdsc) ? a.atdsc : "");
-            this.safeText("lblFromBalance", amountText(a.accBal) + " " + (a.cur || cur));
+            //Amount and currency are separate labels now — currency sits on its own line.
+            this.safeText("lblFromBalance", amountText(a.accBal));
+            this.safeText("lblFromCurrency", a.cur || cur);
         }
 
         this.safeText("lblToAlias", nullCheck(fawranDraft.aliasValue) ? fawranDraft.aliasValue : "—");

@@ -37,7 +37,8 @@
     "children": [
         "lblFromAlias",
         "lblFromAccType",
-        "lblFromBalance"
+        "lblFromBalance",
+        "lblFromCurrency"
     ],
     "clipbounds": false,
     "containerweight": 100,

@@ -142,8 +142,80 @@ define({
         return rows;
     },
 
+    //The carousel's FIRST page is the TOTAL balance across accounts (design: "Total balance", the
+    //Current/Savings split bar and the All-accounts button). Pages 1..n are the individual accounts,
+    //unchanged. Page 0 already shows the accounts list beneath it, which is what the design wants.
+    //
+    //The row template carries both shapes, so which one a page renders is decided purely by
+    //visibility here — no layout change.
+    //Digits, not characters — separators and the decimal part are not what overflows.
+    amountSkinFor: function (intPart) {
+        var digits = ("" + intPart).replace(/[^0-9]/g, "").length;
+        //The row is 345dp wide. Even with the full width available, 15 characters at the design's
+        //~39px overflows, so long figures still step down — but only one step, and now that step
+        //actually fits instead of being shrunk twice over to compensate for a wasted 30% offset.
+        if (digits >= 15) { return "sknLabel40pxBold1B124B"; }     //~18px
+        if (digits >= 11) { return "sknLblSansENBold24Px1B124B"; } //~32px
+        return "CopydefLabel0ebbade0e723843";                      //~39px, the design size
+    },
+
     mapDashboardRows: function (accs) {
         var rows = [];
+
+        //--- page 0: total -------------------------------------------------------------------
+        //accBalBase is the numeric QAR-equivalent; avlBal is a display string and must not be
+        //summed (Number("12,450.75") is NaN — see amountNumber).
+        var total = 0, current = 0, savings = 0, cur = "QAR";
+        for (var t = 0; t < accs.length; t++) {
+            var acc = accs[t];
+            var base = (typeof acc.accBalBase === "number")
+                ? acc.accBalBase : amountNumber(acc.accBalRaw || acc.avlBal);
+            total += base;
+            //Split by account type. "CA" is current; anything else counts as savings, so a type we
+            //have not seen lands in a bucket rather than vanishing from the bar.
+            var isCurrent = (acc.accType === "CA") ||
+                (nullCheck(acc.accTypeDesc) && acc.accTypeDesc.toUpperCase().indexOf("CURRENT") > -1);
+            if (isCurrent) { current += base; } else { savings += base; }
+        }
+        var totalText = formatAmount(total);
+        var tParts = totalText.split(".");
+        var pct = function (v) {
+            if (total <= 0) { return "0%"; }
+            return Math.round((v / total) * 100) + "%";
+        };
+        kony.print("POC DASH: total=" + totalText + " current=" + formatAmount(current) +
+            " savings=" + formatAmount(savings) + " over " + accs.length + " accounts");
+
+        //lblAccBalane is `width: preferred` starting at left 30%, so a long figure simply runs off
+        //the right edge and clips. SIT balances reach twelve digits, so step the font down as the
+        //number grows rather than truncating a balance.
+        var amountSkin = this.amountSkinFor(tParts[0]);
+
+        rows.push({
+            lblAccountType: "Total balance",
+            imgAccType: "eyevisible1.png",
+            lblAccBalane: { text: tParts[0], skin: amountSkin },
+            lblDecimal: "." + (tParts[1] || "00"),
+            lblCurr: cur,
+            //The design shows "Loans remaining balance" here. No loan figure comes back from
+            //DashboardComposite, so the line stays empty rather than showing an invented number.
+            lblActualBal: "",
+            lblBalance: "",
+            lblAllAccounts: "All accounts",
+            imgAllAccount: "iconright1.png",
+            lblCurrent: "Current",
+            lblSavings: "Savings",
+            //DECORATIVE ONLY — kept at the user's request because the page looks bare without it.
+            //The bar shows the row template's fixed 75/23 split, NOT this customer's real
+            //current-vs-savings ratio: Kony segment row data honours `text` and `skin` only, so the
+            //widths cannot be driven per row (proven on device — `isVisible` and geometry are both
+            //ignored). To make it real, the total page has to move out of the segment into a static
+            //container where the widths can be set directly.
+            flxAllAccounts: { isVisible: true },
+            flxActualBalance: { isVisible: false },
+        });
+
+        //--- pages 1..n: one per account, as before -------------------------------------------
         for (var i = 0; i < accs.length; i++) {
             var a = accs[i];
             var full = this.amountText(a.avlBal);       //already "12,450.75" from the server
@@ -151,7 +223,7 @@ define({
             rows.push({
                 lblAccountType: nullCheck(a.accTypeDesc) ? a.accTypeDesc : "Account",
                 imgAccType: "eyevisible1.png",
-                lblAccBalane: parts[0],
+                lblAccBalane: { text: parts[0], skin: this.amountSkinFor(parts[0]) },
                 lblDecimal: "." + (parts[1] || "00"),
                 lblCurr: nullCheck(a.curr) ? a.curr : "",
                 lblActualBal: "Actual balance  ",
@@ -159,7 +231,11 @@ define({
                 lblAllAccounts: "All accounts",
                 imgAllAccount: "iconright1.png",
                 lblSavings: "",
-                lblCurrent: ""
+                lblCurrent: "",
+                //The split bar and its legend belong to the total page only.
+                flxGraphics: { isVisible: false },
+                flxAllAccounts: { isVisible: true },
+                flxActualBalance: { isVisible: true }
             });
         }
         return rows;
@@ -250,10 +326,10 @@ define({
         //Guarded so the nav is safe to ship before frmMenu exists in the project — navigating to a
         //form Visualizer has not generated throws, which would look like a crash in the demo.
         try {
-            new kony.mvc.Navigation("frmMenu").navigate();
+            new kony.mvc.Navigation("frmMoreActions").navigate();
         } catch (e) {
             kony.print("frmMenu not available yet :: " + e);
-            pocNotBuilt("Menu");
+            new kony.mvc.Navigation("frmMoreActions").navigate();
         }
     },
 

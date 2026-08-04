@@ -103,8 +103,9 @@ define({
         if (a) {
             this.safeText("lblFromAlias", nullCheck(a.acNoF) ? a.acNoF : "");
             this.safeText("lblFromAccType", nullCheck(a.atdsc) ? a.atdsc : "");
-            this.safeText("lblFromBalance",
-                amountText(a.accBal) + " " + (nullCheck(a.cur) ? a.cur : "QAR"));
+            //Amount and currency are separate labels now — the currency sits on its own line.
+            this.safeText("lblFromBalance", amountText(a.accBal));
+            this.safeText("lblFromCurrency", nullCheck(a.cur) ? a.cur : "QAR");
         }
         //Guard both: an undefined here previously rendered as the literal string "undefined" above
         //the input, because safeText stringifies whatever it is given.
@@ -132,7 +133,9 @@ define({
     //problem: the controller only sets text, visibility and the tap handler.
     PICKER_ROWS: 10,
 
-    showPicker: function (title, rows, onPick) {
+    //`dividers` is opt-out: the account picker keeps its separators (the design has them),
+    //the alias-type list does not.
+    showPicker: function (title, rows, onPick, dividers) {
         var self = this;
         this.safeText("lblPickerTitle", title);
 
@@ -144,7 +147,7 @@ define({
 
         for (var i = 0; i < this.PICKER_ROWS; i++) {
             var row = (i < rows.length) ? rows[i] : null;
-            this.showRow(i, row, rows.length, onPick);
+            this.showRow(i, row, rows.length, onPick, dividers !== false);
         }
 
         try {
@@ -155,10 +158,16 @@ define({
         }
     },
 
-    showRow: function (i, row, total, onPick) {
+    //A row can carry up to four fields, matching the design: title + sub on the left, amount +
+    //currency stacked on the right. Alias-type and purpose rows use the title alone, so the other
+    //three are hidden rather than left showing stale text from a previous picker.
+    showRow: function (i, row, total, onPick, dividers) {
         var self = this;
         var flx = this.view["flxPickRow" + i];
         var lbl = this.view["lblPickRow" + i];
+        var sub = this.view["lblPickSub" + i];
+        var amt = this.view["lblPickAmt" + i];
+        var cur = this.view["lblPickCur" + i];
         var div = this.view["flxPickDiv" + i];
         if (!flx || !lbl) { return; }
 
@@ -166,9 +175,12 @@ define({
 
         lbl.text = row.label;
         flx.setVisibility(true);
-        //Making the parent visible does NOT recurse, so the label and divider are set explicitly.
+        //Making the parent visible does NOT recurse, so each child is set explicitly.
         lbl.setVisibility(true);
-        if (div) { div.setVisibility(i < total - 1); }
+        this.rowField(sub, row.sub);
+        this.rowField(amt, row.amount);
+        this.rowField(cur, row.currency);
+        if (div) { div.setVisibility(dividers && i < total - 1); }
 
         var handler = function () {
             self.hidePicker();
@@ -176,6 +188,20 @@ define({
         };
         flx.onTouchEnd = handler;
         lbl.onTouchEnd = handler;
+        if (sub) { sub.onTouchEnd = handler; }
+        if (amt) { amt.onTouchEnd = handler; }
+        if (cur) { cur.onTouchEnd = handler; }
+    },
+
+    rowField: function (w, value) {
+        if (!w) { return; }
+        if (nullCheck(value)) {
+            w.text = value;
+            w.setVisibility(true);
+        } else {
+            w.text = "";
+            w.setVisibility(false);
+        }
     },
 
     hidePicker: function () {
@@ -188,8 +214,12 @@ define({
         var rows = [];
         for (var i = 0; i < fawranAccounts.length; i++) {
             var a = fawranAccounts[i];
+            //Four fields, as the design lays them out — no more cramming everything onto one line.
             rows.push({
-                label: a.acNoF + "   " + amountText(a.accBal) + " " + (a.cur || "QAR"),
+                label: a.acNoF,
+                sub: nullCheck(a.atdsc) ? a.atdsc : "",
+                amount: amountText(a.accBal),
+                currency: nullCheck(a.cur) ? a.cur : "QAR",
                 acc: a
             });
         }
@@ -201,15 +231,9 @@ define({
     },
 
     //Label derivation MIRRORS PRODUCTION (QNBMBTransfer/frmInstaPayController.js:578-606).
-    //The two lists are NOT the same shape, which is what produced the literal "undefined":
-    //
-    //  benAliasTypes (retail)     -> rows carry ONLY `type`. There is no desc. Production derives
-    //                                the label client-side: MOB -> mobile number, ALI -> alias name,
-    //                                anything else -> IBAN (the default branch).
-    //  benAliasTypesCorp (SME)    -> rows DO carry `desc`, and production uses it verbatim.
-    //
-    //Reading `.desc` off the retail rows yields undefined for every one of them. The corporate rows
-    //rendered fine, which is exactly the split seen on device.
+    //The two lists are NOT the same shape: benAliasTypes (retail) rows carry ONLY `type` and the
+    //label is derived from it; benAliasTypesCorp rows DO carry `desc`. Reading `.desc` off the
+    //retail rows yields undefined for every one of them.
     aliasTypeLabel: function (it, isCorp) {
         if (isCorp) { return nullCheck(it.desc) ? it.desc : (it.type || ""); }
         if (it.type === "MOB") { return "Mobile number"; }
@@ -244,35 +268,56 @@ define({
             //Field label follows the chosen type, as the design does.
             self.safeText("lblAliasValueLabel", row.label);
             self.renderDraft();
-        });
+        }, false);
     },
 
-    //rtpPurpose returns a flat list of {purposeCode, purposeDesc} — there is no sub-purpose data in
-    //the response. The design shows two dropdowns, so main sets `p` (purposeCode) and sub sets `pd`
-    //(the free-text description production sends alongside it). Worth confirming with the business
-    //whether sub-purpose is meant to be a second server-driven list.
+    //Purposes arrive normalised as { label, code, subs:[{label, code}] } — see
+    //fawranFetchPurposes, which picks TahweelPOP (hierarchical) or rtpPurpose (flat) exactly as
+    //production does. The sub list belongs to the SELECTED main purpose, never the top-level list.
     openPurposePicker: function (which) {
         var self = this;
         if (!fawranPurposes.length) { pocNotBuilt("Remittance purposes"); return; }
 
-        var rows = [];
-        for (var i = 0; i < fawranPurposes.length; i++) {
-            rows.push({
-                label: fawranPurposes[i].purposeDesc,
-                code: fawranPurposes[i].purposeCode
-            });
-        }
-        this.showPicker(which === "main" ? "Main purpose of remittance"
-                                         : "Sub-purpose of remittance",
-            rows, function (row) {
-                if (which === "main") {
-                    fawranDraft.purposeCode = row.code;
-                    fawranDraft.purposeDesc = row.label;
-                } else {
-                    fawranDraft.subPurposeDesc = row.label;
-                }
+        var rows = [], i;
+
+        if (which === "main") {
+            for (i = 0; i < fawranPurposes.length; i++) {
+                rows.push({ label: fawranPurposes[i].label, item: fawranPurposes[i] });
+            }
+            this.showPicker("Main purpose of remittance", rows, function (row) {
+                fawranDraft.purposeItem = row.item;
+                fawranDraft.purposeCode = row.item.code;
+                fawranDraft.purposeDesc = row.label;
+                //A new main purpose invalidates whatever sub-purpose was chosen under the old one.
+                fawranDraft.subPurposeDesc = "";
+                fawranDraft.subPurposeCode = "";
+                self.safeText("lblSubPurpose", "Select");
+                kony.print("POC FAWRAN XFER: main purpose " + row.item.code +
+                    ", sub count=" + ((row.item.subs || []).length));
                 self.renderDraft();
-            });
+            }, false);
+            return;
+        }
+
+        //--- sub-purpose -------------------------------------------------------------------------
+        var main = fawranDraft.purposeItem;
+        if (!main) { this.warn("Select the main purpose of remittance first."); return; }
+
+        var subs = main.subs || [];
+        if (!subs.length) {
+            //Some purposes legitimately have no sub-list. Say so rather than opening an empty sheet.
+            this.warn("This purpose has no sub-purpose to choose.");
+            return;
+        }
+        for (i = 0; i < subs.length; i++) {
+            rows.push({ label: subs[i].label, code: subs[i].code, item: subs[i] });
+        }
+        this.showPicker("Sub-purpose of remittance", rows, function (row) {
+            fawranDraft.subPurposeDesc = row.label;
+            fawranDraft.subPurposeCode = nullCheck(row.code) ? row.code : "";
+            kony.print("POC FAWRAN XFER: sub-purpose " + row.label + " fullCode=" + row.code);
+            self.renderDraft();
+        }, false);
     },
 
     //--- continue --------------------------------------------------------------------------------
