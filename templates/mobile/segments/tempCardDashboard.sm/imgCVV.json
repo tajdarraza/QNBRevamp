@@ -2,13 +2,13 @@
     "@class": "com.kony.gen.viz.model.component.KVizImage2",
     "DNDConfig": null,
     "_base64_": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "10dp"
+    },
     "_height_": {
         "type": "string",
-        "value": "100%"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
+        "value": "16dp"
     },
     "_margin_": [
         0,
@@ -22,36 +22,29 @@
         0,
         0
     ],
-    "_skin_": "s46f4cc5af674c87a6552260c65fd4ef",
-    "_src_": "closeicon.png",
-    "_top_": {
+    "_right_": {
         "type": "string",
-        "value": "0dp"
+        "value": "10dp"
     },
+    "_skin_": "s46f4cc5af674c87a6552260c65fd4ef",
+    "_src_": "eyeclose.png",
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "16dp"
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
+    "containerId": true,
     "containerweight": 100,
-    "id": "imgDismissIcon",
+    "id": "imgCVV",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e6bcd2f4e3ce498f9146ed0aa9c7fd51",
+    "kuid": "efa0fa8d1ebd4546bf725eab991fc37c",
     "name": "kony.ui.Image2",
-    "parent": "flxDismissIcon",
-    "pf": "frmPayCard",
+    "parent": "flxCVVPar",
+    "pf": "tempCardDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "srcType": 1,

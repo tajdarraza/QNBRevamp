@@ -1,8 +1,12 @@
 {
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0"
+    },
     "_height_": {
         "type": "string",
-        "value": "134dp"
+        "value": "40dp"
     },
     "_left_": {
         "type": "string",
@@ -25,36 +29,36 @@
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "20dp"
+        "value": "50dp"
     },
     "_width_": {
         "type": "string",
-        "value": "90%"
+        "value": "100dp"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "centerx": {
+    "centery": {
         "type": "string",
         "value": "50%"
     },
     "children": [
-        "flxCreditCard",
-        "flxCVVPar",
-        "flxExpirationDate"
+        "lblCVV",
+        "imgCVV",
+        "flxCVVNum"
     ],
     "clipbounds": false,
     "containerId": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxTopCardBackView",
+    "id": "flxCVVPar",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d8b39973169d4ccc830726dc283fc135",
+    "kuid": "b3abbb6d790d49ebb5b81c9adf3fe1b6",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxCardBackView",
+    "parent": "flxTopCardBackView",
     "pf": "tempCardDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
