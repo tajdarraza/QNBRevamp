@@ -8,6 +8,127 @@ define(["APICallController"], function (commonUtil) {
             this.view.btnRevAndConfrm.onClick = this.btnRevAndConfrm;
             this.view.preShow = this.preShow;
 
+            //"Pay from" was a plain label with no handler — tapping it did nothing, which read as a
+            //broken control rather than an unbuilt one. Bound on the row AND the label: a label
+            //without a handler does not consume the tap, so binding only the container leaves dead
+            //spots over the text.
+            this.bindTap("flxSelectedAcc", this.openAccountPicker);
+            this.bindTap("lblSelectedAcc", this.openAccountPicker);
+            this.bindTap("imgPickerClose", this.closeAccountPicker);
+        },
+
+        bindTap: function (id, fn) {
+            try {
+                if (this.view[id]) {
+                    this.view[id].onTouchEnd = fn;
+                    kony.print("POC PAYCARD CONFIRM: bound tap on " + id);
+                } else {
+                    //Never skip in silence — an unbuilt widget and a working one used to look the
+                    //same in the log, which is what made the busy overlay take three attempts.
+                    kony.print("POC PAYCARD CONFIRM: *** " + id + " MISSING from the form ***");
+                }
+            } catch (e) { kony.print("POC PAYCARD CONFIRM bindTap " + id + " :: " + e); }
+        },
+
+        //--- pay-from picker ------------------------------------------------------------------
+        //Ten pre-built rows, hidden by default. Runtime `new kony.ui.Label` ignores its position
+        //config in this build — every row landed on the same line — so the rows are static widgets
+        //and the controller only sets text, visibility and handlers. Same approach as Fawran.
+        pickerRowCount: 10,
+
+        openAccountPicker: function () {
+            var self = this;
+            kony.print("POC PAYCARD CONFIRM: Pay from tapped, " + payCardAccounts.length +
+                " accounts available");
+            if (!this.view.flxPickerSheet) {
+                kony.print("POC PAYCARD CONFIRM: *** flxPickerSheet MISSING *** rebuild the FORM");
+                return;
+            }
+            if (!payCardAccounts.length) {
+                kony.print("POC PAYCARD CONFIRM: no accounts to choose from");
+                return;
+            }
+
+            try { this.view.lblPickerTitle.text = "Pay from"; } catch (e) { }
+
+            var shown = payCardAccounts.length;
+            if (shown > this.pickerRowCount) {
+                //Never truncate in silence — say what was dropped.
+                kony.print("POC PAYCARD CONFIRM: " + payCardAccounts.length +
+                    " accounts but only " + this.pickerRowCount + " picker rows");
+                shown = this.pickerRowCount;
+            }
+
+            for (var i = 0; i < this.pickerRowCount; i++) {
+                var row = this.view["flxPickRow" + i];
+                if (!row) { continue; }
+                if (i >= shown) { row.setVisibility(false); continue; }
+
+                var acc = payCardAccounts[i];
+                this.safeText("lblPickRow" + i, acc.af);
+                this.safeText("lblPickSub" + i, acc.ad);
+                this.safeText("lblPickAmt" + i, acc.al);
+                this.safeText("lblPickCur" + i, acc.cr || payCardDraft.currency);
+                row.setVisibility(true);
+                row.onTouchEnd = (function (idx) {
+                    return function () { self.onAccountPicked(idx); };
+                })(i);
+            }
+
+            this.view.flxPickerSheet.setVisibility(true);
+            this.view.forceLayout();
+        },
+
+        closeAccountPicker: function () {
+            try {
+                this.view.flxPickerSheet.setVisibility(false);
+                this.view.forceLayout();
+            } catch (e) { kony.print("POC PAYCARD CONFIRM closeAccountPicker :: " + e); }
+        },
+
+        //CHANGING THE ACCOUNT INVALIDATES prePC. The pre-validation that let this screen open was
+        //run against the previous account, and confirmPC would post against a combination the server
+        //never validated. So the new account is re-validated immediately, and a rejection puts the
+        //old account back rather than leaving the screen describing a payment that cannot be made.
+        onAccountPicked: function (index) {
+            var self = this;
+            var acc = payCardAccounts[index];
+            if (!acc) { return; }
+
+            this.closeAccountPicker();
+
+            var previous = payCardDraft.account;
+            if (previous && previous.au === acc.au) { return; }
+
+            payCardDraft.account = acc;
+            payCardDraft.accuid = acc.au;
+            kony.print("POC PAYCARD CONFIRM: pay-from changed to " + acc.af + " auid=" + acc.au +
+                " — re-validating");
+
+            this.busy(true);
+            payCardPrevalidate(function (ok, data) {
+                self.busy(false);
+                if (!ok) {
+                    payCardDraft.account = previous;
+                    payCardDraft.accuid = previous ? previous.au : "";
+                    kony.print("POC PAYCARD CONFIRM: re-validation failed, reverted to " +
+                        (previous ? previous.af : "(none)"));
+                    var msg = (data && data.status && nullCheck(data.status.description))
+                        ? data.status.description
+                        : "This payment cannot be made from that account.";
+                    kony.ui.Alert({
+                        message: msg, alertType: constants.ALERT_TYPE_INFO,
+                        alertTitle: "Pay card", yesLabel: "OK"
+                    }, {});
+                    self.renderReal();
+                    return;
+                }
+                //The server may return a different amount for the new account, and it is the
+                //server's figure that gets paid.
+                self.renderReal();
+                self.updateProgress(self.navData.utilisedAmount, self.navData.totalLimit,
+                    self.navData.payAmount);
+            });
         },
 
         //Guarded like the Fawran submit: claimed before the call and never released on success, so a
@@ -19,11 +140,11 @@ define(["APICallController"], function (commonUtil) {
             var self = this;
             if (this.submitting) { return; }
             this.submitting = true;
-            try { showLoadingScreen(); } catch (e) { }
+            this.busy(true);
 
             payCardConfirm(function (ok, data, code) {
-                try { dismissLoadingScreen(); } catch (e) { }
                 if (!ok) {
+                    self.busy(false);
                     self.submitting = false;
                     var msg = (data && data.status && nullCheck(data.status.description))
                         ? data.status.description : "The payment could not be completed.";
@@ -37,6 +158,41 @@ define(["APICallController"], function (commonUtil) {
                     " receipt = " + JSON.stringify(data).substring(0, 400));
                 new kony.mvc.Navigation("frmCardPayment").navigate(self.navData);
             });
+        },
+
+        //Common's showLoadingScreen() renders nothing in this app, so the payment posted with no
+        //feedback at all — several seconds of a screen that looked like the tap had missed. Own
+        //overlay, and it eats taps while confirmPC is in flight.
+        //
+        //NOT dismissed on success: the success screen replaces this one, and clearing it first shows
+        //a live Confirm button for the moment in between.
+        busy: function (on) {
+            try {
+                if (this.view.flxBusy) {
+                    if (this.view.lblBusyMsg) {
+                        this.view.lblBusyMsg.text = "Making your payment…";
+                    }
+                    this.view.flxBusy.setVisibility(on);
+                    if (on) { this.view.flxBusy.onTouchEnd = function () { }; }
+                    this.view.forceLayout();
+                    //Read the flag back. "Ran without throwing" is not the same as "is on screen",
+                    //and the overlay reported no error while showing nothing.
+                    kony.print("POC PAYCARD CONFIRM: busy(" + on + ") applied, isVisible=" +
+                        this.view.flxBusy.isVisible);
+                } else {
+                    //The guard used to skip silently, so a form built without the widget looked
+                    //identical to a working one.
+                    kony.print("POC PAYCARD CONFIRM: *** flxBusy MISSING from the form *** " +
+                        "rebuild the FORM in Visualizer, not just the controller");
+                }
+            } catch (e) {
+                kony.print("POC PAYCARD CONFIRM overlay busy(" + on + ") :: " + e);
+            }
+            try {
+                if (on) { showLoadingScreen(); } else { dismissLoadingScreen(); }
+            } catch (e) {
+                kony.print("POC PAYCARD CONFIRM busy(" + on + ") :: " + e);
+            }
         },
 
         safeText: function (id, txt) {
@@ -102,6 +258,14 @@ define(["APICallController"], function (commonUtil) {
         },
 
         preShow: function () {
+            //The overlay is deliberately left up when the payment succeeds, so it has to be cleared
+            //on the way in — the success screen's device-back lands straight back here, and the
+            //screen would otherwise be stuck behind it. Same for the submit guard: arriving here
+            //means a fresh prePC has run, and payCardConfirm refuses a second payment on a spent
+            //pre-validation anyway.
+            this.busy(false);
+            this.submitting = false;
+
             this.renderReal();
             this.updateProgress(
                 this.navData.utilisedAmount,

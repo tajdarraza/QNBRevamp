@@ -209,6 +209,12 @@ define({
             this.cardData[i].imgFlipBack = {
                 onTouchEnd: this.flipCard.bind(this, i)
             };
+            //The eye beside the CVV. Bound per row like the flip icons; the segment's widgetdatamap
+            //already lists imgCVV, so the handler reaches it.
+            this.cardData[i].imgCVV = {
+                src: this.cardData[i].revealed ? "eyevisible.png" : "eyeclose.png",
+                onTouchEnd: this.onToggleCvv.bind(this, i)
+            };
             this.cardData[i].flxMenu4 = {
                 onTouchEnd: this.onMenu4Click
             };
@@ -222,7 +228,40 @@ define({
 
     onMenu4Click: function(){
         new kony.mvc.Navigation("frmCardSetting").navigate();
-        
+
+    },
+
+    //--- CVV eye toggle -------------------------------------------------------------------------
+    //PLACEHOLDER, NOT A REVEAL. The real CVV comes from `cardDisplaySec`, which is gated by
+    //biometric or OTP (cardDisplayOtp -> fpStatus). That integration was written and then removed on
+    //2026-08-05: the OTP screen it needs is a whole journey production implements as
+    //flxVirtualCardOTP, and it is not worth it for the POC. The working service module is kept at
+    //scratchpad/CardSecureService.js.reference if it is ever wanted back — including the detail that
+    //cost the most to find, that `cuid` comes from the `cardlist` service and from nowhere else.
+    //
+    //This shows sample digits so the toggle and the design can be demonstrated. NOTHING HERE IS REAL
+    //CARD DATA.
+    cvvSampleText: "123",
+
+    onToggleCvv: function (rowIndex) {
+        var row = this.cardData[rowIndex];
+        if (!row) { return; }
+
+        row.revealed = !row.revealed;
+        row.lblCVVNum = row.revealed ? this.cvvSampleText : "•••";
+        row.imgCVV = {
+            src: row.revealed ? "eyevisible.png" : "eyeclose.png",
+            onTouchEnd: this.onToggleCvv.bind(this, rowIndex)
+        };
+
+        this.cardData[rowIndex] = row;
+        try {
+            this.view.segCards.setDataAt(row, rowIndex);
+        } catch (e) {
+            kony.print("POC CARDS: CVV toggle setDataAt :: " + e);
+        }
+        kony.print("POC CARDS: CVV sample " + (row.revealed ? "shown" : "hidden") +
+            " on row " + rowIndex);
     },
 
     //Guards the double-fire: both imgFlipFrontCard and imgFlipBack carry this handler and a single

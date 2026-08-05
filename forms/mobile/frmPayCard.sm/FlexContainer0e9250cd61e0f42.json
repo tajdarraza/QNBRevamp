@@ -1,60 +1,60 @@
 {
-    "DNDConfig": null,
-    "_height_": {
-        "type": "string",
-        "value": "20dp"
-    },
-    "_margin_": [
-        0,
-        0,
-        0,
-        0
-    ],
-    "_orientation_": 6,
-    "_padding_": [
-        0,
-        0,
-        0,
-        0
-    ],
-    "_percent_": true,
-    "_right_": {
-        "type": "string",
-        "value": "0"
-    },
-    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
-    "_top_": {
-        "type": "string",
-        "value": "0"
-    },
-    "_width_": {
-        "type": "string",
-        "value": "35%"
-    },
-    "allboxes": [],
-    "autogrowmode": 0,
-    "canUpdateUI": true,
-    "children": [
-        "Label0f1ce4bcb054f44",
-        "Image0h4ece47a2b0f44"
-    ],
-    "clipbounds": false,
-    "containerweight": 100,
-    "enablescrolling": true,
-    "id": "FlexContainer0e9250cd61e0f42",
-    "info": null,
-    "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "d946b8c5d6de4ded9e5f23152a9fb7c9",
-    "layouttype": 2,
-    "name": "kony.ui.FlexContainer",
-    "parent": "flxPayFrom",
-    "pf": "frmPayCard",
-    "retaincontentalignment": false,
-    "retainflexpositionproperties": false,
-    "retainflowhorizontalalignment": false,
-    "snapgridsize": 10,
-    "snaptogrid": true,
-    "wType": "FlexContainer",
-    "widgetalignment": 1
+  "DNDConfig": null,
+  "_height_": {
+    "type": "string",
+    "value": "20dp"
+  },
+  "_margin_": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "_orientation_": 6,
+  "_padding_": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "_percent_": true,
+  "_right_": {
+    "type": "string",
+    "value": "0"
+  },
+  "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+  "_top_": {
+    "type": "string",
+    "value": "0"
+  },
+  "_width_": {
+    "type": "string",
+    "value": "35%"
+  },
+  "allboxes": [],
+  "autogrowmode": 0,
+  "canUpdateUI": true,
+  "children": [
+    "Label0f1ce4bcb054f44",
+    "Image0h4ece47a2b0f44"
+  ],
+  "clipbounds": false,
+  "containerweight": 100,
+  "enablescrolling": false,
+  "id": "FlexContainer0e9250cd61e0f42",
+  "info": null,
+  "iscustomlayout": false,
+  "isvisible": true,
+  "kuid": "d946b8c5d6de4ded9e5f23152a9fb7c9",
+  "layouttype": 2,
+  "name": "kony.ui.FlexContainer",
+  "parent": "flxPayFrom",
+  "pf": "frmPayCard",
+  "retaincontentalignment": false,
+  "retainflexpositionproperties": false,
+  "retainflowhorizontalalignment": false,
+  "snapgridsize": 10,
+  "snaptogrid": true,
+  "wType": "FlexContainer",
+  "widgetalignment": 1
 }

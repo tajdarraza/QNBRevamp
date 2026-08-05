@@ -463,10 +463,22 @@ define({
         this.allAccounts = segData;
         this.view.segAllAccounts.setData(segData);
     },
+    //This customer has 15 accounts. The carousel gives every account a dot, and past about six the
+    //dots run off the screen edge — createIndicators lays them out from the row count, so the cap has
+    //to be on the ROWS, not on the dots, or the carousel and its indicator disagree.
+    //Nothing is hidden from the customer: the full list is one tap away behind "All accounts",
+    //which is fed by serverAccounts and stays complete.
+    maxCarouselAccounts: 5,
+
     setAccountDashboardData: function () {
 
         if (this.serverDashRows && this.serverDashRows.length) {
             var rows = this.serverDashRows;
+            if (rows.length > this.maxCarouselAccounts) {
+                kony.print("POC DASH: carousel capped at " + this.maxCarouselAccounts + " of " +
+                    rows.length + " accounts — the rest are on All accounts");
+                rows = rows.slice(0, this.maxCarouselAccounts);
+            }
             if (this.data && this.data.hasOwnProperty("hideBalance") && this.data.hideBalance) {
                 for (var r = 0; r < rows.length; r++) {
                     rows[r].lblAccBalane = "************";

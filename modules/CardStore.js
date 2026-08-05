@@ -169,7 +169,15 @@ function pocMapCardsForCardsScreen(rows) {
             lblBackCardNumber: "Card number",
             index: i + 1,
             lblExpirationDate: "Expiry Date",
-            lblExpiryDate: "",
+
+            //SAMPLE VALUES — NOT THIS CARD'S DATA. Neither expiry nor CVV exists in any non-gated
+            //service: getCCListDashboard has 16 fields and `cardlist` 13, and expiry is in neither.
+            //Production reads both from `cardDisplaySec`, behind biometric/OTP. Placeholders stand in
+            //so the back face and its eye toggle can be demonstrated.
+            lblExpiryDate: "04/29",
+            lblCVVNum: "•••",
+            imgCVV: { src: "eyeclose.png" },
+            revealed: false,
             showBack: false,
             flxCardFrontView: { isVisible: true },
             flxCardBackView: { isVisible: false }

@@ -29,6 +29,111 @@ define({
         //These three were dead — the only way to enter an amount was free text.
         this.view.btnFullBal.onClick = this.onFullBalance;
         this.view.btnMinAmtDue.onClick = this.onMinimumDue;
+
+        //"Pay from → current account1 ›" shipped as design-time text with no handler. This is where
+        //production puts the account picker too — BEFORE review — so a change here needs no
+        //re-validation: prePC has not run yet.
+        //The row, its inner container, its label and the chevron all get the handler: a label or
+        //image without one does not consume the tap, leaving dead spots over exactly the text people
+        //aim at.
+        this.bindTap("flxPayFrom", this.openAccountPicker);
+        this.bindTap("FlexContainer0e9250cd61e0f42", this.openAccountPicker);
+        this.bindTap("Label0f1ce4bcb054f44", this.openAccountPicker);
+        this.bindTap("Image0h4ece47a2b0f44", this.openAccountPicker);
+        this.bindTap("imgPickerClose", this.closeAccountPicker);
+    },
+
+    bindTap: function (id, fn) {
+        try {
+            if (this.view[id]) {
+                this.view[id].onTouchEnd = fn;
+                kony.print("POC PAYCARD: bound tap on " + id);
+            } else {
+                kony.print("POC PAYCARD: *** " + id + " MISSING from the form ***");
+            }
+        } catch (e) { kony.print("POC PAYCARD bindTap " + id + " :: " + e); }
+    },
+
+    //--- pay-from picker ---------------------------------------------------------------------
+    //Ten pre-built static rows: runtime `new kony.ui.Label` ignores its position config in this
+    //build and every row lands on the same line. Controller only sets text, visibility, handlers.
+    pickerRowCount: 10,
+
+    openAccountPicker: function () {
+        var self = this;
+        kony.print("POC PAYCARD: Pay from tapped, " + payCardAccounts.length + " accounts");
+
+        if (!this.view.flxPickerSheet) {
+            kony.print("POC PAYCARD: *** flxPickerSheet MISSING *** rebuild the FORM in Visualizer");
+            return;
+        }
+        if (!payCardAccounts.length) {
+            //The composite takes ~5s on a cold entry; before it lands there is nothing to choose.
+            this.warn(payCardLoading
+                ? "Still loading your accounts. Try again in a moment."
+                : "No account available to pay from.");
+            return;
+        }
+
+        try { this.view.lblPickerTitle.text = "Pay from"; } catch (e) { }
+
+        var shown = payCardAccounts.length;
+        if (shown > this.pickerRowCount) {
+            kony.print("POC PAYCARD: " + payCardAccounts.length + " accounts but only " +
+                this.pickerRowCount + " picker rows — showing the first " + this.pickerRowCount);
+            shown = this.pickerRowCount;
+        }
+
+        for (var i = 0; i < this.pickerRowCount; i++) {
+            var row = this.view["flxPickRow" + i];
+            if (!row) { continue; }
+            if (i >= shown) { row.setVisibility(false); continue; }
+
+            var acc = payCardAccounts[i];
+            this.setText("lblPickRow" + i, acc.af);
+            this.setText("lblPickSub" + i, acc.ad);
+            this.setText("lblPickAmt" + i, acc.al);
+            this.setText("lblPickCur" + i, acc.cr || payCardDraft.currency);
+            row.setVisibility(true);
+            row.onTouchEnd = (function (idx) {
+                return function () { self.onAccountPicked(idx); };
+            })(i);
+        }
+
+        this.view.flxPickerSheet.setVisibility(true);
+        this.view.forceLayout();
+    },
+
+    closeAccountPicker: function () {
+        try {
+            this.view.flxPickerSheet.setVisibility(false);
+            this.view.forceLayout();
+        } catch (e) { kony.print("POC PAYCARD closeAccountPicker :: " + e); }
+    },
+
+    //No re-validation needed here: prePC runs when Review and confirm is pressed, and it re-resolves
+    //the account uid from the draft at that moment.
+    onAccountPicked: function (index) {
+        var acc = payCardAccounts[index];
+        if (!acc) { return; }
+        payCardDraft.account = acc;
+        payCardDraft.accuid = acc.au;
+        kony.print("POC PAYCARD: pay-from set to " + acc.af + " (" + acc.ad + ") auid=" + acc.au);
+        this.closeAccountPicker();
+        this.showSelectedAccount();
+    },
+
+    //Replaces the "current account1" placeholder with the account the payment will debit.
+    showSelectedAccount: function () {
+        var acc = payCardDraft.account;
+        if (!acc) { return; }
+        this.setText("Label0f1ce4bcb054f44", acc.af);
+    },
+
+    setText: function (id, txt) {
+        if (txt === null || txt === undefined) { return; }
+        try { if (this.view[id]) { this.view[id].text = "" + txt; } }
+        catch (e) { kony.print("POC PAYCARD setText " + id + " :: " + e); }
     },
 
     preShow: function () {
@@ -82,6 +187,7 @@ define({
             var a = payCardDraft.account;
             if (a) {
                 kony.print("POC PAYCARD: paying from " + a.af + " (" + a.ad + ") " + a.al + " " + a.cr);
+                self.showSelectedAccount();
             }
             kony.print("POC PAYCARD: payment options loaded, " + payCardTypes.length + " pay types");
         });
@@ -204,7 +310,31 @@ define({
 
     //Common's loader renders nothing in this app (proven on the Fawran screens), so use the same
     //approach: keep the call, and rely on the button state for feedback until an overlay exists.
+    //Common's showLoadingScreen() resolves and does not throw, but renders NOTHING in this app — the
+    //same finding as the Fawran screens, where the confirm chain sat silent for ~20s. prePC alone can
+    //take five seconds, so the screen has to say something. Own overlay first, Common's call kept in
+    //case it works elsewhere.
+    //
+    //The overlay also swallows taps while a call is in flight, which is a second line of defence
+    //behind the submit guard.
     busy: function (on) {
+        try {
+            if (this.view.flxBusy) {
+                if (this.view.lblBusyMsg) {
+                    this.view.lblBusyMsg.text = "Checking your payment…";
+                }
+                this.view.flxBusy.setVisibility(on);
+                if (on) { this.view.flxBusy.onTouchEnd = function () { }; }
+                this.view.forceLayout();
+                kony.print("POC PAYCARD: busy(" + on + ") applied, isVisible=" +
+                    this.view.flxBusy.isVisible);
+            } else {
+                kony.print("POC PAYCARD: *** flxBusy MISSING from the form *** rebuild the FORM " +
+                    "in Visualizer, not just the controller");
+            }
+        } catch (e) {
+            kony.print("POC PAYCARD overlay busy(" + on + ") :: " + e);
+        }
         try {
             if (on) { showLoadingScreen(); } else { dismissLoadingScreen(); }
         } catch (e) { kony.print("POC PAYCARD busy :: " + e); }

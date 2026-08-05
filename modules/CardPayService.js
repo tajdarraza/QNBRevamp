@@ -351,6 +351,10 @@ function payCardConfirm(callback) {
                 payCardLoaded = null;
                 payCardAccounts = [];
                 payCardCards = [];
+                //ONE prePC BUYS ONE confirmPC. Spending the pre-validation here means a second
+                //confirm — a device-back onto the confirmation screen, a stray double delivery —
+                //is refused by the order guard instead of posting the payment twice.
+                payCardDraft.prevalidated = null;
                 callback(true, res.data, code);
             } else {
                 var msg = (res && res.status && res.status.description) ? res.status.description : "";

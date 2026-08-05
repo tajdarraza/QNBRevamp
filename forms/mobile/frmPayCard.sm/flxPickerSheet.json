@@ -1,0 +1,63 @@
+{
+  "DNDConfig": null,
+  "_height_": {
+    "type": "string",
+    "value": "58%"
+  },
+  "_left_": {
+    "type": "string",
+    "value": "0dp"
+  },
+  "_margin_": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "_orientation_": 6,
+  "_padding_": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "_percent_": true,
+  "_skin_": "scabe65ba445fde12ab8931b11e213f",
+  "_top_": {
+    "type": "string",
+    "value": "30%"
+  },
+  "_width_": {
+    "type": "string",
+    "value": "100%"
+  },
+  "allboxes": [],
+  "autogrowmode": 0,
+  "canUpdateUI": true,
+  "children": [
+    "lblPickerTitle",
+    "imgPickerClose",
+    "flxPickerDiv",
+    "flxPickerRows"
+  ],
+  "clipbounds": false,
+  "containerweight": 100,
+  "enablescrolling": false,
+  "id": "flxPickerSheet",
+  "info": null,
+  "iscustomlayout": false,
+  "isvisible": false,
+  "kuid": "970f3073bf7bc2fa0e20cd90b9050c42",
+  "layouttype": 2,
+  "name": "kony.ui.FlexContainer",
+  "parent": "frmPayCard",
+  "pf": "frmPayCard",
+  "retaincontentalignment": false,
+  "retainflexpositionproperties": false,
+  "retainflowhorizontalalignment": false,
+  "snapgridsize": 10,
+  "snaptogrid": true,
+  "wType": "FlexContainer",
+  "widgetalignment": 1,
+  "zindex": 200
+}
