@@ -1,10 +1,8 @@
 {
-    "@class": "com.kony.gen.viz.model.component.KVizImage2",
     "DNDConfig": null,
-    "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "24dp"
+        "value": "80dp"
     },
     "_left_": {
         "type": "string",
@@ -16,22 +14,25 @@
         0,
         0
     ],
+    "_orientation_": 6,
     "_padding_": [
         0,
         0,
         0,
         0
     ],
-    "_skin_": "s46f4cc5af674c87a6552260c65fd4ef",
-    "_src_": "paycardbill.png",
+    "_percent_": true,
+    "_skin_": "s8757f5a8bef47a4b68dfc87a2b2af25",
     "_top_": {
         "type": "string",
         "value": "0"
     },
     "_width_": {
         "type": "string",
-        "value": "24dp"
+        "value": "80dp"
     },
+    "allboxes": [],
+    "autogrowmode": 0,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
@@ -41,20 +42,24 @@
         "type": "string",
         "value": "50%"
     },
+    "children": [],
+    "clipbounds": false,
     "containerweight": 100,
-    "id": "CopyimgMenuLogo0h3755550389c43",
-    "imagescalemode": 1,
+    "enablescrolling": true,
+    "id": "flxWhite",
     "info": null,
-    "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "f1fe216c741c4fcf9e84be7ab9afebf9",
-    "name": "kony.ui.Image2",
-    "parent": "CopyflxMenuIcon0g03712e737e04f",
-    "pf": "frmMoreActions",
+    "kuid": "g8983c6c241b4c7ebf0f0516c2ae81ad",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxSuccess",
+    "pf": "frmFawranSuccess",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "srcType": 1,
-    "wType": "Image",
-    "widgetalignment": 5
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1
 }

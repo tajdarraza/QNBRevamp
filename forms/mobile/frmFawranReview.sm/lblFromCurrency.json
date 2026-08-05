@@ -41,5 +41,6 @@
     "isvisible": true,
     "kuid": "9ce8df6e56590491cede5145ef7e9921",
     "name": "kony.ui.Label",
-    "parent": "flxFromCard"
+    "parent": "flxFromCard",
+    "pf": "frmFawranReview"
 }

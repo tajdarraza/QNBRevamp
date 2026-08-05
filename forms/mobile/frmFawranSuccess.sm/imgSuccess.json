@@ -39,7 +39,7 @@
     "info": null,
     "invokedProperty": "src",
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "c314771d83b6ad33a7b3a197efb897d7",
     "name": "kony.ui.Image2",
     "parent": "flxContent",

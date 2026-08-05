@@ -22,7 +22,7 @@
         0
     ],
     "_skin_": "s881501d566a4126912b85e0f5be76c6",
-    "_text_": "Processing\u2026",
+    "_text_": "Processing…",
     "_top_": {
         "type": "string",
         "value": "46%"
@@ -41,5 +41,6 @@
     "isvisible": true,
     "kuid": "603c1a893b6b08ce029d96b3f71e4a9e",
     "name": "kony.ui.Label",
-    "parent": "flxBusy"
+    "parent": "flxBusy",
+    "pf": "frmFawranOTP"
 }

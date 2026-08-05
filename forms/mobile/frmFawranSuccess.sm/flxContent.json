@@ -36,6 +36,7 @@
     "canUpdateUI": true,
     "children": [
         "imgSuccess",
+        "flxSuccess",
         "lblSuccessMsg",
         "lblSuccessAmount",
         "flxReceipt",

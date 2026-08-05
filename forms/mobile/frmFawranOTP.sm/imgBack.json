@@ -4,7 +4,7 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "24dp"
+        "value": "40dp"
     },
     "_left_": {
         "type": "string",
@@ -23,14 +23,14 @@
         0
     ],
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
-    "_src_": "caratleftsmall.png",
+    "_src_": "imgnavback.png",
     "_top_": {
         "type": "string",
         "value": "8dp"
     },
     "_width_": {
         "type": "string",
-        "value": "24dp"
+        "value": "40dp"
     },
     "canUpdateUI": true,
     "containerweight": 100,

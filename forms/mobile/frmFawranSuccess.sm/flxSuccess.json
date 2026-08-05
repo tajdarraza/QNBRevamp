@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "170dp"
+        "value": "164dp"
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -22,37 +22,40 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sb9c3a11d36d42b19f8269ae2f21d0b0",
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "448dp"
+        "value": "0%"
     },
     "_width_": {
         "type": "string",
-        "value": "90%"
+        "value": "164dp"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
-        "flxMngAutoTransfers",
-        "flxMngDiv1",
-        "flxMngBeneficiaries",
-        "flxMngDiv2",
-        "flxMngLimits"
+        "flxRipple",
+        "flxCircle",
+        "flxWhite",
+        "imgPaymentTick"
     ],
     "clipbounds": false,
     "containerweight": 100,
-    "enablescrolling": false,
-    "id": "flxManagement",
+    "enablescrolling": true,
+    "id": "flxSuccess",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "259c0e885abecca4f0c1995809cfab70",
+    "kuid": "a37b76b79bda47869ac2e6d233a52c6f",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxContent",
-    "pf": "frmTransfers",
+    "pf": "frmFawranSuccess",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

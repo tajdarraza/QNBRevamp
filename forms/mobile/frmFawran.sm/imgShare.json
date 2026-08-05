@@ -4,7 +4,7 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "32dp"
+        "value": "40dp"
     },
     "_left_": {
         "type": "string",
@@ -23,14 +23,14 @@
         0
     ],
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
-    "_src_": "customsharing.png",
+    "_src_": "sharedetails.png",
     "_top_": {
         "type": "string",
         "value": "16dp"
     },
     "_width_": {
         "type": "string",
-        "value": "32dp"
+        "value": "40dp"
     },
     "canUpdateUI": true,
     "containerweight": 100,

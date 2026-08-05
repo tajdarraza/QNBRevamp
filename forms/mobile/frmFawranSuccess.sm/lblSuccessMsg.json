@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "88dp"
+        "value": "40dp"
     },
     "_left_": {
         "type": "string",
@@ -25,7 +25,7 @@
     "_text_": "Transfer completed",
     "_top_": {
         "type": "string",
-        "value": "132dp"
+        "value": "176dp"
     },
     "_width_": {
         "type": "string",

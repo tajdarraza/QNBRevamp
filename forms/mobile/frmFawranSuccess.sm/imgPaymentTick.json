@@ -4,11 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "40dp"
+        "value": "38dp"
     },
     "_left_": {
         "type": "string",
-        "value": "87%"
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -22,27 +22,35 @@
         0,
         0
     ],
-    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
-    "_src_": "closeicon.png",
+    "_skin_": "s46f4cc5af674c87a6552260c65fd4ef",
+    "_src_": "paymenttick.png",
     "_top_": {
         "type": "string",
-        "value": "24dp"
+        "value": "0"
     },
     "_width_": {
         "type": "string",
-        "value": "40dp"
+        "value": "45dp"
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
-    "id": "imgClose",
+    "id": "imgPaymentTick",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e3ce74822cd375822a3c65a863fe5fd5",
+    "kuid": "e7f8f6bdfce948dbad7d7a9bc86288e9",
     "name": "kony.ui.Image2",
-    "parent": "flxHeader",
+    "parent": "flxSuccess",
     "pf": "frmFawranSuccess",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
