@@ -70,7 +70,7 @@
     "androidscreenresizeable": "false",
     "androidscreensmall": "true",
     "androidwear_allowselfsignedcertificates": "None",
-    "andtargetsdkkey": "15.0 (35)",
+    "andtargetsdkkey": "14.0 (34)",
     "andwearapppackagekey": "com.orgname.Sample",
     "andwearappversioncode": "1",
     "andwearmaxsdkkey": "None",

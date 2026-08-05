@@ -21,8 +21,12 @@
         0,
         0
     ],
-    "_skin_": "s8b7cd20d0494680b6c31e7da7a26896",
-    "_text_": "566",
+    "_skin_": "se816ddd43e74df5933005b8c755aa16",
+    "_text_": "Credit limits",
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -35,14 +39,9 @@
         }
     },
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
-    "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblCVVNum",
+    "id": "CopyLabel0c5497dac32a542",
     "info": null,
     "ipad": {
         "psp": {
@@ -56,10 +55,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "aa720f54fe0b4413b23e1279c0848d14",
+    "kuid": "e504a2d0c66044758e782e9cf51a8623",
     "name": "kony.ui.Label",
-    "parent": "flxCVVNum",
-    "pf": "tempCardDashboard",
+    "parent": "CopyFlexContainer0c6a395d279b04e",
+    "pf": "frmCardSetting",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},

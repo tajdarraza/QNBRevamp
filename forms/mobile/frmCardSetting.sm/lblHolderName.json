@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "0"
+        "value": "76dp"
     },
     "_margin_": [
         1,
@@ -21,11 +21,19 @@
         0,
         0
     ],
-    "_skin_": "s8b7cd20d0494680b6c31e7da7a26896",
-    "_text_": "566",
+    "_right_": {
+        "type": "string",
+        "value": "74dp"
+    },
+    "_skin_": "s82f9ef68f2a45a1a13fb4803b79dd85",
+    "_text_": "James Lee",
+    "_top_": {
+        "type": "string",
+        "value": "24dp"
+    },
     "_width_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "200dp"
     },
     "_wrapping_": 2,
     "android": {
@@ -35,14 +43,9 @@
         }
     },
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
-    "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblCVVNum",
+    "id": "lblHolderName",
     "info": null,
     "ipad": {
         "psp": {
@@ -56,10 +59,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "aa720f54fe0b4413b23e1279c0848d14",
+    "kuid": "ga8455d035634cf7a1d7e37c7b878ad2",
     "name": "kony.ui.Label",
-    "parent": "flxCVVNum",
-    "pf": "tempCardDashboard",
+    "parent": "flxTopCard",
+    "pf": "frmCardSetting",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},

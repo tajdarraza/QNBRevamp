@@ -21,8 +21,12 @@
         0,
         0
     ],
-    "_skin_": "s8b7cd20d0494680b6c31e7da7a26896",
-    "_text_": "566",
+    "_skin_": "se816ddd43e74df5933005b8c755aa16",
+    "_text_": "Financial services",
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -35,14 +39,9 @@
         }
     },
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
-    "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblCVVNum",
+    "id": "Label0ff8a09185e2d4c",
     "info": null,
     "ipad": {
         "psp": {
@@ -56,10 +55,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "aa720f54fe0b4413b23e1279c0848d14",
+    "kuid": "j9be24d563b744c9af13e6a9d06c3c3c",
     "name": "kony.ui.Label",
-    "parent": "flxCVVNum",
-    "pf": "tempCardDashboard",
+    "parent": "FlexContainer0fdbbca4ffd7643",
+    "pf": "frmCardSetting",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},

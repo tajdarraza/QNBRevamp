@@ -1,12 +1,14 @@
 {
+    "@class": "com.kony.gen.viz.model.component.KVizImage2",
     "DNDConfig": null,
+    "_base64_": null,
     "_height_": {
         "type": "string",
         "value": "100%"
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -14,52 +16,45 @@
         0,
         0
     ],
-    "_orientation_": 6,
     "_padding_": [
         0,
         0,
         0,
         0
     ],
-    "_percent_": true,
-    "_skin_": "s8aea137a9a44457a3ee916e217be3c2",
+    "_right_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_skin_": "s46f4cc5af674c87a6552260c65fd4ef",
+    "_src_": "qnb_visa.png",
     "_top_": {
         "type": "string",
         "value": "0"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "66dp"
     },
-    "allboxes": [],
-    "autogrowmode": 0,
     "canUpdateUI": true,
     "centery": {
         "type": "string",
         "value": "50%"
     },
-    "children": [
-        "flxHeader",
-        "FlexContainer0g6f0f0d225ed4a",
-        "flxCardSetting"
-    ],
-    "clipbounds": false,
     "containerweight": 100,
-    "enablescrolling": true,
-    "id": "flxParent",
+    "id": "imgCard",
+    "imagescalemode": 1,
     "info": null,
+    "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ed4aa705b4eb4b16b3f11d2e7aa9e689",
-    "layouttype": 4,
-    "name": "kony.ui.FlexContainer",
-    "parent": "frmCardSetting",
+    "kuid": "c5933c81f5764d96a90e7e82c8660490",
+    "name": "kony.ui.Image2",
+    "parent": "flxTopCard",
     "pf": "frmCardSetting",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "retainflowhorizontalalignment": false,
-    "snapgridsize": 10,
-    "snaptogrid": true,
-    "wType": "FlexContainer",
-    "widgetalignment": 1
+    "srcType": 1,
+    "wType": "Image",
+    "widgetalignment": 5
 }

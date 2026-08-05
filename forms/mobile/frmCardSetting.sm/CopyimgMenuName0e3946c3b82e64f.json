@@ -2,12 +2,12 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "30dp"
     },
     "_left_": {
         "type": "string",
-        "value": "0"
+        "value": "56dp"
     },
     "_margin_": [
         1,
@@ -21,8 +21,8 @@
         0,
         0
     ],
-    "_skin_": "s8b7cd20d0494680b6c31e7da7a26896",
-    "_text_": "566",
+    "_skin_": "s6c148d5eff64853bf05008a57e98a0f",
+    "_text_": "Payment holiday",
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -39,10 +39,9 @@
         "type": "string",
         "value": "50%"
     },
-    "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblCVVNum",
+    "id": "CopyimgMenuName0e3946c3b82e64f",
     "info": null,
     "ipad": {
         "psp": {
@@ -56,10 +55,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "aa720f54fe0b4413b23e1279c0848d14",
+    "kuid": "h7e4bf9984084115825be6f382d4d435",
     "name": "kony.ui.Label",
-    "parent": "flxCVVNum",
-    "pf": "tempCardDashboard",
+    "parent": "CopyflxMenuOpt0d1347ea22d2547",
+    "pf": "frmCardSetting",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},

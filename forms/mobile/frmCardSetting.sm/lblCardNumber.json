@@ -5,10 +5,6 @@
         "type": "ref",
         "value": "preferred"
     },
-    "_left_": {
-        "type": "string",
-        "value": "0"
-    },
     "_margin_": [
         1,
         1,
@@ -21,11 +17,19 @@
         0,
         0
     ],
-    "_skin_": "s8b7cd20d0494680b6c31e7da7a26896",
-    "_text_": "566",
+    "_right_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_skin_": "s3f87a1a93f04e7fbfe16318f9c2c8aa",
+    "_text_": "****3456",
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
     "_width_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "120dp"
     },
     "_wrapping_": 2,
     "android": {
@@ -35,14 +39,9 @@
         }
     },
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
-    "containerId": true,
     "containerweight": 100,
-    "contentalignment": 4,
-    "id": "lblCVVNum",
+    "contentalignment": 6,
+    "id": "lblCardNumber",
     "info": null,
     "ipad": {
         "psp": {
@@ -56,10 +55,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "aa720f54fe0b4413b23e1279c0848d14",
+    "kuid": "f302bccbc7604b86bde12be991645364",
     "name": "kony.ui.Label",
-    "parent": "flxCVVNum",
-    "pf": "tempCardDashboard",
+    "parent": "flxTopCard",
+    "pf": "frmCardSetting",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},

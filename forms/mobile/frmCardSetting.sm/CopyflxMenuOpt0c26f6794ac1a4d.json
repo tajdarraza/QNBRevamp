@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "18%"
+        "value": "60dp"
     },
     "_left_": {
         "type": "string",
@@ -25,7 +25,7 @@
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
     "_width_": {
         "type": "string",
@@ -35,19 +35,21 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flxFinalAmtUpdate"
+        "CopyimgIcon0f50f4061b98b49",
+        "CopyimgMenuName0efcf4944b1ff48",
+        "CopyimgTrail0f9ddfb0333af4b"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "FlexContainer0g6f0f0d225ed4a",
+    "id": "CopyflxMenuOpt0c26f6794ac1a4d",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "g86d420db9ed4391bc3035ba6e59ebdb",
+    "kuid": "e8c50c8e0cf14ffdb93ee932356eb514",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxParent",
+    "parent": "CopyFlexContainer0j63c3ccaae0d40",
     "pf": "frmCardSetting",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
