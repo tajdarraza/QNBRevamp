@@ -255,33 +255,68 @@ define({
             return;
         }
 
-        //Toggle SYNCHRONOUSLY. It used to sit in the animation's animationEnd callback, which never
-        //fires on this build — the handler ran, the shrink played, and nothing ever swapped.
-        rowData.showBack = !rowData.showBack;
-        rowData.flxCardFrontView = { isVisible: !rowData.showBack };
-        rowData.flxCardBackView = { isVisible: rowData.showBack };
-        this.cardData[rowIndex] = rowData;
-        try {
-            this.view.segCards.setDataAt(rowData, rowIndex);
-            kony.print("POC CARDS: flipped row " + rowIndex + " showBack=" + rowData.showBack);
-        } catch (e) {
-            kony.print("POC CARDS: setDataAt failed :: " + e);
-        }
+        var swap = function () {
+            rowData.showBack = !rowData.showBack;
+            rowData.flxCardFrontView = { isVisible: !rowData.showBack };
+            rowData.flxCardBackView = { isVisible: rowData.showBack };
+            self.cardData[rowIndex] = rowData;
+            try {
+                self.view.segCards.setDataAt(rowData, rowIndex);
+                kony.print("POC CARDS: flipped row " + rowIndex + " showBack=" + rowData.showBack);
+            } catch (e) {
+                kony.print("POC CARDS: setDataAt failed :: " + e);
+            }
+        };
 
-        //Decoration only, and deliberately after the swap so a failure here cannot block it.
+        //ANIMATE FIRST, THEN SWAP. The swap calls setDataAt, which re-renders the row — animating
+        //afterwards applies the transform to a widget the segment has just rebuilt, so the shrink was
+        //invisible. That is the regression the other dev noticed: the animation is still here, it was
+        //just running against a dead widget.
+        //
+        //The original ran the swap from the animation's `animationEnd`, which NEVER FIRES on this
+        //build — the card shrank and never turned over. kony.timer does fire (the unlock timer below
+        //is proof), so the delay is driven from a timer instead, and a scheduling failure falls
+        //straight through to a synchronous swap rather than leaving the card stuck.
+        //
+        //Pulse down and back in one animation: FILL_MODE_FORWARDS used to leave the card permanently
+        //at 0.95, which is why it looked "flatter" after each flip.
+        var animated = false;
         try {
-            var card = (widget && widget.parent && widget.parent.parent)
-                ? widget.parent.parent.parent : null;
+            var card = widget;
+            for (var up = 0; up < 3 && card && card.parent; up++) { card = card.parent; }
             if (card && typeof card.animate === "function") {
                 var shrink = kony.ui.makeAffineTransform();
-                shrink.scale(0.97, 0.97);
+                shrink.scale(0.95, 0.95);
+                var normal = kony.ui.makeAffineTransform();
+                normal.scale(1, 1);
                 card.animate(
-                    kony.ui.createAnimation({ "100": { transform: shrink,
-                        stepConfig: { timingFunction: kony.anim.EASE_OUT_BACK } } }),
-                    { duration: 0.15, fillMode: kony.anim.FILL_MODE_REMOVE }, {});
+                    kony.ui.createAnimation({
+                        "50": { transform: shrink,
+                            stepConfig: { timingFunction: kony.anim.EASE_OUT } },
+                        "100": { transform: normal,
+                            stepConfig: { timingFunction: kony.anim.EASE_OUT_BACK } }
+                    }),
+                    { duration: 0.28, fillMode: kony.anim.FILL_MODE_REMOVE }, {});
+                animated = true;
+            } else {
+                kony.print("POC CARDS: flip animation skipped — no animatable parent from the icon");
             }
         } catch (e) {
             kony.print("POC CARDS: flip animation skipped :: " + e);
+        }
+
+        if (!animated) { swap(); return; }
+
+        //Mid-pulse, so the face changes while the card is small — the turn-over the design implies.
+        try {
+            var tmr = "pocFlipSwap" + rowIndex;
+            kony.timer.schedule(tmr, function () {
+                try { kony.timer.cancel(tmr); } catch (e2) { }
+                swap();
+            }, 0.14, false);
+        } catch (e) {
+            kony.print("POC CARDS: flip swap timer :: " + e);
+            swap();
         }
     },
 

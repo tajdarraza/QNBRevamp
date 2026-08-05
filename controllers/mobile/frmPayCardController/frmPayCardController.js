@@ -104,15 +104,24 @@ define({
     //`ma` (minimum amount due) comes from getCCListDashboard and now survives the chooser, so this
     //no longer has to guess at 5% of the balance. Falls back to the old convention only if the
     //server did not supply one.
+    //A supplied "0.00" is an ANSWER — nothing is due — not a missing value. Treating zero as absent
+    //was what put the invented 5% figure back on screen for a card the server says owes nothing, and
+    //prePC then answered 0.00 for it.
     onMinimumDue: function () {
         payCardDraft.payType = this.payTypeId("min");
-        var real = amountNumber(this.navData && this.navData.minDueText);
-        if (real > 0) {
+        var supplied = this.navData && nullCheck(this.navData.minDueText);
+        if (supplied) {
+            var real = amountNumber(this.navData.minDueText);
             kony.print("POC PAYCARD: minimum due from server = " + this.navData.minDueText);
+            if (real <= 0) {
+                this.warn("There is nothing due on this card right now.");
+                return;
+            }
             this.setPayAmount(real);
             return;
         }
-        kony.print("POC PAYCARD: no server minimum due — falling back to 5% of the balance");
+        kony.print("POC PAYCARD: server sent no minimum due at all — falling back to 5% of the " +
+            "balance. The figure is invented; the server will use its own on `min`.");
         this.setPayAmount(Math.round(this.utilisedAmount * 0.05 * 100) / 100);
     },
 
@@ -144,6 +153,13 @@ define({
             return;
         }
         if (!nullCheck(payCardDraft.accuid)) {
+            //The paycard composite takes ~5s on SIT, and the screen is usable the whole time. A tap
+            //inside that window has no account yet — that is not the same as the customer having no
+            //eligible account, and saying so sent us looking for a data problem that did not exist.
+            if (payCardLoading) {
+                this.warn("Still loading your accounts. Try again in a moment.");
+                return;
+            }
             this.warn("No account available to pay from.");
             return;
         }
@@ -157,11 +173,22 @@ define({
                 self.warn(msg);
                 return;
             }
+            //prePC answers with the amount the server will actually take. When that is zero there is
+            //nothing to pay — carrying on would post a 0.00 payment while the screen advertised a
+            //figure the customer chose. Seen with "Minimum due" on a card whose `ma` is 0.00.
+            var serverAmt = amountNumber(payCardDraft.serverAmount);
+            if (nullCheck(payCardDraft.serverAmount) && serverAmt <= 0) {
+                self.warn("There is nothing due on this card, so there is no payment to make. " +
+                    "Choose Current balance or enter an amount.");
+                return;
+            }
+
             kony.print("POC PAYCARD: prePC ok, moving to confirmation");
             new kony.mvc.Navigation("frmPayCardConfrmPay").navigate({
                 utilisedAmount: self.utilisedAmount,
                 totalLimit: self.totalLimit,
-                payAmount: payAmount
+                //The server's figure wins over the typed one — it is what confirmPC will charge.
+                payAmount: serverAmt > 0 ? serverAmt : payAmount
             });
         });
     },

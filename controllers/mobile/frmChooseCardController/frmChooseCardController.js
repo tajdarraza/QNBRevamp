@@ -168,6 +168,10 @@ define({
                 lblCardName: card.lblCardName,
                 lblHolderName: card.lblHolderName,
                 lblCardNumber: card.lblCardNumber,
+                //The full masked number, which payCardResolveCcuid matches against the composite's
+                //card list. Dropping it here would leave the payment on the dashboard's card uid,
+                //which prePC/confirmPC reject as G-00009.
+                mcn: card.mcn,
                 ccuid: card.ccuid,
                 currency: card.currency,
                 minDueText: card.minDueText,

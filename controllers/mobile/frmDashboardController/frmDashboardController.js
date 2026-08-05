@@ -396,7 +396,15 @@ define({
             flxGraphics: "flxGraphics",
             flxMenuOptions: "flxMenuOptions",
 
+            //ALL FOUR quick-action tiles must be mapped. A segment only delivers a row's data —
+            //including its onTouchEnd handlers — to widgets named in widgetDataMap, so with only
+            //flxMenu1 here the handlers bound to flxMenu2/3/4 were discarded before they reached the
+            //row. That is why every tap logged "Fawran" and Pay card appeared dead: the Fawran tile
+            //was the only one the map let through.
             flxMenu1: "flxMenu1",
+            flxMenu2: "flxMenu2",
+            flxMenu3: "flxMenu3",
+            flxMenu4: "flxMenu4",
         };
     },
 
@@ -466,6 +474,7 @@ define({
                     rows[r].lblCurr = "";
                 }
             }
+            this.bindQuickActions(rows);
             this.view.segAccounts.setData(rows);
             this.updateDashboard(0);
             return;
@@ -555,25 +564,32 @@ define({
             }
         }
 
-        for (var i = 0; i < segData.length; i++) {
-
-            segData[i].flxMenu1 = {
-                onTouchEnd: this.onMenu1Click.bind(this)
-            };
-        }
+        this.bindQuickActions(segData);
         this.view.segAccounts.setData(segData);
         this.updateDashboard(0);
     },
-    onMenu1Click: function (widget, context) {
-        try {
-
-            new kony.mvc.Navigation("frmMoreActions").navigate();
-
-        } catch (e) {
-            alert(e)
+    //Quick actions under each account. The row template labels them Fawran / Pay Bill / Pay card /
+    //Menu, so the handlers must line up with that order.
+    bindQuickActions: function (rows) {
+        var self = this;
+        for (var i = 0; i < rows.length; i++) {
+            rows[i].flxMenu1 = { onTouchEnd: function () { self.goTo("frmFawran", "Fawran"); } };
+            //flxMenu2..4 are bound identically; if one of them never logs, the tap is not reaching
+            //that widget rather than the handler being wrong.
+            rows[i].flxMenu2 = { onTouchEnd: function () { pocNotBuilt("Pay Bill"); } };
+            rows[i].flxMenu3 = { onTouchEnd: function () { self.goTo("frmChooseCard", "Pay card"); } };
+            rows[i].flxMenu4 = { onTouchEnd: function () { self.goTo("frmMoreActions", "Menu"); } };
         }
+    },
 
-
+    goTo: function (formName, label) {
+        kony.print("POC DASH: quick action " + label + " -> " + formName);
+        try {
+            new kony.mvc.Navigation(formName).navigate();
+        } catch (e) {
+            kony.print("POC DASH: " + formName + " not available :: " + e);
+            pocNotBuilt(label);
+        }
     },
     updateDashboard: function () {
 
@@ -590,6 +606,10 @@ define({
             };
         }
 
+        //Reading data back out of a segment does not reliably return the function handlers that were
+        //put in, so re-binding before setData keeps the quick actions alive. Without this the tiles
+        //work until the first updateDashboard and then silently stop.
+        this.bindQuickActions(data);
         this.view.segAccounts.setData(data);
     },
     onInit: function () {

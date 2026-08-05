@@ -4,17 +4,24 @@
 //    prePC     -> pre-validation of the chosen combination
 //    confirmPC -> the actual payment
 //
-//ENVELOPE ASYMMETRY — both carry the SAME four fields, wrapped differently:
-//    prePC     body = { e: encUtilA(JSON.stringify({am, a, c, m})) }     <- enveloped
-//    confirmPC body = { am, a, c, m }                                     <- PLAIN, not enveloped
-//Getting this backwards is silent: the service answers, just not with what you expect.
-//(frmPayCardController.js:1411-1426 and frmPayCardConfirmationController.js:91-98.)
+//BOTH prePC AND confirmPC ARE ENVELOPED: body = { e: encUtilA(JSON.stringify({am, a, c, m})) }.
+//
+//An earlier reading of this took confirmPC to be a plain body, from
+//frmPayCardConfirmationController.js:103-110 — but that is the OLD confirmation screen. The live
+//mobile flow pays from frmPayCardController.callConfirmCardService (:1666-1686), which calls
+//encryptPayLoad(inputParam) — i.e. the same {e: …} envelope — before invoking the service.
+//A plain body does NOT error: the service answers 200 with an EMPTY OBJECT, so status/data are both
+//missing and the failure looks like a client bug. Proven on device 2026-08-05 (Content-Length: 2).
 
 var payCardLoaded = null;      //raw `paycard` composite response
 var payCardAccounts = [];      //data-accList -> the accounts you can pay FROM
 var payCardCards = [];         //data-cclist -> cards WITH THE UID prePC/confirmPC EXPECT
 var payCardTypes = [];         //data-types.payTypes -> [{id:"cur"|"min"|"other", value:"..."}]
 var payCardCfg = {};           //data-paycardConfig.cfg -> {AmtMinLen, AmtMaxLen}
+//The composite takes ~5s on SIT. Until it answers there is no account to pay from, and a tap on
+//Review & Confirm in that window used to report "No account available to pay from" — which reads as
+//a data problem on an account the customer does have. Screens ask this before complaining.
+var payCardLoading = false;
 
 var payCardDraft = {
     card: null,          //selected credit card (row from getCCListDashboard / paycard)
@@ -25,6 +32,7 @@ var payCardDraft = {
     payType: "",         //-> "m"  (full / minimum / other — id comes from the paycard response)
     currency: "QAR",
     prevalidated: null,  //prePC response
+    serverAmount: "",    //prePC data.a — what will ACTUALLY be paid, which can differ from `amount`
     receipt: null        //confirmPC response
 };
 
@@ -36,6 +44,7 @@ function payCardResetDraft() {
     payCardDraft.amount = "";
     payCardDraft.payType = "";
     payCardDraft.prevalidated = null;
+    payCardDraft.serverAmount = "";
     payCardDraft.receipt = null;
 }
 
@@ -48,6 +57,7 @@ function payCardResetSession() {
     payCardCards = [];
     payCardTypes = [];
     payCardCfg = {};
+    payCardLoading = false;
     payCardResetDraft();
     kony.print("POC PAYCARD: session caches cleared");
 }
@@ -97,6 +107,7 @@ function payCardLoad(callback) {
     }
     try {
         var headers = createHeaderObj("", true);
+        payCardLoading = true;
 
         //QA report accounts coming back for the same service, so the difference is in the request.
         //Production sends an empty body with default headers and NO screenId (frmPayCardController
@@ -114,6 +125,7 @@ function payCardLoad(callback) {
         kony.print("POC PAYCARD REQ >>> body = {}   (empty, not enveloped — as production sends it)");
 
         invokeServiceAsync(QNBConstants.serviceName.paycard, headers, {}, function (status, res) {
+            payCardLoading = false;
             kony.print("POC PAYCARD: paycard status=" + status +
                 " code=" + (res && res.status ? res.status.code : "?"));
             if (payCardOk(res)) {
@@ -155,23 +167,59 @@ function payCardLoad(callback) {
             }
         });
     } catch (e) {
+        payCardLoading = false;
         kony.print("POC PAYCARD: payCardLoad :: " + e);
         callback(false, null);
     }
 }
 
 //--- 2. pre-validate ----------------------------------------------------------------------------
-//Picks the customer's favourite debit account, or the first one. Safe to call repeatedly — it only
-//fills an empty accuid, so a user's own choice is never overwritten.
+//THE ACCOUNT UID IS REGENERATED ON EVERY COMPOSITE CALL — not merely per service or per login. The
+//same account 0011-010047-001 came back as 2233ef5f…, 9d6da583…, cf0aa9ed… and 2345de45… across four
+//loads in one session. An `a` from an earlier response is dead the moment the composite is called
+//again, and prePC answers G-00009 "Account Details not Found".
+//
+//So this ALWAYS re-resolves against the current list. It preserves the customer's choice by ACCOUNT
+//NUMBER — the field that is stable across loads — and takes the uid from this response, exactly as
+//payCardResolveCcuid() does for the card via `mcn`. An earlier version returned early whenever an
+//accuid was already set, which kept the stale uid and broke every payment after the card cache was
+//refreshed.
 function payCardDefaultAccount() {
-    if (nullCheck(payCardDraft.accuid) || !payCardAccounts.length) { return; }
-    var pick = payCardAccounts[0];
-    for (var i = 0; i < payCardAccounts.length; i++) {
-        if (payCardAccounts[i].isFavorite === "true") { pick = payCardAccounts[i]; break; }
+    if (!payCardAccounts.length) { return; }
+
+    var chosenNo = "";
+    if (payCardDraft.account) {
+        chosenNo = nullCheck(payCardDraft.account.an)
+            ? payCardDraft.account.an : payCardDraft.account.af;
+    }
+
+    var pick = null;
+    if (nullCheck(chosenNo)) {
+        for (var c = 0; c < payCardAccounts.length; c++) {
+            if (payCardAccounts[c].an === chosenNo || payCardAccounts[c].af === chosenNo) {
+                pick = payCardAccounts[c];
+                break;
+            }
+        }
+        if (!pick) {
+            kony.print("POC PAYCARD: previously selected account " + chosenNo +
+                " is not in this composite — falling back to the favourite");
+        }
+    }
+    if (!pick) {
+        pick = payCardAccounts[0];
+        for (var i = 0; i < payCardAccounts.length; i++) {
+            if (payCardAccounts[i].isFavorite === "true") { pick = payCardAccounts[i]; break; }
+        }
+    }
+
+    if (nullCheck(payCardDraft.accuid) && payCardDraft.accuid !== pick.au) {
+        kony.print("POC PAYCARD: auid refreshed for " + pick.af +
+            "  old=" + payCardDraft.accuid + "  new=" + pick.au);
     }
     payCardDraft.account = pick;
     payCardDraft.accuid = pick.au;
-    kony.print("POC PAYCARD: defaulted pay-from to " + pick.af + " (" + pick.ad + ") auid=" + pick.au);
+    kony.print("POC PAYCARD: pay-from " + pick.af + " (" + pick.ad + ") auid=" + pick.au);
 }
 
 //THE CARD UID IS SERVICE-SCOPED. getCCListDashboard and the paycard composite return DIFFERENT `i`
@@ -182,7 +230,10 @@ function payCardDefaultAccount() {
 //
 //Matched on the masked card number, the one field both services agree on.
 function payCardResolveCcuid() {
-    var masked = payCardDraft.card ? payCardDraft.card.lblCardNumber : "";
+    //`mcn` is the FULL masked number kept for this match. lblCardNumber is a display string and is
+    //now shortened to the last four for narrow rows, so matching on it would find nothing.
+    var card = payCardDraft.card || {};
+    var masked = nullCheck(card.mcn) ? card.mcn : card.lblCardNumber;
     if (!nullCheck(masked) || !payCardCards.length) { return; }
     for (var i = 0; i < payCardCards.length; i++) {
         if (payCardCards[i].mcn === masked) {
@@ -209,7 +260,10 @@ function payCardParams() {
 
 function payCardPrevalidate(callback) {
     if (!payCardGuard(callback)) { return; }
+    //Both uids re-resolved against the CURRENT composite immediately before the call — the card by
+    //`mcn`, the account by number. Either one going stale returns the same misleading G-00009.
     payCardResolveCcuid();
+    payCardDefaultAccount();
     var p = payCardParams();
     if (!nullCheck(p.am) || !nullCheck(p.a) || !nullCheck(p.c)) {
         kony.print("POC PAYCARD: prePC called with an incomplete draft :: " + JSON.stringify(p));
@@ -225,7 +279,18 @@ function payCardPrevalidate(callback) {
             kony.print("POC PAYCARD: prePC status=" + status + " code=" + code);
             if (payCardOk(res)) {
                 payCardDraft.prevalidated = res.data || {};
+                //`data.a` is THE AMOUNT THE SERVER WILL TAKE, not an echo of what we sent — production
+                //displays it on the confirmation screen instead of the typed figure
+                //(frmPayCardController.js:1519). With m="min" the server computes it and ignores our
+                //`am` entirely: a 667.32 request came back as 0.00 because this card has nothing due.
+                payCardDraft.serverAmount = nullCheck(res.data && res.data.a) ? res.data.a : "";
                 kony.print("POC PAYCARD: prePC data = " + JSON.stringify(res.data).substring(0, 600));
+                if (nullCheck(payCardDraft.serverAmount) &&
+                    amountNumber(payCardDraft.serverAmount) !== amountNumber(payCardDraft.amount)) {
+                    kony.print("POC PAYCARD: *** server amount " + payCardDraft.serverAmount +
+                        " differs from the requested " + payCardDraft.amount +
+                        " — the server's figure is the one that will be paid ***");
+                }
                 callback(true, res.data, code);
             } else {
                 kony.print("POC PAYCARD: prePC rejected :: " +
@@ -240,8 +305,12 @@ function payCardPrevalidate(callback) {
 }
 
 //--- 3. pay -------------------------------------------------------------------------------------
-//Plain body, and the trailing `true` is invokeServiceAsync's duplicate-submission guard. Both match
-//production. Do not "tidy" the body into an envelope.
+//Enveloped body, and the trailing `true` is invokeServiceAsync's duplicate-submission guard. Both
+//match the live production path. Do not "simplify" the body back to plain {am, a, c, m} — that is
+//answered with {} and nothing says why.
+//
+//Receipt keys come from production's confirmServiceCallBack: data.r = reference id,
+//data.d = transaction date (frmPayCardController.js:1705-1706).
 function payCardConfirm(callback) {
     if (!payCardGuard(callback)) { return; }
     if (!payCardDraft.prevalidated) {
@@ -256,14 +325,32 @@ function payCardConfirm(callback) {
     }
     try {
         var headers = createHeaderObj("", true);
+        //Production tags the call with the navigation flow it came from. Only sent when the POC
+        //actually has one — an undefined header value is worse than an absent one.
+        if (typeof gblNavigateFlow !== "undefined" && nullCheck(gblNavigateFlow)) {
+            headers.userFlow = gblNavigateFlow;
+        }
         var p = payCardParams();
-        kony.print("POC PAYCARD CONFIRM >>> " + JSON.stringify(p));
-        invokeServiceAsync(QNBConstants.serviceName.confirmPC, headers, p, function (status, res) {
+        kony.print("POC PAYCARD CONFIRM >>> " + JSON.stringify(p) + "   (enveloped)");
+        var data = { e: encUtilA(JSON.stringify(p)) };
+        invokeServiceAsync(QNBConstants.serviceName.confirmPC, headers, data, function (status, res) {
             var code = (res && res.status) ? res.status.code : "?";
             kony.print("POC PAYCARD: confirmPC status=" + status + " code=" + code);
+            //The whole response, always. An empty {} is a real answer from this service and the only
+            //way to recognise it is to see it — the first live attempt printed an empty description
+            //and looked like an unexplained failure.
+            kony.print("POC PAYCARD: confirmPC raw = " + JSON.stringify(res));
             if (payCardOk(res)) {
                 payCardDraft.receipt = res.data || {};
-                kony.print("POC PAYCARD: receipt = " + JSON.stringify(res.data).substring(0, 600));
+                kony.print("POC PAYCARD: receipt refId=" + payCardDraft.receipt.r +
+                    " txnDate=" + payCardDraft.receipt.d);
+                //The card list and the paycard composite both hold pre-payment balances now. Left
+                //cached, Cards and the dashboard keep showing the old available balance after a
+                //payment that just went through — the first thing anyone checks to see if it worked.
+                try { pocResetCards(); } catch (e) { kony.print("POC PAYCARD: card cache :: " + e); }
+                payCardLoaded = null;
+                payCardAccounts = [];
+                payCardCards = [];
                 callback(true, res.data, code);
             } else {
                 var msg = (res && res.status && res.status.description) ? res.status.description : "";

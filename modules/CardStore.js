@@ -97,6 +97,18 @@ function pocFetchCards(callback) {
 //--- per-screen mappers ------------------------------------------------------------------------
 //Each screen wants a different row shape, so the store keeps the raw rows and maps on demand.
 
+//List rows give the number ~80dp, but the server's masked PAN is 16 characters, so it clipped to
+//"452338XXXX" — identical on two different cards. The last four digits are the identifying part,
+//and they are what the design's "****3456" placeholder was sized for.
+//
+//The FULL masked number is still carried alongside as `mcn`: payCardResolveCcuid() matches on it to
+//find the composite's card uid, and matching a shortened string would silently bring back the
+//G-00009 "Account Details not Found" failure.
+function maskedShort(mcn) {
+    var s = nullCheck(mcn) ? "" + mcn : "";
+    return s.length > 4 ? "•••• " + s.substring(s.length - 4) : s;
+}
+
 //frmDashboard / frmCards 4-slot scroller.
 function pocMapCardsForScroller(rows) {
     var out = [];
@@ -137,7 +149,10 @@ function pocMapCardsForCardsScreen(rows) {
             lblCardUser: holder,
             lblNameBackCard: holder,
             lblCreditCard: "Credit card",
-            lblCardNumber: masked,
+            //Front face is a narrow row — last four only. The back face is where the full masked
+            //number belongs, under its "Card number" caption.
+            lblCardNumber: maskedShort(masked),
+            mcn: masked,
             lblBackCard: masked,
             imgCard: "qnb_visa.png",
             lblBal: amountText(c.avb),
@@ -182,7 +197,8 @@ function pocMapCardsForChooser(rows) {
             imgCard: "qnb_visa.png",
             lblCardName: nullCheck(c.ctd) ? c.ctd : "Credit card",
             lblHolderName: nullCheck(c.ebn) ? c.ebn : "",
-            lblCardNumber: nullCheck(c.mcn) ? c.mcn : "",
+            lblCardNumber: maskedShort(c.mcn),
+            mcn: nullCheck(c.mcn) ? c.mcn : "",
             utilised: used,
             limit: limit,
             lblUtilAmt: formatAmount(used) + " " + (nullCheck(c.cr) ? c.cr : "QAR"),

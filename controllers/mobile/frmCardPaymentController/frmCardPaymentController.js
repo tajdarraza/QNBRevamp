@@ -13,8 +13,53 @@ define({
     },
 
     preShow: function () {
+        this.renderReal();
         this.initSuccessAnimation();
 
+    },
+
+    safeText: function (id, txt) {
+        if (txt === null || txt === undefined) { return; }
+        try { if (this.view[id]) { this.view[id].text = "" + txt; } }
+        catch (e) { kony.print("frmCardPayment safeText " + id + " :: " + e); }
+    },
+
+    //This screen shipped showing "Credit card 1 / James Lee / ****3456" and a 45,000-of-60,000 bar —
+    //the design placeholders — on top of a real, completed payment. Everything here now comes from
+    //the draft and the confirmPC receipt.
+    renderReal: function () {
+        var card = payCardDraft.card || {};
+        var receipt = payCardDraft.receipt || {};
+        var cur = payCardDraft.currency || "QAR";
+        var nav = this.navData || {};
+
+        var num = "" + (card.lblCardNumber || "");
+        this.safeText("lblCardName", nullCheck(card.lblCardName)
+            ? (card.lblCardName.length > 20 ? card.lblCardName.substring(0, 19) + "…" : card.lblCardName)
+            : "Credit card");
+        var holder = "" + (card.lblHolderName || "");
+        this.safeText("lblHolderName", holder.length > 20 ? holder.substring(0, 19) + "…" : holder);
+        this.safeText("lblCardNumber", num.length > 4 ? "•••• " + num.substring(num.length - 4) : num);
+
+        //The payment has gone through, so the utilised figure is the pre-payment one MINUS what was
+        //just paid — the old number beside a success tick reads as "nothing happened".
+        var limit = Number(nav.totalLimit) || this.totalLimit;
+        var paid = Number(nav.payAmount) || 0;
+        var used = (Number(nav.utilisedAmount) || this.utilisedAmount) - paid;
+        if (used < 0) { used = 0; }
+
+        this.safeText("lblUtilAmt", formatAmount(used) + " " + cur);
+        this.safeText("lblTotalAmt", formatAmount(limit) + " " + cur);
+        try {
+            this.view.flxProgressBar.width = (limit > 0 ? (used / limit) * 100 : 0) + "%";
+            this.view.flxCreditBackProgress.isVisible = false;
+        } catch (e) { kony.print("frmCardPayment progress :: " + e); }
+
+        //`r` is the reference id and `d` the transaction date (production confirmServiceCallBack).
+        //Neither has a widget on this form yet — logged so the values are captured until a
+        //reference row is added.
+        kony.print("POC PAYCARD SUCCESS: refId=" + receipt.r + " txnDate=" + receipt.d +
+            " paid=" + paid + " " + cur + " card=" + num);
     },
     postShow: function () {
         this.playSuccessAnimation();
