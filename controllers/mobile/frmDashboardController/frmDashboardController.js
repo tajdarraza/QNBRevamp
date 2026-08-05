@@ -154,9 +154,9 @@ define({
         //The row is 345dp wide. Even with the full width available, 15 characters at the design's
         //~39px overflows, so long figures still step down — but only one step, and now that step
         //actually fits instead of being shrunk twice over to compensate for a wasted 30% offset.
-        if (digits >= 15) { return "sknLabel40pxBold1B124B"; }     //~18px
-        if (digits >= 11) { return "sknLblSansENBold24Px1B124B"; } //~32px
-        return "CopydefLabel0ebbade0e723843";                      //~39px, the design size
+        if (digits >= 15) { return "sknLabel40pxBold1B124B"; }   //~18px
+        if (digits >= 11) { return "sknLblFawranAmtLong1B124B"; } //~26px, sized on every platform
+        return "CopydefLabel0ebbade0e723843";                    //~39px, the design size
     },
 
     mapDashboardRows: function (accs) {
@@ -1010,7 +1010,10 @@ define({
         this.view.flxDots.removeAll();
         this.indicators = [];
 
-        var pageCount = this.view.segAccounts.data.length;
+        //Same guard as frmCards: Kony returns null for an empty segment, and a customer with no
+        //accounts would crash the dashboard here.
+        var accData = this.view.segAccounts.data;
+        var pageCount = (accData && accData.length) ? accData.length : 0;
 
         for (var i = 0; i < pageCount; i++) {
 

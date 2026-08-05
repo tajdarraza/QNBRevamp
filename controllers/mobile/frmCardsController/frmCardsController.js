@@ -43,10 +43,10 @@ define({
 
     onFooterMenu: function () {
         try {
-            new kony.mvc.Navigation("frmMenu").navigate();
+            new kony.mvc.Navigation("frmMoreActions").navigate();
         } catch (e) {
             kony.print("frmMenu not available yet :: " + e);
-            pocNotBuilt("Menu");
+            new kony.mvc.Navigation("frmMoreActions").navigate();
         }
     },
 
@@ -161,7 +161,9 @@ define({
                 self.cardData = pocMapCardsForCardsScreen(rows);
                 kony.print("POC CARDS SCREEN: rendering " + rows.length + " real cards");
             } else {
-                kony.print("POC CARDS SCREEN: no server cards — using fallback");
+                //Empty rather than fabricated. Fake cards on a banking screen read as real.
+                kony.print("POC CARDS SCREEN: customer has no cards — showing empty state");
+                self.cardData = [];
             }
             self.setCardData();
             self.createIndicators();
@@ -223,50 +225,64 @@ define({
         
     },
 
+    //Guards the double-fire: both imgFlipFrontCard and imgFlipBack carry this handler and a single
+    //tap delivers it twice, which would flip and immediately unflip.
+    flipBusyRow: -1,
+
     flipCard: function (rowIndex, widget) {
-
         var self = this;
-        var card = widget.parent.parent.parent;   // flxContainer
 
-        var shrink = kony.ui.makeAffineTransform();
-        shrink.scale(0.95, 0.95);
+        if (this.flipBusyRow === rowIndex) {
+            kony.print("POC CARDS: flip row=" + rowIndex + " ignored (duplicate delivery)");
+            return;
+        }
+        //Kony's JS runtime has no setTimeout — the rest of this codebase uses kony.timer.schedule.
+        //Guard the timer too: a failed timer must not leave the row permanently locked.
+        this.flipBusyRow = rowIndex;
+        try {
+            kony.timer.schedule("pocFlipUnlock", function () {
+                self.flipBusyRow = -1;
+                try { kony.timer.cancel("pocFlipUnlock"); } catch (e) { }
+            }, 0.4, false);
+        } catch (e) {
+            kony.print("POC CARDS: flip unlock timer :: " + e);
+            this.flipBusyRow = -1;
+        }
 
-        card.animate(
-            kony.ui.createAnimation({
-                "100": {
-                    transform: shrink,
-                    stepConfig: {
-                        timingFunction: kony.anim.EASE_OUT_BACK
-                    }
-                }
-            }),
-            {
-                duration: 0.18,
-                fillMode: kony.anim.FILL_MODE_FORWARDS
-            },
-            {
-                animationEnd: function () {
+        var rowData = this.cardData[rowIndex];
+        if (!rowData) {
+            kony.print("POC CARDS: flipCard has no row " + rowIndex);
+            return;
+        }
 
-                    var rowData = self.cardData[rowIndex];
+        //Toggle SYNCHRONOUSLY. It used to sit in the animation's animationEnd callback, which never
+        //fires on this build — the handler ran, the shrink played, and nothing ever swapped.
+        rowData.showBack = !rowData.showBack;
+        rowData.flxCardFrontView = { isVisible: !rowData.showBack };
+        rowData.flxCardBackView = { isVisible: rowData.showBack };
+        this.cardData[rowIndex] = rowData;
+        try {
+            this.view.segCards.setDataAt(rowData, rowIndex);
+            kony.print("POC CARDS: flipped row " + rowIndex + " showBack=" + rowData.showBack);
+        } catch (e) {
+            kony.print("POC CARDS: setDataAt failed :: " + e);
+        }
 
-                    rowData.showBack = !rowData.showBack;
-
-                    rowData.flxCardFrontView = {
-                        isVisible: !rowData.showBack
-                    };
-
-                    rowData.flxCardBackView = {
-                        isVisible: rowData.showBack
-                    };
-
-                    self.cardData[rowIndex] = rowData;
-
-                    // Only update the row after the shrink completes
-                    self.view.segCards.setDataAt(rowData, rowIndex);
-
-                }
+        //Decoration only, and deliberately after the swap so a failure here cannot block it.
+        try {
+            var card = (widget && widget.parent && widget.parent.parent)
+                ? widget.parent.parent.parent : null;
+            if (card && typeof card.animate === "function") {
+                var shrink = kony.ui.makeAffineTransform();
+                shrink.scale(0.97, 0.97);
+                card.animate(
+                    kony.ui.createAnimation({ "100": { transform: shrink,
+                        stepConfig: { timingFunction: kony.anim.EASE_OUT_BACK } } }),
+                    { duration: 0.15, fillMode: kony.anim.FILL_MODE_REMOVE }, {});
             }
-        );
+        } catch (e) {
+            kony.print("POC CARDS: flip animation skipped :: " + e);
+        }
     },
 
     onSwipeCards: function (eventobject, sectionNumber, rowNumber) {
@@ -310,7 +326,10 @@ define({
         this.view.flxDots.removeAll();
         this.indicators = [];
 
-        var pageCount = this.view.segCards.data.length;
+        //Kony returns NULL — not [] — for an empty segment, so this threw the moment the fallback
+        //cards were removed and a cardless customer produced an empty list.
+        var data = this.view.segCards.data;
+        var pageCount = (data && data.length) ? data.length : 0;
 
         for (var i = 0; i < pageCount; i++) {
 

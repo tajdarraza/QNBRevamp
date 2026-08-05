@@ -2,8 +2,8 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "18dp"
     },
     "_left_": {
         "type": "string",
@@ -29,11 +29,11 @@
     "_text_": "Credit card 1",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "2dp"
     },
     "_width_": {
         "type": "string",
-        "value": "200dp"
+        "value": "142dp"
     },
     "_wrapping_": 2,
     "android": {

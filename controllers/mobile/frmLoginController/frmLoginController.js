@@ -434,6 +434,7 @@ define({
             //Found" — which reads like a beneficiary problem but is the debit account.
             try { fawranResetSession(); } catch (e) { kony.print("fawranResetSession :: " + e); }
             try { pocResetCards(); } catch (e) { kony.print("pocResetCards :: " + e); }
+            try { payCardResetSession(); } catch (e) { kony.print("payCardResetSession :: " + e); }
 
             //"Remember me" decides whether we keep the username. Keeping it drives the returning-user
             //layout (password-only + "Welcome <name>"); clearing it returns to the full login form.

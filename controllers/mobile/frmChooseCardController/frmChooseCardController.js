@@ -77,11 +77,27 @@ define({
             if (rows && rows.length) {
                 self.cardData = pocMapCardsForChooser(rows);
                 kony.print("POC CHOOSE: rendering " + rows.length + " real cards");
-            } else {
-                kony.print("POC CHOOSE: no server cards — using fallback");
+                self.setProgress();
+                return;
             }
+            //No cards means no cards. Showing invented ones here is worse than an empty screen:
+            //they carry no ccuid, so every one of them dead-ends at the payment services anyway.
+            kony.print("POC CHOOSE: customer has no cards — showing empty state");
+            self.cardData = [];
             self.setProgress();
+            self.showNoCards();
         });
+    },
+
+    showNoCards: function () {
+        var self = this;
+        kony.ui.Alert({
+            message: "You don't have any cards to pay.",
+            alertType: constants.ALERT_TYPE_INFO,
+            alertTitle: "Cards",
+            yesLabel: "OK",
+            alertHandler: function () { self.backNav(); }
+        }, {});
     },
 
     backNav: function() {
@@ -140,12 +156,22 @@ define({
             var card = this.cardData[idx];
             if (!card) { return; }
 
+            //ccuid / currency / minDueText were being dropped here even though pocMapCardsForChooser
+            //carries them, so frmPayCard always saw ccuid=MISSING — the payment services would have
+            //been unable to name the card even with real data on screen.
+            kony.print("POC CHOOSE: selected " + card.lblCardName +
+                " ccuid=" + (nullCheck(card.ccuid) ? card.ccuid : "MISSING"));
+
             new kony.mvc.Navigation("frmPayCard").navigate({
                 utilisedAmount: card.utilised,
                 totalLimit: card.limit,
                 lblCardName: card.lblCardName,
                 lblHolderName: card.lblHolderName,
-                lblCardNumber: card.lblCardNumber
+                lblCardNumber: card.lblCardNumber,
+                ccuid: card.ccuid,
+                currency: card.currency,
+                minDueText: card.minDueText,
+                outstandingText: card.outstandingText
             });
         } catch (e) {
             kony.print("onCardSelected :: " + e);

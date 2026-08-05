@@ -18,6 +18,15 @@ var pocCardsInFlight = false;
 //callback(rawRows). Fetches once per session and caches; safe to call from any form's preShow.
 //Returns the cached rows immediately when already loaded, so navigating between card screens does
 //not re-issue the call.
+//Same session-scope problem as Fawran: the card list is cached in module state that outlives a
+//logout, so a user switch would otherwise show the previous customer's cards.
+function pocResetCards() {
+    pocCardsRaw = [];
+    pocCardsLoaded = false;
+    pocCardsInFlight = false;
+    kony.print("POC CARDS: cache cleared");
+}
+
 function pocFetchCards(callback) {
     try {
         if (pocCardsLoaded) {
@@ -159,8 +168,16 @@ function pocMapCardsForChooser(rows) {
     var out = [];
     for (var i = 0; i < rows.length; i++) {
         var c = rows[i];
-        var used = amountNumber(c.ob);
+        //`ob` comes back identical on every card (an account-level figure), so it is not this
+        //card's utilisation — using it made the bar full and showed "437,031.46 out of 750.00".
+        //Utilised = credit limit - available credit, clamped so a negative can never render.
         var limit = amountNumber(c.cl);
+        var avail = amountNumber(c.avb);
+        var used = limit - avail;
+        if (!(used > 0)) { used = 0; }
+        if (used > limit) { used = limit; }
+        kony.print("POC CARDS: " + (c.mcn || "?") + " limit=" + c.cl + " avail=" + c.avb +
+            " -> used=" + formatAmount(used) + "  (ob=" + c.ob + " ignored)");
         out.push({
             imgCard: "qnb_visa.png",
             lblCardName: nullCheck(c.ctd) ? c.ctd : "Credit card",
@@ -168,8 +185,16 @@ function pocMapCardsForChooser(rows) {
             lblCardNumber: nullCheck(c.mcn) ? c.mcn : "",
             utilised: used,
             limit: limit,
-            lblUtilAmt: amountText(c.ob) + " " + (nullCheck(c.cr) ? c.cr : "QAR"),
-            lblTotalAmt: "out of " + amountText(c.cl) + " " + (nullCheck(c.cr) ? c.cr : "QAR")
+            lblUtilAmt: formatAmount(used) + " " + (nullCheck(c.cr) ? c.cr : "QAR"),
+            lblTotalAmt: "out of " + amountText(c.cl) + " " + (nullCheck(c.cr) ? c.cr : "QAR"),
+
+            //Identity + real figures carried through the selection. Without ccuid the payment
+            //services have no idea which card is being paid, and minimum-due was being guessed at
+            //5% of the balance because the real value never left this mapper.
+            ccuid: nullCheck(c.i) ? c.i : "",
+            currency: nullCheck(c.cr) ? c.cr : "QAR",
+            outstandingText: nullCheck(c.ob) ? c.ob : "",
+            minDueText: nullCheck(c.ma) ? c.ma : ""
         });
     }
     return out;
