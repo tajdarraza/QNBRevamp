@@ -40,6 +40,7 @@
     "canUpdateUI": true,
     "children": [],
     "clipbounds": false,
+    "containerId": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxProgressBar",
