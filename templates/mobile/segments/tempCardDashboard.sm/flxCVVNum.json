@@ -31,6 +31,7 @@
         "type": "string",
         "value": "30dp"
     },
+    "activeNativeBorderCornerRadiusControl": "centerControl",
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
