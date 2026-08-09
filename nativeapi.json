@@ -141,6 +141,15 @@
                     "filename": "QNBFuturaeSDK-iOS-15.0.zip",
                     "nfiversion": "3.0",
                     "enable": true
+                },
+                "EncryptionApp-iOS-15.0": {
+                    "title": "EncryptionApp",
+                    "platform": "iOS",
+                    "os": "15.0",
+                    "isDefault": false,
+                    "filename": "EncryptionApp-iOS-15.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
                 }
             }
         }

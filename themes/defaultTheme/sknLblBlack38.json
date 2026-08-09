@@ -18,28 +18,7 @@
     "border_type": 0,
     "border_width": 0,
     "constants": {
-        "iphone": {
-            "font_color": {
-                "key": "color",
-                "value": "${themes.FontCordaleArabic}"
-            },
-            "font_name": {
-                "key": "name",
-                "value": "${themes.FontCordaleArabic}"
-            },
-            "font_size": {
-                "key": "size",
-                "value": "${themes.FontCordaleArabic}"
-            },
-            "font_style": {
-                "key": "style",
-                "value": "${themes.FontCordaleArabic}"
-            },
-            "font_weight": {
-                "key": "weight",
-                "value": "${themes.FontCordaleArabic}"
-            }
-        }
+        "iphone": {}
     },
     "delinkedPltfrms": {
         "androidwear": [],

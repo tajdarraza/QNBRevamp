@@ -27,12 +27,7 @@
     "border_type": 0,
     "border_width": 0,
     "constants": {
-        "iphone": {
-            "font_color": {
-                "key": "color",
-                "value": "${themes.MediumBlue}"
-            }
-        }
+        "iphone": {}
     },
     "delinkedPltfrms": {
         "androidwear": [],

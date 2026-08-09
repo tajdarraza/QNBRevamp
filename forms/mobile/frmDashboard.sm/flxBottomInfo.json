@@ -62,7 +62,7 @@
     "id": "flxBottomInfo",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "e660e8dae1d344ccad709db3c1c5fa59",
     "layouttype": 4,
     "name": "kony.ui.FlexScrollContainer",
