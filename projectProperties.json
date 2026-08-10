@@ -284,6 +284,7 @@
     "enableCordova": false,
     "enableCustomData": false,
     "enableIdForAutomation": false,
+    "enableJasmineAutomation": true,
     "enableOfflineObjects": "false",
     "enableOfflineObjectsDW": "false",
     "enableOfflineObjectsSpa": "false",

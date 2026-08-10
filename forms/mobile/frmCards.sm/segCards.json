@@ -477,7 +477,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "counter": "03",
-    "focusedindex": 0,
+    "focusedindex": null,
     "focuseditem": {
         "imgCVV": {
             "@class": "com.viz.ide.model.segment.ImageSegmentData",
@@ -755,7 +755,7 @@
     "showscrollbars": false,
     "swipeContext": {
         "currentPage": 0,
-        "imageWidth": 1179,
+        "imageWidth": 1173,
         "widthRatio": 0
     },
     "viewtype": "pageview",
