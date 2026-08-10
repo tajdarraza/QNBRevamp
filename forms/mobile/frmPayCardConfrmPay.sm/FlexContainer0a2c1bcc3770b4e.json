@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "1dp"
+        "value": "220dp"
     },
     "_left_": {
         "type": "string",
-        "value": "6%"
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -22,31 +22,30 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sc11a37574a6529ed7690c8f40ed805",
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "75dp"
+        "value": "0"
     },
     "_width_": {
         "type": "string",
-        "value": "88%"
+        "value": "100%"
     },
     "allboxes": [],
-    "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [],
     "clipbounds": false,
     "containerweight": 100,
-    "enablescrolling": false,
-    "id": "flxPickDiv5",
+    "enablescrolling": true,
+    "id": "FlexContainer0a2c1bcc3770b4e",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a4c7365618422bc90cb31c09a0c085f1",
+    "kuid": "ja43fd2d53494aae923564085aef5c5f",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxPickRow5",
-    "pf": "frmPayCard",
+    "parent": "flxParent",
+    "pf": "frmPayCardConfrmPay",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

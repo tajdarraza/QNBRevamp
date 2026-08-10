@@ -1,63 +1,63 @@
 {
-  "DNDConfig": null,
-  "_height_": {
-    "type": "string",
-    "value": "76dp"
-  },
-  "_left_": {
-    "type": "string",
-    "value": "0dp"
-  },
-  "_margin_": [
-    0,
-    0,
-    0,
-    0
-  ],
-  "_orientation_": 6,
-  "_padding_": [
-    0,
-    0,
-    0,
-    0
-  ],
-  "_percent_": true,
-  "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
-  "_top_": {
-    "type": "string",
-    "value": "380dp"
-  },
-  "_width_": {
-    "type": "string",
-    "value": "100%"
-  },
-  "allboxes": [],
-  "autogrowmode": 0,
-  "canUpdateUI": true,
-  "children": [
-    "lblPickRow5",
-    "flxPickDiv5",
-    "lblPickSub5",
-    "lblPickAmt5",
-    "lblPickCur5"
-  ],
-  "clipbounds": false,
-  "containerweight": 100,
-  "enablescrolling": false,
-  "id": "flxPickRow5",
-  "info": null,
-  "iscustomlayout": false,
-  "isvisible": false,
-  "kuid": "2ffc54ada91b7dcdce7fbee550dc5917",
-  "layouttype": 2,
-  "name": "kony.ui.FlexContainer",
-  "parent": "flxPickerRows",
-  "pf": "frmPayCardConfrmPay",
-  "retaincontentalignment": false,
-  "retainflexpositionproperties": false,
-  "retainflowhorizontalalignment": false,
-  "snapgridsize": 10,
-  "snaptogrid": true,
-  "wType": "FlexContainer",
-  "widgetalignment": 1
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "76dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "380dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "lblPickRow5",
+        "flxPickDiv5",
+        "lblPickSub5",
+        "lblPickAmt5",
+        "lblPickCur5"
+    ],
+    "clipbounds": false,
+    "containerweight": 100,
+    "enablescrolling": false,
+    "id": "flxPickRow5",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "2ffc54ada91b7dcdce7fbee550dc5917",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxPickerRows",
+    "pf": "frmPayCardConfrmPay",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1
 }

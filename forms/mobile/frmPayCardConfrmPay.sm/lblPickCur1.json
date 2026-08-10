@@ -1,46 +1,46 @@
 {
-  "@class": "com.kony.gen.viz.model.component.KVizLabel",
-  "DNDConfig": null,
-  "_height_": {
-    "type": "string",
-    "value": "20dp"
-  },
-  "_left_": {
-    "type": "string",
-    "value": "56%"
-  },
-  "_margin_": [
-    0,
-    0,
-    0,
-    0
-  ],
-  "_padding_": [
-    0,
-    0,
-    0,
-    0
-  ],
-  "_skin_": "s36f260ddf254fbda71bc9eae9f52c81",
-  "_text_": "",
-  "_top_": {
-    "type": "string",
-    "value": "38dp"
-  },
-  "_width_": {
-    "type": "string",
-    "value": "38%"
-  },
-  "_wrapping_": 2,
-  "canUpdateUI": true,
-  "containerweight": 100,
-  "contentalignment": 6,
-  "id": "lblPickCur1",
-  "info": null,
-  "iscustomlayout": false,
-  "isvisible": true,
-  "kuid": "aa17ca6026ba970ea151eb94c7e7d37e",
-  "name": "kony.ui.Label",
-  "parent": "flxPickRow1",
-  "pf": "frmPayCardConfrmPay"
+    "@class": "com.kony.gen.viz.model.component.KVizLabel",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "20dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "56%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s36f260ddf254fbda71bc9eae9f52c81",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "38dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "38%"
+    },
+    "_wrapping_": 2,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 6,
+    "id": "lblPickCur1",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "aa17ca6026ba970ea151eb94c7e7d37e",
+    "name": "kony.ui.Label",
+    "parent": "flxPickRow1",
+    "pf": "frmPayCardConfrmPay"
 }
