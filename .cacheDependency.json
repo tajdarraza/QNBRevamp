@@ -3340,7 +3340,7 @@
         {
           "dependency": {
             "type": "kskin",
-            "id": "CopydefLabel0ebbade0e723843",
+            "id": "sknLblAmount85PxBold1b124b",
             "kuid": "s2d4c35c3b7746ffa1f7a151db0d89f9",
             "wType": "Label",
             "theme": "defaultTheme",
@@ -3350,7 +3350,7 @@
           "relationInfo": {
             "kuid": "c5a373d8d2b340608b3239c62ea94126",
             "wType": "Label",
-            "filePath": "/Users/vistas/Downloads/QNB_QA/QNB_MOBILE/QNBRevampWorkspace/QNBMobile/templates/mobile/segments/tempDashboard.sm/lblAccBalane.json",
+            "filePath": "/Users/vistas/Downloads/QNB_QA/QNB_MOBILE/QNBRevampWorkspace/QNBMobile/templates/mobile/segments/tempDashboard.sm/lblAccBalance.json",
             "keyPath": [
               "_skin_"
             ]
@@ -3359,8 +3359,8 @@
         {
           "dependency": {
             "type": "kskin",
-            "id": "CopydefLabel0b233ed80db4e41",
-            "kuid": "s1298de8c6b7448ab6f2ec166112dad4",
+            "id": "sknLblDecimal45pxNormal1b124b",
+            "kuid": "sfa805753c944b67b3d326ca12dfc724",
             "wType": "Label",
             "theme": "defaultTheme",
             "isDefaultSkin": false,
@@ -3378,7 +3378,7 @@
         {
           "dependency": {
             "type": "kskin",
-            "id": "CopydefLabel0hfe8522628c94c",
+            "id": "sknLblCurrency40pxNormal1b124b",
             "kuid": "s43b52d47c3b4e1fb402d61dd70c4aae",
             "wType": "Label",
             "theme": "defaultTheme",
@@ -4052,14 +4052,14 @@
           "runtimePath": "this.view.flxBalance"
         },
         "c5a373d8d2b340608b3239c62ea94126": {
-          "id": "lblAccBalane",
-          "filePath": "/Users/vistas/Downloads/QNB_QA/QNB_MOBILE/QNBRevampWorkspace/QNBMobile/templates/mobile/segments/tempDashboard.sm/lblAccBalane.json",
+          "id": "lblAccBalance",
+          "filePath": "/Users/vistas/Downloads/QNB_QA/QNB_MOBILE/QNBRevampWorkspace/QNBMobile/templates/mobile/segments/tempDashboard.sm/lblAccBalance.json",
           "wType": "Label",
           "name": "kony.ui.Label",
           "entityKUID": "e5df4f9a3b3a4a81ab573589523a0b72",
           "isUDWInstanceModel": false,
           "isRealChildOfTargetContainer": false,
-          "runtimePath": "this.view.lblAccBalane"
+          "runtimePath": "this.view.lblAccBalance"
         },
         "b912521f922b42feacd4a71ded57642e": {
           "id": "lblDecimal",
@@ -15596,14 +15596,14 @@
                 "runtimePath": "this.view.flxBalance"
               },
               "c5a373d8d2b340608b3239c62ea94126": {
-                "id": "lblAccBalane",
-                "filePath": "/Users/vistas/Downloads/QNB_QA/QNB_MOBILE/QNBRevampWorkspace/QNBMobile/templates/mobile/segments/tempDashboard.sm/lblAccBalane.json",
+                "id": "lblAccBalance",
+                "filePath": "/Users/vistas/Downloads/QNB_QA/QNB_MOBILE/QNBRevampWorkspace/QNBMobile/templates/mobile/segments/tempDashboard.sm/lblAccBalance.json",
                 "wType": "Label",
                 "name": "kony.ui.Label",
                 "entityKUID": "e5df4f9a3b3a4a81ab573589523a0b72",
                 "isUDWInstanceModel": false,
                 "isRealChildOfTargetContainer": false,
-                "runtimePath": "this.view.lblAccBalane"
+                "runtimePath": "this.view.lblAccBalance"
               },
               "b912521f922b42feacd4a71ded57642e": {
                 "id": "lblDecimal",
@@ -15956,7 +15956,7 @@
               "flxDashboards"
             ],
             "defaultControllerPath": "/Users/vistas/Downloads/QNB_QA/QNB_MOBILE/QNBRevampWorkspace/QNBMobile/controllers/mobile/flxDashboardsController/flxDashboardsControllerActions.js",
-            "formId": "flxDashboards"
+            "formId": "tempDashboard"
           },
           "relationInfo": {
             "kuid": "edc7e8a0b4fa4287ad6b5f714bfff874",
@@ -21598,7 +21598,7 @@
         {
           "dependency": {
             "type": "kskin",
-            "id": "CopydefLabel0ebbade0e723843",
+            "id": "sknLblAmount85PxBold1b124b",
             "kuid": "s2d4c35c3b7746ffa1f7a151db0d89f9",
             "wType": "Label",
             "theme": "defaultTheme",
@@ -21617,7 +21617,7 @@
         {
           "dependency": {
             "type": "kskin",
-            "id": "CopydefLabel0ebbade0e723843",
+            "id": "sknLblAmount85PxBold1b124b",
             "kuid": "s2d4c35c3b7746ffa1f7a151db0d89f9",
             "wType": "Label",
             "theme": "defaultTheme",
@@ -21636,7 +21636,7 @@
         {
           "dependency": {
             "type": "kskin",
-            "id": "CopydefLabel0ebbade0e723843",
+            "id": "sknLblAmount85PxBold1b124b",
             "kuid": "s2d4c35c3b7746ffa1f7a151db0d89f9",
             "wType": "Label",
             "theme": "defaultTheme",
@@ -23307,7 +23307,7 @@
         {
           "dependency": {
             "type": "kskin",
-            "id": "CopydefLabel0ebbade0e723843",
+            "id": "sknLblAmount85PxBold1b124b",
             "kuid": "s2d4c35c3b7746ffa1f7a151db0d89f9",
             "wType": "Label",
             "theme": "defaultTheme",
@@ -24530,7 +24530,7 @@
         {
           "dependency": {
             "type": "kskin",
-            "id": "CopydefLabel0ebbade0e723843",
+            "id": "sknLblAmount85PxBold1b124b",
             "kuid": "s2d4c35c3b7746ffa1f7a151db0d89f9",
             "wType": "Label",
             "theme": "defaultTheme",
@@ -32094,8 +32094,8 @@
         {
           "dependency": {
             "type": "kskin",
-            "id": "CopyslFbox0e4a7ff8bedb746",
-            "kuid": "s6249bd571654ec29ae012b80f377eac",
+            "id": "sknRoundedCloseIconWhiteBGTransRadius",
+            "kuid": "s531e174855643dc890c8bd76abd6c29",
             "wType": "FlexContainer",
             "theme": "defaultTheme",
             "isDefaultSkin": false,
@@ -35577,8 +35577,8 @@
         {
           "dependency": {
             "type": "kskin",
-            "id": "CopyslFbox0e4a7ff8bedb746",
-            "kuid": "s6249bd571654ec29ae012b80f377eac",
+            "id": "sknRoundedCloseIconWhiteBGTransRadius",
+            "kuid": "s531e174855643dc890c8bd76abd6c29",
             "wType": "FlexContainer",
             "theme": "defaultTheme",
             "isDefaultSkin": false,
@@ -36263,6 +36263,25 @@
             "filePath": "/Users/vistas/Downloads/QNB_QA/QNB_MOBILE/QNBRevampWorkspace/QNBMobile/forms/mobile/frmPayCardConfrmPay.sm/btnRevAndConfrm.json",
             "keyPath": [
               "focusskin"
+            ]
+          }
+        },
+        {
+          "dependency": {
+            "type": "kskin",
+            "id": "slFbox",
+            "kuid": "s2accb80cd4f4d7a8343abebfc9624fb",
+            "wType": "FlexContainer",
+            "theme": "defaultTheme",
+            "isDefaultSkin": true,
+            "forkedPlatforms": []
+          },
+          "relationInfo": {
+            "kuid": "ja43fd2d53494aae923564085aef5c5f",
+            "wType": "FlexContainer",
+            "filePath": "/Users/vistas/Downloads/QNB_QA/QNB_MOBILE/QNBRevampWorkspace/QNBMobile/forms/mobile/frmPayCardConfrmPay.sm/FlexContainer0a2c1bcc3770b4e.json",
+            "keyPath": [
+              "_skin_"
             ]
           }
         },
@@ -38081,6 +38100,17 @@
           "isUDWInstanceModel": false,
           "isRealChildOfTargetContainer": false,
           "runtimePath": "this.view.btnRevAndConfrm"
+        },
+        "ja43fd2d53494aae923564085aef5c5f": {
+          "id": "FlexContainer0a2c1bcc3770b4e",
+          "filePath": "/Users/vistas/Downloads/QNB_QA/QNB_MOBILE/QNBRevampWorkspace/QNBMobile/forms/mobile/frmPayCardConfrmPay.sm/FlexContainer0a2c1bcc3770b4e.json",
+          "wType": "FlexContainer",
+          "name": "kony.ui.FlexContainer",
+          "entityKUID": "dd04ed104e2a4415948b3c44e5e9ca50",
+          "layoutType": 2,
+          "isUDWInstanceModel": false,
+          "isRealChildOfTargetContainer": false,
+          "runtimePath": "this.view.FlexContainer0a2c1bcc3770b4e"
         },
         "efba44850edb83a19847348eb3535b76": {
           "id": "flxPickerSheet",
@@ -42331,6 +42361,9 @@
     "scf9d03dc5724684a9e73e10b4070720": {
       "dependencies": []
     },
+    "sd55dbbf763040d6bda594b246c90438": {
+      "dependencies": []
+    },
     "s49e664bd6834e5a1dbed029146d02a": {
       "dependencies": []
     },
@@ -42344,6 +42377,12 @@
       "dependencies": []
     },
     "sf5c4a11f6ce4457b90b548f7de4452d": {
+      "dependencies": []
+    },
+    "s8b4741fe99c44b7b9d2d59fab28e1ee": {
+      "dependencies": []
+    },
+    "sfa805753c944b67b3d326ca12dfc724": {
       "dependencies": []
     },
     "sed51189e10e47388d97670d1366924c": {
@@ -42428,6 +42467,9 @@
       "dependencies": []
     },
     "s20811afbf9c4838b8683013068f2730": {
+      "dependencies": []
+    },
+    "s531e174855643dc890c8bd76abd6c29": {
       "dependencies": []
     },
     "s18922c424624147a971b5a57beb1452": {

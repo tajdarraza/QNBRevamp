@@ -27,7 +27,7 @@
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "icon_button3.png"
             },
-            "lblAccBalane": {
+            "lblAccBalance": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "4,066"
             },
@@ -105,7 +105,7 @@
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "icon_button3.png"
             },
-            "lblAccBalane": {
+            "lblAccBalance": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "4,066"
             },
@@ -183,7 +183,7 @@
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "icon_button3.png"
             },
-            "lblAccBalane": {
+            "lblAccBalance": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "4,066"
             },
@@ -261,7 +261,7 @@
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "icon_button3.png"
             },
-            "lblAccBalane": {
+            "lblAccBalance": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "4,066"
             },
@@ -598,7 +598,7 @@
         "imgMenu2": "imgMenu2",
         "imgMenu3": "imgMenu3",
         "imgMenu4": "imgMenu4",
-        "lblAccBalane": "lblAccBalane",
+        "lblAccBalance": "lblAccBalance",
         "lblAccountType": "lblAccountType",
         "lblActualBal": "lblActualBal",
         "lblAllAccounts": "lblAllAccounts",

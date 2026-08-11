@@ -154,9 +154,9 @@ define({
         //The row is 345dp wide. Even with the full width available, 15 characters at the design's
         //~39px overflows, so long figures still step down — but only one step, and now that step
         //actually fits instead of being shrunk twice over to compensate for a wasted 30% offset.
-        if (digits >= 15) { return "sknLabel40pxBold1B124B"; }   //~18px
-        if (digits >= 11) { return "sknLblFawranAmtLong1B124B"; } //~26px, sized on every platform
-        return "CopydefLabel0ebbade0e723843";                    //~39px, the design size
+        if (digits >= 15) { return "sknLblAmount60PxBold1b124b"; }   //~18px
+        if (digits >= 11) { return "sknLblAmount60PxBold1b124b"; } //~26px, sized on every platform
+        return "sknLblAmount85PxBold1b124b";                    //~39px, the design size
     },
 
     mapDashboardRows: function (accs) {
@@ -186,7 +186,7 @@ define({
         kony.print("POC DASH: total=" + totalText + " current=" + formatAmount(current) +
             " savings=" + formatAmount(savings) + " over " + accs.length + " accounts");
 
-        //lblAccBalane is `width: preferred` starting at left 30%, so a long figure simply runs off
+        //lblAccBalance is `width: preferred` starting at left 30%, so a long figure simply runs off
         //the right edge and clips. SIT balances reach twelve digits, so step the font down as the
         //number grows rather than truncating a balance.
         var amountSkin = this.amountSkinFor(tParts[0]);
@@ -194,7 +194,7 @@ define({
         rows.push({
             lblAccountType: "Total balance",
             imgAccType: "eyevisible1.png",
-            lblAccBalane: { text: tParts[0], skin: amountSkin },
+            lblAccBalance: { text: tParts[0], skin: amountSkin },
             lblDecimal: "." + (tParts[1] || "00"),
             lblCurr: cur,
             //The design shows "Loans remaining balance" here. No loan figure comes back from
@@ -223,7 +223,7 @@ define({
             rows.push({
                 lblAccountType: nullCheck(a.accTypeDesc) ? a.accTypeDesc : "Account",
                 imgAccType: "eyevisible1.png",
-                lblAccBalane: { text: parts[0], skin: this.amountSkinFor(parts[0]) },
+                lblAccBalance: { text: parts[0], skin: this.amountSkinFor(parts[0]) },
                 lblDecimal: "." + (parts[1] || "00"),
                 lblCurr: nullCheck(a.curr) ? a.curr : "",
                 lblActualBal: "Actual balance  ",
@@ -380,7 +380,7 @@ define({
             lblAccountType: "lblAccountType",
             imgAccType: "imgAccType",
 
-            lblAccBalane: "lblAccBalane",
+            lblAccBalance: "lblAccBalance",
             lblDecimal: "lblDecimal",
             lblCurr: "lblCurr",
 
@@ -481,7 +481,7 @@ define({
             }
             if (this.data && this.data.hasOwnProperty("hideBalance") && this.data.hideBalance) {
                 for (var r = 0; r < rows.length; r++) {
-                    rows[r].lblAccBalane = "************";
+                    rows[r].lblAccBalance = "************";
                     rows[r].lblDecimal = "";
                     rows[r].lblCurr = "";
                 }
@@ -498,7 +498,7 @@ define({
                 lblAccountType: "Current Account",
                 imgAccType: "eyevisible1.png",
 
-                lblAccBalane: "12,450",
+                lblAccBalance: "12,450",
                 lblDecimal: ".75",
                 lblCurr: "QAR",
 
@@ -517,7 +517,7 @@ define({
                 lblAccountType: "Savings Account",
                 imgAccType: "eyevisible1.png",
 
-                lblAccBalane: "35,220",
+                lblAccBalance: "35,220",
                 lblDecimal: ".10",
                 lblCurr: "QAR",
 
@@ -535,7 +535,7 @@ define({
                 lblAccountType: "Fixed Deposit",
                 imgAccType: "eyevisible1.png",
 
-                lblAccBalane: "100,000",
+                lblAccBalance: "100,000",
                 lblDecimal: ".00",
                 lblCurr: "QAR",
 
@@ -553,7 +553,7 @@ define({
                 lblAccountType: "USD Account",
                 imgAccType: "eyevisible1.png",
 
-                lblAccBalane: "5,400",
+                lblAccBalance: "5,400",
                 lblDecimal: ".25",
                 lblCurr: "USD",
 
@@ -570,7 +570,7 @@ define({
         ];
         if (this.data && this.data.hasOwnProperty("hideBalance") && this.data.hideBalance) {
             for (var i = 0; i < segData.length; i++) {
-                segData[i].lblAccBalane = "************";
+                segData[i].lblAccBalance = "************";
                 segData[i].lblDecimal = "";
                 segData[i].lblCurr = "";
             }
