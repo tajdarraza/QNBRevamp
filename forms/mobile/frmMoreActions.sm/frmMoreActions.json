@@ -52,7 +52,7 @@
     "desktopweb": {
         "needAppMenu": false
     },
-    "device": "Pixel3",
+    "device": "iPhone16",
     "displayorientation": 1,
     "enabledforidletimeout": false,
     "id": "frmMoreActions",
@@ -73,7 +73,7 @@
             "titleBarAttributes": {
                 "barStyle": 0,
                 "hidesBackButton": false,
-                "kuid": "i43e1a5a1ba44301a8df5dbcc3c9e3ea",
+                "kuid": "j2be7236502c424ba9d669b5ef856812",
                 "leftBarButtonItems": [],
                 "leftItemsSupplementBackButton": true,
                 "prompt": "",
@@ -84,7 +84,7 @@
                         "info": {
                             "title": "Edit"
                         },
-                        "kuid": "a661aea7ba40482bb40193b23f395eaf",
+                        "kuid": "c4d9278aa3d54a8c9e544ed8572509c7",
                         "style": 0,
                         "tintColor": "4b88f100",
                         "type": 1
@@ -101,14 +101,14 @@
     "kiosk": {
         "needAppMenu": false
     },
-    "kuid": "f476d0506a3241cca2414a4ab450bbc5",
+    "kuid": "cab803a469cb4b378e294551eecd739c",
     "layouttype": 2,
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
-    "platform": "android",
-    "prevDevice": "iPhone16",
-    "prevPlatform": "iphone",
+    "platform": "iphone",
+    "prevDevice": "Pixel3",
+    "prevPlatform": "android",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,

@@ -21,7 +21,7 @@
     "allboxes": [],
     "canUpdateUI": true,
     "children": [
-        "tmpFlxHeader"
+        "tempFlxHeader"
     ],
     "containerId": true,
     "containerweight": 100,

@@ -15,7 +15,12 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s627deddb33d4efda69ae0bfa64563b8",
+    "_pxMenuIndex": [
+        0,
+        1,
+        12
+    ],
+    "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -51,6 +56,31 @@
     },
     "iphone": {
         "needAppMenu": false,
+        "psp": {
+            "titleBarAttributes": {
+                "barStyle": 0,
+                "hidesBackButton": false,
+                "kuid": "e84391fe7aa043f2840669709fed6cbb",
+                "leftBarButtonItems": [],
+                "leftItemsSupplementBackButton": true,
+                "prompt": "",
+                "renderTitleText": true,
+                "rightBarButtonItems": [
+                    {
+                        "enabled": true,
+                        "info": {
+                            "title": "Edit"
+                        },
+                        "kuid": "gbc8971def174cad8f360ddf3a58956c",
+                        "style": 0,
+                        "tintColor": "4b88f100",
+                        "type": 1
+                    }
+                ],
+                "tintColor": "4b88f100",
+                "translucent": true
+            }
+        },
         "titleBar": false
     },
     "iscustomlayout": false,
@@ -61,6 +91,8 @@
     "needappmenu": false,
     "paddinginpixel": false,
     "platform": "android",
+    "prevDevice": "GalaxyNote",
+    "prevPlatform": "android",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,

@@ -15,7 +15,12 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sfbe0b910dfe4363bf286a9d2ada7748",
+    "_pxMenuIndex": [
+        0,
+        1,
+        0
+    ],
+    "_skin_": "s7349b9691cc4419a4a6b12d72321145",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -47,7 +52,7 @@
     "desktopweb": {
         "needAppMenu": false
     },
-    "device": "GalaxyNote",
+    "device": "iPhone12Pro",
     "displayorientation": 1,
     "enabledforidletimeout": true,
     "id": "frmAccounts",
@@ -101,9 +106,9 @@
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
-    "platform": "android",
+    "platform": "iphone",
     "prevDevice": "Pixel3",
-    "prevPlatform": "iphone",
+    "prevPlatform": "android",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,

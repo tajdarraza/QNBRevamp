@@ -41,5 +41,6 @@
     "isvisible": true,
     "kuid": "3053546e6f9cadd648b3322b73cecee5",
     "name": "kony.ui.Label",
-    "parent": "flxPickRow8"
+    "parent": "flxPickRow8",
+    "pf": "frmFawranTransfer"
 }

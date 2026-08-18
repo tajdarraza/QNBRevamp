@@ -396,6 +396,8 @@ define({
             flxGraphics: "flxGraphics",
             flxMenuOptions: "flxMenuOptions",
 
+            flxAllAccounts: "flxAllAccounts",
+
             //ALL FOUR quick-action tiles must be mapped. A segment only delivers a row's data —
             //including its onTouchEnd handlers — to widgets named in widgetDataMap, so with only
             //flxMenu1 here the handlers bound to flxMenu2/3/4 were discarded before they reached the
@@ -591,6 +593,7 @@ define({
             rows[i].flxMenu2 = { onTouchEnd: function () { pocNotBuilt("Pay Bill"); } };
             rows[i].flxMenu3 = { onTouchEnd: function () { self.goTo("frmChooseCard", "Pay card"); } };
             rows[i].flxMenu4 = { onTouchEnd: function () { self.goTo("frmMoreActions", "Menu"); } };
+            rows[i].flxAllAccounts = { onTouchEnd: function () { self.goTo("frmAccounts", "All accounts"); } };
         }
     },
 

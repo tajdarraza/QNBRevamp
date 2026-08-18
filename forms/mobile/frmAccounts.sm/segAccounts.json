@@ -1,0 +1,403 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        [
+            {
+                "lblAccountHeader": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Current account (3)"
+                }
+            },
+            [
+                {
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAccName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Current account 1"
+                    },
+                    "lblAccNum": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "0124-6784-5678"
+                    },
+                    "lblAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "4,000.00"
+                    },
+                    "lblCurrency": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Apr. 20th"
+                    }
+                },
+                {
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAccName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Current account 1"
+                    },
+                    "lblAccNum": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "0124-6784-5678"
+                    },
+                    "lblAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "5,589.34"
+                    },
+                    "lblCurrency": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Apr. 20th"
+                    }
+                },
+                {
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAccName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Current account 1"
+                    },
+                    "lblAccNum": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "0124-6784-5678"
+                    },
+                    "lblAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "17,089.06"
+                    },
+                    "lblCurrency": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Apr. 20th"
+                    }
+                },
+                {
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAccName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Current account 1"
+                    },
+                    "lblAccNum": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "0124-6784-5678"
+                    },
+                    "lblAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "1,050.10"
+                    },
+                    "lblCurrency": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Apr. 20th"
+                    }
+                }
+            ]
+        ],
+        [
+            {
+                "lblAccountHeader": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Savings account (5)"
+                }
+            },
+            [
+                {
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAccName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Savings account 1"
+                    },
+                    "lblAccNum": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "0124-6784-5678"
+                    },
+                    "lblAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "2,000.00"
+                    },
+                    "lblCurrency": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Apr. 20th"
+                    }
+                },
+                {
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAccName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Savings account 1"
+                    },
+                    "lblAccNum": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "0124-6784-5678"
+                    },
+                    "lblAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "6,589.34"
+                    },
+                    "lblCurrency": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Apr. 20th"
+                    }
+                },
+                {
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAccName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Savings account 1"
+                    },
+                    "lblAccNum": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "0124-6784-5678"
+                    },
+                    "lblAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "17,089.06"
+                    },
+                    "lblCurrency": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Apr. 20th"
+                    }
+                },
+                {
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAccName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Savings account 1"
+                    },
+                    "lblAccNum": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "0124-6784-5678"
+                    },
+                    "lblAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "1,050.10"
+                    },
+                    "lblCurrency": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Apr. 20th"
+                    }
+                },
+                {
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAccName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Savings account 1"
+                    },
+                    "lblAccNum": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "0124-6784-5678"
+                    },
+                    "lblAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "6,500.45"
+                    },
+                    "lblCurrency": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Apr. 20th"
+                    }
+                },
+                {
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAccName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Savings account 1"
+                    },
+                    "lblAccNum": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "0124-6784-5678"
+                    },
+                    "lblAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "7,532.54"
+                    },
+                    "lblCurrency": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Apr. 20th"
+                    }
+                }
+            ]
+        ]
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "88%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "2%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "counter": "15",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": true,
+    "id": "segAccounts",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "none"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "fadb15c5118547a4b95157e50c520d86",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flxAccounts",
+    "pf": "frmAccounts",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "dc590102cf3f4a029c47e63644267de3",
+    "rowcounter": 5,
+    "rowexpandable": false,
+    "rowfocusskin": "s2954acbe692423388f2177837594cc7",
+    "rowskin": "sb87b86b8e5942b9818f8db955f022a6",
+    "rowtemplate": "flxAccounts",
+    "screenlevelwidget": false,
+    "seccounter": 1,
+    "sectionHeaderTemplateId": "f5c60c200f144c14bb056e7b67586f27",
+    "sectionheaderskin": "sa3d3e03a64d46889cd06026e0aab435",
+    "sectionheadertemplate": "flxAccountHeader",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorrequired": false,
+    "separatorthickness": 0,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxAccDetails": "flxAccDetails",
+        "flxAccountHeader": "flxAccountHeader",
+        "flxAccounts": "flxAccounts",
+        "flxAmtDetails": "flxAmtDetails",
+        "flxBottom": "flxBottom",
+        "flxBottomMain": "flxBottomMain",
+        "flxMain": "flxMain",
+        "flxSeparator2": "flxSeparator2",
+        "flxSeperator1": "flxSeperator1",
+        "flxTop": "flxTop",
+        "flxTopMain": "flxTopMain",
+        "flxVerticalSeperator": "flxVerticalSeperator",
+        "imgCalendar": "imgCalendar",
+        "lblAccName": "lblAccName",
+        "lblAccNum": "lblAccNum",
+        "lblAccountHeader": "lblAccountHeader",
+        "lblAmount": "lblAmount",
+        "lblCurrency": "lblCurrency",
+        "lblEndDate": "lblEndDate"
+    },
+    "zindex": 1
+}

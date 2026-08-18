@@ -32,6 +32,7 @@
         "type": "string",
         "value": "90%"
     },
+    "android": {},
     "autocapitalize": "none",
     "autocomplete": false,
     "autocorrect": false,

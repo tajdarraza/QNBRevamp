@@ -40,7 +40,8 @@
     },
     "children": [
         "lblFav",
-        "flxMenuOptions"
+        "flxMenuOptions",
+        "lblEditActions"
     ],
     "clipbounds": false,
     "containerweight": 100,
@@ -49,7 +50,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "b049e3e44ca346ccb0fa8aa60ef26fe9",
+    "kuid": "acd86b2cc0bc491ebfabdbbe75e4cf26",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxParent",

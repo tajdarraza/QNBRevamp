@@ -41,7 +41,7 @@
     "id": "flxMngDiv2",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "77e3fa88997ceb6ab078e1bb75d24820",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",

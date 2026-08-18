@@ -11,12 +11,16 @@ define({
 
     },
     preShow: function(){
-
+        this.view.lblEditActions.onTouchEnd = this.onEditClick;
     },
     onDeviceBack: function(){
         var prevForm = kony.application.getPreviousForm();
 
         new kony.mvc.Navigation(prevForm).navigate();
+    },
+
+    onEditClick: function(){
+        new kony.mvc.Navigation("frmMoreActionsEdit").navigate();
     },
 
  });

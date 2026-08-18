@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100dp"
+        "value": "92dp"
     },
     "_left_": {
         "type": "string",
@@ -22,10 +22,10 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "scabe65ba445fde12ab8931b11e213f",
+    "_skin_": "s531d33428304ad08432a5a760c8cebd",
     "_top_": {
         "type": "string",
-        "value": "310dp"
+        "value": "320dp"
     },
     "_width_": {
         "type": "string",
@@ -56,5 +56,6 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 10
 }

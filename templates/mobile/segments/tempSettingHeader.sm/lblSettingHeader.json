@@ -58,7 +58,7 @@
     "isvisible": true,
     "kuid": "fd893eb2a63940cb80101e188e1676c2",
     "name": "kony.ui.Label",
-    "parent": "tmpFlxHeader",
+    "parent": "tempFlxHeader",
     "pf": "tempSettingHeader",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

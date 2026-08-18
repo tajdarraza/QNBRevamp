@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "90dp"
+        "value": "80dp"
     },
     "_left_": {
         "type": "string",
@@ -51,7 +51,7 @@
     "kuid": "ae80360ed1db4e3e8b6470a92f6f8a1d",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "FlexContainer0g6f0f0d225ed4a",
+    "parent": "flxCardHolder",
     "pf": "frmCardSetting",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

@@ -1,0 +1,63 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "104dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "40dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "allboxes": [],
+    "android": {},
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "flxMenu1",
+        "flxMenu2",
+        "flxMenu3"
+    ],
+    "clipbounds": false,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "flxMenuOptions",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "b4a90530d76e4c87b30c6f3ec5204bce",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxFavourites",
+    "pf": "frmMoreActionsEdit",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "shouldgroup": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1
+}

@@ -36,7 +36,8 @@
     "canUpdateUI": true,
     "children": [
         "flxHeader",
-        "flxFavourites"
+        "flxFavourites",
+        "FlexContainer0a36e9d650f2c4c"
     ],
     "clipbounds": false,
     "containerweight": 100,
@@ -45,7 +46,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "i690ba53b197446496f3ddd651768578",
+    "kuid": "cd865a8a5bcc47c887a4d7c5f4e7ddf4",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "frmMoreActions",

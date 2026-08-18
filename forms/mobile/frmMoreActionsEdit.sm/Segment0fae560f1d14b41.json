@@ -1,0 +1,251 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        {
+            "imgAdd1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "addicon.png"
+            },
+            "imgSelectMenuLogo1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "paycardblue.png"
+            },
+            "lblOptionMenuName1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Paycard"
+            }
+        },
+        {
+            "imgAdd1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "addicon.png"
+            },
+            "imgSelectMenuLogo1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "paycardblue.png"
+            },
+            "lblOptionMenuName1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Paycard"
+            }
+        },
+        {
+            "imgAdd1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "addicon.png"
+            },
+            "imgSelectMenuLogo1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "paycardblue.png"
+            },
+            "lblOptionMenuName1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Paycard"
+            }
+        },
+        {
+            "imgAdd1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "addicon.png"
+            },
+            "imgSelectMenuLogo1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "paycardblue.png"
+            },
+            "lblOptionMenuName1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Paycard"
+            }
+        },
+        {
+            "imgAdd1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "addicon.png"
+            },
+            "imgSelectMenuLogo1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "paycardblue.png"
+            },
+            "lblOptionMenuName1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Paycard"
+            }
+        },
+        {
+            "imgAdd1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "addicon.png"
+            },
+            "imgSelectMenuLogo1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "paycardblue.png"
+            },
+            "lblOptionMenuName1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Paycard"
+            }
+        },
+        {
+            "imgAdd1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "addicon.png"
+            },
+            "imgSelectMenuLogo1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "paycardblue.png"
+            },
+            "lblOptionMenuName1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Paycard"
+            }
+        },
+        {
+            "imgAdd1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "addicon.png"
+            },
+            "imgSelectMenuLogo1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "paycardblue.png"
+            },
+            "lblOptionMenuName1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Paycard"
+            }
+        },
+        {
+            "imgAdd1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "addicon.png"
+            },
+            "imgSelectMenuLogo1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "paycardblue.png"
+            },
+            "lblOptionMenuName1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Paycard"
+            }
+        },
+        {
+            "imgAdd1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "addicon.png"
+            },
+            "imgSelectMenuLogo1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "paycardblue.png"
+            },
+            "lblOptionMenuName1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Paycard"
+            }
+        }
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "240dp"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "09",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "Segment0fae560f1d14b41",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "dc77c942540845fdb74c0f4ef4ccc6c2",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom",
+        "vdistance": 1
+    },
+    "parent": "flxParent",
+    "pf": "frmMoreActionsEdit",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "ac983f8304d7437a9278a4d0ff714ed5",
+    "rowcounter": 9,
+    "rowexpandable": false,
+    "rowfocusskin": "s2954acbe692423388f2177837594cc7",
+    "rowskin": "sb87b86b8e5942b9818f8db955f022a6",
+    "rowtemplate": "flxSelectMenu",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionHeaderTemplateId": null,
+    "sectionheaderskin": "s28a7bd0c54c4f64808927aba209e384",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": null,
+    "selectionbehavior": "default",
+    "selectionbehaviorconfig": null,
+    "separatorrequired": false,
+    "showscrollbars": false,
+    "swipeContext": {
+        "currentPage": 0,
+        "imageWidth": 0,
+        "widthRatio": 0
+    },
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxMenuAddRemove1": "flxMenuAddRemove1",
+        "flxOptionMenu1": "flxOptionMenu1",
+        "flxOptionMenuIcon1": "flxOptionMenuIcon1",
+        "flxSelectMenu": "flxSelectMenu",
+        "imgAdd1": "imgAdd1",
+        "imgSelectMenuLogo1": "imgSelectMenuLogo1",
+        "lblOptionMenuName1": "lblOptionMenuName1"
+    }
+}

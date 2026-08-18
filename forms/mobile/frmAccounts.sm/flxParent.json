@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s4f96227fde74df1977265375f9e9546",
+    "_skin_": "s698e9f94f5044a5941b23137068dc95",
     "_top_": {
         "type": "string",
         "value": "0"
@@ -36,7 +36,8 @@
     "canUpdateUI": true,
     "children": [
         "flxHeader",
-        "flxMain"
+        "flxMain",
+        "flxFooter"
     ],
     "clipbounds": true,
     "containerweight": 100,

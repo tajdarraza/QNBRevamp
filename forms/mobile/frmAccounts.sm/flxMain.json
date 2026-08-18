@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "360dp"
+        "value": "82%"
     },
     "_left_": {
         "type": "string",
@@ -35,7 +35,8 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "Segment0b0a83bfaab7f4a"
+        "flxAccounts",
+        "FlexContainer0f74db6c36d9747"
     ],
     "clipbounds": false,
     "containerweight": 100,
@@ -45,7 +46,7 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "gab269abdca544cea1d105eabd47b69c",
-    "layouttype": 2,
+    "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxParent",
     "pf": "frmAccounts",

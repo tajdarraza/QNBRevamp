@@ -20,7 +20,7 @@
         1,
         18
     ],
-    "_skin_": "s627deddb33d4efda69ae0bfa64563b8",
+    "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -43,7 +43,7 @@
         }
     },
     "currentLocale": "default",
-    "device": "Pixel3XL",
+    "device": "Pixel3",
     "displayorientation": 1,
     "enabledforidletimeout": true,
     "id": "frmTransfers",
@@ -91,8 +91,8 @@
     "needappmenu": false,
     "paddinginpixel": false,
     "platform": "android",
-    "prevDevice": "GalaxyNote",
-    "prevPlatform": "android",
+    "prevDevice": "iPhone16",
+    "prevPlatform": "iphone",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,

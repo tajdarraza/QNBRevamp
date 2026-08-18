@@ -1,40 +1,40 @@
 {
-    "android": {
-        "font_name": "default",
-        "border_radius": 26
-    },
-    "androidwearos": {
-        "font_name": "default",
-        "border_radius": 26
-    },
-    "background_color": "2a59bdff",
-    "bg_type": "one",
-    "border_color": "000000ff",
-    "border_style": "plain",
-    "border_type": 0,
-    "border_width": 0,
-    "desktopweb": {
-        "font_name": "Helvetica",
-        "border_radius": 26
-    },
-    "ipad": {
-        "font_name": "System",
-        "border_radius": 26
-    },
-    "iphone": {
-        "font_name": "System",
-        "border_radius": 26
-    },
-    "isDefaultSkin": false,
-    "kuid": "sb77261cce154372974b26f9d1f10f6f",
-    "tabrcandroid": {
-        "font_name": "default",
-        "border_radius": 26
-    },
-    "wType": "FlexContainer",
-    "watchos": {
-        "font_name": "System",
-        "border_radius": 26
-    },
-    "border_radius": 26
+  "android": {
+    "border_radius": 26,
+    "font_name": "default"
+  },
+  "androidwearos": {
+    "border_radius": 26,
+    "font_name": "default"
+  },
+  "background_color": "2a59bdff",
+  "bg_type": "one",
+  "border_color": "2a59bdff",
+  "border_radius": 16,
+  "border_style": "custom",
+  "border_type": 0,
+  "border_width": 1,
+  "desktopweb": {
+    "border_radius": 26,
+    "font_name": "Helvetica"
+  },
+  "ipad": {
+    "border_radius": 26,
+    "font_name": "System"
+  },
+  "iphone": {
+    "border_radius": 26,
+    "font_name": "System"
+  },
+  "isDefaultSkin": false,
+  "kuid": "sb77261cce154372974b26f9d1f10f6f",
+  "tabrcandroid": {
+    "border_radius": 26,
+    "font_name": "default"
+  },
+  "wType": "FlexContainer",
+  "watchos": {
+    "border_radius": 26,
+    "font_name": "System"
+  }
 }

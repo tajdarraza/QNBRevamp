@@ -36,7 +36,6 @@
     "canUpdateUI": true,
     "children": [
         "flxMenuIcon",
-        "flxAddRemove",
         "lblMenuName"
     ],
     "clipbounds": false,
@@ -46,7 +45,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "b4153a79c2e341bfb630331f35085d6e",
+    "kuid": "ccdc6cc2443e4545b2ea05f0414e71fc",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxMenuOptions",

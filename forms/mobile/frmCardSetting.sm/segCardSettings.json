@@ -1,0 +1,235 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        [
+            {
+                "lblSettingHeader": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Financial services"
+                }
+            },
+            [
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Digital wallet"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                },
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Digital wallet"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                },
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Digital wallet"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                }
+            ]
+        ],
+        [
+            {
+                "lblSettingHeader": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Credit limits"
+                }
+            },
+            [
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Digital wallet"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                },
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Digital wallet"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                },
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Digital wallet"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                },
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Digital wallet"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                }
+            ]
+        ]
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "counter": "13",
+    "disabledSkins": {
+        "alternateRowSkin": "s4c65bd92e544f419427154ab9d468aa",
+        "rowFocusSkin": "s2954acbe692423388f2177837594cc7",
+        "widgetSkin": "s291387c4aa74377a23348ad853605cb"
+    },
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": true,
+    "id": "segCardSettings",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "cd8ad6da04544cba9bf0845d9da8417c",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flxCardsSegment",
+    "pf": "frmCardSetting",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "b9dca75e1edf426e8a6524bdb3487a66",
+    "rowcounter": 3,
+    "rowexpandable": false,
+    "rowskin": "sc8a2ccfa3fd4a5886d636584697a786",
+    "rowtemplate": "flxSettings",
+    "screenlevelwidget": false,
+    "seccounter": 1,
+    "sectionHeaderTemplateId": "cb20dc1c72454a69a2c5a7531414c1ac",
+    "sectionheaderskin": "s8e9c5dd259543e6805360c74857f8db",
+    "sectionheadertemplate": "tempFlxHeader",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorrequired": false,
+    "separatorthickness": 0,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxContainerBottom": "flxContainerBottom",
+        "flxContainerTop": "flxContainerTop",
+        "flxMenuOptions": "flxMenuOptions",
+        "flxSettings": "flxSettings",
+        "imgIcon": "imgIcon",
+        "imgMenuName": "imgMenuName",
+        "imgTrail": "imgTrail",
+        "lblSettingHeader": "lblSettingHeader",
+        "tempFlxHeader": "tempFlxHeader"
+    },
+    "zindex": 100
+}

@@ -40,8 +40,8 @@
     },
     "children": [
         "flxHeader",
-        "FlexContainer0g6f0f0d225ed4a",
-        "flxCardSetting"
+        "flxCardHolder",
+        "flxCardsSegment"
     ],
     "clipbounds": false,
     "containerweight": 100,
