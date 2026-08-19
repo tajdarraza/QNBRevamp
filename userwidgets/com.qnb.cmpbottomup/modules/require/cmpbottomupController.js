@@ -2,38 +2,15 @@ define(function () {
 
     return {
 
-        /*
-         * =====================================================
-         * STATE
-         * =====================================================
-         */
-
         isOpen: false,
 
         enableCallback: null,
 
-
-        /*
-         * =====================================================
-         * POST RENDER
-         * =====================================================
-         */
-
         postRender: function () {
 
-            kony.print(
-                "BOTTOM SHEET :: POST RENDER"
-            );
+            kony.print("BOTTOM SHEET :: POST RENDER");
 
             this.bindEvents();
-
-            /*
-             * Default state:
-             *
-             * height = 0%
-             * bottom = 0%
-             * hidden
-             */
 
             if (this.view.flxBottomSheet) {
 
@@ -48,150 +25,69 @@ define(function () {
 
             this.isOpen = false;
 
-            kony.print(
-                "BOTTOM SHEET :: READY"
-            );
+            kony.print("BOTTOM SHEET :: READY");
         },
-
-
-        /*
-         * =====================================================
-         * BIND EVENTS
-         * =====================================================
-         */
 
         bindEvents: function () {
 
-            kony.print(
-                "BOTTOM SHEET :: BIND EVENTS"
-            );
-
-
-            /*
-             * CLOSE ICON
-             */
+            kony.print("BOTTOM SHEET :: BIND EVENTS");
 
             if (this.view.flxClose) {
 
-                this.view.flxClose.onTouchEnd =
-                    this.hide.bind(this);
+                this.view.flxClose.onTouchEnd = this.hide.bind(this);
             }
-
-
-            /*
-             * CANCEL
-             */
 
             if (this.view.lblCancel) {
 
-                this.view.lblCancel.onTouchEnd =
-                    this.onCancel.bind(this);
+                this.view.lblCancel.onTouchEnd = this.onCancel.bind(this);
             }
-
-
-            /*
-             * ENABLE AUTO PAY
-             */
 
             if (this.view.btnEnableAutoPay) {
 
-                this.view.btnEnableAutoPay.onClick =
-                    this.onEnableAutoPay.bind(this);
+                this.view.btnEnableAutoPay.onClick = this.onEnableAutoPay.bind(this);
             }
         },
 
-
-        /*
-         * =====================================================
-         * SHOW
-         * =====================================================
-         *
-         * Parent calls:
-         *
-         * this.view.cmpbottomup.show(callback);
-         *
-         */
-
         show: function (callback) {
 
-            kony.print(
-                "========================================"
-            );
+            kony.print("BOTTOM SHEET :: SHOW");
 
-            kony.print(
-                "BOTTOM SHEET :: SHOW"
-            );
-
-
-            /*
-             * Save callback.
-             */
-
-            this.enableCallback =
-                callback || null;
-
-
+            this.enableCallback = callback || null;
             this.isOpen = true;
-
-
-            /*
-             * Make component visible.
-             */
-
             this.view.isVisible = true;
 
+            this.view.flxBottomSheet.height = "0%";
 
-            /*
-             * Start from default position.
-             *
-             * height = 0%
-             * bottom = 0%
-             */
+            this.view.flxBottomSheet.bottom = "0%";
 
-            this.view.flxBottomSheet.height =
-                "0%";
+            var animation = kony.ui.createAnimation({
+                0: {
 
-            this.view.flxBottomSheet.bottom =
-                "0%";
+                    height: "0%",
 
+                    bottom: "0%",
 
-            /*
-             * Animate to:
-             *
-             * height = 40%
-             * bottom = -2%
-             */
+                    stepConfig: {
 
-            var animation =
-                kony.ui.createAnimation({
-
-                    0: {
-
-                        height: "0%",
-
-                        bottom: "0%",
-
-                        stepConfig: {
-
-                            timingFunction:
-                                kony.anim.EASE_OUT
-                        }
-                    },
-
-
-                    100: {
-
-                        height: "40%",
-
-                        bottom: "-2%",
-
-                        stepConfig: {
-
-                            timingFunction:
-                                kony.anim.EASE_OUT
-                        }
+                        timingFunction:
+                            kony.anim.EASE_OUT
                     }
-                });
+                },
+
+
+                100: {
+
+                    height: "40%",
+
+                    bottom: "-2%",
+
+                    stepConfig: {
+
+                        timingFunction:
+                            kony.anim.EASE_OUT
+                    }
+                }
+            });
 
 
             this.view.flxBottomSheet.animate(
@@ -213,24 +109,12 @@ define(function () {
             );
         },
 
-
-        /*
-         * =====================================================
-         * HIDE
-         * =====================================================
-         */
-
         hide: function () {
 
             if (!this.view.flxBottomSheet) {
 
                 return;
             }
-
-
-            /*
-             * If already closed, simply hide.
-             */
 
             if (!this.isOpen) {
 
@@ -241,24 +125,11 @@ define(function () {
             }
 
 
-            kony.print(
-                "BOTTOM SHEET :: HIDE"
-            );
-
-
+            kony.print("BOTTOM SHEET :: HIDE");
             this.isOpen = false;
 
-
-            /*
-             * Animate:
-             *
-             * 40% -> 0%
-             * -2% -> 0%
-             */
-
-            var animation =
-                kony.ui.createAnimation({
-
+            var animation = kony.ui.createAnimation(
+                {
                     0: {
 
                         height: "40%",
@@ -298,151 +169,51 @@ define(function () {
                 },
                 {
                     animationEnd: function () {
+                        this.view.flxBottomSheet.height = "0%";
 
-                        /*
-                         * Keep default position.
-                         */
+                        this.view.flxBottomSheet.bottom = "0%";
 
-                        this.view.flxBottomSheet.height =
-                            "0%";
-
-                        this.view.flxBottomSheet.bottom =
-                            "0%";
-
-
-                        /*
-                         * Hide component.
-                         */
-
-                        this.view.isVisible =
-                            false;
-
+                        this.view.isVisible = false;
                     }.bind(this)
                 }
             );
         },
 
-
-        /*
-         * =====================================================
-         * CANCEL
-         * =====================================================
-         */
-
         onCancel: function () {
 
-            kony.print(
-                "BOTTOM SHEET :: CANCEL"
-            );
+            kony.print("BOTTOM SHEET :: CANCEL");
 
-
-            /*
-             * IMPORTANT:
-             *
-             * We DO NOT call enableCallback.
-             *
-             * Therefore the bill switch remains OFF.
-             */
-
-            this.enableCallback =
-                null;
-
+            this.enableCallback = null;
 
             this.hide();
         },
 
-
-        /*
-         * =====================================================
-         * ENABLE AUTO PAY
-         * =====================================================
-         */
-
         onEnableAutoPay: function () {
 
-            kony.print(
-                "########################################"
-            );
+            kony.print("BOTTOM SHEET :: ENABLE AUTO PAY");
 
-            kony.print(
-                "BOTTOM SHEET :: ENABLE AUTO PAY"
-            );
-
-
-            /*
-             * Store callback locally.
-             *
-             * This is important because hide()
-             * does not destroy the callback before
-             * we execute it.
-             */
-
-            var callback =
-                this.enableCallback;
-
-
-            /*
-             * Clear callback.
-             */
-
-            this.enableCallback =
-                null;
-
-
-            /*
-             * Close the sheet.
-             */
-
+            var callback = this.enableCallback;
+            this.enableCallback = null;
             this.hide();
 
-
-            /*
-             * NOW tell parent:
-             *
-             * "User actually enabled AutoPay."
-             */
-
-            if (
-                typeof callback ===
-                "function"
-            ) {
-
+            if (typeof callback === "function") {
                 callback();
             }
 
 
-            kony.print(
-                "BOTTOM SHEET :: AUTO PAY ENABLED"
-            );
+            kony.print("BOTTOM SHEET :: AUTO PAY ENABLED");
 
-            kony.print(
-                "########################################"
-            );
         },
 
-
-        /*
-         * =====================================================
-         * DESCRIPTION
-         * =====================================================
-         */
-
-        setDescription: function (
-            desc1,
-            desc2
-        ) {
+        setDescription: function (desc1, desc2) {
 
             if (this.view.lblDesc1) {
 
-                this.view.lblDesc1.text =
-                    desc1 || "";
+                this.view.lblDesc1.text = desc1 || "";
             }
-
-
             if (this.view.lblDesc2) {
 
-                this.view.lblDesc2.text =
-                    desc2 || "";
+                this.view.lblDesc2.text = desc2 || "";
             }
         }
 
