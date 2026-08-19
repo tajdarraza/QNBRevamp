@@ -37,7 +37,7 @@
     "children": [
         "flxHeader",
         "flxCardSetting",
-        "flxFooter"
+        "cmpFooter"
     ],
     "clipbounds": true,
     "containerweight": 100,

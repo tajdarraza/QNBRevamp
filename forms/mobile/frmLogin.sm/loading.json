@@ -112,7 +112,7 @@
                 "srcKUID": "i8ec01de54a34119968598b719bc2dff",
                 "wType": "FlexContainer"
             },
-            "isVisible": true
+            "isVisible": false
         }
     },
     "enablescrolling": true,
@@ -120,7 +120,7 @@
     "info": null,
     "iscustomlayout": false,
     "isdatareferenced": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "g65a3f86c0e64cfba535e6001ddb2aaa",
     "layouttype": 2,
     "masterType": 0,

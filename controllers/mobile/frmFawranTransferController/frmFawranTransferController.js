@@ -10,6 +10,8 @@ define({
             statusBarColor: "E4E2ED",
             statusbarStyle: constants.STATUS_BAR_STYLE_DEFAULT,
         });
+                this.view.cmpFooter.initializeFooter();
+        this.view.cmpFooter.setSelectedTab("transfer");
     },
 
     preShow: function () {
@@ -61,17 +63,6 @@ define({
         this.safeTap("flxBtnContinue", function () { self.onContinue(); });
         this.safeTap("imgPickerClose", function () { self.hidePicker(); });
 
-        this.safeTap("imgFooter1", function () {
-            new kony.mvc.Navigation("frmDashboard").navigate();
-        });
-        this.safeTap("imgFooter2", function () {
-            new kony.mvc.Navigation("frmCards").navigate();
-        });
-        this.safeTap("imgFooter3", function () { pocNotBuilt("Payments"); });
-        this.safeTap("imgFooter4", function () {
-            new kony.mvc.Navigation("frmTransfers").navigate();
-        });
-        this.safeTap("imgFooter5", function () { pocNotBuilt("Menu"); });
     },
 
     //--- data ------------------------------------------------------------------------------------

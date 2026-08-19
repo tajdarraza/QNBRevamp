@@ -6,13 +6,14 @@ define({
         //Was this.onPostShow, which does not exist on this controller — postShow never fired.
         this.view.postShow = this.postShow;
         this.view.onDeviceBack = this.onDeviceBack;
-        this.view.imgFooter1.onTouchEnd = this.imgFooter1;
-
-        //Only Home was wired; the rest were dead taps on a screen that is in the demo path.
-        this.view.imgFooter2.onTouchEnd = this.onFooterCards;
-        this.view.imgFooter3.onTouchEnd = this.onFooterPayments;
-        this.view.imgFooter4.onTouchEnd = this.onFooterTransfers;
-        this.view.imgFooter5.onTouchEnd = this.onFooterMenu;
+                this.view.cmpFooter.initializeFooter();
+        this.view.cmpFooter.setSelectedTab("cards");
+        this.view.cmpHeader.configure({
+    mode: "normal",
+    firstName: "Mohammad",
+    lastName: "Raza",
+    notificationCount: 5
+});
 
         this.view.segCards.onSwipe = this.onSwipeCards;
         this.data = navData;
@@ -363,8 +364,6 @@ define({
 
 
         this.updateIndicator(rowNumber);
-
-        this.view.lblNoti.text = Math.floor(rowNumber + 1).toString();
 
 
     },

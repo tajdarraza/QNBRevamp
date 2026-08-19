@@ -1,0 +1,143 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "10%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "cmpFooter": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "ec7f2cb9646548849440eab6e0b4138b",
+                "srcKUID": "g1fa2db03b9a4a47ba6f155b13f0e33f",
+                "wType": "FlexContainer"
+            },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": "0"
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            }
+        },
+        "flxFooter": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ee3b62bed65f40c59c9d36132e5a8e09",
+                "srcKUID": "i56dea4c753a44b6994eff3269dc5e00",
+                "wType": "FlexContainer"
+            }
+        },
+        "imgFooter1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "d9c758e192784ff28b65d4dd2e737007",
+                "srcKUID": "j0b67d1342e44c3fb104587b54d0c089",
+                "wType": "Image"
+            },
+            "src": "selectedhome.png"
+        },
+        "imgFooter2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "he8caeb8cd574bd685bbe175a0a1c3f3",
+                "srcKUID": "de48f66a3d5f4a0e9fb4668d379be7fe",
+                "wType": "Image"
+            },
+            "src": "selectedcards.png"
+        },
+        "imgFooter3": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ab23931ce6104d50b3aa5e6d59e019d4",
+                "srcKUID": "h979f6b8b898474586c8567b246857d6",
+                "wType": "Image"
+            },
+            "src": "selectedpayment.png"
+        },
+        "imgFooter4": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "fd6d00794aae4263aa10380e17019ff5",
+                "srcKUID": "b86a61a125d543d9b1154d916c752ee9",
+                "wType": "Image"
+            },
+            "src": "selectedtransfer.png"
+        },
+        "imgFooter5": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ee6d26c7a7834569a8b7b0c0c3ca5b8e",
+                "srcKUID": "b22348e2b93f4ce285b294997a50344c",
+                "wType": "Image"
+            },
+            "src": "selectedmenu.png"
+        }
+    },
+    "enablescrolling": true,
+    "id": "cmpFooter",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "ec7f2cb9646548849440eab6e0b4138b",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxParent",
+    "pf": "frmPayBills",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "g1fa2db03b9a4a47ba6f155b13f0e33f",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

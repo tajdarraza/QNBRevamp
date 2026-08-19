@@ -288,18 +288,27 @@ define({
 
     onNavigate: function (navData) {
         this.view.init = this.onInit;
-        this.view.preShow = this.preShow;
+        this.view.preShow = this.preShow;        
+        this.view.cmpFooter.initializeFooter();
+        this.view.cmpFooter.setSelectedTab("home");
         this.view.postShow = this.onPostShow;
         this.view.onDeviceBack = this.onDeviceBack;
         this.view.flxScrollCards.onScrollEnd = this.onScrollCardsEnd;
 
+this.view.cmpHeader.configure({
+    mode: "normal",
+    firstName: "Mohammad",
+    lastName: "Raza",
+    notificationCount: 5
+});
+
         //Full bottom nav. Only Cards was wired; the other four were dead taps, which is the first
         //thing anyone tries in a demo.
-        this.view.imgFooter1.onTouchEnd = this.onFooterHome;
-        this.view.imgFooter2.onTouchEnd = this.imgFooter2;
-        this.view.imgFooter3.onTouchEnd = this.onFooterPayments;
-        this.view.imgFooter4.onTouchEnd = this.onFooterTransfers;
-        this.view.imgFooter5.onTouchEnd = this.onFooterMenu;
+        // this.view.imgFooter1.onTouchEnd = this.onFooterHome;
+        // this.view.imgFooter2.onTouchEnd = this.imgFooter2;
+        // this.view.imgFooter3.onTouchEnd = this.onFooterPayments;
+        // this.view.imgFooter4.onTouchEnd = this.onFooterTransfers;
+        // this.view.imgFooter5.onTouchEnd = this.onFooterMenu;
 
         this.data = navData;
     },
@@ -309,7 +318,12 @@ define({
     },
 
     onFooterPayments: function () {
-        pocNotBuilt("Payments");
+          try {
+            new kony.mvc.Navigation("frmPayments").navigate();
+        } catch (e) {
+            kony.print("frmTransfers not available yet :: " + e);
+            pocNotBuilt("Transfers");
+        }
     },
 
     onFooterTransfers: function () {

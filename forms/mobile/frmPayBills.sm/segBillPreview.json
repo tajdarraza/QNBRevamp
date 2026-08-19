@@ -1,0 +1,350 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        [
+            {
+                "lblBillSeeAll": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "see all"
+                },
+                "lblBillType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Open bills (3)"
+                }
+            },
+            [
+                {
+                    "imgBillLogo": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "zakat.png"
+                    },
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAutopay": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Autopay"
+                    },
+                    "lblBillAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "5466.34"
+                    },
+                    "lblBillCurr": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblBillDetails": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "7456-78897"
+                    },
+                    "lblBillHeader": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Zakaat"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: May. 09th"
+                    }
+                },
+                {
+                    "imgBillLogo": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "ooredoo.png"
+                    },
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAutopay": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Autopay"
+                    },
+                    "lblBillAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "1000.00"
+                    },
+                    "lblBillCurr": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblBillDetails": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "9456-7890"
+                    },
+                    "lblBillHeader": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "ooredoo"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: June. 28th"
+                    }
+                },
+                {
+                    "imgBillLogo": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "ooredoo.png"
+                    },
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAutopay": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Autopay"
+                    },
+                    "lblBillAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "5459.00"
+                    },
+                    "lblBillCurr": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblBillDetails": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "00456-7890"
+                    },
+                    "lblBillHeader": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "ooredoo"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Dec. 29th"
+                    }
+                }
+            ]
+        ],
+        [
+            {
+                "lblBillSeeAll": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "see all"
+                },
+                "lblBillType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Last paid bills"
+                }
+            },
+            [
+                {
+                    "imgBillLogo": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "ooredoo.png"
+                    },
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAutopay": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Autopay"
+                    },
+                    "lblBillAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "4000.00"
+                    },
+                    "lblBillCurr": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblBillDetails": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "3456-7890"
+                    },
+                    "lblBillHeader": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "ooredoo"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Apr. 20th"
+                    }
+                },
+                {
+                    "imgBillLogo": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "ooredoo.png"
+                    },
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAutopay": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Autopay"
+                    },
+                    "lblBillAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "4000.00"
+                    },
+                    "lblBillCurr": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblBillDetails": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "3456-7890"
+                    },
+                    "lblBillHeader": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "ooredoo"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Apr. 20th"
+                    }
+                },
+                {
+                    "imgBillLogo": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "ooredoo.png"
+                    },
+                    "imgCalendar": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "calendar.png"
+                    },
+                    "lblAutopay": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Autopay"
+                    },
+                    "lblBillAmount": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "4000.00"
+                    },
+                    "lblBillCurr": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QAR"
+                    },
+                    "lblBillDetails": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "3456-7890"
+                    },
+                    "lblBillHeader": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "ooredoo"
+                    },
+                    "lblEndDate": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "End date: Apr. 20th"
+                    }
+                }
+            ]
+        ]
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "12",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": true,
+    "id": "segBillPreview",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "none"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "f433013c63ab4affbf4a45a6a489e1e6",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flxBillList",
+    "pf": "frmPayBills",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "abf4b15fbf2542f9ad0701a4ff58df90",
+    "rowcounter": 2,
+    "rowexpandable": false,
+    "rowfocusskin": "s2954acbe692423388f2177837594cc7",
+    "rowskin": "s021ff87d2364478b78744f7b45637aa",
+    "rowtemplate": "flxBillPreview",
+    "screenlevelwidget": false,
+    "seccounter": 1,
+    "sectionHeaderTemplateId": "f9b5ee282dba4d5f8389c21a2e459bf2",
+    "sectionheaderskin": "sad5121e70a245c7850053b0d529a993",
+    "sectionheadertemplate": "flxBillPreviewHeader",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorrequired": false,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxAutoPay": "flxAutoPay",
+        "flxBillAmount": "flxBillAmount",
+        "flxBillDetails": "flxBillDetails",
+        "flxBillPreview": "flxBillPreview",
+        "flxBillPreviewHeader": "flxBillPreviewHeader",
+        "flxBottomMain": "flxBottomMain",
+        "flxMain": "flxMain",
+        "flxSeperator": "flxSeperator",
+        "flxSwitchWidget": "flxSwitchWidget",
+        "flxThumb": "flxThumb",
+        "imgBillLogo": "imgBillLogo",
+        "imgCalendar": "imgCalendar",
+        "lblAutopay": "lblAutopay",
+        "lblBillAmount": "lblBillAmount",
+        "lblBillCurr": "lblBillCurr",
+        "lblBillDetails": "lblBillDetails",
+        "lblBillHeader": "lblBillHeader",
+        "lblBillSeeAll": "lblBillSeeAll",
+        "lblBillType": "lblBillType",
+        "lblEndDate": "lblEndDate"
+    }
+}

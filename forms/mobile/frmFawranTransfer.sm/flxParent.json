@@ -38,7 +38,7 @@
         "flxHeader",
         "flxForm",
         "flxPickerSheet",
-        "flxFooter"
+        "cmpFooter"
     ],
     "clipbounds": false,
     "containerweight": 100,

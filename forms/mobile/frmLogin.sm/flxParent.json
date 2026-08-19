@@ -35,10 +35,10 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flxHeader",
         "flxMainContent",
         "flxBottomSheet",
-        "loading"
+        "loading",
+        "cmpHeader"
     ],
     "clipbounds": true,
     "containerweight": 100,

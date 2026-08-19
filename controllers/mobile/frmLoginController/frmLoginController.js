@@ -10,6 +10,12 @@ define({
         this.view.init = this.onInit;
         this.view.preShow = this.preShow;
         this.view.onDeviceBack = this.onDeviceBack;
+        this.view.cmpHeader.configure();
+
+this.view.cmpHeader.configure({
+    mode: "guest",
+    country: "Qatar"
+});
         //CopyslFbox0f087fc2268764e
         //CopyslFbox0e35759f4fbc44b red border
     },
@@ -109,7 +115,7 @@ define({
         this.view.flxChckbox.src = this.isChecked ? "checkbox.png":"uncheckbox.png";
 
         //Single-market POC — no country picker behaviour, per product decision.
-        this.view.lblCountry.text = "Qatar";
+       
 
         this.view.imgVisibility.src = "trailing_icon.png";
         this.view.flxUsername.skin = "CopyslFbox0gb7ddbb0a9d54d";
@@ -119,7 +125,6 @@ define({
         this.view.flxError.isVisible = false;
         this.view.flxLoginWelcome.top = "40dp";
         this.view.flxSwitchWidget.skin = "sknSwitchOff"
-        this.view.imgLangLogo.onTouchEnd = this.localeChange;
         this.view.flxHideBalance.isVisible = false;
         this.view.lblUsername.text = i18n.get("LBL_USERNAME");
         this.view.lblUsernameLogin.text = i18n.get("USER_NAME");

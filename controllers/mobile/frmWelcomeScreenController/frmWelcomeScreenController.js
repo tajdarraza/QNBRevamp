@@ -5,6 +5,10 @@ define({
     onNavigate: function (params) {
         this.view.init = this.onInit;
         this.view.preShow = this.preShow;
+this.view.cmpHeader.configure({
+    mode: "welcome",
+    country: "Qatar"
+});
         kony.application.setApplicationProperties({
             statusBarColor: "E4E2ED",
             statusbarStyle: constants.STATUS_BAR_STYLE_DEFAULT,

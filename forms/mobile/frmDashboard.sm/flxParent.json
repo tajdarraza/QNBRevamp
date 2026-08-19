@@ -35,9 +35,9 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flxHeader",
+        "cmpHeader",
         "flxMain",
-        "flxFooter",
+        "cmpFooter",
         "loading"
     ],
     "clipbounds": true,

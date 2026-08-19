@@ -2,33 +2,33 @@ define({
 
     cardData: [],
 
-    // Keep the account lists so tabs can filter them
+
     currentAccounts: [],
     savingsAccounts: [],
     delegatedAccounts: [],
 
-
-    // =========================================================
-    // NAVIGATION
-    // =========================================================
 
     onNavigate: function (navData) {
 
         this.view.init = this.init;
         this.view.preShow = this.preShow;
         this.view.postShow = this.postShow;
+            this.view.cmpHeader.configure({
+        mode: "normal",
+        firstName: "Mohammad",
+        lastName: "Raza",
+        notificationCount: 5
+        });
 
-        this.view.imgFooter1.onTouchEnd = this.onFooterMenu;
-        this.view.imgFooter2.onTouchEnd = this.onFooterMenu;
-        this.view.imgFooter3.onTouchEnd = this.onFooterMenu;
-        this.view.imgFooter4.onTouchEnd = this.onFooterMenu;
-        this.view.imgFooter5.onTouchEnd = this.onFooterMenu;
+        this.view.cmpFooter.initializeFooter();
+        this.view.cmpFooter.setSelectedTab("menu");
 
         this.data = navData;
     },
 
 
     onFooterMenu: function () {
+        new kony.mvc.Navigation("frmDashboard").navigate();
 
     },
 

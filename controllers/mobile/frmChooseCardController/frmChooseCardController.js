@@ -10,17 +10,8 @@ define({
         this.view.flxBack.onTouchEnd = this.backNav;
 
         //Footer exists on this form but was never wired — reachable from the dashboard's Pay Now.
-        this.view.imgFooter1.onTouchEnd = function () {
-            new kony.mvc.Navigation("frmDashboard").navigate();
-        };
-        this.view.imgFooter2.onTouchEnd = function () {
-            new kony.mvc.Navigation("frmCards").navigate();
-        };
-        this.view.imgFooter3.onTouchEnd = function () { pocNotBuilt("Payments"); };
-        this.view.imgFooter4.onTouchEnd = function () {
-            new kony.mvc.Navigation("frmTransfers").navigate();
-        };
-        this.view.imgFooter5.onTouchEnd = function () { pocNotBuilt("Menu"); };
+                this.view.cmpFooter.initializeFooter();
+        this.view.cmpFooter.setSelectedTab("cards");
     },
 
     onInit: function () {

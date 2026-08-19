@@ -1,0 +1,98 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s9a19c3ade8d41fe9891469016fff93c",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "billprovider": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "aa08ade0771b4bdb8d97df3a3f1d8559",
+                "srcKUID": "ee7f94ab929041e0b34e388d707cb197",
+                "wType": "FlexContainer"
+            },
+            "isVisible": false
+        },
+        "flxMain": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "bf4ed83aa03f439c87983f220418eb54",
+                "srcKUID": "f1ab67b61a6e43af962cf2a8d8105f95",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxSegProvider": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "bcf3585c5e2e42a28a19519c870ae393",
+                "srcKUID": "ecb11bcf62e7422ea1956f91a75d49d3",
+                "wType": "FlexContainer"
+            },
+            "isVisible": true
+        },
+        "segBillProvider": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "e0fd2c8e383043958016420b06e8d2b7",
+                "srcKUID": "c746e9b0fa5d4f298d94b2e1f9d2344e",
+                "wType": "Segment"
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "billprovider",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": false,
+    "kuid": "aa08ade0771b4bdb8d97df3a3f1d8559",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxParent",
+    "pf": "frmPayBills",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "ee7f94ab929041e0b34e388d707cb197",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

@@ -3,6 +3,8 @@ define({
     onNavigate: function (navData) {
         this.view.preShow = this.preShow;
         this.view.onDeviceBack = this.onDeviceBack;
+                this.view.cmpFooter.initializeFooter();
+        this.view.cmpFooter.setSelectedTab("transfer");
         kony.application.setApplicationProperties({
             statusBarColor: "E4E2ED",
             statusbarStyle: constants.STATUS_BAR_STYLE_DEFAULT,
@@ -60,17 +62,6 @@ define({
         this.safeTap("flxBtnRequest", function () { pocNotBuilt("Request money"); });
         this.safeTap("flxBtnManage", function () { pocNotBuilt("Manage alias"); });
 
-        this.safeTap("imgFooter1", function () {
-            new kony.mvc.Navigation("frmDashboard").navigate();
-        });
-        this.safeTap("imgFooter2", function () {
-            new kony.mvc.Navigation("frmCards").navigate();
-        });
-        this.safeTap("imgFooter3", function () { pocNotBuilt("Payments"); });
-        this.safeTap("imgFooter4", function () {
-            new kony.mvc.Navigation("frmTransfers").navigate();
-        });
-        this.safeTap("imgFooter5", function () { pocNotBuilt("Menu"); });
     },
 
     //Toggles between the enrolled layout (alias card + action buttons) and the not-enrolled notice.

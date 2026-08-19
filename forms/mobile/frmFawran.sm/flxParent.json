@@ -41,7 +41,7 @@
         "flxBtnRequest",
         "flxBtnManage",
         "flxNoFawran",
-        "flxFooter"
+        "cmpFooter"
     ],
     "clipbounds": false,
     "containerweight": 100,
