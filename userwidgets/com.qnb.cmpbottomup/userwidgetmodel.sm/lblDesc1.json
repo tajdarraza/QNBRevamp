@@ -25,7 +25,7 @@
     "_text_": "Do you want to enable automatic payment for this bill?",
     "_top_": {
         "type": "string",
-        "value": "2%"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
@@ -34,7 +34,7 @@
     "_wrapping_": 2,
     "android": {
         "textStyle": {
-            "letterSpacing": 1,
+            "letterSpacing": 0,
             "strikeThrough": false
         }
     },
@@ -53,12 +53,13 @@
             "wrapping": 2
         },
         "textStyle": {
-            "letterSpacing": 1
+            "letterSpacing": 0
         }
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "afedd2fe1d264bfda7c2b213a0f13bb9",
+    "kuid": "da684c51c0de498794482e25c78f6aca",
+    "maxnumberoflines": 3,
     "name": "kony.ui.Label",
     "parent": "flxContent",
     "pf": "userwidgetmodel",

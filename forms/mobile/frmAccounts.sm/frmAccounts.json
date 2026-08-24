@@ -20,7 +20,7 @@
         1,
         0
     ],
-    "_skin_": "s7349b9691cc4419a4a6b12d72321145",
+    "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -40,6 +40,8 @@
     "children": [
         "flxParent"
     ],
+    "configureExtendBottom": true,
+    "configureExtendTop": false,
     "containerweight": 100,
     "controllerInfo": {
         "default": {
@@ -55,6 +57,7 @@
     "device": "iPhone12Pro",
     "displayorientation": 1,
     "enabledforidletimeout": true,
+    "extendbottom": true,
     "id": "frmAccounts",
     "info": null,
     "initdone": false,
@@ -69,7 +72,11 @@
     "iphone": {
         "needAppMenu": false,
         "psp": {
+            "configureExtendBottom": true,
+            "configureExtendTop": false,
+            "extendBottom": true,
             "inputAccessoryViewType": 4,
+            "requiresBottomSafeAreaInset": false,
             "titleBarAttributes": {
                 "barStyle": 0,
                 "hidesBackButton": false,
@@ -109,6 +116,7 @@
     "platform": "iphone",
     "prevDevice": "Pixel3",
     "prevPlatform": "android",
+    "requiresBottomSafeAreaInset": false,
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,

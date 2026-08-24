@@ -39,8 +39,8 @@
         "value": "50%"
     },
     "children": [
-        "lblAutopay",
-        "flxSwitchWidget"
+        "flxSwitchWidget",
+        "lblAutopay"
     ],
     "clipbounds": true,
     "containerId": true,
@@ -51,13 +51,14 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "d5b0950704f145759070851a879c0713",
-    "layouttype": 2,
+    "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "flxBottomMain",
     "pf": "tempBillPreview",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
+    "reverselayoutdirection": true,
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",

@@ -20,7 +20,7 @@
         1,
         19
     ],
-    "_skin_": "sfbe0b910dfe4363bf286a9d2ada7748",
+    "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -36,10 +36,13 @@
             "windowSoftInputMode": 1
         }
     },
+    "bounces": true,
     "canUpdateUI": true,
     "children": [
         "flxParent"
     ],
+    "configureExtendBottom": true,
+    "configureExtendTop": false,
     "containerweight": 100,
     "controllerInfo": {
         "default": {
@@ -52,9 +55,10 @@
     "desktopweb": {
         "needAppMenu": false
     },
-    "device": "Pixel3",
+    "device": "iPhone16",
     "displayorientation": 1,
-    "enabledforidletimeout": false,
+    "enabledforidletimeout": true,
+    "extendbottom": true,
     "id": "frmPayments",
     "info": null,
     "initdone": false,
@@ -69,7 +73,14 @@
     "iphone": {
         "needAppMenu": false,
         "psp": {
-            "inputAccessoryViewType": 4,
+            "bouncesZoom": true,
+            "configureExtendBottom": true,
+            "configureExtendTop": false,
+            "configureStatusBarStyle": true,
+            "extendBottom": true,
+            "formTransparencyDuringPostShow": 100,
+            "inputAccessoryViewType": 1,
+            "requiresBottomSafeAreaInset": false,
             "titleBarAttributes": {
                 "barStyle": 0,
                 "hidesBackButton": false,
@@ -106,9 +117,10 @@
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
-    "platform": "android",
-    "prevDevice": "iPhone16",
-    "prevPlatform": "iphone",
+    "platform": "iphone",
+    "prevDevice": "Pixel3",
+    "prevPlatform": "android",
+    "requiresBottomSafeAreaInset": false,
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,
@@ -133,7 +145,7 @@
         "needAppMenu": false
     },
     "titleBarSkin": "s7c2028af1a84384b11825e5ea71b5d2",
-    "titlebar": true,
+    "titlebar": false,
     "type": 3,
     "wType": "Form",
     "windows8": {

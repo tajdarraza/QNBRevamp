@@ -5,6 +5,10 @@
         "type": "ref",
         "value": "preferred"
     },
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
     "_margin_": [
         1,
         1,
@@ -19,13 +23,13 @@
     ],
     "_right_": {
         "type": "string",
-        "value": "50dp"
+        "value": "8dp"
     },
     "_skin_": "s8b4741fe99c44b7b9d2d59fab28e1ee",
     "_text_": "Autopay",
     "_width_": {
-        "type": "string",
-        "value": "60dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {

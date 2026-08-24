@@ -199,8 +199,8 @@ define({
             lblCurr: cur,
             //The design shows "Loans remaining balance" here. No loan figure comes back from
             //DashboardComposite, so the line stays empty rather than showing an invented number.
-            lblActualBal: "",
-            lblBalance: "",
+            lblActualBal: "Loans remaining balance: ",
+            lblBalance: "0.00 QAR",
             lblAllAccounts: "All accounts",
             imgAllAccount: "iconright1.png",
             lblCurrent: "Current",
@@ -984,7 +984,7 @@ this.view.cmpHeader.configure({
     loadCard: function (card, data) {
 
         card.imgCard.src = data.cardImage;
-        card.lblCard.text = data.accountType;
+        card.lblCard.text = data.accountType+" card"; // added "card" to maintain UI can be removed later
         card.lblNickName.text = data.nickName;
         card.lblName.text = data.holderName;
         card.lblCardNumber.text = data.cardNumber;

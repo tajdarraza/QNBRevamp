@@ -3,7 +3,7 @@ define({
     onNavigate: function (navData) {
         this.view.preShow = this.preShow;
         this.view.onDeviceBack = this.onDeviceBack;
-                this.view.cmpFooter.initializeFooter();
+        this.view.cmpFooter.initializeFooter();
         this.view.cmpFooter.setSelectedTab("transfer");
         kony.application.setApplicationProperties({
             statusBarColor: "E4E2ED",
@@ -19,6 +19,15 @@ define({
         this.safeText("lblFawranAlias", "Loading…");
         this.safeText("lblFawranBalance", "—");
         this.loadFawran();
+
+        this.view.commonheader.configure({
+            title: "Fawran",
+
+            action1: function () { new kony.mvc.Navigation("frmDashboard").navigate() },
+
+            action1Image: "customsettings.png",
+            action2: function () { pocNotBuilt("Fawran settings") },
+        });
     },
 
     onDeviceBack: function () {
@@ -51,11 +60,6 @@ define({
 
     bindActions: function () {
         var self = this;
-        this.safeTap("flxBack", function () { self.onDeviceBack(); });
-        this.safeTap("imgClose", function () {
-            new kony.mvc.Navigation("frmDashboard").navigate();
-        });
-        this.safeTap("imgSettings", function () { pocNotBuilt("Fawran settings"); });
         this.safeTap("imgShare", function () { pocNotBuilt("Share alias"); });
 
         this.safeTap("flxBtnSend", function () { self.onSend(); });

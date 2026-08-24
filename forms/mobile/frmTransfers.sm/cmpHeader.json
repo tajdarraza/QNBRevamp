@@ -163,7 +163,7 @@
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
-    "parent": "flxParent",
+    "parent": "flxMain",
     "pf": "frmTransfers",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

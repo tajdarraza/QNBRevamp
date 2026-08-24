@@ -43,9 +43,7 @@
         "value": "50%"
     },
     "children": [
-        "cmpHeader",
         "flxMain",
-        "cmpFooter",
         "billprovider",
         "cmpbottomup"
     ],

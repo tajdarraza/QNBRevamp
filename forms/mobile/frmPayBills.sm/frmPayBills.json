@@ -18,12 +18,13 @@
     "_pxMenuIndex": [
         0,
         1,
-        16
+        17
     ],
-    "_skin_": "sfbe0b910dfe4363bf286a9d2ada7748",
+    "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
+    "allowhorizontalbounce": false,
     "android": {
         "needAppMenu": false,
         "psp": {
@@ -55,6 +56,8 @@
     "device": "Pixel3",
     "displayorientation": 1,
     "enabledforidletimeout": false,
+    "enablescrolling": false,
+    "headeroverlap": false,
     "id": "frmPayBills",
     "info": null,
     "initdone": false,
@@ -69,7 +72,14 @@
     "iphone": {
         "needAppMenu": false,
         "psp": {
-            "inputAccessoryViewType": 4,
+            "bouncesZoom": false,
+            "configureExtendBottom": true,
+            "configureExtendTop": false,
+            "configureStatusBarStyle": true,
+            "extendBottom": true,
+            "inputAccessoryViewType": 1,
+            "requiresBottomSafeAreaInset": true,
+            "statusBarStyle": "STATUS_BAR_STYLE_DEFAULT",
             "titleBarAttributes": {
                 "barStyle": 0,
                 "hidesBackButton": false,
@@ -133,7 +143,7 @@
         "needAppMenu": false
     },
     "titleBarSkin": "s7c2028af1a84384b11825e5ea71b5d2",
-    "titlebar": true,
+    "titlebar": false,
     "type": 3,
     "wType": "Form",
     "windows8": {

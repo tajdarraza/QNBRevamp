@@ -7,6 +7,16 @@ define({
         this.view.init = this.onInit;
         this.view.preShow = this.preShow;
 
+        this.view.commonheader.configure({
+            title: "More actions",
+            action1: function () {
+                alert("not yet developed")
+            },
+            action1Image: "add_card_header.png",
+        });
+
+
+
         // Segment row click
         this.view.segCardSettings.onRowClick = this.onSettingsRowClick.bind(this);
 
@@ -217,8 +227,8 @@ define({
 
 
         for (var sectionIndex = 0;
-             sectionIndex < response.length;
-             sectionIndex++) {
+            sectionIndex < response.length;
+            sectionIndex++) {
 
             var section = response[sectionIndex];
 
@@ -252,8 +262,8 @@ define({
 
 
             for (var rowIndex = 0;
-                 rowIndex < items.length;
-                 rowIndex++) {
+                rowIndex < items.length;
+                rowIndex++) {
 
                 var item = items[rowIndex];
 

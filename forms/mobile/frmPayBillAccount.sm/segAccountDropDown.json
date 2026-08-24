@@ -1,0 +1,124 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        {
+            "lblAccountList": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current account 1 (1,200.00 QAR)"
+            }
+        },
+        {
+            "lblAccountList": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current account 2 (2,670.00 QAR)"
+            }
+        },
+        {
+            "lblAccountList": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current account 3 (1,345.00 QAR)"
+            }
+        },
+        {
+            "lblAccountList": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current account 4 (8,276.00 QAR)"
+            }
+        }
+    ],
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 1,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "03",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segAccountDropDown",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "none"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "a21b38f6946c42cdbdffc3f30b00c654",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flxAccountsDrop",
+    "pf": "frmPayBillAccount",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "jc106b6ce071431ab8b991454b1bb70c",
+    "rowcounter": 3,
+    "rowexpandable": false,
+    "rowfocusskin": "s2954acbe692423388f2177837594cc7",
+    "rowskin": "s847f4ec4a29456da9ae7a21b7c201fe",
+    "rowtemplate": "flxAccountList",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s28a7bd0c54c4f64808927aba209e384",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorrequired": false,
+    "separatorthickness": 0,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxAccountList": "flxAccountList",
+        "flxAccounts": "flxAccounts",
+        "lblAccountList": "lblAccountList"
+    }
+}

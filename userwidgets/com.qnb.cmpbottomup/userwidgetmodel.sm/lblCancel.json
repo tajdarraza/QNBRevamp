@@ -1,6 +1,10 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "16dp"
+    },
     "_height_": {
         "type": "string",
         "value": "48dp"
@@ -21,7 +25,7 @@
     "_text_": "cancel",
     "_top_": {
         "type": "string",
-        "value": "0"
+        "value": "8dp"
     },
     "_width_": {
         "type": "string",
@@ -55,9 +59,9 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ge5c140ddcda437ba3877ca2bc4e20dc",
+    "kuid": "e80d861bc6f543a88d344c5ed72c5f62",
     "name": "kony.ui.Label",
-    "parent": "flxContent",
+    "parent": "flxButtonActions",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

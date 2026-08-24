@@ -56,12 +56,14 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "ca0b785da1f5448fa760fda90d7c7a57",
+    "maxnumberoflines": 3,
     "name": "kony.ui.Label",
     "parent": "flxErrorInner",
     "pf": "frmLogin",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},
+    "texttruncateposition": 0,
     "tooltip": "",
     "wType": "Label"
 }

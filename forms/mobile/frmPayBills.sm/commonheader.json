@@ -1,0 +1,151 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "10%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "commonheader": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "ada09b50e9fb4b959600faacb0aefd10",
+                "srcKUID": "aeca8dd7cbb84c1b8c8e214bb938ea96",
+                "wType": "FlexContainer"
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
+            }
+        },
+        "flxAction1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ae8714a0baa245ef9b492ae51e3528fe",
+                "srcKUID": "bf83af34e6b74d4d856c48a0b4a33609",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxAction2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "d5154bc55dcc40f88230dcf7632ecc42",
+                "srcKUID": "g4fc1ecc8093432b887e691201dbba0f",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxBack": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "e9bc3ae6efb74eda9efa068a16bacfe4",
+                "srcKUID": "de6658419ce74b06a59484969e74dcdb",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxHeader": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "jb0c89b2bd564fa8818e97d533a7c3b1",
+                "srcKUID": "ada0c8f26b58448bbaa1c079f25be2d7",
+                "wType": "FlexContainer"
+            }
+        },
+        "imgAction1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "caf97cfa18c643b38b04fb193c8f90f6",
+                "srcKUID": "ce67e20decd44378a97bfec1f7b4ba44",
+                "wType": "Image"
+            },
+            "src": "closeicon.png"
+        },
+        "imgAction2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "if6223faca96419195586528f62ff87a",
+                "srcKUID": "c20fbf8154c643819cdcc81ef0b27b2c",
+                "wType": "Image"
+            },
+            "src": "closeicon.png"
+        },
+        "imgBackNav": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "dc73720cfe1d44ca94aa543ca0d3d111",
+                "srcKUID": "d760b5e8194243f3bc0edb6b4b61ca08",
+                "wType": "Image"
+            },
+            "src": "caratleftsmall.png"
+        },
+        "lblScreenTitle": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "if97fd7aecae4eb988136a48a27e03f5",
+                "srcKUID": "e873f8c7bfa242c7b51c8559085298be",
+                "wType": "Label"
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "commonheader",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "ada09b50e9fb4b959600faacb0aefd10",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxMain",
+    "pf": "frmPayBills",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "aeca8dd7cbb84c1b8c8e214bb938ea96",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

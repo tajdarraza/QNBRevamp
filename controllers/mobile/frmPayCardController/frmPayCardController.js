@@ -137,6 +137,10 @@ define({
     },
 
     preShow: function () {
+
+        this.view.commonheader.configure({
+            title: "Pay card",
+        });
         //Was hardcoded to the same numbers twice; now reflects the selected card.
         this.view.lblUtilAmt.text = formatAmount(this.utilisedAmount) + " QAR out of";
         this.view.lblTotalAmt.text = formatAmount(this.totalLimit) + " QAR";

@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "4dp"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "QAR",
     "_top_": {
         "type": "string",
-        "value": "18dp"
+        "value": "20dp"
     },
     "_width_": {
         "type": "ref",

@@ -4,6 +4,10 @@
         "type": "string",
         "value": "24dp"
     },
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
     "_margin_": [
         0,
         0,

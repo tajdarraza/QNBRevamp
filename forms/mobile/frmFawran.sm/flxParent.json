@@ -35,13 +35,13 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flxHeader",
         "flxAliasCard",
         "flxBtnSend",
         "flxBtnRequest",
         "flxBtnManage",
         "flxNoFawran",
-        "cmpFooter"
+        "cmpFooter",
+        "commonheader"
     ],
     "clipbounds": false,
     "containerweight": 100,

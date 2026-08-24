@@ -14,6 +14,13 @@ define({
         this.hideLimitSheet();
         this.applyMaxLength();
         this.renderTo();
+        this.view.commonheader.configure({
+            title: "Fawran",
+            backAction: function () { self.onDeviceBack(); },
+            action1: function () { new kony.mvc.Navigation("frmFawran").navigate() },
+            action1Image: "customsettings.png",
+            action2: function () { self.onDeviceBack(); },
+        });
 
         try {
             this.view.txtAmount.text = nullCheck(fawranDraft.amount) ? fawranDraft.amount : "";
@@ -41,10 +48,7 @@ define({
 
     bindActions: function () {
         var self = this;
-        this.safeTap("flxBack", function () { self.onDeviceBack(); });
-        this.safeTap("imgClose", function () {
-            new kony.mvc.Navigation("frmFawran").navigate();
-        });
+
         this.safeTap("imgLimitInfo", function () { self.showLimitSheet(); });
         this.safeTap("flxBtnUnderstood", function () { self.hideLimitSheet(); });
         this.safeTap("flxBtnReview", function () { self.onReview(); });

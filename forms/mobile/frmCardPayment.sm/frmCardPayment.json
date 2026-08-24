@@ -15,7 +15,12 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sfbe0b910dfe4363bf286a9d2ada7748",
+    "_pxMenuIndex": [
+        0,
+        1,
+        1
+    ],
+    "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -64,7 +69,11 @@
     "iphone": {
         "needAppMenu": false,
         "psp": {
+            "configureExtendBottom": true,
+            "configureStatusBarStyle": true,
+            "extendBottom": true,
             "inputAccessoryViewType": 4,
+            "requiresBottomSafeAreaInset": false,
             "titleBarAttributes": {
                 "barStyle": 0,
                 "hidesBackButton": false,

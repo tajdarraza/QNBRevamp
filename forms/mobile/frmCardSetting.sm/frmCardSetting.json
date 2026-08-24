@@ -20,7 +20,7 @@
         1,
         2
     ],
-    "_skin_": "sfbe0b910dfe4363bf286a9d2ada7748",
+    "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -40,6 +40,7 @@
     "children": [
         "flxParent"
     ],
+    "configureExtendBottom": true,
     "containerweight": 100,
     "controllerInfo": {
         "default": {
@@ -52,9 +53,10 @@
     "desktopweb": {
         "needAppMenu": false
     },
-    "device": "Pixel3",
+    "device": "iPhone16",
     "displayorientation": 1,
     "enabledforidletimeout": false,
+    "extendbottom": true,
     "id": "frmCardSetting",
     "info": null,
     "initdone": false,
@@ -69,7 +71,11 @@
     "iphone": {
         "needAppMenu": false,
         "psp": {
+            "configureExtendBottom": true,
+            "configureStatusBarStyle": true,
+            "extendBottom": true,
             "inputAccessoryViewType": 4,
+            "requiresBottomSafeAreaInset": false,
             "titleBarAttributes": {
                 "barStyle": 0,
                 "hidesBackButton": false,
@@ -106,9 +112,10 @@
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
-    "platform": "android",
-    "prevDevice": "iPhone16",
-    "prevPlatform": "iphone",
+    "platform": "iphone",
+    "prevDevice": "Pixel3",
+    "prevPlatform": "android",
+    "requiresBottomSafeAreaInset": false,
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,

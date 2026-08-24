@@ -4,7 +4,7 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "8%"
+        "value": "10%"
     },
     "_left_": {
         "type": "string",
@@ -53,7 +53,7 @@
             "height": {
                 "Default": {
                     "type": "string",
-                    "value": "8%"
+                    "value": "10%"
                 }
             }
         },
@@ -111,7 +111,8 @@
                 "kuid": "a8484e91bec44edc880a7c086d5b3009",
                 "srcKUID": "he03bf35de83446f8b87caad30637b33",
                 "wType": "Image"
-            }
+            },
+            "src": "add_button.png"
         },
         "imgArrowDown": {
             "__events__": {},
@@ -127,7 +128,8 @@
                 "kuid": "d100ee799d714842baee05183dbe0c48",
                 "srcKUID": "dc6712a03d844cc6bc6d2021f5765a89",
                 "wType": "Image"
-            }
+            },
+            "src": "search_icon.png"
         },
         "imgQnbLogo": {
             "__events__": {},
@@ -135,7 +137,8 @@
                 "kuid": "f2a5d88c9d904c56a535326b1ab549cd",
                 "srcKUID": "dea03518a12c492bb0654a8764e4343c",
                 "wType": "Image"
-            }
+            },
+            "src": "logo.png"
         },
         "lblCountry": {
             "__events__": {},

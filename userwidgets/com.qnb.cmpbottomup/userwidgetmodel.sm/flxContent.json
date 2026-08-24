@@ -1,12 +1,8 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "0%"
-    },
     "_height_": {
-        "type": "string",
-        "value": "84%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
@@ -27,12 +23,16 @@
     ],
     "_percent_": true,
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "16dp"
+    },
     "_width_": {
         "type": "string",
-        "value": "80%"
+        "value": "86%"
     },
     "allboxes": [],
-    "autogrowmode": 0,
+    "autogrowmode": 1,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
@@ -41,8 +41,7 @@
     "children": [
         "lblDesc1",
         "lblDesc2",
-        "btnEnableAutoPay",
-        "lblCancel"
+        "lblDesc3"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -51,7 +50,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "g98dce79252a4c4a83c145539ea727f7",
+    "kuid": "caa098f233c24075a8766bc9607f3a10",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxBottomSheet",
@@ -59,6 +58,7 @@
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
+    "reverselayoutdirection": false,
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",

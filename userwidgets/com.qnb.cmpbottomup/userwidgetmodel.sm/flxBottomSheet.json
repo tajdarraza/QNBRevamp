@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "0%"
+        "value": "-16dp"
     },
     "_height_": {
-        "type": "string",
-        "value": "0%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
@@ -32,11 +32,15 @@
         "value": "100%"
     },
     "allboxes": [],
-    "autogrowmode": 0,
+    "autogrowmode": 1,
     "canUpdateUI": true,
     "children": [
         "flxClose",
-        "flxContent"
+        "flxContent",
+        "flxBillDetailsEdit",
+        "flxEnterAmount",
+        "flxLoyaltyPoint",
+        "flxButtonActions"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -45,8 +49,8 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e9584cda0dae47e5badb0b64f8f1b392",
-    "layouttype": 2,
+    "kuid": "h00d8529f6d14beb96924d310f4d495b",
+    "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "cmpbottomup",
     "pf": "userwidgetmodel",

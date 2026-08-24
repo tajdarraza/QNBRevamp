@@ -112,7 +112,10 @@
                 "srcKUID": "i8ec01de54a34119968598b719bc2dff",
                 "wType": "FlexContainer"
             },
-            "isVisible": false
+            "isVisible": false,
+            "zIndex": {
+                "Default": 100003
+            }
         }
     },
     "enablescrolling": true,

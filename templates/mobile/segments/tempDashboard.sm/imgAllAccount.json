@@ -2,9 +2,13 @@
     "@class": "com.kony.gen.viz.model.component.KVizImage2",
     "DNDConfig": null,
     "_base64_": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0"
+    },
     "_height_": {
         "type": "string",
-        "value": "16dp"
+        "value": "18dp"
     },
     "_left_": {
         "type": "string",
@@ -24,13 +28,9 @@
     ],
     "_skin_": "s46f4cc5af674c87a6552260c65fd4ef",
     "_src_": "iconright1.png",
-    "_top_": {
-        "type": "string",
-        "value": "0"
-    },
     "_width_": {
         "type": "string",
-        "value": "16dp"
+        "value": "18dp"
     },
     "canUpdateUI": true,
     "centery": {

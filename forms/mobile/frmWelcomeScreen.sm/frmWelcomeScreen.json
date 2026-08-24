@@ -18,9 +18,9 @@
     "_pxMenuIndex": [
         0,
         1,
-        22
+        23
     ],
-    "_skin_": "s3ac91e2f5634099930ea83cecd9a790",
+    "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -80,6 +80,7 @@
             "extendBottom": false,
             "extendTop": false,
             "inputAccessoryViewType": 4,
+            "requiresBottomSafeAreaInset": false,
             "statusBarStyle": "STATUS_BAR_STYLE_LIGHT_CONTENT",
             "titleBarAttributes": {
                 "barStyle": 0,
@@ -120,6 +121,7 @@
     "platform": "iphone",
     "prevDevice": "Pixel3",
     "prevPlatform": "android",
+    "requiresBottomSafeAreaInset": false,
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,

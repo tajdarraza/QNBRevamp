@@ -20,7 +20,7 @@
         1,
         13
     ],
-    "_skin_": "s9bb5c0498ef43ab9077727536e6dc9f",
+    "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -36,12 +36,13 @@
             "windowSoftInputMode": 1
         }
     },
+    "bounces": false,
     "canUpdateUI": true,
     "children": [
         "flxParent"
     ],
     "configureExtendBottom": true,
-    "configureExtendTop": true,
+    "configureExtendTop": false,
     "containerweight": 100,
     "controllerInfo": {
         "default": {
@@ -54,10 +55,12 @@
     "desktopweb": {
         "needAppMenu": false
     },
-    "device": "Pixel3",
+    "device": "iPhone16",
     "displayorientation": 1,
     "enabledforidletimeout": true,
+    "enablescrolling": false,
     "extendbottom": false,
+    "headeroverlap": false,
     "id": "frmLogin",
     "info": null,
     "initdone": false,
@@ -72,12 +75,15 @@
     "iphone": {
         "needAppMenu": false,
         "psp": {
+            "bouncesZoom": false,
             "configureExtendBottom": true,
-            "configureExtendTop": true,
+            "configureExtendTop": false,
             "configureStatusBarStyle": true,
-            "extendBottom": false,
+            "extendBottom": true,
             "inputAccessoryViewType": 4,
-            "statusBarStyle": "STATUS_BAR_STYLE_LIGHT_CONTENT",
+            "requiresBottomSafeAreaInset": false,
+            "requiresTopSafeAreaInset": true,
+            "statusBarStyle": "STATUS_BAR_STYLE_DEFAULT",
             "titleBarAttributes": {
                 "barStyle": 0,
                 "hidesBackButton": false,
@@ -114,9 +120,10 @@
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
-    "platform": "android",
-    "prevDevice": "iPhone13",
-    "prevPlatform": "iphone",
+    "platform": "iphone",
+    "prevDevice": "Pixel3",
+    "prevPlatform": "android",
+    "requiresTopSafeAreaInset": true,
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,

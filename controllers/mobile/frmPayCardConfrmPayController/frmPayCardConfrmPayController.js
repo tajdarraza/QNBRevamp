@@ -272,6 +272,9 @@ define(["APICallController"], function (commonUtil) {
                 this.navData.totalLimit,
                 this.navData.payAmount
             );
+            this.view.commonheader.configure({
+            title: "Pay card",
+            });
         },
         updateProgress: function (currentAmount, totalLimit, payAmount) {
 

@@ -20,7 +20,7 @@
         1,
         5
     ],
-    "_skin_": "sfbe0b910dfe4363bf286a9d2ada7748",
+    "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -36,6 +36,7 @@
             "windowSoftInputMode": 1
         }
     },
+    "bounces": false,
     "bounceszoom": false,
     "canUpdateUI": true,
     "children": [
@@ -58,6 +59,7 @@
     "device": "Pixel3",
     "displayorientation": 1,
     "enabledforidletimeout": true,
+    "enablescrolling": false,
     "extendbottom": true,
     "id": "frmDashboard",
     "info": null,

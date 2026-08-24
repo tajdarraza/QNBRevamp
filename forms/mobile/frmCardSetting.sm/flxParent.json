@@ -39,7 +39,7 @@
         "value": "50%"
     },
     "children": [
-        "flxHeader",
+        "commonheader",
         "flxCardHolder",
         "flxCardsSegment"
     ],

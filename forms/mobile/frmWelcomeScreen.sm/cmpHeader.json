@@ -46,6 +46,21 @@
                 "kuid": "b6012de19f6d482982a476f44444954b",
                 "srcKUID": "df4929c38eba4b738b0e1fcdcabad8cf",
                 "wType": "FlexContainer"
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
+            },
+            "zIndex": {
+                "Default": 10
             }
         },
         "flxCountries": {
@@ -172,5 +187,5 @@
     "snaptogrid": true,
     "sourceUserWidget": "df4929c38eba4b738b0e1fcdcabad8cf",
     "wType": "UserWidgetInstance",
-    "zindex": 1
+    "zindex": 10
 }

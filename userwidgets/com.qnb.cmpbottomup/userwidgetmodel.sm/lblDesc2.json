@@ -25,7 +25,7 @@
     "_text_": " Your bills will be paid automatically on the due date using your default payment method.",
     "_top_": {
         "type": "string",
-        "value": "16dp"
+        "value": "8dp"
     },
     "_width_": {
         "type": "string",
@@ -33,8 +33,11 @@
     },
     "_wrapping_": 2,
     "android": {
+        "psp": {
+            "includeFontPadding": true
+        },
         "textStyle": {
-            "letterSpacing": 1,
+            "letterSpacing": 0,
             "strikeThrough": false
         }
     },
@@ -42,6 +45,7 @@
     "containerweight": 100,
     "contentalignment": 2,
     "id": "lblDesc2",
+    "includeFontPadding": true,
     "info": null,
     "ipad": {
         "psp": {
@@ -53,12 +57,12 @@
             "wrapping": 2
         },
         "textStyle": {
-            "letterSpacing": 1
+            "letterSpacing": 0
         }
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a4352bb6b605408a9a92ff2535a39935",
+    "kuid": "d11f81eee261463690dfd4d11b3b4660",
     "maxnumberoflines": 3,
     "name": "kony.ui.Label",
     "parent": "flxContent",

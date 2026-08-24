@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "124dp"
+        "value": "127dp"
     },
     "_left_": {
         "type": "string",
@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "scabe65ba445fde12ab8931b11e213f",
+    "_skin_": "sc07b9618ca14ee98a574d511960683e",
     "_top_": {
         "type": "string",
         "value": "88dp"
@@ -31,6 +31,7 @@
         "type": "string",
         "value": "90%"
     },
+    "activeNativeBorderCornerRadiusControl": "centerControl",
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
@@ -38,6 +39,7 @@
         "lblFawranAliasLabel",
         "lblFawranAlias",
         "imgShare",
+        "FlexContainer0b29bd57fae224e",
         "lblFawranBalance",
         "lblFawranAccMasked"
     ],

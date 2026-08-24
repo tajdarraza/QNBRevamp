@@ -83,7 +83,8 @@
                 "kuid": "c86f286d902c4059b7c45cf11e146a96",
                 "srcKUID": "j0b67d1342e44c3fb104587b54d0c089",
                 "wType": "Image"
-            }
+            },
+            "src": "selectedhome.png"
         },
         "imgFooter2": {
             "__events__": {},
@@ -91,7 +92,8 @@
                 "kuid": "f618c5989bf9440ea7a18c653aa22e41",
                 "srcKUID": "de48f66a3d5f4a0e9fb4668d379be7fe",
                 "wType": "Image"
-            }
+            },
+            "src": "selectedcards.png"
         },
         "imgFooter3": {
             "__events__": {},
@@ -99,7 +101,8 @@
                 "kuid": "c591187d342a4c74b67e855e9233294b",
                 "srcKUID": "h979f6b8b898474586c8567b246857d6",
                 "wType": "Image"
-            }
+            },
+            "src": "selectedpayment.png"
         },
         "imgFooter4": {
             "__events__": {},
@@ -107,7 +110,8 @@
                 "kuid": "e7e7aecfbcfc40fa95db6ec68ef7288f",
                 "srcKUID": "b86a61a125d543d9b1154d916c752ee9",
                 "wType": "Image"
-            }
+            },
+            "src": "selectedtransfer.png"
         },
         "imgFooter5": {
             "__events__": {},
@@ -115,7 +119,8 @@
                 "kuid": "b4fe87e1492a4afb9cef0363d5a57b44",
                 "srcKUID": "b22348e2b93f4ce285b294997a50344c",
                 "wType": "Image"
-            }
+            },
+            "src": "selectedmenu.png"
         }
     },
     "enablescrolling": true,

@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sd9c4ea85d1d482291ef90302408aedb",
+    "_skin_": "sa33f22fe75d49e9888b8293acb41bfc",
     "_top_": {
         "type": "string",
         "value": "0"
@@ -31,6 +31,7 @@
         "type": "string",
         "value": "100%"
     },
+    "activeNativeBorderCornerRadiusControl": "centerControl",
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,

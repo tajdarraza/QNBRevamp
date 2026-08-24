@@ -10,17 +10,20 @@ define({
     onInit: function () {
 
     },
-    preShow: function(){
+    preShow: function () {
+        this.view.commonheader.configure({
+            title: "More actions"
+        });
         this.view.lblEditActions.onTouchEnd = this.onEditClick;
     },
-    onDeviceBack: function(){
+    onDeviceBack: function () {
         var prevForm = kony.application.getPreviousForm();
 
         new kony.mvc.Navigation(prevForm).navigate();
     },
 
-    onEditClick: function(){
+    onEditClick: function () {
         new kony.mvc.Navigation("frmMoreActionsEdit").navigate();
     },
 
- });
+});

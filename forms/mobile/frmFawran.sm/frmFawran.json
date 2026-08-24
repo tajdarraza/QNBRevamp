@@ -43,7 +43,7 @@
         }
     },
     "currentLocale": "default",
-    "device": "iPhone16",
+    "device": "Pixel3",
     "displayorientation": 1,
     "enabledforidletimeout": true,
     "id": "frmFawran",
@@ -57,6 +57,10 @@
     "iphone": {
         "needAppMenu": false,
         "psp": {
+            "configureExtendBottom": true,
+            "configureStatusBarStyle": true,
+            "extendBottom": true,
+            "requiresBottomSafeAreaInset": false,
             "titleBarAttributes": {
                 "barStyle": 0,
                 "hidesBackButton": false,
@@ -90,9 +94,9 @@
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
-    "platform": "iphone",
-    "prevDevice": "Pixel2XL",
-    "prevPlatform": "android",
+    "platform": "android",
+    "prevDevice": "iPhone16",
+    "prevPlatform": "iphone",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,
