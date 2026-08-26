@@ -1,0 +1,137 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "10%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "commonheader": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "ffb64108dca54d3595e41823b9f5b718",
+                "srcKUID": "aeca8dd7cbb84c1b8c8e214bb938ea96",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxAction1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "j003fe9a0ac14f33b558f383dfa64b07",
+                "srcKUID": "bf83af34e6b74d4d856c48a0b4a33609",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxAction2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ac03f171bc1a49f7b8bcd08ae46b6dc1",
+                "srcKUID": "g4fc1ecc8093432b887e691201dbba0f",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxBack": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b8326f8c24a842eb87f01b3b6c6c9c13",
+                "srcKUID": "de6658419ce74b06a59484969e74dcdb",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxHeader": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b00c695a96a54449ae46cb42d84c8a20",
+                "srcKUID": "ada0c8f26b58448bbaa1c079f25be2d7",
+                "wType": "FlexContainer"
+            }
+        },
+        "imgAction1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "je1bd70a0177409aba288dd3dd5bfeba",
+                "srcKUID": "ce67e20decd44378a97bfec1f7b4ba44",
+                "wType": "Image"
+            }
+        },
+        "imgAction2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "gf96ee65422148268e788d3f89b8140a",
+                "srcKUID": "c20fbf8154c643819cdcc81ef0b27b2c",
+                "wType": "Image"
+            }
+        },
+        "imgBackNav": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b40b7cd1b8bd4b81892d6a15281879e7",
+                "srcKUID": "d760b5e8194243f3bc0edb6b4b61ca08",
+                "wType": "Image"
+            }
+        },
+        "lblScreenTitle": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b86557eda594477580daf30bd4a1a994",
+                "srcKUID": "e873f8c7bfa242c7b51c8559085298be",
+                "wType": "Label"
+            },
+            "text": "OTP"
+        }
+    },
+    "enablescrolling": true,
+    "id": "commonheader",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "ffb64108dca54d3595e41823b9f5b718",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxParent",
+    "pf": "frmOtpCommon",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "aeca8dd7cbb84c1b8c8e214bb938ea96",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

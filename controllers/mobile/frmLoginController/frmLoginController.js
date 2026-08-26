@@ -16,6 +16,7 @@ this.view.cmpHeader.configure({
     mode: "guest",
     country: "Qatar"
 });
+
         //CopyslFbox0f087fc2268764e
         //CopyslFbox0e35759f4fbc44b red border
     },

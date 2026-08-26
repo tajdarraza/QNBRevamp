@@ -53,7 +53,7 @@
     "desktopweb": {
         "needAppMenu": false
     },
-    "device": "GalaxyS7",
+    "device": "iPhone16",
     "displayorientation": 1,
     "enabledforidletimeout": false,
     "id": "frmPayBillAccount",
@@ -113,9 +113,9 @@
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
-    "platform": "android",
-    "prevDevice": "iPhone16",
-    "prevPlatform": "iphone",
+    "platform": "iphone",
+    "prevDevice": "GalaxyS7",
+    "prevPlatform": "android",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,

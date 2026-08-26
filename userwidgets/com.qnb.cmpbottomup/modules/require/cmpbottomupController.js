@@ -17,6 +17,8 @@ define(function () {
             if (this.view.lblDesc3) this.view.lblDesc3.isVisible = false;
             if (this.view.flxBillDetailsEdit) this.view.flxBillDetailsEdit.isVisible = false;
             if (this.view.flxEnterAmount) this.view.flxEnterAmount.isVisible = false;
+            if (this.view.flxTxtAmtRewards) this.view.flxTxtAmtRewards.isVisible = false;
+            if (this.view.lblCurrencyRewarrds) this.view.lblCurrencyRewarrds.isVisible = false;
             if (this.view.flxLoyaltyPoint) this.view.flxLoyaltyPoint.isVisible = false;
             if (this.view.lblCancel) this.view.lblCancel.isVisible = true;
 
@@ -77,6 +79,8 @@ define(function () {
             if (this.view.lblDesc3) this.view.lblDesc3.isVisible = false;
             if (this.view.flxBillDetailsEdit) this.view.flxBillDetailsEdit.isVisible = false;
             if (this.view.flxEnterAmount) this.view.flxEnterAmount.isVisible = false;
+            if (this.view.flxTxtAmtRewards) this.view.flxTxtAmtRewards.isVisible = false;
+            if (this.view.lblCurrencyRewarrds) this.view.lblCurrencyRewarrds.isVisible = false;
             if (this.view.flxLoyaltyPoint) this.view.flxLoyaltyPoint.isVisible = false;
             if (this.view.lblCancel) this.view.lblCancel.isVisible = true;
             if (this.view.btnSheetEnable) this.view.btnSheetEnable.bottom = "0dp";
@@ -109,6 +113,20 @@ define(function () {
                 if (this.view.lblCancel) this.view.lblCancel.isVisible = false;
 
                 this.setLoyaltyPoints(this.billData);
+            } else if (this.actionType === "payWithPoints") {
+                if (this.view.btnSheetEnable) {
+                    this.view.btnSheetEnable.text = "Confirm";
+                }
+
+                if (this.view.lblDesc1) this.view.lblDesc1.text = "Pay with life rewards";
+                if (this.view.lblDesc2) this.view.lblDesc2.text = "How many Life Rewards points would you like to spend to this bill?";
+
+                if (this.view.flxEnterAmount) this.view.flxEnterAmount.isVisible = true;
+                if (this.view.lblEnterAmount) this.view.lblEnterAmount.text = "Points";
+                if (this.view.lblCurrencyRewarrds) this.view.lblCurrencyRewarrds.isVisible = true;
+                if (this.view.flxTxtAmtRewards) this.view.flxTxtAmtRewards.isVisible = true;
+
+                this.setPayWithPoints(this.billData);
             } else {
                 if (this.view.btnSheetEnable) this.view.btnSheetEnable.text = "Enable automatic payment";
                 if (this.view.lblDesc1) this.view.lblDesc1.text = "Do you want to enable automatic payment for this bill?";
@@ -125,7 +143,7 @@ define(function () {
             if (this.view.lblBillName) this.view.lblBillName.text = data.billHeader || "";
             if (this.view.lblBillDescValue) this.view.lblBillDescValue.text = data.billDetails || "";
             if (this.view.lblDueOnDate) this.view.lblDueOnDate.text = data.endDate || "";
-            if (this.view.lblAutoPayVal) this.view.lblAutoPayVal.text = data.switchOn ? "Enabled" : "Disabled";
+            if (this.view.lblAutoPayVal) this.view.lblAutoPayVal.text = data.switchOn ? "On" : "Off";
             if (this.view.lblBillAmtValue) this.view.lblBillAmtValue.text = data.billAmount || "";
             if (this.view.lblBillCurrency) this.view.lblBillCurrency.text = data.billCurr || "";
         },
@@ -148,6 +166,34 @@ define(function () {
 
             if (this.view.lblLoyaltyPointVal) {
                 this.view.lblLoyaltyPointVal.text = data.value || "125 QAR";
+            }
+        },
+
+        setPayWithPoints: function (data) {
+            var points = data && data.points ? data.points : "";
+            var numericPoints = parseFloat(String(points).replace(/[^0-9.]/g, ""));
+            var convertedValue = "";
+
+            if (this.view.txtAmount) {
+                this.view.txtAmount.text = "";
+            }
+
+            if (!isNaN(numericPoints)) {
+                convertedValue = (numericPoints * 2) + " QAR";
+
+                if (this.view.lblTotalAmt) {
+                    this.view.lblTotalAmt.text = "Available points : " + numericPoints;
+                }
+            } else if (this.view.lblTotalAmt) {
+                this.view.lblTotalAmt.text = "Available points : " + points;
+            }
+
+            if (this.view.lblCurrencyRewarrds) {
+                this.view.lblCurrencyRewarrds.text = "QAR";
+            }
+
+            if (this.view.lblConvertedValue) {
+                this.view.lblConvertedValue.text = convertedValue;
             }
         },
 
@@ -207,7 +253,7 @@ define(function () {
 
             this.hide(function () {
                 if (typeof callback === "function") {
-                    if (actionType === "edit") {
+                    if (actionType === "edit" || actionType === "payWithPoints") {
                         callback(actionType, billData, amount);
                     } else {
                         callback(actionType, billData);

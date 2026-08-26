@@ -4,12 +4,21 @@ define({
         this.view.init = this.onInit;
 
         this.view.preShow = this.preShow;
-        kony.application.setApplicationProperties({
-            statusBarColor: "E4E2ED",
-            statusbarStyle: constants.STATUS_BAR_STYLE_DEFAULT,
-        });
+        var isAndroid = kony.os.deviceInfo().name;
+        if (isAndroid === "android") {
+            var build = java.import("android.os.Build");
+            if (build.VERSION.SDK_INT > 21) {
+                kony.print("SDK vers : " + build.VERSION.SDK_INIT);
+                kony.application.setApplicationProperties({
+                    statusBarColor: "F4F3F6",
+                    statusbarStyle: constants.STATUS_BAR_STYLE_DEFAULT,
+                });
+            }
+        }
 
     },
+
+
 
     onInit: function () {
 

@@ -53,7 +53,7 @@
     "desktopweb": {
         "needAppMenu": false
     },
-    "device": "Pixel3",
+    "device": "GalaxyS7",
     "displayorientation": 1,
     "enabledforidletimeout": false,
     "enablescrolling": false,
@@ -117,7 +117,7 @@
     "needappmenu": false,
     "paddinginpixel": false,
     "platform": "android",
-    "prevDevice": "iPhone16",
+    "prevDevice": "Pixel3",
     "prevPlatform": "iphone",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

@@ -34,9 +34,9 @@ define({
     },
 
     init: function() {
-    this.view.billprovider.isVisible = false;
-    this.view.billprovider.initializeProviders();
-    this.initializeBillPreview();
+        this.view.billprovider.isVisible = false;
+        this.view.billprovider.initializeProviders();
+        this.initializeBillPreview();
     },
 
     preShow: function() {
@@ -60,32 +60,55 @@ define({
 
     onAutoPayTouchStart: function() {
         this.autoPayTouchHandled = true;
-        kony.print("AUTO PAY :: TOUCH START");
     },
 
     onAutoPayTouchEnd: function() {
         this.autoPayTouchHandled = true;
-        kony.print("AUTO PAY :: TOUCH END");
     },
 
     onBillRowClick: function() {
         if (this.autoPayTouchHandled) {
-            kony.print("BILL ROW CLICK :: IGNORED - AUTOPAY CLICK");
             this.autoPayTouchHandled = false;
             return;
         }
 
-        var selectedRow = this.view.segBillPreview.selectedRowItems[0];
+        var selectedIndex = this.view.segBillPreview.selectedRowIndex;
 
-        if (!selectedRow) {
-            kony.print("BILL ROW CLICK :: NO ROW SELECTED");
+        if (!selectedIndex || selectedIndex.length < 2) {
+            kony.print("BILL ROW CLICK :: NO ROW INDEX");
             return;
         }
 
-        kony.print("BILL ROW CLICKED");
-        kony.print("SELECTED BILL = " + JSON.stringify(selectedRow));
+        var sectionIndex = selectedIndex[0];
+        var rowIndex = selectedIndex[1];
+        var selectedRow;
 
-        new kony.mvc.Navigation("frmPayBillAccount").navigate(selectedRow);
+        if (sectionIndex === 0) {
+            selectedRow = this.openBills[rowIndex];
+        } else if (sectionIndex === 1) {
+            selectedRow = this.lastPaidBills[rowIndex];
+        }
+
+        if (!selectedRow) {
+            kony.print("BILL ROW CLICK :: NO BILL DATA");
+            return;
+        }
+
+        var billData = {
+            billLogo: selectedRow.billLogo,
+            billHeader: selectedRow.billHeader,
+            billDetails: selectedRow.billDetails,
+            billAmount: selectedRow.billAmount,
+            billCurr: selectedRow.billCurr,
+            calendarIcon: selectedRow.calendarIcon,
+            endDate: selectedRow.endDate,
+            switchOn: selectedRow.switchOn
+        };
+
+        kony.print("BILL ROW CLICKED");
+        kony.print("SELECTED BILL = " + JSON.stringify(billData));
+
+        new kony.mvc.Navigation("frmPayBillAccount").navigate(billData);
     },
 
     initializeBillPreview: function() {
@@ -116,6 +139,7 @@ define({
                 billDetails: "Mobile Bill",
                 billAmount: "180.00",
                 billCurr: "QAR",
+                calendarIcon: "calendar.png",
                 endDate: "Due date on May, 15th",
                 switchOn: false
             }
@@ -214,7 +238,9 @@ define({
         this.pendingAutoPayRow = rowIndex;
         this.pendingAutoPayWidget = switchWidget;
 
-        this.pendingAutoPayData = sectionIndex === 0 ? this.openBills[rowIndex] : this.lastPaidBills[rowIndex];
+        this.pendingAutoPayData = sectionIndex === 0
+            ? this.openBills[rowIndex]
+            : this.lastPaidBills[rowIndex];
 
         if (!this.pendingAutoPayData) {
             kony.print("AUTO PAY :: NO BILL DATA");
@@ -222,7 +248,11 @@ define({
         }
 
         if (this.view.cmpbottomup && typeof this.view.cmpbottomup.show === "function") {
-            this.view.cmpbottomup.show(this.onAutoPayEnabled.bind(this), "enable", this.pendingAutoPayData);
+            this.view.cmpbottomup.show(
+                this.onAutoPayEnabled.bind(this),
+                "enable",
+                this.pendingAutoPayData
+            );
         }
     },
 
@@ -236,37 +266,37 @@ define({
             return;
         }
 
-        if (sectionIndex === 0) {
-            if (!this.openBills[rowIndex]) {
-                this.clearPendingAutoPay();
-                return;
-            }
+        var row = sectionIndex === 0
+            ? this.openBills[rowIndex]
+            : this.lastPaidBills[rowIndex];
 
-            this.openBills[rowIndex].switchOn = true;
-        } else if (sectionIndex === 1) {
-            if (!this.lastPaidBills[rowIndex]) {
-                this.clearPendingAutoPay();
-                return;
-            }
-
-            this.lastPaidBills[rowIndex].switchOn = true;
+        if (!row) {
+            this.clearPendingAutoPay();
+            return;
         }
+
+        row.switchOn = true;
 
         this.updateSwitchUI(switchWidget, true);
 
         var autoPayRequestData = {
-            billLogo: billData.billLogo,
-            billHeader: billData.billHeader,
-            billDetails: billData.billDetails,
-            billAmount: billData.billAmount,
-            billCurr: billData.billCurr,
-            calendarIcon: billData.calendarIcon,
-            endDate: billData.endDate,
+            billLogo: row.billLogo,
+            billHeader: row.billHeader,
+            billDetails: row.billDetails,
+            billAmount: row.billAmount,
+            billCurr: row.billCurr,
+            calendarIcon: row.calendarIcon,
+            endDate: row.endDate,
+            switchOn: row.switchOn,
             sectionIndex: sectionIndex,
             rowIndex: rowIndex
         };
 
-        kony.print("AUTO PAY :: API REQUEST DATA = " + JSON.stringify(autoPayRequestData));
+        kony.print(
+            "AUTO PAY :: API REQUEST DATA = " +
+            JSON.stringify(autoPayRequestData)
+        );
+
         this.clearPendingAutoPay();
     },
 
@@ -292,7 +322,6 @@ define({
         }
 
         row.switchOn = false;
-        this.openBills[rowIndex] = row;
         this.updateSwitchUI(widget, false);
     },
 
@@ -311,7 +340,6 @@ define({
         }
 
         row.switchOn = false;
-        this.lastPaidBills[rowIndex] = row;
         this.updateSwitchUI(widget, false);
     }
 });

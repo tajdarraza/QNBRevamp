@@ -2,8 +2,12 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "20dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "16dp"
     },
     "_margin_": [
         1,
@@ -17,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "scb73c682a5847ba84bb73182f80c520",
-    "_text_": "Payment successful",
+    "_skin_": "scf9d03dc5724684a9e73e10b4070720",
+    "_text_": "Total:",
     "_top_": {
         "type": "string",
-        "value": "10%"
+        "value": "12dp"
     },
     "_width_": {
         "type": "ref",
@@ -35,13 +39,9 @@
         }
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerweight": 100,
-    "contentalignment": 5,
-    "id": "lblPaymentSuccessful",
+    "contentalignment": 7,
+    "id": "lblTotal",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,10 +55,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "h943f95a80b94444a2ac8e1e58401561",
+    "kuid": "j40480bf263c41f19b16e036e5134dd9",
     "name": "kony.ui.Label",
-    "parent": "flxAmountOptions",
-    "pf": "frmCardPayment",
+    "parent": "flxLoyaltyCalc",
+    "pf": "frmPayBillAccount",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},

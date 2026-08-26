@@ -1,0 +1,69 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sa33f22fe75d49e9888b8293acb41bfc",
+    "_top_": {
+        "type": "string",
+        "value": "12dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "allboxes": [],
+    "autogrowmode": 1,
+    "canUpdateUI": true,
+    "children": [
+        "flxBillName",
+        "flxBillSeperator",
+        "lblBillDesc",
+        "lblBillDescValue",
+        "lblDueOn",
+        "lblDueOnDate",
+        "lblAutoPay",
+        "lblAutoPayVal",
+        "lblBillAmount",
+        "flxBillAmount",
+        "flxGap"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "flxBillDetailsEdit",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "d1801841e4f845fcb03752190fc10955",
+    "layouttype": 4,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxBillDetails",
+    "pf": "frmPaymentScreen",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1
+}

@@ -42,7 +42,9 @@
     "children": [
         "lblEnterAmount",
         "flxTxtAmount",
-        "lblTotalAmt"
+        "lblTotalAmt",
+        "lblCurrencyRewarrds",
+        "flxTxtAmtRewards"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -50,7 +52,7 @@
     "id": "flxEnterAmount",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "aa5300b0dad6426c96698fe997a625da",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",

@@ -6,7 +6,7 @@ define({
         this.view.preShow = this.preShow;
         this.view.postShow = this.postShow;
 
-           this.view.cmpFooter.initializeFooter();
+        this.view.cmpFooter.initializeFooter();
         this.view.cmpFooter.setSelectedTab("payments");
         this.view.flxOption1.onTouchEnd = this.onPayBillClick;
 

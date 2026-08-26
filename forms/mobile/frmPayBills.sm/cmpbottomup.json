@@ -178,6 +178,14 @@
                 "wType": "FlexContainer"
             }
         },
+        "flxTxtAmtRewards": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "c849d55fb1a54b109d75f43b9fb9eb5b",
+                "srcKUID": "h51c46784f1e47a9a1484c14b0ae7e76",
+                "wType": "FlexContainer"
+            }
+        },
         "flxValue": {
             "__events__": {},
             "__info__": {
@@ -272,6 +280,22 @@
             "__info__": {
                 "kuid": "g76ae14b53ae46ef80c472a43776edc4",
                 "srcKUID": "e80d861bc6f543a88d344c5ed72c5f62",
+                "wType": "Label"
+            }
+        },
+        "lblConvertedValue": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "e6408dabf32e47728c5c241d98c48caf",
+                "srcKUID": "gcde00407ee64e18b7cfed33eb426ce5",
+                "wType": "Label"
+            }
+        },
+        "lblCurrencyRewarrds": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "hcb126838ebc45be95a5b3c951e4c65f",
+                "srcKUID": "ce4c1e30106745a2a671bdb29507bb8c",
                 "wType": "Label"
             }
         },

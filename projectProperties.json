@@ -662,7 +662,6 @@
     "protectedmodeenabled_android": "false",
     "protectedmodeenabled_androidwear": "false",
     "protectedmodeenabled_ios": "false",
-    "prototype": {},
     "pushcertificatetype": "",
     "read_device_identifying_information": "false",
     "referenceWidth": "375",
@@ -697,7 +696,7 @@
     "tags": {
         "android": {
             "activity_child_tags": "",
-            "activityattrs": "",
+            "activityattrs": "android:theme=\"@style/AppTheme\"",
             "andapplicationattrs": "",
             "andapplicationtags": "",
             "andmanifesttags": "",

@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "164dp"
+        "value": "65%"
     },
     "_left_": {
         "type": "string",
-        "value": "0"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -25,11 +25,11 @@
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "20%"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "164dp"
+        "value": "90%"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -39,23 +39,21 @@
         "value": "50%"
     },
     "children": [
-        "flxRipple",
-        "flxCircle",
-        "flxWhite",
-        "imgPaymentTick"
+        "flxBillDetails",
+        "flxDoneCards"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxSuccess",
+    "id": "flxCardDetails",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "bd91c00827bb45aaa18a5030c42fb24e",
+    "kuid": "d5f7647494e94c558cf9e0b33978b8a2",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxAmountOptions",
-    "pf": "frmCardPayment",
+    "parent": "flxParent",
+    "pf": "frmPaymentScreen",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

@@ -37,7 +37,8 @@
     "children": [
         "lblBillDetails",
         "flxBillDetailsEdit",
-        "flxLoyaltyPointsMain"
+        "flxLoyaltyPointsMain",
+        "flxLoyaltyCalc"
     ],
     "clipbounds": true,
     "containerweight": 100,

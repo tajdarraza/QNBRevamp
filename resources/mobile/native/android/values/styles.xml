@@ -25,6 +25,8 @@ backward-compatibility can go here.
 <item name="colorPrimary">@color/colorPrimary</item>
 <!-- <item name="colorPrimaryDark">@color/colorPrimaryDark</item> -->
 <item name="colorAccent">@color/colorAccent</item>
+<item name="android:statusBarColor">#010F34</item>
+<item name="android:windowLightStatusBar">true</item>
 </style>
 <style name="AppTheme2" parent="Theme.AppCompat.NoActionBar"></style>
 </resources>

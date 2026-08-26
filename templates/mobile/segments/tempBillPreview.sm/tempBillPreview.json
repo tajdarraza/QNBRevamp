@@ -26,7 +26,7 @@
     "containerId": true,
     "containerweight": 100,
     "currentLocale": "default",
-    "device": "iPhone16",
+    "device": "Pixel3",
     "displayorientation": 3,
     "enabledforidletimeout": false,
     "id": "tempBillPreview",
@@ -45,7 +45,7 @@
         "formTransition": "None"
     },
     "paddinginpixel": false,
-    "platform": "iphone",
+    "platform": "android",
     "prevDevice": "iPhone16",
     "prevPlatform": "iphone",
     "retaincontentalignment": false,

@@ -6,10 +6,7 @@ define({
     onNavigate: function (navData) {
         this.view.preShow = this.preShow;
         this.view.onDeviceBack = this.onDeviceBack;
-        kony.application.setApplicationProperties({
-            statusBarColor: "E4E2ED",
-            statusbarStyle: constants.STATUS_BAR_STYLE_DEFAULT,
-        });
+
                 this.view.cmpFooter.initializeFooter();
         this.view.cmpFooter.setSelectedTab("transfer");
     },

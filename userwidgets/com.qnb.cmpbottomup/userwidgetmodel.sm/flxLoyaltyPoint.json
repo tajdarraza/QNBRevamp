@@ -49,7 +49,7 @@
     "id": "flxLoyaltyPoint",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "d11a096b12884b90842e7a30088fac1f",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",

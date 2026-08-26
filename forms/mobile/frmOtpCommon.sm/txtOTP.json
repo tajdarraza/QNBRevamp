@@ -1,0 +1,78 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "1dp"
+    },
+    "_height_": {
+        "type": "string",
+        "value": "1dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "",
+    "_skin_": "s9d9e5d2ce974d30bb7335438bc6b3ee",
+    "_text_": "",
+    "_width_": {
+        "type": "string",
+        "value": "80%"
+    },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 7,
+    "disabledSkins": {
+        "placeholderSkin": "s920d296cb504ed8b7c72c70d6980c10"
+    },
+    "focusskin": "s9d9e5d2ce974d30bb7335438bc6b3ee",
+    "id": "txtOTP",
+    "info": null,
+    "iphone": {
+        "psp": {
+            "showClearButton": false,
+            "showCloseButton": false
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardstyle": "A",
+    "keyboardtype": "A",
+    "kuid": "a6deb09d55854389bb2810e43ca862a2",
+    "maxtextlength": 7,
+    "mode": "N",
+    "name": "kony.ui.TextBox2",
+    "parent": "flxOtpDigits",
+    "pf": "frmOtpCommon",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": true,
+    "showclearbutton": false,
+    "textinputmode": "N",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField"
+}
