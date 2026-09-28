@@ -46,6 +46,18 @@
                 "kuid": "e4688044bd5640439563c09422aed227",
                 "srcKUID": "aeca8dd7cbb84c1b8c8e214bb938ea96",
                 "wType": "FlexContainer"
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
             }
         },
         "flxAction1": {

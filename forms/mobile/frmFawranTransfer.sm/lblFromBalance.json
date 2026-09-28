@@ -2,12 +2,8 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "22dp"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "45%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_margin_": [
         1,
@@ -21,15 +17,19 @@
         0,
         0
     ],
-    "_skin_": "s18e15efc4242ac98da8fd41f9452262",
-    "_text_": "—",
-    "_top_": {
+    "_right_": {
         "type": "string",
         "value": "12dp"
     },
-    "_width_": {
+    "_skin_": "s82f9ef68f2a45a1a13fb4803b79dd85",
+    "_text_": "4200",
+    "_top_": {
         "type": "string",
-        "value": "52%"
+        "value": "8dp"
+    },
+    "_width_": {
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {
@@ -40,7 +40,7 @@
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "contentalignment": 6,
+    "contentalignment": 4,
     "id": "lblFromBalance",
     "info": null,
     "ipad": {
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "6cca663fa45d64acea55ce80868144ea",
+    "kuid": "feafabf262404433aba58dc1c1d0e114",
     "name": "kony.ui.Label",
     "parent": "flxTransferFrom",
     "pf": "frmFawranTransfer",

@@ -6,8 +6,8 @@
         "value": "8dp"
     },
     "_height_": {
-        "type": "string",
-        "value": "22dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",

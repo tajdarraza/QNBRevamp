@@ -42,8 +42,7 @@
         "imgLimitInfo",
         "lblToHeading",
         "flxToCard",
-        "flxBtnReview",
-        "flxLimitSheet"
+        "flxBtnReview"
     ],
     "clipbounds": false,
     "containerweight": 100,

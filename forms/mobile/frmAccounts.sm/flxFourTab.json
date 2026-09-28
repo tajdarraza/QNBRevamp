@@ -50,7 +50,7 @@
     "id": "flxFourTab",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "fedced1e9a4941c9a554144fc5b9058c",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",

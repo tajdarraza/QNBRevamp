@@ -6,7 +6,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -25,7 +25,7 @@
     "_skin_": "sc11a37574a6529ed7690c8f40ed805",
     "_top_": {
         "type": "string",
-        "value": "250dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
@@ -34,6 +34,10 @@
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [],
     "clipbounds": false,
     "containerweight": 100,

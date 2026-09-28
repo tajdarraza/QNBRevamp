@@ -6,7 +6,6 @@ define({
     this.view.init = this.onInit;
     this.view.preShow = this.preShow;
     this.view.onDeviceBack = this.backNav;
-    this.view.flxBack.onTouchEnd = this.backNav;
     //Footer exists on this form but was never wired — reachable from the dashboard's Pay Now.
     this.view.cmpFooter.initializeFooter();
     this.view.cmpFooter.setSelectedTab("cards");
@@ -56,6 +55,9 @@ define({
   },
 
   preShow: function () {
+    this.view.commonheader.configure({
+      title: "Choose your card",
+    });
     var self = this;
     //Service-driven. The inline cardData below is only a fallback if the call returns nothing.
     pocFetchCards(function (rows) {
@@ -148,7 +150,12 @@ define({
       //ccuid / currency / minDueText were being dropped here even though pocMapCardsForChooser
       //carries them, so frmPayCard always saw ccuid=MISSING — the payment services would have
       //been unable to name the card even with real data on screen.
-      kony.print("POC CHOOSE: selected " +card.lblCardName +" ccuid=" +(nullCheck(card.ccuid) ? card.ccuid : "MISSING"),);
+      kony.print(
+        "POC CHOOSE: selected " +
+          card.lblCardName +
+          " ccuid=" +
+          (nullCheck(card.ccuid) ? card.ccuid : "MISSING"),
+      );
 
       new kony.mvc.Navigation("frmPayCard").navigate({
         utilisedAmount: card.utilised,

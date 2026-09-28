@@ -2,12 +2,12 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "20dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "16dp"
     },
     "_margin_": [
         1,
@@ -21,15 +21,11 @@
         0,
         0
     ],
-    "_skin_": "se6a173f9bb04594b0f8ee528971a4ae",
+    "_skin_": "s7194a7e9c7d41519144ffb852512508",
     "_text_": "Select an option",
-    "_top_": {
-        "type": "string",
-        "value": "14dp"
-    },
     "_width_": {
-        "type": "string",
-        "value": "80%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {
@@ -39,6 +35,10 @@
         }
     },
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 4,
     "id": "lblMainPurpose",
@@ -55,9 +55,9 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "09d0b0bfb9008b494b4e41daa78262c9",
+    "kuid": "f075b596662940e4b11624be28d0a485",
     "name": "kony.ui.Label",
-    "parent": "flxMainPurpose",
+    "parent": "flxMainPurposeInner",
     "pf": "frmFawranTransfer",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

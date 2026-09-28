@@ -1,0 +1,129 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "flxAmountOptions": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "f090085c103146cda21a13d3dad6f8e7",
+                "srcKUID": "e965a82604a548f0854838fc90d1cfb5",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxCircle": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ef6c233dd0744b28bfefdc22878f8148",
+                "srcKUID": "c8bed7f1c2ed4974b00bd6652db07aed",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxRipple": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "e20abb3437b54dcc8a41364883b9a442",
+                "srcKUID": "ea89229be8ea486386e984479d23538d",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxSuccess": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b8f77e3d28f740be912412e6be8d0ab6",
+                "srcKUID": "a3dea3a10c784848b2ed2448b6e159d6",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxWhite": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "d6925ade801d4d929bc6764b105a2c26",
+                "srcKUID": "j682f95f52bf4bf2886cd6a0bad63d54",
+                "wType": "FlexContainer"
+            }
+        },
+        "imgPaymentTick": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b4a38f79ed00443fb56a005191a4c21a",
+                "srcKUID": "b96ac7a130fd4d949cf0610cad56eb32",
+                "wType": "Image"
+            }
+        },
+        "lblPaymentSuccessful": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "i33cdc2ec1dd42078c41a004c22b9746",
+                "srcKUID": "d5a0c5814df94145987e69a640437149",
+                "wType": "Label"
+            },
+            "text": "Loan payment postponed"
+        },
+        "rippleanimation": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "e685fe44866e4b12b80cabe236cbe24c",
+                "srcKUID": "e370c25eaaf3416ca6c9b74e05544a8d",
+                "wType": "FlexContainer"
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "rippleanimation",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "e685fe44866e4b12b80cabe236cbe24c",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxAmountOptions",
+    "pf": "frmLoanPostponeConfirmation",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "e370c25eaaf3416ca6c9b74e05544a8d",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

@@ -1,694 +1,342 @@
 define(function () {
+  return {
+    currentMode: "normal",
+    callbacks: {},
+    /*
+     *
+     * Parent controller:
+     *
+     * this.view.cmpHeader.configure({
+     *     mode: "normal",
+     *     firstName: "Mohammad",
+     *     lastName: "Raza",
+     *     notificationCount: 5,
+     *     callbacks: {
+     *         initialsNotification: this.onNotificationClick.bind(this),
+     *         country: this.onCountryClick.bind(this),
+     *         add: this.onAddClick.bind(this),
+     *         language: this.onLanguageClick.bind(this)
+     *     }
+     * });
+     *
+     */
+
+    initializeHeader: function () {
+      kony.print("========================================");
+      kony.print("HEADER :: INITIALIZE");
+
+      this.currentMode = "normal";
+      this.callbacks = {};
+
+      this.bindEvents();
+      this.setNormalMode();
+
+      kony.print("HEADER :: INITIALIZE COMPLETE");
+      kony.print("========================================");
+    },
+
+    bindEvents: function () {
+      kony.print("HEADER :: BIND EVENTS");
+
+      if (this.view.imgLangLogo) {
+        this.view.imgLangLogo.onTouchEnd = this.localeChange.bind(this);
+        kony.print("HEADER :: LANGUAGE EVENT BOUND");
+      } else {
+        kony.print("HEADER :: imgLangLogo NOT FOUND");
+      }
+
+      if (this.view.imgAdd) {
+        this.view.imgAdd.onTouchEnd = this.onAddClick.bind(this);
+        kony.print("HEADER :: ADD EVENT BOUND");
+      }
+
+      if (this.view.flxCountries) {
+        this.view.flxCountries.onTouchEnd = this.onCountryClick.bind(this);
+        kony.print("HEADER :: COUNTRY EVENT BOUND");
+      }
+
+      if (this.view.flxInitialsNotifi) {
+        this.view.flxInitialsNotifi.onTouchEnd =
+          this.onInitialsNotificationClick.bind(this);
+        kony.print("HEADER :: INITIALS/NOTIFICATION EVENT BOUND");
+      }
+    },
+
+    setNormalMode: function () {
+      kony.print("HEADER :: SET NORMAL MODE");
+
+      this.currentMode = "normal";
+
+      if (this.view.flxCountries) {
+        this.view.flxCountries.isVisible = false;
+      }
+
+      if (this.view.imgLangLogo) {
+        this.view.imgLangLogo.isVisible = false;
+      }
+
+      if (this.view.imgAdd) {
+        this.view.imgAdd.isVisible = true;
+      }
+
+      if (this.view.imgSearch) {
+        this.view.imgSearch.isVisible = true;
+        this.view.imgSearch.src = "search_icon.png";
+      }
+
+      if (this.view.flxInitialsNotifi) {
+        this.view.flxInitialsNotifi.isVisible = true;
+      }
+    },
+
+    setLoginMode: function () {
+      kony.print("HEADER :: SET LOGIN MODE");
+
+      this.currentMode = "login";
+
+      if (this.view.flxCountries) {
+        this.view.flxCountries.isVisible = true;
+      }
+
+      if (this.view.lblCountry) {
+        this.view.lblCountry.text = "Qatar";
+      }
 
-    return {
+      if (this.view.imgLangLogo) {
+        this.view.imgLangLogo.isVisible = true;
+        this.view.imgLangLogo.src = "globe_language.png";
+      }
 
-        /*
-         * =====================================================
-         * STATE
-         * =====================================================
-         */
+      if (this.view.imgAdd) {
+        this.view.imgAdd.isVisible = false;
+      }
+
+      if (this.view.imgSearch) {
+        this.view.imgSearch.isVisible = false;
+      }
+
+      if (this.view.flxInitialsNotifi) {
+        this.view.flxInitialsNotifi.isVisible = false;
+      }
+    },
+
+    setWelcomeMode: function () {
+      kony.print("HEADER :: SET WELCOME MODE");
+
+      this.setLoginMode();
+      this.currentMode = "welcome";
+    },
+
+    setGuestMode: function () {
+      kony.print("HEADER :: SET GUEST MODE");
+
+      this.setLoginMode();
+      this.currentMode = "guest";
+    },
+
+    configure: function (config) {
+      config = config || {};
+
+      kony.print("HEADER :: CONFIGURE");
+
+      this.bindEvents();
+
+      this.callbacks = config.callbacks || {};
+
+      var mode = config.mode || "normal";
+
+      if (mode === "login") {
+        this.setLoginMode();
+      } else if (mode === "welcome") {
+        this.setWelcomeMode();
+      } else if (mode === "guest") {
+        this.setGuestMode();
+      } else {
+        this.setNormalMode();
+      }
 
-        currentMode: "normal",
+      if (config.country !== undefined) {
+        this.setCountry(config.country);
+      }
 
+      if (config.firstName !== undefined || config.lastName !== undefined) {
+        this.setInitials(config.firstName || "", config.lastName || "");
+      }
 
-        /*
-         * =====================================================
-         * COMPONENT INITIALIZATION
-         * =====================================================
-         *
-         * Call this from the parent controller:
-         *
-         * this.view.cmpHeader.configure({
-         *     mode: "guest",
-         *     country: "Qatar"
-         * });
-         *
-         */
+      if (config.notificationCount !== undefined) {
+        this.setNotificationCount(config.notificationCount);
+      }
+    },
 
-        initializeHeader: function () {
+    setCountry: function (countryName) {
+      if (!this.view.lblCountry) {
+        kony.print("HEADER :: lblCountry NOT FOUND");
+        return;
+      }
 
-            kony.print(
-                "========================================"
-            );
+      this.view.lblCountry.text = countryName || "Qatar";
+    },
 
-            kony.print(
-                "HEADER :: INITIALIZE"
-            );
+    setInitials: function (firstName, lastName) {
+      if (!this.view.lblInitials) {
+        return;
+      }
 
+      var firstInitial = firstName ? firstName.charAt(0) : "";
+      var lastInitial = lastName ? lastName.charAt(0) : "";
 
-            this.currentMode = "normal";
+      this.view.lblInitials.text = (firstInitial + lastInitial).toUpperCase();
+    },
 
+    setNotificationCount: function (count) {
+      if (!this.view.lblNoti) {
+        return;
+      }
 
-            /*
-             * Bind events
-             */
+      if (count === null || count === undefined) {
+        count = 0;
+      }
 
-            this.bindEvents();
+      this.view.lblNoti.text = String(count);
+    },
 
+    localeChange: function () {
+      kony.print("########################################");
+      kony.print("HEADER :: LANGUAGE CLICKED");
+      kony.print("HEADER :: CURRENT MODE = " + this.currentMode);
 
-            /*
-             * Default state
-             */
+      /*
+       * If parent supplied a callback, let the parent
+       * handle the language click.
+       *
+       * Otherwise keep the existing language logic.
+       */
 
-            this.setNormalMode();
+      if (typeof this.callbacks.language === "function") {
+        this.callbacks.language();
+        return;
+      }
 
+      if (
+        this.currentMode !== "login" &&
+        this.currentMode !== "welcome" &&
+        this.currentMode !== "guest"
+      ) {
+        kony.print("HEADER :: LANGUAGE NOT ALLOWED");
+        return;
+      }
 
-            kony.print(
-                "HEADER :: INITIALIZE COMPLETE"
-            );
+      try {
+        if (this.view.loading) {
+          this.view.loading.show(this, "Loading..");
+        }
 
-            kony.print(
-                "========================================"
-            );
-        },
+        var currentLocale = kony.i18n.getCurrentLocale();
 
+        kony.print("HEADER :: CURRENT LOCALE = " + currentLocale);
 
-        /*
-         * =====================================================
-         * BIND EVENTS
-         * =====================================================
-         */
+        var set_locale;
 
-        bindEvents: function () {
+        if (currentLocale === "en") {
+          set_locale = "ar";
+        } else {
+          set_locale = "en";
+        }
 
-            kony.print(
-                "HEADER :: BIND EVENTS"
-            );
+        kony.print("HEADER :: CHANGING LOCALE TO = " + set_locale);
 
+        var self = this;
 
-            /*
-             * LANGUAGE
-             */
+        kony.i18n.setCurrentLocaleAsync(
+          set_locale,
+          function () {
+            kony.print("HEADER :: LOCALE CHANGE SUCCESS");
 
-            if (this.view.imgLangLogo) {
+            var newLocale = kony.i18n.getCurrentLocale();
 
-                this.view.imgLangLogo.onTouchEnd =
-                    this.localeChange.bind(this);
-
-                kony.print(
-                    "HEADER :: LANGUAGE EVENT BOUND"
-                );
-
-            } else {
-
-                kony.print(
-                    "HEADER :: imgLangLogo NOT FOUND"
-                );
-            }
-
-
-            /*
-             * ADD
-             */
-
-            if (this.view.imgAdd) {
-
-                this.view.imgAdd.onTouchEnd =
-                    this.onAddClick.bind(this);
-
-                kony.print(
-                    "HEADER :: ADD EVENT BOUND"
-                );
-            }
-
-
-            /*
-             * COUNTRY
-             */
-
-            if (this.view.flxCountries) {
-
-                this.view.flxCountries.onTouchEnd =
-                    this.onCountryClick.bind(this);
-
-                kony.print(
-                    "HEADER :: COUNTRY EVENT BOUND"
-                );
-            }
-        },
-
-
-        /*
-         * =====================================================
-         * NORMAL MODE
-         * =====================================================
-         */
-
-        setNormalMode: function () {
-
-            kony.print(
-                "HEADER :: SET NORMAL MODE"
-            );
-
-            this.currentMode = "normal";
-
-
-            if (this.view.flxCountries) {
-
-                this.view.flxCountries.isVisible = false;
-            }
-
-
-            if (this.view.imgLangLogo) {
-
-                this.view.imgLangLogo.isVisible = false;
-            }
-
-
-            if (this.view.imgAdd) {
-
-                this.view.imgAdd.isVisible = true;
-            }
-
-
-            if (this.view.imgSearch) {
-
-                this.view.imgSearch.isVisible = true;
-                this.view.imgSearch.src = "search_icon.png";
-            }
-
-
-            if (this.view.flxInitialsNotifi) {
-
-                this.view.flxInitialsNotifi.isVisible = true;
-            }
-        },
-
-
-        /*
-         * =====================================================
-         * LOGIN MODE
-         * =====================================================
-         */
-
-        setLoginMode: function () {
-
-            kony.print(
-                "HEADER :: SET LOGIN MODE"
-            );
-
-            this.currentMode = "login";
-
-
-            if (this.view.flxCountries) {
-
-                this.view.flxCountries.isVisible = true;
-            }
-
-
-            if (this.view.lblCountry) {
-
-                this.view.lblCountry.text = "Qatar";
-            }
-
-
-            if (this.view.imgLangLogo) {
-
-                this.view.imgLangLogo.isVisible = true;
-
-                this.view.imgLangLogo.src =
-                    "globe_language.png";
-            }
-
-
-            if (this.view.imgAdd) {
-
-                this.view.imgAdd.isVisible = false;
-            }
-
-
-            if (this.view.imgSearch) {
-
-                this.view.imgSearch.isVisible = false;
-            }
-
-
-            if (this.view.flxInitialsNotifi) {
-
-                this.view.flxInitialsNotifi.isVisible = false;
-            }
-        },
-
-
-        /*
-         * =====================================================
-         * WELCOME MODE
-         * =====================================================
-         */
-
-        setWelcomeMode: function () {
-
-            kony.print(
-                "HEADER :: SET WELCOME MODE"
-            );
-
-            this.setLoginMode();
-
-            this.currentMode = "welcome";
-        },
-
-
-        /*
-         * =====================================================
-         * GUEST MODE
-         * =====================================================
-         *
-         * Guest behaves like Login/Welcome.
-         */
-
-        setGuestMode: function () {
-
-            kony.print(
-                "HEADER :: SET GUEST MODE"
-            );
-
-            this.setLoginMode();
-
-            this.currentMode = "guest";
-        },
-
-
-        /*
-         * =====================================================
-         * CONFIGURE
-         * =====================================================
-         */
-
-        configure: function (config) {
-
-            config = config || {};
-
-
-            kony.print(
-                "HEADER :: CONFIGURE"
-            );
-
-
-            /*
-             * IMPORTANT:
-             *
-             * Make sure events are bound whenever
-             * configure() is called.
-             */
-
-            this.bindEvents();
-
-
-            var mode =
-                config.mode || "normal";
-
-
-            if (mode === "login") {
-
-                this.setLoginMode();
-
-            } else if (mode === "welcome") {
-
-                this.setWelcomeMode();
-
-            } else if (mode === "guest") {
-
-                this.setGuestMode();
-
-            } else {
-
-                this.setNormalMode();
-            }
-
-
-            /*
-             * Country
-             */
-
-            if (
-                config.country !== undefined
-            ) {
-
-                this.setCountry(
-                    config.country
-                );
-            }
-
-
-            /*
-             * Initials
-             */
-
-            if (
-                config.firstName !== undefined ||
-                config.lastName !== undefined
-            ) {
-
-                this.setInitials(
-                    config.firstName || "",
-                    config.lastName || ""
-                );
-            }
-
-
-            /*
-             * Notification
-             */
-
-            if (
-                config.notificationCount !== undefined
-            ) {
-
-                this.setNotificationCount(
-                    config.notificationCount
-                );
-            }
-        },
-
-
-        /*
-         * =====================================================
-         * COUNTRY
-         * =====================================================
-         */
-
-        setCountry: function (countryName) {
-
-            if (!this.view.lblCountry) {
-
-                kony.print(
-                    "HEADER :: lblCountry NOT FOUND"
-                );
-
-                return;
-            }
-
-
-            this.view.lblCountry.text =
-                countryName || "Qatar";
-        },
-
-
-        /*
-         * =====================================================
-         * INITIALS
-         * =====================================================
-         */
-
-        setInitials: function (
-            firstName,
-            lastName
-        ) {
-
-            if (!this.view.lblInitials) {
-
-                return;
-            }
-
-
-            var firstInitial =
-                firstName
-                    ? firstName.charAt(0)
-                    : "";
-
-
-            var lastInitial =
-                lastName
-                    ? lastName.charAt(0)
-                    : "";
-
-
-            this.view.lblInitials.text =
-                (
-                    firstInitial +
-                    lastInitial
-                ).toUpperCase();
-        },
-
-
-        /*
-         * =====================================================
-         * NOTIFICATION
-         * =====================================================
-         */
-
-        setNotificationCount: function (count) {
-
-            if (!this.view.lblNoti) {
-
-                return;
-            }
-
-
-            if (
-                count === null ||
-                count === undefined
-            ) {
-
-                count = 0;
-            }
-
-
-            this.view.lblNoti.text =
-                String(count);
-        },
-
-
-        /*
-         * =====================================================
-         * LANGUAGE
-         * =====================================================
-         */
-
-        localeChange: function () {
-
-            kony.print(
-                "########################################"
-            );
-
-            kony.print(
-                "HEADER :: LANGUAGE CLICKED"
-            );
-
-            kony.print(
-                "HEADER :: CURRENT MODE = " +
-                this.currentMode
-            );
-
-
-            /*
-             * Safety check
-             */
-
-            if (
-                this.currentMode !== "login" &&
-                this.currentMode !== "welcome" &&
-                this.currentMode !== "guest"
-            ) {
-
-                kony.print(
-                    "HEADER :: LANGUAGE NOT ALLOWED"
-                );
-
-                return;
-            }
-
+            kony.store.setItem("current_locale", newLocale);
 
             try {
-
-                if (this.view.loading) {
-
-                    this.view.loading.show(
-                        this,
-                        "Loading.."
-                    );
-                }
-
-
-                var currentLocale =
-                    kony.i18n.getCurrentLocale();
-
-
-                kony.print(
-                    "HEADER :: CURRENT LOCALE = " +
-                    currentLocale
-                );
-
-
-                var set_locale;
-
-
-                if (currentLocale === "en") {
-
-                    set_locale = "ar";
-
-                } else {
-
-                    set_locale = "en";
-                }
-
-
-                kony.print(
-                    "HEADER :: CHANGING LOCALE TO = " +
-                    set_locale
-                );
-
-
-                var self = this;
-
-
-                kony.i18n.setCurrentLocaleAsync(
-                    set_locale,
-
-                    function () {
-
-                        kony.print(
-                            "HEADER :: LOCALE CHANGE SUCCESS"
-                        );
-
-
-                        var newLocale =
-                            kony.i18n.getCurrentLocale();
-
-
-                        kony.store.setItem(
-                            "current_locale",
-                            newLocale
-                        );
-
-
-                        /*
-                         * Keep your existing navigation flow
-                         */
-
-                        try {
-
-                            new kony.mvc.Navigation(
-                                "frmDummy"
-                            ).navigate();
-
-                        } catch (e) {
-
-                            kony.print(
-                                "HEADER :: DUMMY NAV ERROR = " +
-                                e
-                            );
-                        }
-
-
-                        /*
-                         * Destroy forms
-                         */
-
-                        try {
-
-                            kony.application.destroyForm(
-                                "frmLogin"
-                            );
-
-                            kony.application.destroyForm(
-                                "frmWelcomeScreen"
-                            );
-
-                            kony.application.destroyForm(
-                                "frmDashboard"
-                            );
-
-                        } catch (e2) {
-
-                            kony.print(
-                                "HEADER :: DESTROY ERROR = " +
-                                e2
-                            );
-                        }
-
-
-                        /*
-                         * Navigate to Login
-                         */
-
-                        kony.timer.schedule(
-                            "languageChangeTimer",
-
-                            function () {
-
-                                kony.print(
-                                    "HEADER :: NAVIGATING TO LOGIN"
-                                );
-
-
-                                try {
-
-                                    new kony.mvc.Navigation(
-                                        "frmLogin"
-                                    ).navigate();
-
-                                } catch (e3) {
-
-                                    kony.print(
-                                        "HEADER :: LOGIN NAV ERROR = " +
-                                        e3
-                                    );
-                                }
-
-
-                                kony.timer.cancel(
-                                    "languageChangeTimer"
-                                );
-
-                            },
-
-                            2,
-
-                            false
-                        );
-
-                    },
-
-                    function () {
-
-                        kony.print(
-                            "HEADER :: LOCALE CHANGE FAILED"
-                        );
-
-                        alert(
-                            "Failed to change language"
-                        );
-                    }
-                );
-
+              new kony.mvc.Navigation("frmDummy").navigate();
             } catch (e) {
-
-                kony.print(
-                    "HEADER :: LOCALE ERROR = " +
-                    e
-                );
-
-                alert(e);
+              kony.print("HEADER :: DUMMY NAV ERROR = " + e);
             }
-        },
 
+            /*
+             * Destroy forms
+             */
 
-        /*
-         * =====================================================
-         * ADD
-         * =====================================================
-         */
+            try {
+              kony.application.destroyForm("frmLogin");
+              kony.application.destroyForm("frmWelcomeScreen");
+              kony.application.destroyForm("frmDashboard");
+            } catch (e2) {
+              kony.print("HEADER :: DESTROY ERROR = " + e2);
+            }
 
-        onAddClick: function () {
+            /*
+             * Navigate to Login
+             */
 
-            kony.print(
-                "HEADER :: ADD CLICKED"
+            kony.timer.schedule(
+              "languageChangeTimer",
+              function () {
+                kony.print("HEADER :: NAVIGATING TO LOGIN");
+
+                try {
+                  new kony.mvc.Navigation("frmLogin").navigate();
+                } catch (e3) {
+                  kony.print("HEADER :: LOGIN NAV ERROR = " + e3);
+                }
+
+                kony.timer.cancel("languageChangeTimer");
+              },
+              2,
+              false,
             );
-        },
+          },
+          function () {
+            kony.print("HEADER :: LOCALE CHANGE FAILED");
+            alert("Failed to change language");
+          },
+        );
+      } catch (e) {
+        kony.print("HEADER :: LOCALE ERROR = " + e);
+        alert(e);
+      }
+    },
 
+    /*
+     * =====================================================
+     * ADD
+     * =====================================================
+     */
 
-        /*
-         * =====================================================
-         * COUNTRY
-         * =====================================================
-         */
+    onAddClick: function () {
+      kony.print("HEADER :: ADD CLICKED");
 
-        onCountryClick: function () {
+      if (typeof this.callbacks.add === "function") {
+        this.callbacks.add();
+        return;
+      }
+    },
 
-            kony.print(
-                "HEADER :: COUNTRY CLICKED"
-            );
-        }
-    };
+    onCountryClick: function () {
+      kony.print("HEADER :: COUNTRY CLICKED");
+
+      if (typeof this.callbacks.country === "function") {
+        this.callbacks.country();
+        return;
+      }
+    },
+
+    onInitialsNotificationClick: function () {
+      kony.print("HEADER :: INITIALS/NOTIFICATION CLICKED");
+
+      if (typeof this.callbacks.initialsNotification === "function") {
+        this.callbacks.initialsNotification();
+        return;
+      }
+    },
+  };
 });

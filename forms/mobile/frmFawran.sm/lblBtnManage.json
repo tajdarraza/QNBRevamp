@@ -21,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "s4a68898d4ea4ae584e70f2eabab914a",
+    "_skin_": "s3e3300fa0424016af6a5fefcb4d5e93",
     "_text_": "Manage",
     "_top_": {
         "type": "string",
-        "value": "74dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
@@ -40,7 +40,7 @@
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "contentalignment": 5,
+    "contentalignment": 2,
     "id": "lblBtnManage",
     "info": null,
     "ipad": {

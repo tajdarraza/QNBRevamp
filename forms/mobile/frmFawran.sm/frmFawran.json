@@ -18,7 +18,7 @@
     "_pxMenuIndex": [
         0,
         1,
-        7
+        11
     ],
     "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
@@ -43,7 +43,7 @@
         }
     },
     "currentLocale": "default",
-    "device": "Pixel3",
+    "device": "iPhone16",
     "displayorientation": 1,
     "enabledforidletimeout": true,
     "id": "frmFawran",
@@ -94,9 +94,9 @@
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
-    "platform": "android",
-    "prevDevice": "iPhone16",
-    "prevPlatform": "iphone",
+    "platform": "iphone",
+    "prevDevice": "Pixel3",
+    "prevPlatform": "android",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,

@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "20dp"
+        "value": "24dp"
     },
     "_left_": {
         "type": "string",
@@ -35,9 +35,8 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "Label0e03101bc02e044",
-        "Label0c2de68d6140940",
-        "CopyFlexContainer0c974f6a21c8c46"
+        "flxUserCardInfo",
+        "flxCardType"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -47,7 +46,7 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "i2316c58ed444af5bba3fe1e5a56e684",
-    "layouttype": 3,
+    "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxCardDetails",
     "pf": "frmPayCard",

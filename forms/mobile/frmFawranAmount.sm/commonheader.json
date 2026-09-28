@@ -86,7 +86,8 @@
                 "kuid": "bef055827e3c4ccc8bfe00df2a329f1e",
                 "srcKUID": "ce67e20decd44378a97bfec1f7b4ba44",
                 "wType": "Image"
-            }
+            },
+            "src": "closeicon.png"
         },
         "imgAction2": {
             "__events__": {},
@@ -94,7 +95,8 @@
                 "kuid": "e8045b46b58f4ad1838244df73e8e4e1",
                 "srcKUID": "c20fbf8154c643819cdcc81ef0b27b2c",
                 "wType": "Image"
-            }
+            },
+            "src": "closeicon.png"
         },
         "imgBackNav": {
             "__events__": {},
@@ -102,7 +104,8 @@
                 "kuid": "be683c8fbbc648c599baadf2ee82b01a",
                 "srcKUID": "d760b5e8194243f3bc0edb6b4b61ca08",
                 "wType": "Image"
-            }
+            },
+            "src": "caratleftsmall.png"
         },
         "lblScreenTitle": {
             "__events__": {},
@@ -110,7 +113,8 @@
                 "kuid": "j46a8950d97b49b19382a1be8c98b78b",
                 "srcKUID": "e873f8c7bfa242c7b51c8559085298be",
                 "wType": "Label"
-            }
+            },
+            "text": "Fawran"
         }
     },
     "enablescrolling": true,

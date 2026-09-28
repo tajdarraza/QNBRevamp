@@ -19,14 +19,10 @@
     ],
     "_right_": {
         "type": "string",
-        "value": "2%"
+        "value": "0"
     },
-    "_skin_": "se471b02e10c4dffa5bb7523aa54e98e",
+    "_skin_": "s0cb4d6dc08049c29d96a799ee882eef",
     "_text_": "Get Started",
-    "_top_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -39,6 +35,10 @@
         }
     },
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 4,
     "id": "lblGetStarted",

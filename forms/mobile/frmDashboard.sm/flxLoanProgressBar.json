@@ -44,7 +44,7 @@
     "id": "flxLoanProgressBar",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "g3d12d42c40f4ef4a8d01943da2b5b88",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",

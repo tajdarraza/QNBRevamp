@@ -43,6 +43,8 @@
         "lblDueOnDate",
         "lblAutoPay",
         "lblAutoPayVal",
+        "lblInterestRate",
+        "lblInterestRateVal",
         "lblBillAmount",
         "flxBillAmount",
         "flxGap"

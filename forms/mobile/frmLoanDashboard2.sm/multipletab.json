@@ -1,0 +1,165 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "48dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "12dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "flxFourTab": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "g6ab22eea1c049cc9abc9f3b7aebf14c",
+                "srcKUID": "i4ece481bde34e7ea9e30142d82101dd",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxTab1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "f4fea3a5a7104087a8490df2c96536f5",
+                "srcKUID": "a2c2518f4853407ab312bfc34baafe7d",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxTab2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "gf1b6062a7e24e0984ab8a6e51378189",
+                "srcKUID": "ba5ee89ac31b414fa2c4aa4ae0d5641e",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxTab3": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "a702b6c8e3de4caca5b8870d8ebaaae2",
+                "srcKUID": "h86d01e69dac46a79d60ca49d7a55053",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxTab4": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ed4b0ad6b10442a4aae5e533c00d7482",
+                "srcKUID": "a2c4bb92f5cf4a26adffc03b84da6aab",
+                "wType": "FlexContainer"
+            }
+        },
+        "lblTab1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "a212bca3fb00406388d69538ccde4129",
+                "srcKUID": "a74ee172383e4a358f6822459f144b94",
+                "wType": "Label"
+            }
+        },
+        "lblTab2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "i4a4827e63ae42c287637df5c312ee6d",
+                "srcKUID": "a59d0ea47f054cd68a4e1eb05c886679",
+                "wType": "Label"
+            },
+            "text": "Personal"
+        },
+        "lblTab3": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "d58c850f2f6c4754b6c67a76565d9789",
+                "srcKUID": "feeaaafdedf24783b755824486b6e3b7",
+                "wType": "Label"
+            },
+            "text": "Vehicle"
+        },
+        "lblTab4": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b29d2180c15246cf9271b6a84416d23c",
+                "srcKUID": "ec8774169ac44c6a8c64caa89a989361",
+                "wType": "Label"
+            },
+            "text": "Mortgage"
+        },
+        "multipletab": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "e671672c3e75499c9438b9759a433383",
+                "srcKUID": "i5cc0aa39e114283a3c47d0778029af9",
+                "wType": "FlexContainer"
+            },
+            "autogrowMode": {
+                "Default": 0
+            },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "48dp"
+                }
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "12dp"
+                }
+            },
+            "zIndex": {
+                "Default": 1000
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "multipletab",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "e671672c3e75499c9438b9759a433383",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxLoanInfo",
+    "pf": "frmLoanDashboard2",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "i5cc0aa39e114283a3c47d0778029af9",
+    "wType": "UserWidgetInstance",
+    "zindex": 1000
+}

@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "4%"
+        "value": "9%"
     },
     "_margin_": [
         0,
@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_placeholder_": "0.00",
+    "_placeholder_": "0,00",
     "_skin_": "s2d4c35c3b7746ffa1f7a151db0d89f9",
     "_text_": "",
     "_top_": {
@@ -41,14 +41,17 @@
     "containerheightmode": 1,
     "containerweight": 100,
     "contentalignment": 6,
+    "disabledSkins": {},
     "focusskin": "s2d4c35c3b7746ffa1f7a151db0d89f9",
     "id": "txtAmount",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
+    "keyboardstyle": "number",
     "keyboardtype": "N",
     "kuid": "63201ea09e31358cd2439e5532d051aa",
-    "mode": "A",
+    "maxtextlength": "",
+    "mode": "N",
     "name": "kony.ui.TextBox2",
     "parent": "flxParent",
     "pf": "frmFawranAmount",
@@ -56,7 +59,7 @@
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "securetextentry": false,
-    "textinputmode": "A",
+    "textinputmode": "N",
     "tooltip": "",
     "viewtype": "default",
     "wType": "TextField"

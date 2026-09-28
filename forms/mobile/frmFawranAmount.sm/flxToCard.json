@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "198dp"
+        "value": "188dp"
     },
     "_left_": {
         "type": "string",
@@ -42,7 +42,7 @@
         "lblToSubPurposeLabel",
         "lblToSubPurpose"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": false,
     "id": "flxToCard",
@@ -60,5 +60,6 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 10
 }

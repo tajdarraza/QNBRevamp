@@ -6,7 +6,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -25,7 +25,7 @@
     "_skin_": "sb77261cce154372974b26f9d1f10f6f",
     "_top_": {
         "type": "string",
-        "value": "504dp"
+        "value": "24dp"
     },
     "_width_": {
         "type": "string",
@@ -34,20 +34,24 @@
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
         "lblBtnContinue"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerweight": 100,
-    "enablescrolling": false,
+    "enablescrolling": true,
     "id": "flxBtnContinue",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "7f7e7e2d2d392f9470e208a5e70f055c",
+    "kuid": "g40926ecb35349a8bf616d251e713b55",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxForm",
+    "parent": "flxMain",
     "pf": "frmFawranTransfer",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

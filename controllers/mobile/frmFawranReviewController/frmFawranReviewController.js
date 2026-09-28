@@ -1,5 +1,4 @@
 define({
-
     quoted: false,
 
     //One acknowledgement only. If the server still returns RTP_BL_004 after we retry with
@@ -15,7 +14,19 @@ define({
     onNavigate: function (navData) {
         this.view.preShow = this.preShow;
         this.view.onDeviceBack = this.onDeviceBack;
-
+        this.view.commonheader.configure({
+            title: "Fawran",
+            backAction: function () {
+                self.onDeviceBack();
+            },
+            action1: function () {
+                new kony.mvc.Navigation("frmFawran").navigate();
+            },
+            action1Image: "customsettings.png",
+            action2: function () {
+                self.onDeviceBack();
+            }
+        });
     },
 
     preShow: function () {
@@ -49,19 +60,28 @@ define({
     },
 
     safeText: function (id, txt) {
-        try { if (this.view[id]) { this.view[id].text = "" + txt; } }
-        catch (e) { kony.print("frmFawranReview safeText " + id + " :: " + e); }
+        try {
+            if (this.view[id]) {
+                this.view[id].text = "" + txt;
+            }
+        } catch (e) {
+            kony.print("frmFawranReview safeText " + id + " :: " + e);
+        }
     },
 
     bindActions: function () {
         var self = this;
-        this.safeTap("flxBack", function () { self.onDeviceBack(); });
+        this.safeTap("flxBack", function () {
+            self.onDeviceBack();
+        });
         this.safeTap("imgClose", function () {
             new kony.mvc.Navigation("frmFawran").navigate();
         });
         //Bound on the label as well as the container: a child widget drawn on top can take the
         //touch instead of its parent, which is exactly how the alias picker rows behaved.
-        var tapped = function () { self.onConfirm(); };
+        var tapped = function () {
+            self.onConfirm();
+        };
         var a = this.safeTap("flxBtnConfirm", tapped);
         var b = this.safeTap("lblBtnConfirm", tapped);
         kony.print("frmFawranReview: confirm bound flx=" + a + " lbl=" + b);
@@ -84,11 +104,24 @@ define({
             this.safeText("lblFromCurrency", a.cur || cur);
         }
 
-        this.safeText("lblToAlias", nullCheck(fawranDraft.aliasValue) ? fawranDraft.aliasValue : "—");
-        this.safeText("lblToAliasLabel",
-            nullCheck(fawranDraft.aliasTypeDesc) ? fawranDraft.aliasTypeDesc : "Beneficiary alias");
-        this.safeText("lblRevMainPurpose", nullCheck(fawranDraft.purposeDesc) ? fawranDraft.purposeDesc : "—");
-        this.safeText("lblRevSubPurpose", nullCheck(fawranDraft.subPurposeDesc) ? fawranDraft.subPurposeDesc : "—");
+        this.safeText(
+            "lblToAlias",
+            nullCheck(fawranDraft.aliasValue) ? fawranDraft.aliasValue : "—",
+        );
+        this.safeText(
+            "lblToAliasLabel",
+            nullCheck(fawranDraft.aliasTypeDesc)
+                ? fawranDraft.aliasTypeDesc
+                : "Beneficiary alias",
+        );
+        this.safeText(
+            "lblRevMainPurpose",
+            nullCheck(fawranDraft.purposeDesc) ? fawranDraft.purposeDesc : "—",
+        );
+        this.safeText(
+            "lblRevSubPurpose",
+            nullCheck(fawranDraft.subPurposeDesc) ? fawranDraft.subPurposeDesc : "—",
+        );
         this.safeText("lblBeneficiaryName", "Checking…");
         this.safeText("lblTotalDebit", "—");
     },
@@ -103,19 +136,30 @@ define({
         fawranPreprocess(function (ok, data, code) {
             if (ok) {
                 self.quoted = true;
-                kony.print("POC FAWRAN REVIEW: quote fields = " + JSON.stringify(data).substring(0, 500));
+                kony.print(
+                    "POC FAWRAN REVIEW: quote fields = " +
+                    JSON.stringify(data).substring(0, 500),
+                );
 
                 var name = fawranBenName();
-                self.safeText("lblBeneficiaryName", nullCheck(name) ? name : "Verified");
+                self.safeText(
+                    "lblBeneficiaryName",
+                    nullCheck(name) ? name : "Verified",
+                );
 
                 self.safeText("lblFees", "Fees " + fawranFeeText() + " " + cur);
-                self.safeText("lblTotalDebit", formatAmount(fawranTotalDebit()) + " " + cur);
+                self.safeText(
+                    "lblTotalDebit",
+                    formatAmount(fawranTotalDebit()) + " " + cur,
+                );
                 return;
             }
 
             self.quoted = false;
-            var msg = (data && data.status && nullCheck(data.status.description))
-                ? data.status.description : "";
+            var msg =
+                data && data.status && nullCheck(data.status.description)
+                    ? data.status.description
+                    : "";
 
             //RTP_BL_004 is NOT a rejection. It is the incomplete-transaction notification check
             //firing, and production (frmInstaPayController.js:2260-2268) shows the server's wording
@@ -125,34 +169,44 @@ define({
                 self.acked = true;
                 self.busy(false);
                 self.safeText("lblBeneficiaryName", "Awaiting confirmation");
-                self.acknowledge(nullCheck(msg) ? msg : "You have incomplete Fawran transactions.",
+                self.acknowledge(
+                    nullCheck(msg) ? msg : "You have incomplete Fawran transactions.",
                     function () {
                         fawranAckNotiWarning();
                         self.safeText("lblBeneficiaryName", "Checking…");
                         self.getQuote();
-                    });
+                    },
+                );
                 return;
             }
 
             //Everything else is a genuine stop — RTP_BL_003 (limit breach), unknown alias, etc.
             self.safeText("lblBeneficiaryName", "Could not verify");
             self.safeText("lblFees", "Fees unavailable");
-            self.warn(nullCheck(msg)
-                ? msg
-                : "Could not verify this transfer. Please check the details and try again.");
+            self.warn(
+                nullCheck(msg)
+                    ? msg
+                    : "Could not verify this transfer. Please check the details and try again.",
+            );
         });
     },
 
     onConfirm: function () {
         var self = this;
-        kony.print("POC FAWRAN REVIEW: confirm tapped, quoted=" + this.quoted +
-            " submitting=" + this.submitting);
+        kony.print(
+            "POC FAWRAN REVIEW: confirm tapped, quoted=" +
+            this.quoted +
+            " submitting=" +
+            this.submitting,
+        );
         if (this.submitting) {
             kony.print("POC FAWRAN REVIEW: submit already in flight — tap ignored");
             return;
         }
         if (!this.quoted) {
-            this.warn("This transfer could not be verified, so it cannot be confirmed.");
+            this.warn(
+                "This transfer could not be verified, so it cannot be confirmed.",
+            );
             return;
         }
 
@@ -172,14 +226,18 @@ define({
             //production posts immediately — showing an OTP screen would strand the user waiting for
             //a code that is never sent.
             if (!fawranDraft.otpRequired) {
-                kony.print("POC FAWRAN REVIEW: isOtpRequired=N — posting without an OTP step");
+                kony.print(
+                    "POC FAWRAN REVIEW: isOtpRequired=N — posting without an OTP step",
+                );
                 self.postWithoutOtp();
                 return;
             }
 
             //Handing off to the OTP screen — that screen owns the spinner from here.
             self.busy(false);
-            kony.print("POC FAWRAN REVIEW: OTP sent, length=" + fawranDraft.otpLength);
+            kony.print(
+                "POC FAWRAN REVIEW: OTP sent, length=" + fawranDraft.otpLength,
+            );
             try {
                 new kony.mvc.Navigation("frmFawranOTP").navigate();
             } catch (e) {
@@ -197,8 +255,10 @@ define({
                 //keeps the guard set for the life of the screen.
                 self.submitting = false;
                 self.busy(false);
-                var msg = (data && data.status && nullCheck(data.status.description))
-                    ? data.status.description : "The transfer could not be completed.";
+                var msg =
+                    data && data.status && nullCheck(data.status.description)
+                        ? data.status.description
+                        : "The transfer could not be completed.";
                 self.warn(msg);
                 return;
             }
@@ -216,17 +276,23 @@ define({
 
     //Alert whose dismissal drives the next step, as production's showErr callback does.
     acknowledge: function (msg, onDismiss) {
-        kony.ui.Alert({
-            message: msg,
-            alertType: constants.ALERT_TYPE_CONFIRMATION,
-            alertTitle: "Fawran",
-            yesLabel: "Continue",
-            noLabel: "Cancel",
-            alertHandler: function (response) {
-                if (response) { onDismiss(); }
-                else { new kony.mvc.Navigation("frmFawranAmount").navigate(); }
-            }
-        }, {});
+        kony.ui.Alert(
+            {
+                message: msg,
+                alertType: constants.ALERT_TYPE_CONFIRMATION,
+                alertTitle: "Fawran",
+                yesLabel: "Continue",
+                noLabel: "Cancel",
+                alertHandler: function (response) {
+                    if (response) {
+                        onDismiss();
+                    } else {
+                        new kony.mvc.Navigation("frmFawranAmount").navigate();
+                    }
+                },
+            },
+            {},
+        );
     },
 
     //Common's showLoadingScreen() resolves and does not throw (POC-CHECK passes it), but renders
@@ -237,26 +303,34 @@ define({
         try {
             if (this.view.flxBusy) {
                 this.view.flxBusy.setVisibility(on);
-                if (on) { this.view.flxBusy.onTouchEnd = function () { }; }
+                if (on) {
+                    this.view.flxBusy.onTouchEnd = function () { };
+                }
                 this.view.forceLayout();
             }
         } catch (e) {
             kony.print("frmFawranReview overlay busy(" + on + ") :: " + e);
         }
         try {
-            if (on) { showLoadingScreen(); } else { dismissLoadingScreen(); }
+            if (on) {
+                showLoadingScreen();
+            } else {
+                dismissLoadingScreen();
+            }
         } catch (e) {
             kony.print("frmFawranReview busy(" + on + ") :: " + e);
         }
     },
 
     warn: function (msg) {
-        kony.ui.Alert({
-            message: msg,
-            alertType: constants.ALERT_TYPE_INFO,
-            alertTitle: "Fawran",
-            yesLabel: "OK"
-        }, {});
+        kony.ui.Alert(
+            {
+                message: msg,
+                alertType: constants.ALERT_TYPE_INFO,
+                alertTitle: "Fawran",
+                yesLabel: "OK",
+            },
+            {},
+        );
     },
-
 });

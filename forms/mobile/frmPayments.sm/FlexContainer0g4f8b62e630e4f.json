@@ -39,7 +39,7 @@
         "value": "50%"
     },
     "children": [
-        "Label0cced2e299fd945",
+        "lblAllPayments",
         "flxOptionBillPayment"
     ],
     "clipbounds": true,

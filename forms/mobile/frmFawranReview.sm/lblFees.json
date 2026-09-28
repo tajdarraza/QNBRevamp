@@ -1,13 +1,17 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0"
+    },
     "_height_": {
         "type": "string",
         "value": "22dp"
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "0%"
     },
     "_margin_": [
         1,
@@ -23,10 +27,6 @@
     ],
     "_skin_": "se6a173f9bb04594b0f8ee528971a4ae",
     "_text_": "Fees —",
-    "_top_": {
-        "type": "string",
-        "value": "108dp"
-    },
     "_width_": {
         "type": "string",
         "value": "90%"
@@ -57,7 +57,7 @@
     "isvisible": true,
     "kuid": "bb2d2b2a72ed892b3c543addb1844c1e",
     "name": "kony.ui.Label",
-    "parent": "flxContent",
+    "parent": "flxTopInfo",
     "pf": "frmFawranReview",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

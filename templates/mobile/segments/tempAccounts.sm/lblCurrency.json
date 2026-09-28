@@ -2,8 +2,8 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "20dp"
     },
     "_margin_": [
         1,
@@ -23,10 +23,6 @@
     },
     "_skin_": "s9f10199d7514a6a9bd152be9a423041",
     "_text_": "QAR",
-    "_top_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -41,7 +37,7 @@
     "canUpdateUI": true,
     "containerId": true,
     "containerweight": 100,
-    "contentalignment": 4,
+    "contentalignment": 1,
     "id": "lblCurrency",
     "info": null,
     "ipad": {

@@ -1,259 +1,277 @@
 define({
+  utilisedAmount: 45000,
+  totalLimit: 60000,
+  navData: null,
 
-    utilisedAmount: 45000,
-    totalLimit: 60000,
-    navData: null,
-
-    onNavigate: function (data) {
-        this.navData = data;
-        this.view.preShow = this.preShow;
-        this.view.postShow = this.postShow;
-        this.view.btnReturnCards.onClick = this.returnToCards;
-    },
-
-    preShow: function () {
-        //this.renderReal();
-        this.view.rippleanimation.initSuccessAnimation();
-        //this.initSuccessAnimation();
-
-    },
-
-    safeText: function (id, txt) {
-        if (txt === null || txt === undefined) { return; }
-        try { if (this.view[id]) { this.view[id].text = "" + txt; } }
-        catch (e) { kony.print("frmCardPayment safeText " + id + " :: " + e); }
-    },
+  onNavigate: function (data) {
+    this.navData = data || {};
 
-    //This screen shipped showing "Credit card 1 / James Lee / ****3456" and a 45,000-of-60,000 bar —
-    //the design placeholders — on top of a real, completed payment. Everything here now comes from
-    //the draft and the confirmPC receipt.
-    renderReal: function () {
-        var card = payCardDraft.card || {};
-        var receipt = payCardDraft.receipt || {};
-        var cur = payCardDraft.currency || "QAR";
-        var nav = this.navData || {};
-
-        var num = "" + (card.lblCardNumber || "");
-        this.safeText("lblCardName", nullCheck(card.lblCardName)
-            ? (card.lblCardName.length > 20 ? card.lblCardName.substring(0, 19) + "…" : card.lblCardName)
-            : "Credit card");
-        var holder = "" + (card.lblHolderName || "");
-        this.safeText("lblHolderName", holder.length > 20 ? holder.substring(0, 19) + "…" : holder);
-        this.safeText("lblCardNumber", num.length > 4 ? "•••• " + num.substring(num.length - 4) : num);
-
-        //The payment has gone through, so the utilised figure is the pre-payment one MINUS what was
-        //just paid — the old number beside a success tick reads as "nothing happened".
-        var limit = Number(nav.totalLimit) || this.totalLimit;
-        var paid = Number(nav.payAmount) || 0;
-        var used = (Number(nav.utilisedAmount) || this.utilisedAmount) - paid;
-        if (used < 0) { used = 0; }
+    this.view.preShow = this.preShow;
+    this.view.postShow = this.postShow;
 
-        this.safeText("lblUtilAmt", formatAmount(used) + " " + cur);
-        this.safeText("lblTotalAmt", formatAmount(limit) + " " + cur);
-        try {
-            this.view.flxProgressBar.width = (limit > 0 ? (used / limit) * 100 : 0) + "%";
-            this.view.flxCreditBackProgress.isVisible = false;
-        } catch (e) { kony.print("frmCardPayment progress :: " + e); }
+    if (this.view.btnReturnCards) {
+      this.view.btnReturnCards.onClick = this.returnFromSuccess.bind(this);
+    }
+  },
 
-        //`r` is the reference id and `d` the transaction date (production confirmServiceCallBack).
-        //Neither has a widget on this form yet — logged so the values are captured until a
-        //reference row is added.
-        kony.print("POC PAYCARD SUCCESS: refId=" + receipt.r + " txnDate=" + receipt.d +
-            " paid=" + paid + " " + cur + " card=" + num);
-    },
-    postShow: function () {
-        this.view.rippleanimation.playSuccessAnimation();
-    },
-    onDeviceBack: function(){
-        new kony.mvc.Navigation("frmPayBills").navigate(this.navData);
-    },
-    onAmountChange: function () {
+  preShow: function () {
+    if (this.isDepositFlow()) {
+      this.renderDepositSuccess();
+    } else {
+      this.renderBillSuccess();
+    }
 
+    /*
+     * Reset modular success animation.
+     */
+    if (this.view.rippleanimation) {
+      this.view.rippleanimation.reset();
+    }
+  },
 
-    },
+  postShow: function () {
+    kony.print("PAYMENT SCREEN :: postShow");
 
-    returnToCards: function () {
-        new kony.mvc.Navigation("frmPayBills").navigate();
-    },
+    /*
+     * Play modular success animation.
+     */
+    if (this.view.rippleanimation) {
+      var message = this.isDepositFlow()
+        ? "Fixed deposit opened successfully"
+        : "Payment successful";
 
-    initSuccessAnimation: function () {
+      this.view.rippleanimation.show({
+        type: "success",
+        text: message,
+      });
+    } else {
+      kony.print("PAYMENT SCREEN :: rippleanimation not found");
+    }
+  },
 
-        this.view.flxSuccess.opacity = 1;
+  /*
+   * ==========================================
+   * FLOW DETECTION
+   * ==========================================
+   */
 
-        this.view.flxRipple.opacity = 0;
-        var rippleTransform = kony.ui.makeAffineTransform();
-        rippleTransform.scale(0.2, 0.2);
-        this.view.flxRipple.transform = rippleTransform;
+  isDepositFlow: function () {
+    var data = this.navData || {};
 
+    return data.depositFlow === true;
+  },
 
-        var circleTransform = kony.ui.makeAffineTransform();
-        circleTransform.scale(0.2, 0.2);
-        this.view.flxCircle.transform = circleTransform;
+  renderBillSuccess: function () {
+    var data = this.navData || {};
+    var bill = data.billData || {};
 
+    if (this.view.flxBillName) {
+      this.view.flxBillName.isVisible = true;
+    }
 
-        var whiteTransform = kony.ui.makeAffineTransform();
-        whiteTransform.scale(0.2, 0.2);
-        this.view.flxWhite.transform = whiteTransform;
+    if (this.view.flxBillSeperator) {
+      this.view.flxBillSeperator.isVisible = true;
+    }
 
-        this.view.imgPaymentTick.opacity = 0;
-        var tickTransform = kony.ui.makeAffineTransform();
-        tickTransform.scale(0.2, 0.2);
-        this.view.imgPaymentTick.transform = tickTransform;
+    this.safeText("lblBillName", bill.billHeader || "");
 
-    },
+    this.safeText("lblBillDesc", "Description:");
 
-    playSuccessAnimation: function () {
+    this.safeText("lblBillDescValue", bill.billDetails || "");
 
-        var self = this;
+    this.safeText("lblDueOn", "Due on:");
 
-        var rippleStart = kony.ui.makeAffineTransform();
-        rippleStart.scale(0.2, 0.2);
+    this.safeText("lblDueOnDate", bill.endDate || "");
 
-        var rippleBig = kony.ui.makeAffineTransform();
-        rippleBig.scale(1.45, 1.45);
+    this.safeText("lblAutoPay", "Autopay:");
 
-        var rippleSmall = kony.ui.makeAffineTransform();
-        rippleSmall.scale(0.96, 0.96);
+    this.safeText("lblAutoPayVal", bill.switchOn ? "On" : "Off");
 
-        var rippleNormal = kony.ui.makeAffineTransform();
-        rippleNormal.scale(1, 1);
+    if (this.view.lblInterestRate) {
+      this.view.lblInterestRate.isVisible = false;
+    }
 
-        self.view.flxRipple.opacity = 1;
-        self.view.flxRipple.transform = rippleStart;
+    if (this.view.lblInterestRateVal) {
+      this.view.lblInterestRateVal.isVisible = false;
+    }
 
-        self.view.flxRipple.animate(
+    this.safeText("lblBillAmount", "Bill amount:");
 
-            kony.ui.createAnimation({
+    this.safeText("lblBillAmtValue", this.formatNumber(bill.billAmount));
 
-                "60": {
-                    transform: rippleBig,
-                    opacity: 0.45
-                },
+    this.safeText("lblBillCurrency", bill.billCurr || "QAR");
 
-                "85": {
-                    transform: rippleSmall,
-                    opacity: 1
-                },
+    if (this.view.btnReturnCards) {
+      this.view.btnReturnCards.text = "Return to Cards";
+    }
 
-                "100": {
-                    transform: rippleNormal,
-                    opacity: 1
-                }
+    if (this.view.lblCancel) {
+      this.view.lblCancel.text = "Set automatic payment";
+    }
 
-            }),
+    this.view.forceLayout();
 
-            {
-                duration: 0.9,
-                fillMode: kony.anim.FILL_MODE_FORWARDS
-            },
+    kony.print("BILL PAYMENT SUCCESS :: " + JSON.stringify(bill));
+  },
 
-            {}
+  renderDepositSuccess: function () {
+    var data = this.navData || {};
+    var currency = data.selectedCurrency || {};
 
-        );
+    var depositPeriod = data.selectedDepositPeriod || {};
 
+    var currencyCode = currency.currencyCode || currency.lblCurrency || "QAR";
 
-        var circleBig = kony.ui.makeAffineTransform();
-        circleBig.scale(1.15, 1.15);
+    if (this.view.flxBillName) {
+      this.view.flxBillName.isVisible = false;
+    }
 
-        var circleNormal = kony.ui.makeAffineTransform();
-        circleNormal.scale(1, 1);
+    if (this.view.flxBillSeperator) {
+      this.view.flxBillSeperator.isVisible = false;
+    }
 
-        self.view.flxCircle.animate(
+    var referenceNumber = data.referenceNumber || "123456789-001";
 
-            kony.ui.createAnimation({
+    this.safeText("lblBillDesc", "Reference number:");
 
-                "50": {
-                    transform: circleBig
-                },
+    this.safeText("lblBillDescValue", referenceNumber);
 
-                "100": {
-                    transform: circleNormal
-                }
+    var startDate = data.startDate || this.getDepositStartDate();
 
-            }),
+    this.safeText("lblDueOn", "Start date:");
 
-            {
-                duration: 0.45,
-                fillMode: kony.anim.FILL_MODE_FORWARDS
-            },
+    this.safeText("lblDueOnDate", startDate);
 
-            {}
+    var period =
+      depositPeriod.lblDepositName ||
+      depositPeriod.lblDeposit ||
+      data.depositPeriod ||
+      "";
 
-        );
+    period = this.formatDepositPeriod(period);
 
-        kony.timer.schedule("whiteCircle", function () {
+    this.safeText("lblAutoPay", "Period:");
 
-            self.view.flxWhite.animate(
+    this.safeText("lblAutoPayVal", period);
 
-                kony.ui.createAnimation({
+    if (this.view.lblInterestRate) {
+      this.view.lblInterestRate.isVisible = true;
+    }
 
-                    "100": {
+    if (this.view.lblInterestRateVal) {
+      this.view.lblInterestRateVal.isVisible = true;
+    }
 
-                        transform: circleNormal
+    this.safeText("lblInterestRate", "Interest rate:");
 
-                    }
+    this.safeText("lblInterestRateVal", data.interestRate || "0.65%");
 
-                }),
+    var totalAmount = data.totalMaturityAmount;
 
-                {
-                    duration: 0.25,
-                    fillMode: kony.anim.FILL_MODE_FORWARDS
-                },
+    if (
+      totalAmount === null ||
+      totalAmount === undefined ||
+      totalAmount === ""
+    ) {
+      totalAmount = data.enteredAmount || "0.00";
+    }
 
-                {}
+    this.safeText("lblBillAmount", "Total amount:");
 
-            );
+    this.safeText("lblBillAmtValue", this.formatNumber(totalAmount));
 
-        }, 0.15, false);
+    this.safeText("lblBillCurrency", currencyCode);
 
+    if (this.view.btnReturnCards) {
+      this.view.btnReturnCards.text = "Return to Accounts";
+    }
 
+    if (this.view.lblCancel) {
+      this.view.lblCancel.text = "View Details";
 
-        //------------------------------------
-        // Tick
-        //------------------------------------
+      this.view.lblCancel.onTouchEnd = this.onViewDepositDetails.bind(this);
+    }
 
-        kony.timer.schedule("tickAnim", function () {
+    this.view.forceLayout();
 
-            var tickBig = kony.ui.makeAffineTransform();
-            tickBig.scale(1.25, 1.25);
-            tickBig.rotate(-15);
+    kony.print(
+      "DEPOSIT SUCCESS :: " +
+        JSON.stringify({
+          referenceNumber: referenceNumber,
+          startDate: startDate,
+          period: period,
+          interestRate: data.interestRate,
+          totalAmount: totalAmount,
+          currency: currencyCode,
+        }),
+    );
+  },
 
-            var tickNormal = kony.ui.makeAffineTransform();
-            tickNormal.scale(1, 1);
+  returnFromSuccess: function () {
+    if (this.isDepositFlow()) {
+      new kony.mvc.Navigation("frmAccounts").navigate(this.navData);
 
-            self.view.imgPaymentTick.opacity = 1;
+      return;
+    }
 
-            self.view.imgPaymentTick.animate(
+    new kony.mvc.Navigation("frmPayBills").navigate(this.navData);
+  },
 
-                kony.ui.createAnimation({
+  onViewDepositDetails: function () {
+    kony.print("DEPOSIT VIEW DETAILS :: " + JSON.stringify(this.navData));
+  },
 
-                    "60": {
+  safeText: function (id, txt) {
+    if (txt === null || txt === undefined) {
+      return;
+    }
 
-                        transform: tickBig,
-                        opacity: 1
+    try {
+      if (this.view[id]) {
+        this.view[id].text = String(txt);
+      }
+    } catch (e) {
+      kony.print("frmPaymentScreen safeText " + id + " :: " + e);
+    }
+  },
 
-                    },
+  formatNumber: function (amount) {
+    if (amount === null || amount === undefined || amount === "") {
+      return "0.00";
+    }
 
-                    "100": {
+    var value = String(amount).replace(/,/g, "").trim();
 
-                        transform: tickNormal,
-                        opacity: 1
+    var number = parseFloat(value);
 
-                    }
+    if (isNaN(number)) {
+      return String(amount);
+    }
 
-                }),
+    return number.toFixed(2);
+  },
 
-                {
-                    duration: 0.35,
-                    fillMode: kony.anim.FILL_MODE_FORWARDS
-                },
+  formatDepositPeriod: function (period) {
+    if (!period) {
+      return "";
+    }
 
-                {}
+    var value = String(period).trim();
 
-            );
+    return value.charAt(0) + value.substring(1).toLowerCase();
+  },
 
-        }, 0.35, false);
+  getDepositStartDate: function () {
+    var date = new Date();
 
-    },
+    var day = date.getDate();
 
+    var month = date.toLocaleString("en-US", {
+      month: "short",
+    });
+
+    var year = date.getFullYear();
+
+    return day + " " + month + " " + year;
+  },
 });

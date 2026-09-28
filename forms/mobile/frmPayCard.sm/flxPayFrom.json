@@ -35,8 +35,8 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "Label0hbc6bd136afa40",
-        "FlexContainer0e9250cd61e0f42"
+        "lblPayFrom",
+        "flxSelectAccount"
     ],
     "clipbounds": true,
     "containerweight": 100,

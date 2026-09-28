@@ -1,13 +1,17 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0"
+    },
     "_height_": {
         "type": "string",
         "value": "26dp"
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "0%"
     },
     "_margin_": [
         1,
@@ -23,10 +27,6 @@
     ],
     "_skin_": "s18e15efc4242ac98da8fd41f9452262",
     "_text_": "—",
-    "_top_": {
-        "type": "string",
-        "value": "288dp"
-    },
     "_width_": {
         "type": "string",
         "value": "90%"
@@ -39,6 +39,10 @@
         }
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 4,
     "id": "lblTotalDebit",
@@ -57,7 +61,7 @@
     "isvisible": true,
     "kuid": "ed70300f8c75844289190f56d9d2b8b7",
     "name": "kony.ui.Label",
-    "parent": "flxToCard",
+    "parent": "flxTotalDebit",
     "pf": "frmFawranReview",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

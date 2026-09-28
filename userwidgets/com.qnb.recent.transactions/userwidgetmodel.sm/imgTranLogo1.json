@@ -23,7 +23,7 @@
         0
     ],
     "_skin_": "s46f4cc5af674c87a6552260c65fd4ef",
-    "_src_": "leadingcontent.png",
+    "_src_": "cash_outflow.png",
     "_top_": {
         "type": "string",
         "value": "0"
@@ -35,7 +35,7 @@
     "canUpdateUI": true,
     "centery": {
         "type": "string",
-        "value": "50%"
+        "value": "52.08%"
     },
     "containerweight": 100,
     "id": "imgTranLogo1",

@@ -18,7 +18,7 @@
     "_pxMenuIndex": [
         0,
         1,
-        8
+        11
     ],
     "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
@@ -32,7 +32,8 @@
     },
     "canUpdateUI": true,
     "children": [
-        "flxParent"
+        "flxParent",
+        "flxLimitSheet"
     ],
     "configureExtendBottom": true,
     "containerweight": 100,
@@ -44,7 +45,7 @@
         }
     },
     "currentLocale": "default",
-    "device": "iPhone16",
+    "device": "Pixel3",
     "displayorientation": 1,
     "enabledforidletimeout": true,
     "extendbottom": true,
@@ -96,9 +97,9 @@
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
-    "platform": "iphone",
-    "prevDevice": "GalaxyNote",
-    "prevPlatform": "android",
+    "platform": "android",
+    "prevDevice": "iPhone16",
+    "prevPlatform": "iphone",
     "requiresBottomSafeAreaInset": false,
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

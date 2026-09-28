@@ -3,24 +3,40 @@
     "DNDConfig": null,
     "_data_": [
         {
+            "lblAccName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current account 1 (4,200.00 QAR)"
+            },
             "lblAccountList": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Current account 1 (1,200.00 QAR)"
             }
         },
         {
+            "lblAccName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current account 1 (4,200.00 QAR)"
+            },
             "lblAccountList": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Current account 2 (2,670.00 QAR)"
             }
         },
         {
+            "lblAccName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current account 1 (4,200.00 QAR)"
+            },
             "lblAccountList": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Current account 3 (1,345.00 QAR)"
             }
         },
         {
+            "lblAccName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Current account 1 (4,200.00 QAR)"
+            },
             "lblAccountList": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Current account 4 (8,276.00 QAR)"
@@ -119,6 +135,7 @@
     "widgetdatamap": {
         "flxAccountList": "flxAccountList",
         "flxAccounts": "flxAccounts",
+        "lblAccName": "lblAccName",
         "lblAccountList": "lblAccountList"
     }
 }

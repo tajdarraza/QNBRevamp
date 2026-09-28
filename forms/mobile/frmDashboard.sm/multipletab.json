@@ -1,0 +1,163 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "32dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 1,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "flxFourTab": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "hcb9e721fa1b4266956e1550db568661",
+                "srcKUID": "i4ece481bde34e7ea9e30142d82101dd",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxTab1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "c5b614ae4f9d4f68b66ec7a8e1eff266",
+                "srcKUID": "a2c2518f4853407ab312bfc34baafe7d",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxTab2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "e67423237e74457195e6538ff6265d02",
+                "srcKUID": "ba5ee89ac31b414fa2c4aa4ae0d5641e",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxTab3": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "c946187675cc44cc99c9e47719d88d31",
+                "srcKUID": "h86d01e69dac46a79d60ca49d7a55053",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxTab4": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ad63d83a1cf9431e870ac8c02b77b52c",
+                "srcKUID": "a2c4bb92f5cf4a26adffc03b84da6aab",
+                "wType": "FlexContainer"
+            },
+            "isVisible": true
+        },
+        "lblTab1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "e11587e7d88c40529d9cbec1a534c070",
+                "srcKUID": "a74ee172383e4a358f6822459f144b94",
+                "wType": "Label"
+            }
+        },
+        "lblTab2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "j0a84f91eb6841cbac157bfe4ca14265",
+                "srcKUID": "a59d0ea47f054cd68a4e1eb05c886679",
+                "wType": "Label"
+            },
+            "text": "Credit"
+        },
+        "lblTab3": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "d76c2f259c2249f682eae4ebd3f05767",
+                "srcKUID": "feeaaafdedf24783b755824486b6e3b7",
+                "wType": "Label"
+            },
+            "text": "Debit"
+        },
+        "lblTab4": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ff627f334ace4c38ada2f78210a66aeb",
+                "srcKUID": "ec8774169ac44c6a8c64caa89a989361",
+                "wType": "Label"
+            },
+            "text": "Tab 4"
+        },
+        "multipletab": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "a112d28885ff4e45a9bf420efa62959b",
+                "srcKUID": "i5cc0aa39e114283a3c47d0778029af9",
+                "wType": "FlexContainer"
+            },
+            "autogrowMode": {
+                "Default": 1
+            },
+            "height": {
+                "Default": {
+                    "type": "ref",
+                    "value": "preferred"
+                }
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "32dp"
+                }
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "multipletab",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "a112d28885ff4e45a9bf420efa62959b",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxScrollAccounts",
+    "pf": "frmDashboard",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "i5cc0aa39e114283a3c47d0778029af9",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

@@ -39,6 +39,7 @@
     "enablescrolling": false,
     "id": "flxBusy",
     "info": null,
+    "isVisible": false,
     "iscustomlayout": false,
     "isvisible": false,
     "kuid": "a1c74f0e2b9d41e7ac05fe31d7c04b11",

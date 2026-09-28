@@ -2,8 +2,8 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "20dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
@@ -61,6 +61,7 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "af94d262fb7b451083c3c9838f69b225",
+    "maxnumberoflines": 2,
     "name": "kony.ui.Label",
     "parent": "flxMenu1",
     "pf": "tempCardDashboard",

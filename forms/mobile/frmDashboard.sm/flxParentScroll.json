@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s09d5c5532834f32b6650af2bfd67afe",
+    "_skin_": "s3b7ec435aa6479ba94384bbefddc9f8",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -32,7 +32,9 @@
         "value": "100%"
     },
     "allboxes": [],
-    "autogrowmode": 0,
+    "allowhorizontalbounce": false,
+    "allowverticalbounce": true,
+    "bounces": true,
     "canUpdateUI": true,
     "children": [
         "flxBottomInfo",
@@ -40,22 +42,29 @@
     ],
     "clipbounds": true,
     "containerweight": 100,
+    "decelerat": false,
+    "dragg": false,
     "enablescrolling": true,
+    "horizontalscrollindicator": true,
     "id": "flxParentScroll",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "i7efe42fbe594e399a3205315d390f2d",
     "layouttype": 4,
-    "name": "kony.ui.FlexContainer",
+    "name": "kony.ui.FlexScrollContainer",
+    "pagingenabled": false,
     "parent": "flxMain",
     "pf": "frmDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
+    "scrolldirection": 2,
     "snapgridsize": 10,
     "snaptogrid": true,
-    "wType": "FlexContainer",
+    "track": false,
+    "verticalscrollindicator": true,
+    "wType": "FlexScrollContainer",
     "widgetalignment": 1,
     "zindex": 100
 }

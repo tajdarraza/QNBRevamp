@@ -698,7 +698,7 @@
             "activity_child_tags": "",
             "activityattrs": "android:theme=\"@style/AppTheme\"",
             "andapplicationattrs": "",
-            "andapplicationtags": "",
+            "andapplicationtags": "<provider android:name=\"androidx.core.content.FileProvider\"\n android:authorities=\"${applicationId}.provider\"\n android:exported=\"false\"\n android:grantUriPermissions=\"true\">\n <meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\"\n android:resource=\"@xml/fileprovider\" />\n </provider>",
             "andmanifesttags": "",
             "manifest_tag_attrs": ""
         },

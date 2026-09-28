@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "44%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -22,10 +22,10 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "scabe65ba445fde12ab8931b11e213f",
+    "_skin_": "s9a19c3ade8d41fe9891469016fff93c",
     "_top_": {
         "type": "string",
-        "value": "34%"
+        "value": "0"
     },
     "_width_": {
         "type": "string",
@@ -35,21 +35,20 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "lblLimitTitle",
-        "lblLimitInfoText",
-        "flxBtnUnderstood"
+        "flxLimitSheetBox"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerweight": 100,
-    "enablescrolling": false,
+    "enablescrolling": true,
     "id": "flxLimitSheet",
     "info": null,
     "iscustomlayout": false,
+    "ismodalcontainer": true,
     "isvisible": false,
-    "kuid": "8dce532167deee90e881b4a277ecd4fc",
+    "kuid": "dbba4e897af9407fa09d20b0c14489ab",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxParent",
+    "parent": "frmFawranAmount",
     "pf": "frmFawranAmount",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -57,5 +56,6 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 100
 }

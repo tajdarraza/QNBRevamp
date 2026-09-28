@@ -25,7 +25,7 @@
     "_skin_": "sc07b9618ca14ee98a574d511960683e",
     "_top_": {
         "type": "string",
-        "value": "88dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
@@ -48,7 +48,7 @@
     "kuid": "254dea1c0d9c9ab8631ea042950adfd6",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxParent",
+    "parent": "flxMain",
     "pf": "frmFawran",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

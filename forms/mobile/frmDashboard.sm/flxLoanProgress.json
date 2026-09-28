@@ -40,7 +40,8 @@
     },
     "children": [
         "lblMyLoan",
-        "flxLoanProgressBar"
+        "flxLoanProgressBar",
+        "circularchart"
     ],
     "clipbounds": true,
     "containerweight": 100,

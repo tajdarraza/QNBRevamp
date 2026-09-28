@@ -1,12 +1,12 @@
 {
   "android": {
     "font_name": "QNBSansAR",
-    "font_size": 111,
+    "font_size": 106,
     "isForked": true
   },
   "androidwearos": {
     "font_name": "default",
-    "font_size": 161,
+    "font_size": 136,
     "isForked": true
   },
   "background_color": "ffffff00",
@@ -23,7 +23,7 @@
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
     "font_name": "Helvetica",
-    "font_size": 281,
+    "font_size": 238,
     "isForked": true,
     "top_left_border_color": "333333ff",
     "top_left_border_style": "plain",
@@ -40,19 +40,19 @@
   "font_weight": "400",
   "ipad": {
     "font_name": "System",
-    "font_size": 161,
+    "font_size": 136,
     "isForked": true
   },
   "iphone": {
     "font_name": "QNBSansAR",
-    "font_size": 125,
+    "font_size": 95,
     "isForked": true
   },
   "isDefaultSkin": false,
   "kuid": "se1e249128f34bffad6ec4756196df78",
   "tabrcandroid": {
     "font_name": "default",
-    "font_size": 267,
+    "font_size": 225,
     "isForked": true
   },
   "wType": "TextField",

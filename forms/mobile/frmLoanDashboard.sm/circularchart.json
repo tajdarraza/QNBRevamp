@@ -1,0 +1,166 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "156dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "circularchart": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "i0f56c9d4a5b4f1a990bce006f68d92d",
+                "srcKUID": "eff1a44a0a0a4adb81ab5df77c5ed281",
+                "wType": "FlexContainer"
+            },
+            "autogrowMode": {
+                "Default": 0
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "156dp"
+                }
+            },
+            "isVisible": true,
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "100%"
+                }
+            }
+        },
+        "flxLoanProgressBar": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "f9c3f3abd5af44d58781ff7abbf9bbf7",
+                "srcKUID": "j1f5e3386ec34290aeca133de1b5a03a",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxLoanValues": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "fc46e823530e4e1e8b6f187cdbdd9f55",
+                "srcKUID": "e44592170a074e4695ef0131af94e0ae",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxProgressIndicator": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b21ab8c2928945c9bc98b675498ac8d8",
+                "srcKUID": "d26c610cb6de41c392f32fd5753a7900",
+                "wType": "FlexContainer"
+            }
+        },
+        "lblNoOfLoans": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "bce6d016f65c4322a369c226d18f6724",
+                "srcKUID": "d607ee92b25b476fad019d8bb8dd4f90",
+                "wType": "Label"
+            }
+        },
+        "lblRemainingAmt": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "fb2736fb1f0c464ebc2391e9e59893d9",
+                "srcKUID": "jfd9f350bfcf4577b546f53ec715d3e6",
+                "wType": "Label"
+            }
+        },
+        "lblRemainingBalTxt": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "c5470e1a78b24de8b18539df35f9fed2",
+                "srcKUID": "e10a1367884e46589896d3dbd56773b2",
+                "wType": "Label"
+            }
+        },
+        "progressbar": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "e0a2bfb91146456a849547473b0ea2f8",
+                "srcKUID": "gbbec1f78b524853bb91c94b9fca6837",
+                "wType": "Browser"
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "circularchart",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "i0f56c9d4a5b4f1a990bce006f68d92d",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxLoanData",
+    "pf": "frmLoanDashboard",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "eff1a44a0a0a4adb81ab5df77c5ed281",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

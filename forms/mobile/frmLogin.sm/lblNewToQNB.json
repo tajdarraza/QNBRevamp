@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "2%"
+        "value": "0dp"
     },
     "_margin_": [
         1,
@@ -21,12 +21,8 @@
         0,
         0
     ],
-    "_skin_": "se6a173f9bb04594b0f8ee528971a4ae",
+    "_skin_": "sf7e23896f9f4da7adf37390f5b563c3",
     "_text_": "New to QNB Mobile Banking?",
-    "_top_": {
-        "type": "string",
-        "value": "0%"
-    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -39,6 +35,10 @@
         }
     },
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 4,
     "id": "lblNewToQNB",

@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "6%"
+        "value": "0dp"
     },
     "_margin_": [
         1,
@@ -21,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "se6a173f9bb04594b0f8ee528971a4ae",
+    "_skin_": "s8b4741fe99c44b7b9d2d59fab28e1ee",
     "_text_": "Beneficiary alias type",
     "_top_": {
         "type": "string",
-        "value": "152dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "ref",
@@ -55,9 +55,9 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "9131814c8b7cd57ed818a5efea48d59c",
+    "kuid": "f038a3590c7743b28472d2d624b54f86",
     "name": "kony.ui.Label",
-    "parent": "flxForm",
+    "parent": "flxAliasType",
     "pf": "frmFawranTransfer",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

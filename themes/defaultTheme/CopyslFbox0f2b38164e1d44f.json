@@ -5,7 +5,7 @@
   "androidwearos": {
     "font_name": "default"
   },
-  "background_color": "f4f3f600",
+  "background_color": "f4f3f6ff",
   "bg_type": "one",
   "border_color": "000000ff",
   "border_style": "plain",

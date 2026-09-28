@@ -1,0 +1,267 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "04",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segTransactionList",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "none",
+            "showProgressIndicator": true
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "c3d0a17f35ef4a5f8fee50087a13c662",
+    "masterdata": {},
+    "mobile": {
+        "_data_": [
+            {
+                "imgTranLogo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "cash_outflow.png"
+                },
+                "imgTransaction": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "trailingcontent.png"
+                },
+                "lblTransactAmount": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "-8.00"
+                },
+                "lblTransactCurr": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "QAR"
+                },
+                "lblTransactTime": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Yesterday, 10:32"
+                },
+                "lblTransaction": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Uber Ride"
+                }
+            },
+            {
+                "imgTranLogo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "cash_outflow.png"
+                },
+                "imgTransaction": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "trailingcontent.png"
+                },
+                "lblTransactAmount": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "-8.00"
+                },
+                "lblTransactCurr": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "QAR"
+                },
+                "lblTransactTime": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Yesterday, 10:32"
+                },
+                "lblTransaction": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Uber Ride"
+                }
+            },
+            {
+                "imgTranLogo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "cash_outflow.png"
+                },
+                "imgTransaction": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "trailingcontent.png"
+                },
+                "lblTransactAmount": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "-8.00"
+                },
+                "lblTransactCurr": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "QAR"
+                },
+                "lblTransactTime": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Yesterday, 10:32"
+                },
+                "lblTransaction": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Uber Ride"
+                }
+            },
+            {
+                "imgTranLogo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "cash_outflow.png"
+                },
+                "imgTransaction": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "trailingcontent.png"
+                },
+                "lblTransactAmount": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "-8.00"
+                },
+                "lblTransactCurr": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "QAR"
+                },
+                "lblTransactTime": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Yesterday, 10:32"
+                },
+                "lblTransaction": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Uber Ride"
+                }
+            },
+            {
+                "imgTranLogo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "cash_outflow.png"
+                },
+                "imgTransaction": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "trailingcontent.png"
+                },
+                "lblTransactAmount": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "-8.00"
+                },
+                "lblTransactCurr": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "QAR"
+                },
+                "lblTransactTime": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Yesterday, 10:32"
+                },
+                "lblTransaction": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Uber Ride"
+                }
+            }
+        ],
+        "rowTemplateId": "i6c89afa18af4e7a81f51f0a3edbf1b9",
+        "rowtemplate": "flxTransactionList",
+        "widgetdatamap": {
+            "flxTransactAmount": "flxTransactAmount",
+            "flxTransaction": "flxTransaction",
+            "flxTransactionList": "flxTransactionList",
+            "flxTransactionName": "flxTransactionName",
+            "imgTranLogo": "imgTranLogo",
+            "imgTransaction": "imgTransaction",
+            "lblTransactAmount": "lblTransactAmount",
+            "lblTransactCurr": "lblTransactCurr",
+            "lblTransactTime": "lblTransactTime",
+            "lblTransaction": "lblTransaction"
+        }
+    },
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flxTransactionList",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowcounter": 4,
+    "rowexpandable": false,
+    "rowfocusskin": "s2954acbe692423388f2177837594cc7",
+    "rowskin": "sb87b86b8e5942b9818f8db955f022a6",
+    "rowtemplate": null,
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s28a7bd0c54c4f64808927aba209e384",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorcolor": "aaaaaa00",
+    "separatorrequired": false,
+    "separatorthickness": 0,
+    "showprogressindicator": true,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxTransactAmount": "flxTransactAmount",
+        "flxTransaction": "flxTransaction",
+        "flxTransactionList": "flxTransactionList",
+        "flxTransactionName": "flxTransactionName",
+        "imgTranLogo": "imgTranLogo",
+        "imgTransaction": "imgTransaction",
+        "lblTransactAmount": "lblTransactAmount",
+        "lblTransactCurr": "lblTransactCurr",
+        "lblTransactTime": "lblTransactTime",
+        "lblTransaction": "lblTransaction"
+    }
+}

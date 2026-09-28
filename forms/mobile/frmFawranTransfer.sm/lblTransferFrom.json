@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "6%"
+        "value": "0dp"
     },
     "_margin_": [
         1,
@@ -21,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "sffbbf6dcdcf47309e9090c6422f3859",
+    "_skin_": "s82f9ef68f2a45a1a13fb4803b79dd85",
     "_text_": "Transfer from",
     "_top_": {
         "type": "string",
-        "value": "16dp"
+        "value": "0"
     },
     "_width_": {
         "type": "ref",
@@ -55,9 +55,9 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "b18c69f05a356d8fd97960e7d23d66c6",
+    "kuid": "j0ef7fcc36354ed58535aa9509d2278c",
     "name": "kony.ui.Label",
-    "parent": "flxForm",
+    "parent": "flxTransferFromHeader",
     "pf": "frmFawranTransfer",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

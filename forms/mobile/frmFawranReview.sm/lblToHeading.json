@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "6%"
+        "value": "16dp"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "To",
     "_top_": {
         "type": "string",
-        "value": "268dp"
+        "value": "16dp"
     },
     "_width_": {
         "type": "string",
@@ -39,6 +39,10 @@
         }
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 4,
     "id": "lblToHeading",

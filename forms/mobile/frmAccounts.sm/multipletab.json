@@ -1,0 +1,153 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 1,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "flxFourTab": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b566dfc145eb4f8bb839c2085ea91a96",
+                "srcKUID": "i4ece481bde34e7ea9e30142d82101dd",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxTab1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ge357ceee5464e4b8e9f5fdcd0d0bd10",
+                "srcKUID": "a2c2518f4853407ab312bfc34baafe7d",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxTab2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "i887c9994f2e4f4bb16342d55d156fbe",
+                "srcKUID": "ba5ee89ac31b414fa2c4aa4ae0d5641e",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxTab3": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "i009edccf3614ce2bcc875f8c8478565",
+                "srcKUID": "h86d01e69dac46a79d60ca49d7a55053",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxTab4": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "db57a150c2f54ddcac3ed6acce5f8c5e",
+                "srcKUID": "a2c4bb92f5cf4a26adffc03b84da6aab",
+                "wType": "FlexContainer"
+            }
+        },
+        "lblTab1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "f5c33e3efc1f47959894af255a10f40b",
+                "srcKUID": "a74ee172383e4a358f6822459f144b94",
+                "wType": "Label"
+            }
+        },
+        "lblTab2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b29559c113a045768bd029fbc3046aa7",
+                "srcKUID": "a59d0ea47f054cd68a4e1eb05c886679",
+                "wType": "Label"
+            }
+        },
+        "lblTab3": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "g9039eb38ff94d4c8d6dbec7dccb36c1",
+                "srcKUID": "feeaaafdedf24783b755824486b6e3b7",
+                "wType": "Label"
+            }
+        },
+        "lblTab4": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "db938f548ed642fab42eb5efd298f9e5",
+                "srcKUID": "ec8774169ac44c6a8c64caa89a989361",
+                "wType": "Label"
+            }
+        },
+        "multipletab": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "b667adf6135a4d01bb618f80333c1bb4",
+                "srcKUID": "i5cc0aa39e114283a3c47d0778029af9",
+                "wType": "FlexContainer"
+            },
+            "autogrowMode": {
+                "Default": 1
+            },
+            "height": {
+                "Default": {
+                    "type": "ref",
+                    "value": "preferred"
+                }
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "multipletab",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "b667adf6135a4d01bb618f80333c1bb4",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxAccounts",
+    "pf": "frmAccounts",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "i5cc0aa39e114283a3c47d0778029af9",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

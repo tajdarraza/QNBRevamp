@@ -36,7 +36,7 @@
     "canUpdateUI": true,
     "children": [
         "Label0c469edccc06a43",
-        "CopyLabel0i507f2a0acab40"
+        "lblSpendingLimit"
     ],
     "clipbounds": false,
     "containerweight": 100,

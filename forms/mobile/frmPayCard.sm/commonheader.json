@@ -86,7 +86,8 @@
                 "kuid": "e2004c93c68b4c3983b2d08087923274",
                 "srcKUID": "ce67e20decd44378a97bfec1f7b4ba44",
                 "wType": "Image"
-            }
+            },
+            "src": "closeicon.png"
         },
         "imgAction2": {
             "__events__": {},
@@ -94,7 +95,8 @@
                 "kuid": "e60f299d628a4da5ab73067c74bf50a7",
                 "srcKUID": "c20fbf8154c643819cdcc81ef0b27b2c",
                 "wType": "Image"
-            }
+            },
+            "src": "closeicon.png"
         },
         "imgBackNav": {
             "__events__": {},
@@ -102,7 +104,8 @@
                 "kuid": "ebac3e8a58594c25b175ab4d11b53269",
                 "srcKUID": "d760b5e8194243f3bc0edb6b4b61ca08",
                 "wType": "Image"
-            }
+            },
+            "src": "caratleftsmall.png"
         },
         "lblScreenTitle": {
             "__events__": {},

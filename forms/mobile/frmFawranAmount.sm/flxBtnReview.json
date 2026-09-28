@@ -4,10 +4,6 @@
         "type": "string",
         "value": "52dp"
     },
-    "_left_": {
-        "type": "string",
-        "value": "5%"
-    },
     "_margin_": [
         0,
         0,
@@ -22,7 +18,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sddad0b24c2a07e68db809fbea65106",
+    "_skin_": "sf58cfd5bcd74cd486cf7bc82b87d171",
     "_top_": {
         "type": "string",
         "value": "454dp"
@@ -34,6 +30,10 @@
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
         "lblBtnReview"
     ],

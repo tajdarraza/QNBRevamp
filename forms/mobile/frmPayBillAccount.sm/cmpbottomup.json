@@ -39,14 +39,6 @@
     "clipbounds": true,
     "containerweight": 0,
     "dataDiffs": {
-        "btnSheetEnable": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "f4fc7ca9904943fabe45c1f542ff4b8c",
-                "srcKUID": "bbdd5e5f2e7341d081e3371c4f5fcca8",
-                "wType": "Button"
-            }
-        },
         "cmpbottomup": {
             "__events__": {},
             "__info__": {
@@ -64,7 +56,7 @@
                     "value": "100%"
                 }
             },
-            "isVisible": false
+            "isVisible": true
         },
         "flxBillAmount": {
             "__events__": {},
@@ -114,14 +106,6 @@
                 "wType": "FlexContainer"
             }
         },
-        "flxButtonActions": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "ab046e960f734c2fa1ff79b651850852",
-                "srcKUID": "h5846d5dfe77430492589d65d76e600b",
-                "wType": "FlexContainer"
-            }
-        },
         "flxClose": {
             "__events__": {},
             "__info__": {
@@ -135,14 +119,6 @@
             "__info__": {
                 "kuid": "ddbb7a57a1f2413fbc613ffe715170b0",
                 "srcKUID": "iecf1b53ba8042e6bc35cc86c9460c1e",
-                "wType": "FlexContainer"
-            }
-        },
-        "flxContent": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "d7a3bf8adeca4842818f2cd8f105c9c6",
-                "srcKUID": "caa098f233c24075a8766bc9607f3a10",
                 "wType": "FlexContainer"
             }
         },
@@ -275,14 +251,6 @@
             },
             "src": "ooredoo.png"
         },
-        "lblCancel": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "b5117e302ffc4941bdb0ab53f90e99f0",
-                "srcKUID": "e80d861bc6f543a88d344c5ed72c5f62",
-                "wType": "Label"
-            }
-        },
         "lblConvertedValue": {
             "__events__": {},
             "__info__": {
@@ -296,30 +264,6 @@
             "__info__": {
                 "kuid": "cc42b75b20d54a708b39a1940a505845",
                 "srcKUID": "ce4c1e30106745a2a671bdb29507bb8c",
-                "wType": "Label"
-            }
-        },
-        "lblDesc1": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "i2455b9045a94648a35e5350d59abdab",
-                "srcKUID": "da684c51c0de498794482e25c78f6aca",
-                "wType": "Label"
-            }
-        },
-        "lblDesc2": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "cea9528c23564bb697f670626a54572b",
-                "srcKUID": "d11f81eee261463690dfd4d11b3b4660",
-                "wType": "Label"
-            }
-        },
-        "lblDesc3": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "a17d518b3d1e43ad8eb406b027492d21",
-                "srcKUID": "d335ecb4101e4864be6a290ec0456da0",
                 "wType": "Label"
             }
         },
@@ -385,7 +329,7 @@
     "info": null,
     "iscustomlayout": false,
     "isdatareferenced": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "b28382ba4635480bb92ca122f37a8c32",
     "layouttype": 2,
     "masterType": 0,

@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "44dp"
+        "value": "40dp"
     },
     "_left_": {
         "type": "string",
@@ -21,23 +21,26 @@
         0,
         0
     ],
-    "_placeholder_": "Enter value",
+    "_placeholder_": "Placeholder",
     "_skin_": "s6d52f9417604055a427e9c48b95130a",
     "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "2dp"
+        "value": "0"
     },
     "_width_": {
         "type": "string",
-        "value": "90%"
+        "value": "300dp"
     },
-    "android": {},
     "autocapitalize": "none",
     "autocomplete": false,
     "autocorrect": false,
     "autofilter": false,
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerheight": "",
     "containerheightmode": 1,
     "containerweight": 100,
@@ -45,15 +48,16 @@
     "focusskin": "s6d52f9417604055a427e9c48b95130a",
     "id": "txtAliasValue",
     "info": null,
+    "iphone": {},
     "iscustomlayout": false,
     "isvisible": true,
     "keyboardtype": "A",
-    "kuid": "2fb8ac8ee67efb41f6ff4e69db1e1939",
+    "kuid": "j2ac1a0c89a6429c8aba9ae83066236d",
     "mode": "A",
     "name": "kony.ui.TextBox2",
-    "parent": "flxAliasValue",
+    "parent": "flxAliasValueInner",
     "pf": "frmFawranTransfer",
-    "placeholderskin": "se1e249128f34bffad6ec4756196df78",
+    "placeholderskin": "s8b86b5c32f94739b172908ab9d06312",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "securetextentry": false,

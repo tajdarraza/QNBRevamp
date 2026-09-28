@@ -46,8 +46,6 @@
     },
     "children": [
         "transactions",
-        "flxCardsHeader",
-        "flxScrollCards",
         "flxBanner"
     ],
     "clipbounds": true,

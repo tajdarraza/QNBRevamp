@@ -1,15 +1,6 @@
-define(function() {
-
+define(function () {
     return {
-
-        /*
-         * =====================================================
-         * FOOTER CONFIGURATION
-         * =====================================================
-         */
-
         footerItems: {
-
             home: {
                 widgetId: "imgFooter1",
                 selectedImage: "selectedhome.png",
@@ -44,483 +35,155 @@ define(function() {
                 unselectedImage: "navigationmenu.png",
                 formId: "frmMoreActions"
             }
-
         },
-
-
-        /*
-         * =====================================================
-         * STATE
-         * =====================================================
-         */
 
         selectedTab: "",
 
+        initializeFooter: function () {
+            kony.print("========================================");
+            kony.print("FOOTER :: INITIALIZE START");
 
-        /*
-         * =====================================================
-         * COMPONENT INITIALIZATION
-         * =====================================================
-         */
+            if (!this.view.imgFooter1 ||
+                !this.view.imgFooter2 ||
+                !this.view.imgFooter3 ||
+                !this.view.imgFooter4 ||
+                !this.view.imgFooter5) {
 
-        initializeFooter: function() {
-
-            kony.print(
-                "========================================"
-            );
-
-            kony.print(
-                "FOOTER COMPONENT INIT START"
-            );
-
-
-            /*
-             * Make sure the component widgets exist.
-             */
-
-            if (!this.view.imgFooter1) {
-
-                kony.print(
-                    "FOOTER ERROR: imgFooter1 NOT FOUND"
-                );
-
+                kony.print("FOOTER :: REQUIRED WIDGETS NOT FOUND");
                 return;
             }
 
-            if (!this.view.imgFooter2) {
+            this.view.imgFooter1.onTouchEnd = this.onHomeClick.bind(this);
+            this.view.imgFooter2.onTouchEnd = this.onCardsClick.bind(this);
+            this.view.imgFooter3.onTouchEnd = this.onPaymentsClick.bind(this);
+            this.view.imgFooter4.onTouchEnd = this.onTransferClick.bind(this);
+            this.view.imgFooter5.onTouchEnd = this.onMenuClick.bind(this);
 
-                kony.print(
-                    "FOOTER ERROR: imgFooter2 NOT FOUND"
-                );
+            kony.print("FOOTER :: TOUCH EVENTS ATTACHED");
 
-                return;
-            }
+            this.updateAllFooterImages();
 
-            if (!this.view.imgFooter3) {
-
-                kony.print(
-                    "FOOTER ERROR: imgFooter3 NOT FOUND"
-                );
-
-                return;
-            }
-
-            if (!this.view.imgFooter4) {
-
-                kony.print(
-                    "FOOTER ERROR: imgFooter4 NOT FOUND"
-                );
-
-                return;
-            }
-
-            if (!this.view.imgFooter5) {
-
-                kony.print(
-                    "FOOTER ERROR: imgFooter5 NOT FOUND"
-                );
-
-                return;
-            }
-
-
-            /*
-             * =================================================
-             * ATTACH TOUCH EVENTS
-             * =================================================
-             */
-
-            this.view.imgFooter1.onTouchEnd =
-                this.onHomeClick.bind(this);
-
-            this.view.imgFooter2.onTouchEnd =
-                this.onCardsClick.bind(this);
-
-            this.view.imgFooter3.onTouchEnd =
-                this.onPaymentsClick.bind(this);
-
-            this.view.imgFooter4.onTouchEnd =
-                this.onTransferClick.bind(this);
-
-            this.view.imgFooter5.onTouchEnd =
-                this.onMenuClick.bind(this);
-
-
-            kony.print(
-                "FOOTER :: ALL TOUCH EVENTS ATTACHED"
-            );
-
-
-            /*
-             * Default state
-             */
-
-            this.setSelectedTab("");
-
-
-            kony.print(
-                "FOOTER COMPONENT INIT COMPLETE"
-            );
-
-            kony.print(
-                "========================================"
-            );
+            kony.print("FOOTER :: INITIALIZE COMPLETE");
+            kony.print("========================================");
         },
 
+        setSelectedTab: function (tabName) {
+            kony.print("FOOTER :: SET SELECTED TAB = " + tabName);
 
-        /*
-         * =====================================================
-         * SET SELECTED TAB
-         * =====================================================
-         *
-         * Public method.
-         *
-         * Parent can call:
-         *
-         * this.view.cmpFooter.setSelectedTab("home");
-         *
-         */
+            this.selectedTab = tabName || "";
 
-        setSelectedTab: function(tabName) {
+            this.updateAllFooterImages();
+        },
 
-            kony.print(
-                "FOOTER :: SET SELECTED TAB = " +
-                tabName
-            );
-
-
-            this.selectedTab =
-                tabName || "";
-
-
+        updateAllFooterImages: function () {
             this.updateFooterImage("home");
-
             this.updateFooterImage("cards");
-
             this.updateFooterImage("payments");
-
             this.updateFooterImage("transfer");
-
             this.updateFooterImage("menu");
         },
 
-
-        /*
-         * =====================================================
-         * UPDATE FOOTER IMAGE
-         * =====================================================
-         */
-
-        updateFooterImage: function(tabName) {
-
-            var item =
-                this.footerItems[tabName];
-
+        updateFooterImage: function (tabName) {
+            var item = this.footerItems[tabName];
 
             if (!item) {
-
-                kony.print(
-                    "FOOTER :: UNKNOWN TAB = " +
-                    tabName
-                );
-
+                kony.print("FOOTER :: UNKNOWN TAB = " + tabName);
                 return;
             }
 
-
-            var widget =
-                this.view[item.widgetId];
-
+            var widget = this.view[item.widgetId];
 
             if (!widget) {
-
-                kony.print(
-                    "FOOTER :: WIDGET NOT FOUND = " +
-                    item.widgetId
-                );
-
+                kony.print("FOOTER :: WIDGET NOT FOUND = " + item.widgetId);
                 return;
             }
 
-
-            if (
-                this.selectedTab ===
-                tabName
-            ) {
-
-                widget.src =
-                    item.selectedImage;
-
+            if (this.selectedTab === tabName) {
+                widget.src = item.selectedImage;
+                kony.print("FOOTER :: " + tabName + " = SELECTED");
             } else {
-
-                widget.src =
-                    item.unselectedImage;
+                widget.src = item.unselectedImage;
             }
         },
 
-
-        /*
-         * =====================================================
-         * HOME
-         * =====================================================
-         */
-
-        onHomeClick: function() {
-
-            kony.print(
-                "########################################"
-            );
-
-            kony.print(
-                "FOOTER :: HOME CLICKED"
-            );
-
-
-            this.handleFooterNavigation(
-                "home"
-            );
+        onHomeClick: function () {
+            kony.print("FOOTER :: HOME CLICKED");
+            this.handleFooterNavigation("home");
         },
 
-
-        /*
-         * =====================================================
-         * CARDS
-         * =====================================================
-         */
-
-        onCardsClick: function() {
-
-            kony.print(
-                "########################################"
-            );
-
-            kony.print(
-                "FOOTER :: CARDS CLICKED"
-            );
-
-
-            this.handleFooterNavigation(
-                "cards"
-            );
+        onCardsClick: function () {
+            kony.print("FOOTER :: CARDS CLICKED");
+            this.handleFooterNavigation("cards");
         },
 
-
-        /*
-         * =====================================================
-         * PAYMENTS
-         * =====================================================
-         */
-
-        onPaymentsClick: function() {
-
-            kony.print(
-                "########################################"
-            );
-
-            kony.print(
-                "FOOTER :: PAYMENTS CLICKED"
-            );
-
-
-            this.handleFooterNavigation(
-                "payments"
-            );
+        onPaymentsClick: function () {
+            kony.print("FOOTER :: PAYMENTS CLICKED");
+            this.handleFooterNavigation("payments");
         },
 
-
-        /*
-         * =====================================================
-         * TRANSFER
-         * =====================================================
-         */
-
-        onTransferClick: function() {
-
-            kony.print(
-                "########################################"
-            );
-
-            kony.print(
-                "FOOTER :: TRANSFER CLICKED"
-            );
-
-
-            this.handleFooterNavigation(
-                "transfer"
-            );
+        onTransferClick: function () {
+            kony.print("FOOTER :: TRANSFER CLICKED");
+            this.handleFooterNavigation("transfer");
         },
 
-
-        /*
-         * =====================================================
-         * MENU
-         * =====================================================
-         */
-
-        onMenuClick: function() {
-
-            kony.print(
-                "########################################"
-            );
-
-            kony.print(
-                "FOOTER :: MENU CLICKED"
-            );
-
-
-            this.handleFooterNavigation(
-                "menu"
-            );
+        onMenuClick: function () {
+            kony.print("FOOTER :: MENU CLICKED");
+            this.handleFooterNavigation("menu");
         },
 
+        handleFooterNavigation: function (tabName) {
+            kony.print("FOOTER :: HANDLE NAVIGATION = " + tabName);
 
-        /*
-         * =====================================================
-         * COMMON FOOTER NAVIGATION
-         * =====================================================
-         */
-
-        handleFooterNavigation: function(tabName) {
-
-            kony.print(
-                "FOOTER :: HANDLE NAVIGATION = " +
-                tabName
-            );
-
-
-            var item =
-                this.footerItems[tabName];
-
+            var item = this.footerItems[tabName];
 
             if (!item) {
-
-                kony.print(
-                    "FOOTER :: CONFIG NOT FOUND = " +
-                    tabName
-                );
-
+                kony.print("FOOTER :: CONFIG NOT FOUND = " + tabName);
                 return;
             }
 
-
-            /*
-             * Update icon first.
-             */
-
-            this.setSelectedTab(
-                tabName
-            );
-
-
-            /*
-             * Navigate.
-             */
-
-            this.navigateToForm(
-                item.formId
-            );
+            this.setSelectedTab(tabName);
+            this.navigateToForm(item.formId);
         },
 
-
-        /*
-         * =====================================================
-         * COMMON NAVIGATION
-         * =====================================================
-         */
-
-        navigateToForm: function(formId) {
-
-            kony.print(
-                "FOOTER :: NAVIGATE TO = " +
-                formId
-            );
-
+        navigateToForm: function (formId) {
+            kony.print("FOOTER :: NAVIGATE TO = " + formId);
 
             if (!formId) {
-
-                kony.print(
-                    "FOOTER :: FORM ID EMPTY"
-                );
-
+                kony.print("FOOTER :: FORM ID EMPTY");
                 return;
             }
 
-
             try {
+                var navigation = new kony.mvc.Navigation(formId);
 
-                var navigation =
-                    new kony.mvc.Navigation(
-                        formId
-                    );
-
-
-                kony.print(
-                    "FOOTER :: NAVIGATION OBJECT CREATED"
-                );
-
+                kony.print("FOOTER :: NAVIGATION OBJECT CREATED");
 
                 navigation.navigate();
 
-
-                kony.print(
-                    "FOOTER :: NAVIGATION CALLED"
-                );
-
+                kony.print("FOOTER :: NAVIGATION CALLED");
             } catch (e) {
-
-                kony.print(
-                    "FOOTER :: NAVIGATION ERROR = " +
-                    e
-                );
+                kony.print("FOOTER :: NAVIGATION ERROR = " + e);
             }
         },
 
-
-        /*
-         * =====================================================
-         * PUBLIC METHODS
-         * =====================================================
-         */
-
-        goHome: function() {
-
-            this.handleFooterNavigation(
-                "home"
-            );
+        goHome: function () {
+            this.handleFooterNavigation("home");
         },
 
-
-        goCards: function() {
-
-            this.handleFooterNavigation(
-                "cards"
-            );
+        goCards: function () {
+            this.handleFooterNavigation("cards");
         },
 
-
-        goPayments: function() {
-
-            this.handleFooterNavigation(
-                "payments"
-            );
+        goPayments: function () {
+            this.handleFooterNavigation("payments");
         },
 
-
-        goTransfer: function() {
-
-            this.handleFooterNavigation(
-                "transfer"
-            );
+        goTransfer: function () {
+            this.handleFooterNavigation("transfer");
         },
 
-
-        goMenu: function() {
-
-            this.handleFooterNavigation(
-                "menu"
-            );
+        goMenu: function () {
+            this.handleFooterNavigation("menu");
         }
-
     };
-
 });

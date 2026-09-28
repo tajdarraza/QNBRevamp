@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "0%"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "You will send",
     "_top_": {
         "type": "string",
-        "value": "16dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
@@ -39,6 +39,10 @@
         }
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 5,
     "id": "lblYouWillSend",
@@ -57,7 +61,7 @@
     "isvisible": true,
     "kuid": "015bea3e509f46bb707b608c22c43ae8",
     "name": "kony.ui.Label",
-    "parent": "flxContent",
+    "parent": "flxTopInfo",
     "pf": "frmFawranReview",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

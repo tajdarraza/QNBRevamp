@@ -6,7 +6,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "0%"
     },
     "_margin_": [
         0,
@@ -22,18 +22,23 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "scabe65ba445fde12ab8931b11e213f",
+    "_skin_": "sc07b9618ca14ee98a574d511960683e",
     "_top_": {
         "type": "string",
-        "value": "180dp"
+        "value": "8dp"
     },
     "_width_": {
         "type": "string",
         "value": "90%"
     },
+    "activeNativeBorderCornerRadiusControl": "centerControl",
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
         "lblFromAlias",
         "lblFromAccType",

@@ -18,7 +18,7 @@
     "_pxMenuIndex": [
         0,
         1,
-        13
+        17
     ],
     "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
@@ -55,7 +55,7 @@
     "desktopweb": {
         "needAppMenu": false
     },
-    "device": "iPhone16",
+    "device": "iPhoneSE",
     "displayorientation": 1,
     "enabledforidletimeout": true,
     "enablescrolling": false,
@@ -121,7 +121,7 @@
     "needappmenu": false,
     "paddinginpixel": false,
     "platform": "iphone",
-    "prevDevice": "Pixel3",
+    "prevDevice": "iPhone16",
     "prevPlatform": "android",
     "requiresTopSafeAreaInset": true,
     "retaincontentalignment": false,

@@ -1,0 +1,137 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 1,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "flxError": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "i4be4b841c0f4213976be1736d962c63",
+                "srcKUID": "f7774c8d36cf4df2bdc3e29597e1f109",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxErrorBackground": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "d119a9d74a1f4ace9eff64b34e44a2f0",
+                "srcKUID": "jd79fc3b44b74855ba09c15201996275",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxErrorDescription": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b3bd3331e4be4a64a3d615d136caf4a1",
+                "srcKUID": "ga790700ac7646bc9b97c7e521d376de",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxForeground": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ie175c245cb04a6b8bc7a74b630de963",
+                "srcKUID": "d6fc34f0b5334843ad7e1be6969b8813",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxSeperator1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "f04692143eed4f00ae49bd6903bc133c",
+                "srcKUID": "g7462c4591584348b45b9fd22f119743",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxSeperator2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "f8c8ca6aa274412cbec70f5ee3ec3b47",
+                "srcKUID": "a7fcb0136a5143cfadcb779dfeaf59e7",
+                "wType": "FlexContainer"
+            }
+        },
+        "imgErrorDesc": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "bb300c901e4f4f2e837c6fd5ca8f6ae8",
+                "srcKUID": "gc20893c983b4bd0aaecb923f6100bc9",
+                "wType": "Image"
+            }
+        },
+        "lblErrorDesc": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "c922a9b4ce204bf4aec5eb8eff186520",
+                "srcKUID": "g51c57a5e04c4c8fa62ffda71f71c44b",
+                "wType": "Label"
+            },
+            "text": "Includes special extra month for Ramadan"
+        },
+        "wallError": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "f4793f7da67044aa8ab582de9ba9dbb8",
+                "srcKUID": "aa87339abcd04de09e2abc11ad73ac7c",
+                "wType": "FlexContainer"
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "wallError",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "f4793f7da67044aa8ab582de9ba9dbb8",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxLoanSpecialOffer",
+    "pf": "frmLoanPostponeUpdate",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "aa87339abcd04de09e2abc11ad73ac7c",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

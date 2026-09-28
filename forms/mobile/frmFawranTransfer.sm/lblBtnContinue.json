@@ -2,12 +2,8 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "22dp"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_margin_": [
         1,
@@ -23,13 +19,9 @@
     ],
     "_skin_": "s881501d566a4126912b85e0f5be76c6",
     "_text_": "Continue",
-    "_top_": {
-        "type": "string",
-        "value": "16dp"
-    },
     "_width_": {
-        "type": "string",
-        "value": "100%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {
@@ -39,8 +31,16 @@
         }
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
-    "contentalignment": 5,
+    "contentalignment": 4,
     "id": "lblBtnContinue",
     "info": null,
     "ipad": {
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "3f3d7bcbc91588861918f82348ca325d",
+    "kuid": "cbd2b3cb41c14298be262423437af7ee",
     "name": "kony.ui.Label",
     "parent": "flxBtnContinue",
     "pf": "frmFawranTransfer",

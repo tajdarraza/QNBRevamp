@@ -2,8 +2,8 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "34dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
@@ -25,7 +25,7 @@
     "_text_": "Between my accounts",
     "_top_": {
         "type": "string",
-        "value": "58dp"
+        "value": "56dp"
     },
     "_width_": {
         "type": "string",

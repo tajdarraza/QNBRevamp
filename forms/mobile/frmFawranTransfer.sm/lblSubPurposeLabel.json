@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "6%"
+        "value": "0dp"
     },
     "_margin_": [
         1,
@@ -21,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "se6a173f9bb04594b0f8ee528971a4ae",
+    "_skin_": "s8b4741fe99c44b7b9d2d59fab28e1ee",
     "_text_": "Sub-purpose of remittance",
     "_top_": {
         "type": "string",
-        "value": "404dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "ref",
@@ -55,9 +55,9 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "5c0f9bfe12328d67eede401e148360da",
+    "kuid": "j244499c17524d6385a83b0473d80f0e",
     "name": "kony.ui.Label",
-    "parent": "flxForm",
+    "parent": "flxSubPurpose",
     "pf": "frmFawranTransfer",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

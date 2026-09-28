@@ -15,11 +15,6 @@
         0
     ],
     "_percent_": true,
-    "_pxMenuIndex": [
-        0,
-        1,
-        12
-    ],
     "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
     "addWidgetsdone": false,
@@ -30,9 +25,16 @@
             "windowSoftInputMode": 1
         }
     },
+    "androidwearos": {
+        "needAppMenu": false,
+        "psp": {
+            "windowSoftInputMode": 1
+        }
+    },
     "canUpdateUI": true,
     "children": [
-        "flxParent"
+        "flxParent",
+        "commonlist"
     ],
     "containerweight": 100,
     "controllerInfo": {
@@ -43,24 +45,31 @@
         }
     },
     "currentLocale": "default",
-    "device": "GalaxyNote",
+    "desktopweb": {
+        "needAppMenu": false
+    },
+    "device": "iPhone16",
     "displayorientation": 1,
-    "enabledforidletimeout": true,
+    "enabledforidletimeout": false,
     "id": "frmFawranTransfer",
     "info": null,
     "initdone": false,
     "inputaccessoryviewtype": 4,
     "ipad": {
         "needAppMenu": false,
+        "psp": {
+            "inputAccessoryViewType": 4
+        },
         "titleBar": false
     },
     "iphone": {
         "needAppMenu": false,
         "psp": {
+            "inputAccessoryViewType": 4,
             "titleBarAttributes": {
                 "barStyle": 0,
                 "hidesBackButton": false,
-                "kuid": "e84391fe7aa043f2840669709fed6cbb",
+                "kuid": "e0ee4d8920cc447d8621a2b8e7b07430",
                 "leftBarButtonItems": [],
                 "leftItemsSupplementBackButton": true,
                 "prompt": "",
@@ -71,7 +80,7 @@
                         "info": {
                             "title": "Edit"
                         },
-                        "kuid": "gbc8971def174cad8f360ddf3a58956c",
+                        "kuid": "d70fd09ac12944fc8a746f48f0c2e95b",
                         "style": 0,
                         "tintColor": "4b88f100",
                         "type": 1
@@ -85,20 +94,48 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "9e76dff5becc18c78a02cfb2193dc5d2",
+    "kiosk": {
+        "needAppMenu": false
+    },
+    "kuid": "i86c051b3fe24414918e7564bbf684c6",
     "layouttype": 2,
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
-    "platform": "android",
-    "prevDevice": "GalaxyNote",
+    "platform": "iphone",
+    "prevDevice": "Pixel3",
     "prevPlatform": "android",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,
     "snapgridsize": 10,
     "snaptogrid": true,
+    "spaan": {
+        "needAppMenu": false
+    },
+    "spaandroidtablet": {
+        "needAppMenu": false
+    },
+    "spaip": {
+        "needAppMenu": false
+    },
+    "spaipad": {
+        "needAppMenu": false
+    },
+    "spawindowstablet": {
+        "needAppMenu": false
+    },
+    "spawinphone8": {
+        "needAppMenu": false
+    },
+    "titleBarSkin": "s7c2028af1a84384b11825e5ea71b5d2",
     "titlebar": true,
     "type": 3,
-    "wType": "Form"
+    "wType": "Form",
+    "windows8": {
+        "needAppMenu": false
+    },
+    "winphone8": {
+        "needAppMenu": false
+    }
 }

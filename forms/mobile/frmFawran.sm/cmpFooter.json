@@ -29,6 +29,10 @@
     ],
     "_percent_": true,
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
     "_width_": {
         "type": "string",
         "value": "100%"
@@ -62,7 +66,7 @@
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": ""
+                    "value": "0"
                 }
             }
         },

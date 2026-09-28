@@ -1,6 +1,5 @@
 define({
   cardData: [],
-
   currentAccounts: [],
   savingsAccounts: [],
   delegatedAccounts: [],
@@ -9,141 +8,61 @@ define({
     this.view.init = this.init;
     this.view.preShow = this.preShow;
     this.view.postShow = this.postShow;
+
     this.view.cmpHeader.configure({
       mode: "normal",
       firstName: "Mohammad",
       lastName: "Raza",
-      notificationCount: 5,
+      notificationCount: 2,
+      callbacks: {
+        add: this.onAddClick.bind(this),
+      },
     });
 
     this.view.cmpFooter.initializeFooter();
     this.view.cmpFooter.setSelectedTab("menu");
-
     this.data = navData;
+  },
+
+  onAddClick: function () {
+    new kony.mvc.Navigation("frmNewAccount").navigate();
   },
 
   onFooterMenu: function () {
     new kony.mvc.Navigation("frmDashboard").navigate();
   },
 
-  init: function () {},
-
-  // =========================================================
-  // PRE SHOW
-  // =========================================================
+  init: function () { },
 
   preShow: function () {
-    // =====================================================
-    // SEGMENT WIDGET DATA MAP
-    // =====================================================
-
     this.view.segAccounts.widgetDataMap = {
-      // -----------------------------------------
-      // SECTION HEADER
-      // -----------------------------------------
-
       flxAccountHeader: "flxAccountHeader",
       lblAccountHeader: "lblAccountHeader",
-
-      // -----------------------------------------
-      // MAIN
-      // -----------------------------------------
-
       flxMain: "flxMain",
-
-      // -----------------------------------------
-      // TOP
-      // -----------------------------------------
-
       flxTop: "flxTop",
       flxTopMain: "flxTopMain",
-
-      // -----------------------------------------
-      // VERTICAL SEPARATOR
-      // -----------------------------------------
-
       flxVerticalSeperator: "flxVerticalSeperator",
-
-      // -----------------------------------------
-      // ACCOUNT DETAILS
-      // -----------------------------------------
-
       flxAccDetails: "flxAccDetails",
       lblAccName: "lblAccName",
       lblAccNum: "lblAccNum",
-
-      // -----------------------------------------
-      // AMOUNT DETAILS
-      // -----------------------------------------
-
       flxAmtDetails: "flxAmtDetails",
       lblAmount: "lblAmount",
       lblCurrency: "lblCurrency",
-
-      // -----------------------------------------
-      // SEPARATOR 1
-      // -----------------------------------------
-
       flxSeperator1: "flxSeperator1",
-
-      // -----------------------------------------
-      // BOTTOM
-      // -----------------------------------------
-
       flxBottom: "flxBottom",
       flxBottomMain: "flxBottomMain",
-
       imgCalendar: "imgCalendar",
       lblEndDate: "lblEndDate",
-
-      // -----------------------------------------
-      // SEPARATOR 2
-      // -----------------------------------------
-
       flxSeparator2: "flxSeparator2",
     };
 
-    // =====================================================
-    // ROW CLICK
-    // =====================================================
-
     this.view.segAccounts.onRowClick = this.onAccountRowClick.bind(this);
 
-    // =====================================================
-    // TAB CLICK EVENTS
-    // =====================================================
-
-    this.view.flxTabAll.onTouchEnd = this.onTabAll.bind(this);
-
-    this.view.flxTabCurrent.onTouchEnd = this.onTabCurrent.bind(this);
-
-    this.view.flxTabSavings.onTouchEnd = this.onTabSavings.bind(this);
-
-    this.view.flxTabDelegate.onTouchEnd = this.onTabDelegated.bind(this);
-
-    // =====================================================
-    // LOAD DATA
-    // =====================================================
-
     this.setDummyAccounts();
-
-    // =====================================================
-    // DEFAULT TAB
-    // ALL IS SELECTED
-    // =====================================================
-
-    this.selectTab("all");
+    this.configureTabs();
   },
 
-  // =========================================================
-  // POST SHOW
-  // =========================================================
-
-  postShow: function () {},
-
-  // =========================================================
-  // CREATE ACCOUNT ROW
-  // =========================================================
+  postShow: function () { },
 
   createAccountRow: function (
     accountName,
@@ -155,17 +74,9 @@ define({
     verticalSeparatorSkin,
   ) {
     return {
-      // =================================================
-      // MAIN
-      // =================================================
-
       flxMain: {
         isVisible: true,
       },
-
-      // =================================================
-      // TOP
-      // =================================================
 
       flxTop: {
         isVisible: true,
@@ -175,51 +86,29 @@ define({
         isVisible: true,
       },
 
-      // =================================================
-      // VERTICAL SEPARATOR
-      // =================================================
-
       flxVerticalSeperator: {
         isVisible: true,
         skin: verticalSeparatorSkin,
       },
-
-      // =================================================
-      // ACCOUNT DETAILS
-      // =================================================
 
       flxAccDetails: {
         isVisible: true,
       },
 
       lblAccName: accountName,
-
       lblAccNum: accountNumber,
-
-      // =================================================
-      // AMOUNT DETAILS
-      // =================================================
 
       flxAmtDetails: {
         isVisible: true,
       },
 
       lblAmount: amount,
-
       lblCurrency: currency,
-
-      // =================================================
-      // SEPARATOR 1
-      // =================================================
 
       flxSeperator1: {
         isVisible: !showBottom,
         skin: "slFbox",
       },
-
-      // =================================================
-      // BOTTOM
-      // =================================================
 
       flxBottom: {
         isVisible: showBottom,
@@ -229,27 +118,15 @@ define({
         isVisible: showBottom,
       },
 
-      // =================================================
-      // CALENDAR
-      // =================================================
-
       imgCalendar: {
         isVisible: showBottom,
         src: "calendar.png",
       },
 
-      // =================================================
-      // END DATE
-      // =================================================
-
       lblEndDate: {
         isVisible: showBottom,
         text: endDate || "",
       },
-
-      // =================================================
-      // SEPARATOR 2
-      // =================================================
 
       flxSeparator2: {
         isVisible: showBottom,
@@ -258,15 +135,7 @@ define({
     };
   },
 
-  // =========================================================
-  // DUMMY DATA
-  // =========================================================
-
   setDummyAccounts: function () {
-    // =====================================================
-    // CURRENT ACCOUNTS
-    // =====================================================
-
     this.currentAccounts = [
       this.createAccountRow(
         "Current Account",
@@ -288,10 +157,6 @@ define({
         "sknFlxRounderdSeperator2a59bd",
       ),
     ];
-
-    // =====================================================
-    // SAVINGS ACCOUNTS
-    // =====================================================
 
     this.savingsAccounts = [
       this.createAccountRow(
@@ -315,10 +180,6 @@ define({
       ),
     ];
 
-    // =====================================================
-    // DELEGATED ACCOUNTS
-    // =====================================================
-
     this.delegatedAccounts = [
       this.createAccountRow(
         "Delegated Account",
@@ -341,68 +202,41 @@ define({
       ),
     ];
 
-    // =====================================================
-    // DEFAULT = ALL ACCOUNTS
-    // =====================================================
-
     this.showAllAccounts();
   },
 
-  // =========================================================
-  // SHOW ALL ACCOUNTS
-  // =========================================================
-
   showAllAccounts: function () {
     var data = [];
-
-    // -----------------------------------------------------
-    // CURRENT
-    // -----------------------------------------------------
 
     if (this.currentAccounts.length > 0) {
       data.push([
         {
           lblAccountHeader: "Current (" + this.currentAccounts.length + ")",
         },
-
         this.currentAccounts,
       ]);
     }
-
-    // -----------------------------------------------------
-    // SAVINGS
-    // -----------------------------------------------------
 
     if (this.savingsAccounts.length > 0) {
       data.push([
         {
           lblAccountHeader: "Savings (" + this.savingsAccounts.length + ")",
         },
-
         this.savingsAccounts,
       ]);
     }
-
-    // -----------------------------------------------------
-    // DELEGATED
-    // -----------------------------------------------------
 
     if (this.delegatedAccounts.length > 0) {
       data.push([
         {
           lblAccountHeader: "Delegated (" + this.delegatedAccounts.length + ")",
         },
-
         this.delegatedAccounts,
       ]);
     }
 
     this.view.segAccounts.setData(data);
   },
-
-  // =========================================================
-  // SHOW CURRENT ACCOUNTS
-  // =========================================================
 
   showCurrentAccounts: function () {
     var data = [
@@ -410,7 +244,6 @@ define({
         {
           lblAccountHeader: "Current (" + this.currentAccounts.length + ")",
         },
-
         this.currentAccounts,
       ],
     ];
@@ -418,17 +251,12 @@ define({
     this.view.segAccounts.setData(data);
   },
 
-  // =========================================================
-  // SHOW SAVINGS ACCOUNTS
-  // =========================================================
-
   showSavingsAccounts: function () {
     var data = [
       [
         {
           lblAccountHeader: "Savings (" + this.savingsAccounts.length + ")",
         },
-
         this.savingsAccounts,
       ],
     ];
@@ -436,17 +264,12 @@ define({
     this.view.segAccounts.setData(data);
   },
 
-  // =========================================================
-  // SHOW DELEGATED ACCOUNTS
-  // =========================================================
-
   showDelegatedAccounts: function () {
     var data = [
       [
         {
           lblAccountHeader: "Delegated (" + this.delegatedAccounts.length + ")",
         },
-
         this.delegatedAccounts,
       ],
     ];
@@ -455,105 +278,66 @@ define({
   },
 
   // =========================================================
-  // TAB SELECTION
+  // MULTIPLETAB
   // =========================================================
 
-  selectTab: function (selectedTab) {
-    // =====================================================
-    // RESET ALL TABS
-    // =====================================================
+  configureTabs: function () {
+    var self = this;
 
-    this.view.flxTabAll.skin = "slFbox";
-    this.view.flxTabCurrent.skin = "slFbox";
-    this.view.flxTabSavings.skin = "slFbox";
-    this.view.flxTabDelegate.skin = "slFbox";
+    this.view.multipletab.initialize({
+      selectedIndex: 0,
+      flxFourTabSkin: "sknFlx32pxRoundWhiteBgE4E2ED",
 
-    this.view.lblTabAll.skin = "sknLblQNBSemibold16Px1b124b";
-    this.view.lblTabSavings.skin = "sknLblQNBSemibold16Px1b124b";
-    this.view.lblTabCurrent.skin = "sknLblQNBSemibold16Px1b124b";
-    this.view.lblTabDelegate.skin = "sknLblQNBSemibold16Px1b124b";
+      tabs: [
+        {
+          flx: "flxTab1",
+          lbl: "lblTab1",
+          text: "All",
+          enabled: true,
+        },
+        {
+          flx: "flxTab2",
+          lbl: "lblTab2",
+          text: "Current",
+          enabled: true,
+        },
+        {
+          flx: "flxTab3",
+          lbl: "lblTab3",
+          text: "Savings",
+          enabled: true,
+        },
+        {
+          flx: "flxTab4",
+          lbl: "lblTab4",
+          text: "Delegate",
+          enabled: true,
+        },
+      ],
 
-    // =====================================================
-    // SELECTED TAB
-    // =====================================================
+      onTabSelected: function (tab, index) {
+        self.onTabSelected(tab, index);
+      },
+    });
+  },
 
-    if (selectedTab === "all") {
-      this.view.flxTabAll.skin = "sknFlxTabQNBSemiBold16Px2a59bd";
-      this.view.lblTabAll.skin = "sknLblQNBSemibold16PxWhite";
+  onTabSelected: function (tab, index) {
+    kony.print("ACCOUNTS :: TAB " + tab.flx + " INDEX " + index);
 
+    if (index === 0) {
       this.showAllAccounts();
-    } else if (selectedTab === "current") {
-      this.view.flxTabCurrent.skin = "sknFlxTabQNBSemiBold16Px2a59bd";
-      this.view.lblTabCurrent.skin = "sknLblQNBSemibold16PxWhite";
-
+    } else if (index === 1) {
       this.showCurrentAccounts();
-    } else if (selectedTab === "savings") {
-      this.view.flxTabSavings.skin = "sknFlxTabQNBSemiBold16Px2a59bd";
-      this.view.lblTabSavings.skin = "sknLblQNBSemibold16PxWhite";
-
+    } else if (index === 2) {
       this.showSavingsAccounts();
-    } else if (selectedTab === "delegated") {
-      this.view.flxTabDelegate.skin = "sknFlxTabQNBSemiBold16Px2a59bd";
-      this.view.lblTabDelegate.skin = "sknLblQNBSemibold16PxWhite";
-
+    } else if (index === 3) {
       this.showDelegatedAccounts();
     }
   },
 
-  // =========================================================
-  // TAB: ALL
-  // =========================================================
-
-  onTabAll: function () {
-    this.selectTab("all");
-  },
-
-  // =========================================================
-  // TAB: CURRENT
-  // =========================================================
-
-  onTabCurrent: function () {
-    this.selectTab("current");
-  },
-
-  // =========================================================
-  // TAB: SAVINGS
-  // =========================================================
-
-  onTabSavings: function () {
-    this.selectTab("savings");
-  },
-
-  // =========================================================
-  // TAB: DELEGATED
-  // =========================================================
-
-  onTabDelegated: function () {
-    this.selectTab("delegated");
-  },
-
-  // =========================================================
-  // ROW CLICK
-  // =========================================================
-
   onAccountRowClick: function (segmentWidget, sectionIndex, rowIndex) {
     var rowData = segmentWidget.data[sectionIndex][1][rowIndex];
 
-    alert(
-      "Clicked: " +
-        rowData.lblAccName +
-        "\nAccount: " +
-        rowData.lblAccNum +
-        "\nAmount: " +
-        rowData.lblAmount +
-        " " +
-        rowData.lblCurrency,
-    );
-
-    // Later:
-    //
-    // new kony.mvc.Navigation(
-    //     "frmAccountDetails"
-    // ).navigate(rowData);
+    new kony.mvc.Navigation("frmFixedDeposit").navigate();
   },
 });

@@ -2,12 +2,12 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "20dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "12dp"
     },
     "_margin_": [
         1,
@@ -21,15 +21,15 @@
         0,
         0
     ],
-    "_skin_": "se6a173f9bb04594b0f8ee528971a4ae",
-    "_text_": "—",
+    "_skin_": "s9429029abb946bf97c94f15b1a30fe0",
+    "_text_": "Fawran alias",
     "_top_": {
         "type": "string",
-        "value": "12dp"
+        "value": "8dp"
     },
     "_width_": {
-        "type": "string",
-        "value": "52%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "fd35a37f8ebd70d497197bbf30fafaec",
+    "kuid": "c8b9887939514722ba376870a9ec0767",
     "name": "kony.ui.Label",
     "parent": "flxTransferFrom",
     "pf": "frmFawranTransfer",

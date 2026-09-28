@@ -2,12 +2,12 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "140dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
-        "value": "6%"
+        "value": "0dp"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "The maximum Fawran transaction limit is 50,000 QAR, reduced to 10,000 QAR for unregistered or newly registered devices (first 7 days). Transfers are instant upon OTP authentication, subject to applicable terms and conditions.",
     "_top_": {
         "type": "string",
-        "value": "56dp"
+        "value": "16dp"
     },
     "_width_": {
         "type": "string",
@@ -39,6 +39,10 @@
         }
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 5,
     "id": "lblLimitInfoText",
@@ -57,7 +61,7 @@
     "isvisible": true,
     "kuid": "abc22bf8bbf17a0a633780984dda1bf4",
     "name": "kony.ui.Label",
-    "parent": "flxLimitSheet",
+    "parent": "flxLimitSheetBox",
     "pf": "frmFawranAmount",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

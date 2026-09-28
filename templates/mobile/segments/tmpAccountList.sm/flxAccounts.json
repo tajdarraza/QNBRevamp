@@ -39,9 +39,10 @@
         "value": "50%"
     },
     "children": [
+        "lblAccName",
         "lblAccountList"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerId": true,
     "containerweight": 100,
     "enablescrolling": true,
@@ -50,7 +51,7 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "f3e124d24f9c4802a074ad22892db8c0",
-    "layouttype": 2,
+    "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "flxAccountList",
     "pf": "tmpAccountList",

@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "55%"
+        "value": "60%"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "QAR",
     "_top_": {
         "type": "string",
-        "value": "64dp"
+        "value": "44dp"
     },
     "_width_": {
         "type": "string",
@@ -57,7 +57,7 @@
     "isvisible": true,
     "kuid": "f84f18e8c9e7e8a06e851044005ea22b",
     "name": "kony.ui.Label",
-    "parent": "flxContent",
+    "parent": "flxTopInfo",
     "pf": "frmFawranReview",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

@@ -1,0 +1,128 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 1,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "circularchart": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "a2e7cb05fbb34b33afd1db3030bdbc9d",
+                "srcKUID": "eff1a44a0a0a4adb81ab5df77c5ed281",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxLoanProgressBar": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "j2b114c7170044c5b671522d384ae001",
+                "srcKUID": "j1f5e3386ec34290aeca133de1b5a03a",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxLoanValues": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "icf4e672762e4e23aa543be3ccdf075e",
+                "srcKUID": "e44592170a074e4695ef0131af94e0ae",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxProgressIndicator": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "h34c6ffe3efd4d6599a446130f165eef",
+                "srcKUID": "d26c610cb6de41c392f32fd5753a7900",
+                "wType": "FlexContainer"
+            }
+        },
+        "lblNoOfLoans": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ic89054333c8474687df51e55dc27ed3",
+                "srcKUID": "d607ee92b25b476fad019d8bb8dd4f90",
+                "wType": "Label"
+            }
+        },
+        "lblRemainingAmt": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "jd3930e90c944acfa1f79f79c2671ac1",
+                "srcKUID": "jfd9f350bfcf4577b546f53ec715d3e6",
+                "wType": "Label"
+            }
+        },
+        "lblRemainingBalTxt": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "a7f55920c2c0420caa777804cd52ae7b",
+                "srcKUID": "e10a1367884e46589896d3dbd56773b2",
+                "wType": "Label"
+            }
+        },
+        "progressbar": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "f89503f28bce44308ea96f8be4001f4c",
+                "srcKUID": "gbbec1f78b524853bb91c94b9fca6837",
+                "wType": "Browser"
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "circularchart",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "a2e7cb05fbb34b33afd1db3030bdbc9d",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxLoanProgress",
+    "pf": "frmDashboard",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "eff1a44a0a0a4adb81ab5df77c5ed281",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

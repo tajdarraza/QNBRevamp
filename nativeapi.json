@@ -77,6 +77,30 @@
                     "filename": "java.lang-Android-4.0.zip",
                     "enable": true
                 }
+            },
+            "API level 29": {
+                "java.io-Android-API level 29": {
+                    "apiKey": "java.io-Android-API level 29",
+                    "title": "java.io",
+                    "platform": "Android",
+                    "os": "API level 29",
+                    "url": "/visualizer/nativeframeworks/android/3.0/java.io-Android-10.0.zip",
+                    "checksum": "51957e75cdf7d92641b1da6a904172da43ad43f2",
+                    "filename": "java.io-Android-10.0.zip",
+                    "isDefault": false,
+                    "enable": true
+                },
+                "android.content-Android-API level 29": {
+                    "apiKey": "android.content-Android-API level 29",
+                    "title": "android.content",
+                    "platform": "Android",
+                    "os": "API level 29",
+                    "url": "/visualizer/nativeframeworks/android/3.0/android.content-Android-10.0.zip",
+                    "checksum": "53e3b47c3f155697162697ae6fa774ec863075e9",
+                    "filename": "android.content-Android-10.0.zip",
+                    "isDefault": false,
+                    "enable": true
+                }
             }
         },
         "iOS": {

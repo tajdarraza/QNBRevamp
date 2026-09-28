@@ -1,13 +1,17 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0"
+    },
     "_height_": {
         "type": "string",
         "value": "22dp"
     },
     "_left_": {
         "type": "string",
-        "value": "6%"
+        "value": "16dp"
     },
     "_margin_": [
         1,
@@ -21,11 +25,15 @@
         0,
         0
     ],
+    "_right_": {
+        "type": "string",
+        "value": "0"
+    },
     "_skin_": "sffbbf6dcdcf47309e9090c6422f3859",
     "_text_": "Transfer from",
     "_top_": {
         "type": "string",
-        "value": "152dp"
+        "value": "8dp"
     },
     "_width_": {
         "type": "string",
@@ -39,6 +47,10 @@
         }
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 4,
     "id": "lblTransferFromHeading",

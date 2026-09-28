@@ -1,13 +1,17 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0dp"
+    },
     "_height_": {
         "type": "string",
         "value": "22dp"
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "0"
     },
     "_margin_": [
         1,
@@ -21,12 +25,12 @@
         0,
         0
     ],
+    "_right_": {
+        "type": "string",
+        "value": "0"
+    },
     "_skin_": "se6a173f9bb04594b0f8ee528971a4ae",
     "_text_": "—",
-    "_top_": {
-        "type": "string",
-        "value": "214dp"
-    },
     "_width_": {
         "type": "string",
         "value": "90%"
@@ -39,6 +43,10 @@
         }
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 4,
     "id": "lblRevSubPurpose",
@@ -57,7 +65,7 @@
     "isvisible": true,
     "kuid": "74e529b25b97d4a88ce935aa8fb9a833",
     "name": "kony.ui.Label",
-    "parent": "flxToCard",
+    "parent": "flxSubPurpose",
     "pf": "frmFawranReview",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

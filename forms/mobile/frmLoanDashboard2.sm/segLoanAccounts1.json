@@ -1,0 +1,173 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        [
+            {
+                "lblSettingHeader": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Personal loan"
+                }
+            },
+            [
+                {
+                    "lblInstallment": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Paid 100 of 360"
+                    },
+                    "lblRemainingBalAmt": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "14,068,680.94 QAR"
+                    },
+                    "lblRemainingBalance": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Remaining balance"
+                    },
+                    "lblTotalAmt": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "1,00,000.00"
+                    },
+                    "lblUtilAmt": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "75,000.00 QAR out of"
+                    }
+                },
+                {
+                    "lblInstallment": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Paid 100 of 360"
+                    },
+                    "lblRemainingBalAmt": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "14,068,680.94 QAR"
+                    },
+                    "lblRemainingBalance": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Remaining balance"
+                    },
+                    "lblTotalAmt": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "1,00,000.00"
+                    },
+                    "lblUtilAmt": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "75,000.00 QAR out of"
+                    }
+                }
+            ]
+        ]
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "80%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "76dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "counter": "01",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": true,
+    "id": "segLoanAccounts1",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "none"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "d40059bd95f346e38e5e1ffa7cdfccfc",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "paddinginpixel": false,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flxLoanInfo1",
+    "pf": "frmLoanDashboard2",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "c021ce7a2f67422f82876016eadbe060",
+    "rowcounter": 1,
+    "rowexpandable": false,
+    "rowfocusskin": "s2954acbe692423388f2177837594cc7",
+    "rowskin": "s4db6a0a3101432e8bf441e2857f3322",
+    "rowtemplate": "flxLoanAccounts",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionHeaderTemplateId": "cb20dc1c72454a69a2c5a7531414c1ac",
+    "sectionheaderskin": "sad5121e70a245c7850053b0d529a993",
+    "sectionheadertemplate": "tempFlxHeader",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorrequired": false,
+    "separatorthickness": 0,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxAmtUtilised": "flxAmtUtilised",
+        "flxLoanAccounts": "flxLoanAccounts",
+        "flxLoanVisual": "flxLoanVisual",
+        "flxPaidEMIs": "flxPaidEMIs",
+        "flxParent": "flxParent",
+        "flxProgressBar": "flxProgressBar",
+        "flxRemainingBal": "flxRemainingBal",
+        "flxSeperator": "flxSeperator",
+        "lblInstallment": "lblInstallment",
+        "lblRemainingBalAmt": "lblRemainingBalAmt",
+        "lblRemainingBalance": "lblRemainingBalance",
+        "lblSettingHeader": "lblSettingHeader",
+        "lblTotalAmt": "lblTotalAmt",
+        "lblUtilAmt": "lblUtilAmt",
+        "tempFlxHeader": "tempFlxHeader"
+    }
+}

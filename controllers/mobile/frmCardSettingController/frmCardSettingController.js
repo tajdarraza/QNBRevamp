@@ -13,7 +13,6 @@ define({
       action1Image: "add_card_header.png",
     });
 
-    // Segment row click
     this.view.segCardSettings.onRowClick = this.onSettingsRowClick.bind(this);
 
     // this.view.onDeviceBack = this.onDeviceBack;
@@ -33,11 +32,6 @@ define({
 
   setSettingsData: function (response) {
     var seg = this.view.segCardSettings;
-
-    // =====================================================
-    // WIDGET DATA MAP
-    // =====================================================
-
     seg.widgetDataMap = {
       // Section header
       lblSettingHeader: "lblSettingHeader",
@@ -61,7 +55,7 @@ define({
     // =====================================================
     // DEMO / LOCAL DATA
     //
-    // Later replace this with your API response.
+    // Later replace this with API response.
     // =====================================================
 
     if (!response) {
@@ -160,17 +154,7 @@ define({
         },
       ];
     }
-
-    // =====================================================
-    // BUILD SEGMENT DATA DYNAMICALLY
-    // =====================================================
-
     var segmentData = this.buildSegmentData(response);
-
-    // =====================================================
-    // SET SEGMENT DATA
-    // =====================================================
-
     seg.setData(segmentData);
   },
 
@@ -323,16 +307,8 @@ define({
     return segmentData;
   },
 
-  // =========================================================
-  // ROW CLICK
-  // =========================================================
-
   onSettingsRowClick: function (segment, sectionIndex, rowIndex) {
     var rowData;
-
-    // =====================================================
-    // GET CLICKED ROW DATA
-    // =====================================================
 
     if (
       segment &&
@@ -353,12 +329,6 @@ define({
     // =====================================================
 
     var originalData = rowData.originalData || rowData;
-
-    // =====================================================
-    // DEBUG
-    // =====================================================
-
-    // Remove this alert once your navigation is implemented.
 
     alert(
       "Clicked: " +

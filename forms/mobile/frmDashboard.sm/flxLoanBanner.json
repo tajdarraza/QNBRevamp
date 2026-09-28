@@ -1,8 +1,12 @@
 {
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "12dp"
+    },
     "_height_": {
         "type": "string",
-        "value": "120dp"
+        "value": "140dp"
     },
     "_left_": {
         "type": "string",
@@ -39,9 +43,10 @@
         "value": "50%"
     },
     "children": [
-        "imgLoanBanner"
+        "flxRewardsHeader",
+        "flxRewardsPoint"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxLoanBanner",

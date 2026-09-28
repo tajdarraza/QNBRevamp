@@ -43,7 +43,7 @@
         "value": "50%"
     },
     "children": [
-        "btnContinuPayment",
+        "btnVerifyOTP",
         "lblCancel"
     ],
     "clipbounds": true,

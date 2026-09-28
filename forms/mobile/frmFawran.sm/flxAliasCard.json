@@ -6,7 +6,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "0%"
     },
     "_margin_": [
         0,
@@ -25,16 +25,20 @@
     "_skin_": "sc07b9618ca14ee98a574d511960683e",
     "_top_": {
         "type": "string",
-        "value": "88dp"
+        "value": "24dp"
     },
     "_width_": {
         "type": "string",
-        "value": "90%"
+        "value": "86%"
     },
     "activeNativeBorderCornerRadiusControl": "centerControl",
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
         "lblFawranAliasLabel",
         "lblFawranAlias",
@@ -53,7 +57,7 @@
     "kuid": "552b761e7e8ca5cfbdf090fd26e49489",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxParent",
+    "parent": "flxMain",
     "pf": "frmFawran",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -61,5 +65,6 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 10
 }

@@ -25,11 +25,11 @@
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "232dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "27%"
+        "value": "30%"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -38,7 +38,7 @@
         "imgBtnRequest",
         "lblBtnRequest"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": false,
     "id": "flxBtnRequest",
@@ -46,9 +46,9 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "778571c69d600ba83ec2831e86143f53",
-    "layouttype": 2,
+    "layouttype": 4,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxParent",
+    "parent": "flxFawranOptions",
     "pf": "frmFawran",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

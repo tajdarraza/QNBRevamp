@@ -35,10 +35,8 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flxHeader",
-        "flxContent",
-        "flxBtnConfirm",
-        "flxBusy"
+        "flxBusy",
+        "flxMain"
     ],
     "clipbounds": false,
     "containerweight": 100,
