@@ -5,6 +5,10 @@
         "type": "ref",
         "value": "preferred"
     },
+    "_left_": {
+        "type": "string",
+        "value": "8dp"
+    },
     "_margin_": [
         1,
         1,
@@ -17,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "s8407fe05e72490a8346e8f2127acdf2",
-    "_text_": "Statement",
+    "_skin_": "scf9d03dc5724684a9e73e10b4070720",
+    "_text_": "Next instalment",
     "_top_": {
         "type": "string",
-        "value": "5dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "ref",
@@ -35,13 +39,9 @@
         }
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "CopyLabel0dd8dd237f85548",
+    "id": "lblNextInstalment",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,10 +55,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d6090a2af78b4c749a113b08c9e2b6a1",
+    "kuid": "fb30e6112ae449cca12f22d33d89b808",
     "name": "kony.ui.Label",
-    "parent": "flxMenu3",
-    "pf": "frmLoanDashboard2",
+    "parent": "flxDueDateHolder",
+    "pf": "frmLoanDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},

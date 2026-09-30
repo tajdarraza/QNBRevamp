@@ -1,10 +1,14 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0dp"
+    },
     "_children_": [],
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
@@ -25,300 +29,107 @@
     ],
     "_percent_": true,
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
-    "_top_": {
-        "type": "string",
-        "value": "8dp"
-    },
     "_width_": {
         "type": "string",
         "value": "100%"
     },
     "areflexpropsreferenced": false,
-    "autogrowmode": 1,
+    "autogrowmode": 0,
     "canUpdateUI": true,
     "clipbounds": true,
     "containerweight": 0,
     "dataDiffs": {
-        "flxAmount1": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "ieef17e80847496c819f72f242e35a61",
-                "srcKUID": "afea114adb2a4a8cba399bb5fca6bd98",
-                "wType": "FlexContainer"
-            }
-        },
-        "flxAmount2": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "e3430e8d1a014f028757e59bbdd53ce4",
-                "srcKUID": "a1cb04efee414483a94913ca2f7c478f",
-                "wType": "FlexContainer"
-            }
-        },
-        "flxAmount3": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "c40cca8170b749f5ad4471823d2b42a7",
-                "srcKUID": "d11b177bd37f4db0aa7a5f699a6afddf",
-                "wType": "FlexContainer"
-            }
-        },
         "flxHeaderRecent": {
             "__events__": {},
             "__info__": {
-                "kuid": "ddefa7b46d03475b85dc6ba5d4943a8b",
-                "srcKUID": "a55cd9c74e664b4e80271198d4eafa32",
+                "kuid": "ff20379a2b0744fa84fde089a17b635c",
+                "srcKUID": "a0ecc0015a004d0db5f14dbfda90235e",
                 "wType": "FlexContainer"
             }
         },
-        "flxTransaction1": {
+        "flxParent": {
             "__events__": {},
             "__info__": {
-                "kuid": "dd51abd720dc4f9a83c27b27b66c627a",
-                "srcKUID": "j8f45e1c923d497c8d7d35ce1c8f4d64",
+                "kuid": "faaa450353e3468eb7f71b1b7c839e4c",
+                "srcKUID": "g61e4722e9ca468cbafd12be9bd9a90f",
                 "wType": "FlexContainer"
             }
         },
-        "flxTransaction2": {
+        "flxTransactionList": {
             "__events__": {},
             "__info__": {
-                "kuid": "a3af26338a8744b09b1a292fd0354bf4",
-                "srcKUID": "b3b0c692e02c4f41ba280ba985a29ce8",
+                "kuid": "f7eed94e5bb34698b6f92719d60ee48c",
+                "srcKUID": "c438864d685b46dc96275c002c66f684",
                 "wType": "FlexContainer"
             }
         },
-        "flxTransaction3": {
+        "flxViewMore": {
             "__events__": {},
             "__info__": {
-                "kuid": "e3f66c9e13744ae58f302a9ca04f632a",
-                "srcKUID": "eb9f383f1ea2472fb5576519c4b26a02",
+                "kuid": "dedce124c4834534953a3b47ff6acfc8",
+                "srcKUID": "d984bb9c6d14462ca61ec14bf4c309f2",
                 "wType": "FlexContainer"
-            }
-        },
-        "flxTransactionName1": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "ab99b897c52e452db836bff75528d75e",
-                "srcKUID": "ge3f4b7a931147dbb3584492ad9133e1",
-                "wType": "FlexContainer"
-            }
-        },
-        "flxTransactionName2": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "be01f18d64274c668480e7047431fbbc",
-                "srcKUID": "fec3676655284cfcb5483234636cb901",
-                "wType": "FlexContainer"
-            }
-        },
-        "flxTransactionName3": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "a58efe1d668945f7ac061fde80cbaf56",
-                "srcKUID": "caec308360f44b479836de575a11fb6c",
-                "wType": "FlexContainer"
-            }
-        },
-        "flxTransactions": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "ia5e0fa8f1684c7bb43e41101149eafd",
-                "srcKUID": "fa286b28084b4461ba1b9bca61d603d4",
-                "wType": "FlexContainer"
-            }
-        },
-        "imgIcon1": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "ecd08636d76b42b0a8959b1c0c04ef6b",
-                "srcKUID": "e07b2073f78c403085c62f7df6ed3c47",
-                "wType": "Image"
-            },
-            "src": "trailingcontent.png"
-        },
-        "imgIcon2": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "e8316e2c889c45438005e25201dabac2",
-                "srcKUID": "ha9b585441fa4e1da6139922f5e02f45",
-                "wType": "Image"
-            }
-        },
-        "imgIcon3": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "g7e317323fec4e4d8e5bed1e4d27ef2f",
-                "srcKUID": "f61d1dad1c7d436d832eb3736c1c6c8e",
-                "wType": "Image"
-            },
-            "src": "trailingcontent.png"
-        },
-        "imgTranLogo1": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "aaca087aa4c4455fbf46a02be4c9af62",
-                "srcKUID": "aaaddb2ceff6477aa73e6d2b6cb5bb22",
-                "wType": "Image"
-            },
-            "src": "cash_outflow.png"
-        },
-        "imgTranLogo2": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "fda0638550c3442eaa64d6631757291d",
-                "srcKUID": "cef371f5d09d4c7f88ce19c28a5ad65a",
-                "wType": "Image"
-            },
-            "src": "cash_inflow.png"
-        },
-        "imgTranLogo3": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "ie39331ac452438aa85d882daa46f7a3",
-                "srcKUID": "hb93c897668e40c5b999a96dbff7689d",
-                "wType": "Image"
-            },
-            "src": "cash_outflow.png"
-        },
-        "lblAmount1": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "f453b5a5f89543da90786a02231397ad",
-                "srcKUID": "d30e06b71f8a416d8929db0b1c6e172c",
-                "wType": "Label"
-            }
-        },
-        "lblAmount2": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "cadb365467244a7fb12d1a955f38e89c",
-                "srcKUID": "f3e488f6f2aa4755aa3d376d3f627824",
-                "wType": "Label"
-            }
-        },
-        "lblAmount3": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "d872929e4fac437aafa7cb0a1cc65c3a",
-                "srcKUID": "g82b61448f84449e91db7dc2c244a42d",
-                "wType": "Label"
-            }
-        },
-        "lblCurr1": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "ja238ce143bc48a78c306a5e91ff7208",
-                "srcKUID": "f1f599fcbaba45668333fad284f7ce77",
-                "wType": "Label"
-            }
-        },
-        "lblCurr2": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "h836a0dfd4034a5cb7340c37c8abfd5b",
-                "srcKUID": "ec721914bb36451690daf5dc88a8935b",
-                "wType": "Label"
-            }
-        },
-        "lblCurr3": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "fcd398934b18495ca08712858b2c1ce0",
-                "srcKUID": "idfc1c07a5424a8f98c14094be661552",
-                "wType": "Label"
-            }
-        },
-        "lblDay1": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "b5342b75eca144a9a2382095c6922a3b",
-                "srcKUID": "d6f7c5041761423eb40e4a425e748c72",
-                "wType": "Label"
-            }
-        },
-        "lblDay2": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "c6e15905415948829df1602b9be05902",
-                "srcKUID": "a8ea736e8a23436dadba2dafd8cd0ba7",
-                "wType": "Label"
-            }
-        },
-        "lblDay3": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "b1076dd8ed2f4cb7a993c22089a5e233",
-                "srcKUID": "f48b588fe5524b9fa12a0c8fb3c8504d",
-                "wType": "Label"
-            }
-        },
-        "lblName1": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "bf033bd59fd04a52a71ae058c17abb86",
-                "srcKUID": "gf403572401b45cc8f6cdec6f9dd46fa",
-                "wType": "Label"
-            }
-        },
-        "lblName2": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "e1601d6df83641c79b5ef65ab24eb581",
-                "srcKUID": "d63831ce79d443bdafc64f32f2bc73d2",
-                "wType": "Label"
-            }
-        },
-        "lblName3": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "dd73d22d50764704a065f4d795e30e6b",
-                "srcKUID": "aacb8fbb16b7412ab6fa51bd53dc94e6",
-                "wType": "Label"
             }
         },
         "lblRecentTran": {
             "__events__": {},
             "__info__": {
-                "kuid": "acfe494d7fb8499a8b71e7fed5108311",
-                "srcKUID": "d71b0668fe1e4765953b08e9884e5efd",
+                "kuid": "f582b34e11c44a47a0b7aa87d9710683",
+                "srcKUID": "cd43aa0289ef4370a424d75b977fcfdb",
                 "wType": "Label"
             }
         },
         "lblSeeAll": {
             "__events__": {},
             "__info__": {
-                "kuid": "ad55cfe7ee3b4b8db4309b34325467db",
-                "srcKUID": "i00d7d0bfeee487d903ac8c8967ef1a9",
+                "kuid": "ec9020c1caf94fa084decb3ad967020b",
+                "srcKUID": "e8eaf933ec994b61aa2bf3ab8af33033",
                 "wType": "Label"
             }
         },
-        "transactions": {
+        "lblViewMore": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ad5f31b6a2f6469c93e1cee0735eb837",
+                "srcKUID": "hbd19a61c4794810b2a3d2d325a8af4c",
+                "wType": "Label"
+            }
+        },
+        "segTransactionList": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "d1b46990e9884be1b4e00f4d13ad57a2",
+                "srcKUID": "c3d0a17f35ef4a5f8fee50087a13c662",
+                "wType": "Segment"
+            }
+        },
+        "transactionList": {
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "b94e738a2347470a8a8dffd8a4067d6e",
-                "srcKUID": "jd6127922417491dab4fb04bfd3431e5",
+                "kuid": "d4ba37b8dda347189d60c3f1bf3aea4f",
+                "srcKUID": "b57835d215fb47b48c73ba7f2a83f76e",
                 "wType": "FlexContainer"
             },
             "autogrowMode": {
-                "Default": 1
+                "Default": 0
             },
-            "centerY": {
+            "bottom": {
                 "Default": {
                     "type": "string",
-                    "value": ""
+                    "value": "0dp"
                 }
             },
             "height": {
                 "Default": {
-                    "type": "ref",
-                    "value": "preferred"
+                    "type": "string",
+                    "value": "100%"
                 }
             },
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": "8dp"
+                    "value": ""
                 }
             }
         }
@@ -329,18 +140,18 @@
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "b94e738a2347470a8a8dffd8a4067d6e",
-    "layouttype": 4,
+    "kuid": "d4ba37b8dda347189d60c3f1bf3aea4f",
+    "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
-    "parent": "flxLoanTransactions",
+    "parent": "flxTransList",
     "pf": "frmLoanDashboard2",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
-    "sourceUserWidget": "jd6127922417491dab4fb04bfd3431e5",
+    "sourceUserWidget": "b57835d215fb47b48c73ba7f2a83f76e",
     "wType": "UserWidgetInstance",
     "zindex": 1
 }

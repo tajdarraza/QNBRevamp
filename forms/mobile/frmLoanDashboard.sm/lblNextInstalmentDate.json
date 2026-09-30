@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s167abc85e35468d8a955b674c5d1d0a",
+    "_skin_": "sf3bac4d48a642d2a729018e9d950718",
     "_text_": "1,500.00 QAR due Mar. 13th",
     "_top_": {
         "type": "string",
@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "Label0f635ef6f25284e",
+    "id": "lblNextInstalmentDate",
     "info": null,
     "ipad": {
         "psp": {
@@ -57,7 +57,7 @@
     "isvisible": true,
     "kuid": "a89941a297f443fb8eff0d34c7b0af5f",
     "name": "kony.ui.Label",
-    "parent": "FlexContainer0dae4e9d3900c42",
+    "parent": "flxDueDateHolder",
     "pf": "frmLoanDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

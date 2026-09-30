@@ -2,8 +2,8 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "22dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",

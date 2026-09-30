@@ -1,12 +1,12 @@
 {
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "156dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
-        "value": "0"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -25,21 +25,20 @@
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "72dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
         "value": "90%"
     },
     "allboxes": [],
-    "autogrowmode": 0,
+    "autogrowmode": 1,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
         "value": "50%"
     },
     "children": [
-        "flxLoanData",
         "flxDots",
         "flxDueDate"
     ],
@@ -53,7 +52,7 @@
     "kuid": "da0e7225a9fd49eebbcfd1193064acb3",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxParent",
+    "parent": "flxSwipeUse",
     "pf": "frmLoanDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -62,5 +61,5 @@
     "snaptogrid": true,
     "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 200
+    "zindex": 2
 }

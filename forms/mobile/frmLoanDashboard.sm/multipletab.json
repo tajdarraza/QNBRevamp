@@ -42,7 +42,7 @@
         "flxFourTab": {
             "__events__": {},
             "__info__": {
-                "kuid": "h1f9987af1694a9eb55b9994ea18b37f",
+                "kuid": "e653e25c36ea42cdbd811b033e1d136d",
                 "srcKUID": "i4ece481bde34e7ea9e30142d82101dd",
                 "wType": "FlexContainer"
             }
@@ -50,7 +50,7 @@
         "flxTab1": {
             "__events__": {},
             "__info__": {
-                "kuid": "ade37db719054183b65fd8534f81c45e",
+                "kuid": "d0548f9fb12e41109fec4ef6ee77dcd6",
                 "srcKUID": "a2c2518f4853407ab312bfc34baafe7d",
                 "wType": "FlexContainer"
             }
@@ -58,7 +58,7 @@
         "flxTab2": {
             "__events__": {},
             "__info__": {
-                "kuid": "g492d88e0a024a539cb98ca2d0fce13a",
+                "kuid": "d661efae921e43a9a0b8082b478943fe",
                 "srcKUID": "ba5ee89ac31b414fa2c4aa4ae0d5641e",
                 "wType": "FlexContainer"
             }
@@ -66,7 +66,7 @@
         "flxTab3": {
             "__events__": {},
             "__info__": {
-                "kuid": "e4af05d882f24149b4b7085937e2b102",
+                "kuid": "bc7211970a3743428fb60191cbd97ab6",
                 "srcKUID": "h86d01e69dac46a79d60ca49d7a55053",
                 "wType": "FlexContainer"
             }
@@ -74,7 +74,7 @@
         "flxTab4": {
             "__events__": {},
             "__info__": {
-                "kuid": "f3a765ecb8a04125886454b3c9439fa3",
+                "kuid": "e49b867b37a94b8fb06b074dddfe5488",
                 "srcKUID": "a2c4bb92f5cf4a26adffc03b84da6aab",
                 "wType": "FlexContainer"
             }
@@ -82,7 +82,7 @@
         "lblTab1": {
             "__events__": {},
             "__info__": {
-                "kuid": "j1609b2ab0334864ac0ca418ca34353b",
+                "kuid": "d8d059a4047245449f25ab4fb9015992",
                 "srcKUID": "a74ee172383e4a358f6822459f144b94",
                 "wType": "Label"
             }
@@ -90,7 +90,7 @@
         "lblTab2": {
             "__events__": {},
             "__info__": {
-                "kuid": "e507619d7519468bae6b3e52e5d1e9a3",
+                "kuid": "d34b214a260d4eba86679a31ee5c661f",
                 "srcKUID": "a59d0ea47f054cd68a4e1eb05c886679",
                 "wType": "Label"
             },
@@ -99,7 +99,7 @@
         "lblTab3": {
             "__events__": {},
             "__info__": {
-                "kuid": "f0f00c3047c54e71b0bbfa4a7b73a9fe",
+                "kuid": "a75d3ae4d62e44efab3ac5efae59ede2",
                 "srcKUID": "feeaaafdedf24783b755824486b6e3b7",
                 "wType": "Label"
             },
@@ -108,7 +108,7 @@
         "lblTab4": {
             "__events__": {},
             "__info__": {
-                "kuid": "b2ceef1ef3194288bb4624f5f377f148",
+                "kuid": "j784dc2a3fe847ed93bb9c8f922cc405",
                 "srcKUID": "ec8774169ac44c6a8c64caa89a989361",
                 "wType": "Label"
             },
@@ -125,10 +125,22 @@
             "autogrowMode": {
                 "Default": 0
             },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
             "height": {
                 "Default": {
                     "type": "string",
                     "value": "48dp"
+                }
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
                 }
             },
             "top": {

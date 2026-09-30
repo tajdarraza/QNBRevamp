@@ -27,7 +27,7 @@
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "8dp"
+        "value": "12dp"
     },
     "_width_": {
         "type": "string",
@@ -42,7 +42,7 @@
         "flxFourTab": {
             "__events__": {},
             "__info__": {
-                "kuid": "b60fe71bd2d44cee89ef08d8d395bf03",
+                "kuid": "hc9ec4437fed46ba9ea8fc87c07976ff",
                 "srcKUID": "i4ece481bde34e7ea9e30142d82101dd",
                 "wType": "FlexContainer"
             }
@@ -50,7 +50,7 @@
         "flxTab1": {
             "__events__": {},
             "__info__": {
-                "kuid": "cbf269f340cd439ab7bc207f97895601",
+                "kuid": "ic3b9becb914467aac4613100eb642e3",
                 "srcKUID": "a2c2518f4853407ab312bfc34baafe7d",
                 "wType": "FlexContainer"
             }
@@ -58,7 +58,7 @@
         "flxTab2": {
             "__events__": {},
             "__info__": {
-                "kuid": "f86a61d055a04e3e8c488bc35c2ad784",
+                "kuid": "db2be0c9872348b58b8481118331eb11",
                 "srcKUID": "ba5ee89ac31b414fa2c4aa4ae0d5641e",
                 "wType": "FlexContainer"
             }
@@ -66,7 +66,7 @@
         "flxTab3": {
             "__events__": {},
             "__info__": {
-                "kuid": "a6e741f513f748a2b31de506326d3ec3",
+                "kuid": "dbd41e8260db4c05af07741fa12df60d",
                 "srcKUID": "h86d01e69dac46a79d60ca49d7a55053",
                 "wType": "FlexContainer"
             }
@@ -74,7 +74,7 @@
         "flxTab4": {
             "__events__": {},
             "__info__": {
-                "kuid": "j1abbe3a66c64e25abeb130aec5cea99",
+                "kuid": "cd4964bf8f5640baa21bebbaf829352a",
                 "srcKUID": "a2c4bb92f5cf4a26adffc03b84da6aab",
                 "wType": "FlexContainer"
             }
@@ -82,7 +82,7 @@
         "lblTab1": {
             "__events__": {},
             "__info__": {
-                "kuid": "f890a1bfe57e4ccf963f4354731cea72",
+                "kuid": "d40fcbfc53944309bffb86107feae84a",
                 "srcKUID": "a74ee172383e4a358f6822459f144b94",
                 "wType": "Label"
             }
@@ -90,7 +90,7 @@
         "lblTab2": {
             "__events__": {},
             "__info__": {
-                "kuid": "a52f5600710946ad97187b8ecd0aa3f6",
+                "kuid": "a8f0411a23aa4aeb80f9b6c5af58b2ed",
                 "srcKUID": "a59d0ea47f054cd68a4e1eb05c886679",
                 "wType": "Label"
             }
@@ -98,7 +98,7 @@
         "lblTab3": {
             "__events__": {},
             "__info__": {
-                "kuid": "dd382d573993471d8972a0789d17b70d",
+                "kuid": "ae0a9d82cfab487ba3eb9c81868ad100",
                 "srcKUID": "feeaaafdedf24783b755824486b6e3b7",
                 "wType": "Label"
             }
@@ -106,7 +106,7 @@
         "lblTab4": {
             "__events__": {},
             "__info__": {
-                "kuid": "c3aa9cf3221a4062b9868dba477e363d",
+                "kuid": "d032c9f956114e55ae99412599b78a5e",
                 "srcKUID": "ec8774169ac44c6a8c64caa89a989361",
                 "wType": "Label"
             }
@@ -128,7 +128,7 @@
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": "8dp"
+                    "value": "12dp"
                 }
             }
         }

@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "0"
+        "value": "16dp"
     },
     "_margin_": [
         0,
@@ -23,7 +23,7 @@
         0
     ],
     "_skin_": "s46f4cc5af674c87a6552260c65fd4ef",
-    "_src_": "postponeloan.png",
+    "_src_": "calendar.png",
     "_top_": {
         "type": "string",
         "value": "0"
@@ -33,25 +33,21 @@
         "value": "24dp"
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
     "centery": {
         "type": "string",
         "value": "50%"
     },
     "containerweight": 100,
-    "id": "CopyImage0c4f4a84bf75b4b",
+    "id": "imgCalendar",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ha369b17c048473bbf3ebdac64b10685",
+    "kuid": "afaef44dfe1e4319ab77344b6082bc21",
     "name": "kony.ui.Image2",
-    "parent": "CopyFlexContainer0hf3083c495b64a",
-    "pf": "frmLoanDashboard2",
+    "parent": "flxDueDate",
+    "pf": "frmLoanDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "srcType": 1,

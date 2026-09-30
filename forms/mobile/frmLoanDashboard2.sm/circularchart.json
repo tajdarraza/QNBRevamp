@@ -3,8 +3,8 @@
     "DNDConfig": null,
     "_children_": [],
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "156dp"
     },
     "_left_": {
         "type": "string",
@@ -31,10 +31,10 @@
     },
     "_width_": {
         "type": "string",
-        "value": "90%"
+        "value": "100%"
     },
     "areflexpropsreferenced": false,
-    "autogrowmode": 1,
+    "autogrowmode": 0,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
@@ -47,12 +47,12 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "c4aa2b11f28245eb8a108a9a20c3e455",
+                "kuid": "b2975ce608a84c01a8276d7799a646ce",
                 "srcKUID": "eff1a44a0a0a4adb81ab5df77c5ed281",
                 "wType": "FlexContainer"
             },
             "autogrowMode": {
-                "Default": 1
+                "Default": 0
             },
             "centerX": {
                 "Default": {
@@ -68,8 +68,8 @@
             },
             "height": {
                 "Default": {
-                    "type": "ref",
-                    "value": "preferred"
+                    "type": "string",
+                    "value": "156dp"
                 }
             },
             "isVisible": true,
@@ -82,14 +82,14 @@
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "90%"
+                    "value": "100%"
                 }
             }
         },
         "flxLoanProgressBar": {
             "__events__": {},
             "__info__": {
-                "kuid": "e2b7425dbbfb4b2fa31a1ed7b4cc278d",
+                "kuid": "cb2b789e8d65414b8a1edd01150c6431",
                 "srcKUID": "j1f5e3386ec34290aeca133de1b5a03a",
                 "wType": "FlexContainer"
             }
@@ -97,7 +97,7 @@
         "flxLoanValues": {
             "__events__": {},
             "__info__": {
-                "kuid": "c07dc1fd4a034209984cd4c5f573bcc2",
+                "kuid": "j254829e8e7f47848530e7116d04ae86",
                 "srcKUID": "e44592170a074e4695ef0131af94e0ae",
                 "wType": "FlexContainer"
             }
@@ -105,7 +105,7 @@
         "flxProgressIndicator": {
             "__events__": {},
             "__info__": {
-                "kuid": "ba97a92001424db888df72434b445db6",
+                "kuid": "h6f1151a152648d09718030ce3657d77",
                 "srcKUID": "d26c610cb6de41c392f32fd5753a7900",
                 "wType": "FlexContainer"
             }
@@ -113,7 +113,7 @@
         "lblNoOfLoans": {
             "__events__": {},
             "__info__": {
-                "kuid": "i80e3c4d0c694dc3a1e5292d5aea637c",
+                "kuid": "f3a20bf8a8e1478780fb354ee6092d1f",
                 "srcKUID": "d607ee92b25b476fad019d8bb8dd4f90",
                 "wType": "Label"
             }
@@ -121,7 +121,7 @@
         "lblRemainingAmt": {
             "__events__": {},
             "__info__": {
-                "kuid": "e00a0fbe8c204fe1b41150fd522fde09",
+                "kuid": "ifae9df9f4f14392a5f333a4c881dfa5",
                 "srcKUID": "jfd9f350bfcf4577b546f53ec715d3e6",
                 "wType": "Label"
             }
@@ -129,7 +129,7 @@
         "lblRemainingBalTxt": {
             "__events__": {},
             "__info__": {
-                "kuid": "f8fbc7aa838f4442a73f8d0c0345f8a1",
+                "kuid": "fe9dc2473873490080431ca965b7329c",
                 "srcKUID": "e10a1367884e46589896d3dbd56773b2",
                 "wType": "Label"
             }
@@ -137,7 +137,7 @@
         "progressbar": {
             "__events__": {},
             "__info__": {
-                "kuid": "e28dec9310594a1bbd5d837d028f021c",
+                "kuid": "g37de68f663c401795f86e23d4149b1a",
                 "srcKUID": "gbbec1f78b524853bb91c94b9fca6837",
                 "wType": "Browser"
             }
@@ -149,11 +149,11 @@
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "c4aa2b11f28245eb8a108a9a20c3e455",
+    "kuid": "b2975ce608a84c01a8276d7799a646ce",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
-    "parent": "flxLoanDetails",
+    "parent": "flxLoanData",
     "pf": "frmLoanDashboard2",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

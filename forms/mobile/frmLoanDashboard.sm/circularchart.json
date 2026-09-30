@@ -27,11 +27,11 @@
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "8dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "90%"
     },
     "areflexpropsreferenced": false,
     "autogrowmode": 0,
@@ -76,20 +76,20 @@
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": "0dp"
+                    "value": "8dp"
                 }
             },
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "100%"
+                    "value": "90%"
                 }
             }
         },
         "flxLoanProgressBar": {
             "__events__": {},
             "__info__": {
-                "kuid": "f9c3f3abd5af44d58781ff7abbf9bbf7",
+                "kuid": "c3389746cfc641b786e680aec0da8498",
                 "srcKUID": "j1f5e3386ec34290aeca133de1b5a03a",
                 "wType": "FlexContainer"
             }
@@ -97,7 +97,7 @@
         "flxLoanValues": {
             "__events__": {},
             "__info__": {
-                "kuid": "fc46e823530e4e1e8b6f187cdbdd9f55",
+                "kuid": "c6ed4e247fc642eca08c09a08ebccde1",
                 "srcKUID": "e44592170a074e4695ef0131af94e0ae",
                 "wType": "FlexContainer"
             }
@@ -105,7 +105,7 @@
         "flxProgressIndicator": {
             "__events__": {},
             "__info__": {
-                "kuid": "b21ab8c2928945c9bc98b675498ac8d8",
+                "kuid": "jee4bc704e9d4944929a6d5799edf73a",
                 "srcKUID": "d26c610cb6de41c392f32fd5753a7900",
                 "wType": "FlexContainer"
             }
@@ -113,7 +113,7 @@
         "lblNoOfLoans": {
             "__events__": {},
             "__info__": {
-                "kuid": "bce6d016f65c4322a369c226d18f6724",
+                "kuid": "f7a5e9ef539146098423e38bc4ec717e",
                 "srcKUID": "d607ee92b25b476fad019d8bb8dd4f90",
                 "wType": "Label"
             }
@@ -121,7 +121,7 @@
         "lblRemainingAmt": {
             "__events__": {},
             "__info__": {
-                "kuid": "fb2736fb1f0c464ebc2391e9e59893d9",
+                "kuid": "cbb8448d05f241b8b22537cdd8322f56",
                 "srcKUID": "jfd9f350bfcf4577b546f53ec715d3e6",
                 "wType": "Label"
             }
@@ -129,7 +129,7 @@
         "lblRemainingBalTxt": {
             "__events__": {},
             "__info__": {
-                "kuid": "c5470e1a78b24de8b18539df35f9fed2",
+                "kuid": "jbbe47fff070424093c901c6b74dd67c",
                 "srcKUID": "e10a1367884e46589896d3dbd56773b2",
                 "wType": "Label"
             }
@@ -137,7 +137,7 @@
         "progressbar": {
             "__events__": {},
             "__info__": {
-                "kuid": "e0a2bfb91146456a849547473b0ea2f8",
+                "kuid": "b9fef7c00665442c86b0889dc1c22a28",
                 "srcKUID": "gbbec1f78b524853bb91c94b9fca6837",
                 "wType": "Browser"
             }
@@ -153,7 +153,7 @@
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
-    "parent": "flxLoanData",
+    "parent": "flxPage1",
     "pf": "frmLoanDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

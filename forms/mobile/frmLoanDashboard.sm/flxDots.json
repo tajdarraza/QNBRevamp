@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "8dp"
+        "value": "12dp"
     },
     "_left_": {
         "type": "string",
@@ -25,7 +25,7 @@
     "_skin_": "s942f8686e0c4837a2e4168c1e665d92",
     "_top_": {
         "type": "string",
-        "value": "12dp"
+        "value": "8dp"
     },
     "_width_": {
         "type": "string",
@@ -39,7 +39,7 @@
         "value": "50%"
     },
     "children": [],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxDots",
@@ -47,7 +47,7 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "dcd6e2f50bc14209bfc1b5745058250f",
-    "layouttype": 3,
+    "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxLoanDetails",
     "pf": "frmLoanDashboard",

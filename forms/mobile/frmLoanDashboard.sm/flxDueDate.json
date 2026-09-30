@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "72dp"
+        "value": "68dp"
     },
     "_left_": {
         "type": "string",
-        "value": "0"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -25,7 +25,7 @@
     "_skin_": "s3f3989acca84da9aa1ef1b46260215a",
     "_top_": {
         "type": "string",
-        "value": "8dp"
+        "value": "16dp"
     },
     "_width_": {
         "type": "string",
@@ -39,8 +39,8 @@
         "value": "50%"
     },
     "children": [
-        "Image0ce6c98f145ab48",
-        "FlexContainer0dae4e9d3900c42"
+        "imgCalendar",
+        "flxDueDateHolder"
     ],
     "clipbounds": true,
     "containerweight": 100,

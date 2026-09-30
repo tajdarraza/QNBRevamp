@@ -1,12 +1,8 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "0"
-    },
     "_height_": {
         "type": "string",
-        "value": "65%"
+        "value": "90%"
     },
     "_left_": {
         "type": "string",
@@ -27,20 +23,24 @@
     ],
     "_percent_": true,
     "_skin_": "s947eaee7c6f4648b92de6536b7c6e7f",
+    "_top_": {
+        "type": "string",
+        "value": "10%"
+    },
     "_width_": {
         "type": "string",
         "value": "100%"
     },
     "allboxes": [],
-    "allowhorizontalbounce": true,
+    "allowhorizontalbounce": false,
     "allowverticalbounce": true,
     "bounces": true,
     "canUpdateUI": true,
     "children": [
-        "flxMain",
-        "flxMain2"
+        "flxPage1",
+        "flxPage2"
     ],
-    "clipbounds": true,
+    "clipbounds": false,
     "containerweight": 100,
     "decelerat": false,
     "dragg": false,
@@ -50,21 +50,20 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "b9dfe210f77c465d9cdcda00abfe820e",
-    "layouttype": 3,
+    "kuid": "ef12731293c345619e0cfe6be6abdba7",
+    "layouttype": 2,
     "name": "kony.ui.FlexScrollContainer",
-    "pagingenabled": true,
+    "pagingenabled": false,
     "parent": "flxParent",
     "pf": "frmLoanDashboard2",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
-    "scrolldirection": 1,
+    "scrolldirection": 2,
     "snapgridsize": 10,
     "snaptogrid": true,
     "track": false,
     "verticalscrollindicator": true,
     "wType": "FlexScrollContainer",
-    "widgetalignment": 1,
-    "zindex": 10
+    "widgetalignment": 1
 }

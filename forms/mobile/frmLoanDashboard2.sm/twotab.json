@@ -42,7 +42,7 @@
         "flxFourTab": {
             "__events__": {},
             "__info__": {
-                "kuid": "a719573ac3074269b6f183cc367dd2f4",
+                "kuid": "fa20b7097ae94053abf37d9839f99914",
                 "srcKUID": "i4ece481bde34e7ea9e30142d82101dd",
                 "wType": "FlexContainer"
             }
@@ -50,7 +50,7 @@
         "flxTab1": {
             "__events__": {},
             "__info__": {
-                "kuid": "affb4a6a863347f3a59f67f76b5041a1",
+                "kuid": "b6bc5aebe83c4b5a8c658c61a749f0a9",
                 "srcKUID": "a2c2518f4853407ab312bfc34baafe7d",
                 "wType": "FlexContainer"
             }
@@ -58,7 +58,7 @@
         "flxTab2": {
             "__events__": {},
             "__info__": {
-                "kuid": "j238f7ae84eb4e0d989e63fe98086270",
+                "kuid": "fa6bae8da57948aebced40fc2ebb5dae",
                 "srcKUID": "ba5ee89ac31b414fa2c4aa4ae0d5641e",
                 "wType": "FlexContainer"
             }
@@ -66,7 +66,7 @@
         "flxTab3": {
             "__events__": {},
             "__info__": {
-                "kuid": "ce1e1c500bfd48cda5775830f9c96cb8",
+                "kuid": "f3d6f5c87f0f4a4eb167cbdcb6f4daf9",
                 "srcKUID": "h86d01e69dac46a79d60ca49d7a55053",
                 "wType": "FlexContainer"
             }
@@ -74,7 +74,7 @@
         "flxTab4": {
             "__events__": {},
             "__info__": {
-                "kuid": "c794e4c7c42a49eba6324f24fb9dfae3",
+                "kuid": "dbc8aa98a7184a2392812632c5afcf3a",
                 "srcKUID": "a2c4bb92f5cf4a26adffc03b84da6aab",
                 "wType": "FlexContainer"
             }
@@ -82,7 +82,7 @@
         "lblTab1": {
             "__events__": {},
             "__info__": {
-                "kuid": "e730735b6eb14f529c5c4aa51d055e39",
+                "kuid": "ca2b85ed1af346a78cb029c48c599a27",
                 "srcKUID": "a74ee172383e4a358f6822459f144b94",
                 "wType": "Label"
             }
@@ -90,7 +90,7 @@
         "lblTab2": {
             "__events__": {},
             "__info__": {
-                "kuid": "b2bda6eed9cb47cd89877382a05e011a",
+                "kuid": "e701b20170134ea88706563d497faf01",
                 "srcKUID": "a59d0ea47f054cd68a4e1eb05c886679",
                 "wType": "Label"
             }
@@ -98,7 +98,7 @@
         "lblTab3": {
             "__events__": {},
             "__info__": {
-                "kuid": "h253382032e4412eb7164929218d486f",
+                "kuid": "c8fefcb256a645f19140055f681ee790",
                 "srcKUID": "feeaaafdedf24783b755824486b6e3b7",
                 "wType": "Label"
             }
@@ -106,7 +106,7 @@
         "lblTab4": {
             "__events__": {},
             "__info__": {
-                "kuid": "h224e1cf63574503aa3a70ae34b2268b",
+                "kuid": "ddbda800e0ef4b31837cf6be74c07b66",
                 "srcKUID": "ec8774169ac44c6a8c64caa89a989361",
                 "wType": "Label"
             }
@@ -115,7 +115,7 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "ha8df93cd61745f19c058c794bdeed8c",
+                "kuid": "af685bcabbc84fc7ae92e2c9a5fe0a55",
                 "srcKUID": "i5cc0aa39e114283a3c47d0778029af9",
                 "wType": "FlexContainer"
             },
@@ -139,7 +139,7 @@
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "ha8df93cd61745f19c058c794bdeed8c",
+    "kuid": "af685bcabbc84fc7ae92e2c9a5fe0a55",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",

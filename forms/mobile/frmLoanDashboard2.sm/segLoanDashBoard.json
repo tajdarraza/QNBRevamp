@@ -665,7 +665,7 @@
     ],
     "_height_": {
         "type": "string",
-        "value": "326dp"
+        "value": "100%"
     },
     "_indicator_": "none",
     "_left_": {
@@ -716,7 +716,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c1f40155251449289d13751e3d0121fc",
+    "kuid": "d0e1e807abdd4f37af2ffc430b37480a",
     "masterdata": {},
     "name": "kony.ui.SegmentedUI2",
     "needpageindicator": false,
@@ -726,7 +726,7 @@
         "position": "bottom",
         "vdistance": 1
     },
-    "parent": "flxLoanDashboard",
+    "parent": "flxLoanData",
     "pf": "frmLoanDashboard2",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -748,7 +748,9 @@
     "selectedsectionindex": 0,
     "selectionbehavior": "default",
     "selectionbehaviorconfig": null,
-    "separatorrequired": false,
+    "separatorcolor": "64646464",
+    "separatorrequired": true,
+    "separatorthickness": 5,
     "showprogressindicator": true,
     "showscrollbars": false,
     "swipeContext": {

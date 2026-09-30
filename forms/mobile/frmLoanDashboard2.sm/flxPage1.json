@@ -1,12 +1,8 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "0"
-    },
     "_height_": {
         "type": "string",
-        "value": "28%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
@@ -26,7 +22,11 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s2e8804a5f2a4c4fafa3e910b737e188",
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
     "_width_": {
         "type": "string",
         "value": "100%"
@@ -34,21 +34,18 @@
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "children": [
-        "twotab1",
-        "transactionList2"
-    ],
-    "clipbounds": true,
+    "children": [],
+    "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxLoanTransactions1",
+    "id": "flxPage1",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "dd05a158d6ad4c03b3fd6801d04ba40e",
-    "layouttype": 4,
+    "kuid": "ba9c29dc417644b9a7a5212893ea9ccb",
+    "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxParent1",
+    "parent": "flxScrollMain",
     "pf": "frmLoanDashboard2",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

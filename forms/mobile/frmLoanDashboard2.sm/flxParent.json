@@ -6,7 +6,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "0"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -25,7 +25,7 @@
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "0"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
@@ -38,13 +38,11 @@
         "type": "string",
         "value": "50%"
     },
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "children": [
         "commonheader",
-        "flxLoanMain",
+        "flxLoanDetails",
+        "flxLoanInfo",
+        "flxLoanTransactions",
         "flxScrollMain"
     ],
     "clipbounds": true,
@@ -54,7 +52,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d905d8811dd1444d8ee363ace967ef5b",
+    "kuid": "af837f08a62a4cbfad7925a886a062e1",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "frmLoanDashboard2",

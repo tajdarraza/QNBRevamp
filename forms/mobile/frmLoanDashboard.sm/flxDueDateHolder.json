@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "70%"
+        "value": "80%"
     },
     "_left_": {
         "type": "string",
-        "value": "0%"
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -22,33 +22,42 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s21b83a3931342eda62dd44d8bf562af",
+    "_right_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "80%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
-        "CopyImage0c4f4a84bf75b4b"
+        "lblNextInstalment",
+        "lblNextInstalmentDate"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "CopyFlexContainer0hf3083c495b64a",
+    "id": "flxDueDateHolder",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "i2968601d3a645fb86bb7464ab859fa2",
-    "layouttype": 2,
+    "kuid": "h410b91daeaf447da134f540838042d2",
+    "layouttype": 4,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMenu2",
-    "pf": "frmLoanDashboard2",
+    "parent": "flxDueDate",
+    "pf": "frmLoanDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

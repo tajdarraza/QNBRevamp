@@ -43,36 +43,15 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "g24264fbcce84b2c88ead482a9a2d834",
+                "kuid": "dc735f4044114a4bae8fd2dd1b32d013",
                 "srcKUID": "aeca8dd7cbb84c1b8c8e214bb938ea96",
                 "wType": "FlexContainer"
-            },
-            "autogrowMode": {
-                "Default": 0
-            },
-            "centerY": {
-                "Default": {
-                    "type": "string",
-                    "value": ""
-                }
-            },
-            "height": {
-                "Default": {
-                    "type": "string",
-                    "value": "10%"
-                }
-            },
-            "top": {
-                "Default": {
-                    "type": "string",
-                    "value": "0dp"
-                }
             }
         },
         "flxAction1": {
             "__events__": {},
             "__info__": {
-                "kuid": "ead3083686574bac9ea762e67e56ba9e",
+                "kuid": "d5418bf6f80e4156bf62b55f42dc4963",
                 "srcKUID": "bf83af34e6b74d4d856c48a0b4a33609",
                 "wType": "FlexContainer"
             }
@@ -80,7 +59,7 @@
         "flxAction2": {
             "__events__": {},
             "__info__": {
-                "kuid": "c675f505c6c94c028b54ce20fd4ad21a",
+                "kuid": "f0bc3d2be5aa4038a2a2be7495d1ac44",
                 "srcKUID": "g4fc1ecc8093432b887e691201dbba0f",
                 "wType": "FlexContainer"
             }
@@ -88,7 +67,7 @@
         "flxBack": {
             "__events__": {},
             "__info__": {
-                "kuid": "ddafb4f67f1044b688ba764f2d6a013f",
+                "kuid": "ib9c86339a084e3fabb59fc5a718d70f",
                 "srcKUID": "de6658419ce74b06a59484969e74dcdb",
                 "wType": "FlexContainer"
             }
@@ -96,7 +75,7 @@
         "flxHeader": {
             "__events__": {},
             "__info__": {
-                "kuid": "ife1d107bc7e4e388bebf7dba50acbc9",
+                "kuid": "b52feab7dc3d4050a4f5bbf9e9f369e6",
                 "srcKUID": "ada0c8f26b58448bbaa1c079f25be2d7",
                 "wType": "FlexContainer"
             }
@@ -104,55 +83,33 @@
         "imgAction1": {
             "__events__": {},
             "__info__": {
-                "kuid": "d4babcd0d81b4277b8081ba40f086d38",
+                "kuid": "a52d268c5d074aedb93bc3c1e9f07244",
                 "srcKUID": "ce67e20decd44378a97bfec1f7b4ba44",
                 "wType": "Image"
-            },
-            "src": "closeicon.png"
+            }
         },
         "imgAction2": {
             "__events__": {},
             "__info__": {
-                "kuid": "faa25af6e70d4ed5acb6ca30caf5cb61",
+                "kuid": "hd5ddf8994d7415a9cf9ca6587978917",
                 "srcKUID": "c20fbf8154c643819cdcc81ef0b27b2c",
                 "wType": "Image"
-            },
-            "src": "closeicon.png"
+            }
         },
         "imgBackNav": {
             "__events__": {},
             "__info__": {
-                "kuid": "jd3dd751a4c74d62969e6ac1f82cc403",
+                "kuid": "dbceff483ba0485e96b6afccb57c4e99",
                 "srcKUID": "d760b5e8194243f3bc0edb6b4b61ca08",
                 "wType": "Image"
-            },
-            "src": "caratleftsmall.png"
+            }
         },
         "lblScreenTitle": {
             "__events__": {},
             "__info__": {
-                "kuid": "a3f79ebf575645f39cb6cb46d7169455",
+                "kuid": "d317c9a5a4b840659447a686a5c2a959",
                 "srcKUID": "e873f8c7bfa242c7b51c8559085298be",
                 "wType": "Label"
-            },
-            "centerX": {
-                "Default": {
-                    "type": "string",
-                    "value": "50.00%"
-                }
-            },
-            "centerY": {
-                "Default": {
-                    "type": "string",
-                    "value": "50.01%"
-                }
-            },
-            "text": "Loan",
-            "top": {
-                "Default": {
-                    "type": "string",
-                    "value": "0dp"
-                }
             }
         }
     },
@@ -162,12 +119,12 @@
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "g24264fbcce84b2c88ead482a9a2d834",
+    "kuid": "dc735f4044114a4bae8fd2dd1b32d013",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
-    "parent": "flxParent",
-    "pf": "frmLoanDashboard2",
+    "parent": "Form1",
+    "pf": "Form1",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

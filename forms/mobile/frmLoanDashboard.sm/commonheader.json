@@ -4,7 +4,7 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "72dp"
+        "value": "10%"
     },
     "_left_": {
         "type": "string",
@@ -59,7 +59,7 @@
             "height": {
                 "Default": {
                     "type": "string",
-                    "value": "72dp"
+                    "value": "10%"
                 }
             },
             "top": {

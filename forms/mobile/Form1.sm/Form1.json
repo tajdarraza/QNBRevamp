@@ -15,12 +15,7 @@
         0
     ],
     "_percent_": true,
-    "_pxMenuIndex": [
-        0,
-        1,
-        17
-    ],
-    "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
+    "_skin_": "sfbe0b910dfe4363bf286a9d2ada7748",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -38,15 +33,14 @@
     },
     "canUpdateUI": true,
     "children": [
-        "flxParent",
-        "notification"
+        "commonheader"
     ],
     "containerweight": 100,
     "controllerInfo": {
         "default": {
             "channel": "mobile",
             "fileType": "js",
-            "name": "frmLoanDashboard2Controller"
+            "name": "Form1Controller"
         }
     },
     "currentLocale": "default",
@@ -56,7 +50,7 @@
     "device": "iPhone16",
     "displayorientation": 1,
     "enabledforidletimeout": false,
-    "id": "frmLoanDashboard2",
+    "id": "Form1",
     "info": null,
     "initdone": false,
     "inputaccessoryviewtype": 4,
@@ -74,7 +68,7 @@
             "titleBarAttributes": {
                 "barStyle": 0,
                 "hidesBackButton": false,
-                "kuid": "j9781cdc2778479abac4db5bf367fef0",
+                "kuid": "eaf5750c66b34452941d82986d709339",
                 "leftBarButtonItems": [],
                 "leftItemsSupplementBackButton": true,
                 "prompt": "",
@@ -85,7 +79,7 @@
                         "info": {
                             "title": "Edit"
                         },
-                        "kuid": "d2704f7c46414a8c9980ea79b0dafcd8",
+                        "kuid": "if0df6fe5406469a916a1b8f77d05bbb",
                         "style": 0,
                         "tintColor": "4b88f100",
                         "type": 1
@@ -102,7 +96,7 @@
     "kiosk": {
         "needAppMenu": false
     },
-    "kuid": "ja650f8c14e04b16bfbd02ef8695b8b7",
+    "kuid": "b3fd699838a0464bb37d201bc6058750",
     "layouttype": 2,
     "name": "kony.ui.Form2",
     "needappmenu": false,

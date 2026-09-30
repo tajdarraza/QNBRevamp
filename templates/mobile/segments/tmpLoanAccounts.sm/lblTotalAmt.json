@@ -21,12 +21,8 @@
         0,
         0
     ],
-    "_skin_": "s6c148d5eff64853bf05008a57e98a0f",
-    "_text_": "1,00,000.00",
-    "_top_": {
-        "type": "string",
-        "value": "0"
-    },
+    "_skin_": "s8b4741fe99c44b7b9d2d59fab28e1ee",
+    "_text_": "on Mar. 13th",
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -39,6 +35,10 @@
         }
     },
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,

@@ -2,11 +2,15 @@
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
     "_height_": {
         "type": "string",
         "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
     },
     "_margin_": [
         0,
@@ -31,28 +35,27 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flxLoanTransactions",
-        "flxDueDate"
+        "flxLoanData",
+        "flxSwipeUse"
     ],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxMain2",
+    "id": "flxPage2",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "je24df8cf6db483391177c50d5124c33",
-    "layouttype": 4,
+    "kuid": "ha68b0b4cd7f49e5a92442583e827b64",
+    "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxScrollMain",
-    "pf": "frmLoanDashboard2",
+    "pf": "frmLoanDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
-    "reverselayoutdirection": true,
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 1000
+    "zindex": 101
 }

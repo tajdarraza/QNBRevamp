@@ -748,14 +748,13 @@
     "selectedsectionindex": 0,
     "selectionbehavior": "default",
     "selectionbehaviorconfig": null,
-    "separatorcolor": "64646464",
-    "separatorrequired": true,
-    "separatorthickness": 5,
+    "separatorrequired": false,
+    "separatorthickness": 0,
     "showprogressindicator": true,
     "showscrollbars": false,
     "swipeContext": {
         "currentPage": 0,
-        "imageWidth": 1055,
+        "imageWidth": 966,
         "widthRatio": 0
     },
     "viewtype": "pageview",

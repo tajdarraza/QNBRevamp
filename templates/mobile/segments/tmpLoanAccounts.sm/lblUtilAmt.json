@@ -21,12 +21,8 @@
         0,
         0
     ],
-    "_skin_": "s2ca9d180c3b4fad91d9d6a48c6c89f5",
+    "_skin_": "s94f6c44357541a3b3e2cb0f16f5b5aa",
     "_text_": "75,000.00 QAR out of",
-    "_top_": {
-        "type": "string",
-        "value": "0"
-    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -39,6 +35,10 @@
         }
     },
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,

@@ -69,3 +69,9 @@ function pocNotBuilt(title) {
         yesLabel: "OK"
     }, {});
 }
+function isiOS(){
+    if (kony.os.deviceInfo().name === "iPhone" || kony.os.deviceInfo().name === "iPad"){
+          return true
+    }
+    return false;
+}

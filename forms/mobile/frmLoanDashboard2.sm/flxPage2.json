@@ -6,7 +6,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "0%"
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -29,26 +29,23 @@
     },
     "_width_": {
         "type": "string",
-        "value": "28%"
+        "value": "100%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "children": [
-        "FlexContainer0c9b3de0b8e4542",
-        "Label0j9081786f2664d"
-    ],
-    "clipbounds": true,
+    "children": [],
+    "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxMenu1",
+    "id": "flxPage2",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ef9ec2b94d314826bfa11752595d75f1",
-    "layouttype": 4,
+    "kuid": "dfee399f657748b29a6c7948f1be20d5",
+    "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxLoanQuickMenu",
+    "parent": "flxScrollMain",
     "pf": "frmLoanDashboard2",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "0"
+        "value": "0dp"
     },
     "_height_": {
         "type": "string",
-        "value": "200dp"
+        "value": "80%"
     },
     "_left_": {
         "type": "string",
@@ -27,6 +27,10 @@
     ],
     "_percent_": true,
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "12dp"
+    },
     "_width_": {
         "type": "string",
         "value": "100%"
@@ -37,7 +41,7 @@
     "children": [
         "transactionList"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxTransList",

@@ -2,10 +2,12 @@ define({
   loanData: [],
   transactionData: [],
   currentLoanRow: 0,
-  previousLoanRow: -1,
-  indicators: [],
+  currentPage: 1,
+  indicatorsPage2: [],
   screenHeight: "",
-  visibilityAnimationId: 0,
+  availableHeight:"",
+  pageSwipeConfigured: false,
+  isAnimatingPage: false,
 
   onNavigate: function (navData) {
     this.view.init = this.init;
@@ -23,35 +25,42 @@ define({
 
     this.data = navData;
   },
+init: function () {
+  var deviceInfo = kony.os.deviceInfo();
 
-  init: function () {
-    var deviceInfo = kony.os.deviceInfo();
-    this.screenHeight = deviceInfo.screenHeight;
-  },
+  this.screenHeight = deviceInfo.screenHeight;
+
+  var headerHeight = this.screenHeight * 0.10;
+  var availableHeight = this.screenHeight - headerHeight;
+  this.availableHeight = availableHeight;
+
+  kony.print("LOAN :: Screen Height = " + this.screenHeight + "dp");
+  kony.print("LOAN :: Header Height = " + headerHeight + "dp");
+  kony.print("LOAN :: Available Height = " + availableHeight + "dp");
+
+  this.configurePageSwipe();
+},
 
   preShow: function () {
     this.view.circularchart.isVisible = false;
-
-    this.view.flxLoanData.height = "75%";
-
     this.currentLoanRow = 0;
-    this.previousLoanRow = -1;
-    this.visibilityAnimationId = 0;
+    this.currentPage = 1;
+    this.isAnimatingPage = false;
+    var devH = 250;
+    if(isiOS()){
+        devH = 366;
+    }
+this.view.flxSwipeUse.height = (this.availableHeight-devH)+"dp"
 
-    if (this.view.flxLoanInfo) {
-      this.view.flxLoanInfo.isVisible = true;
-      this.view.flxLoanInfo.opacity = 1;
+    // Completely disable scrolling on flxScrollMain to prevent touch interception
+    if (this.view.flxScrollMain) {
+      this.view.flxScrollMain.enableScrolling = false;
     }
 
-    if (this.view.flxLoanTransactions) {
-      this.view.flxLoanTransactions.isVisible = false;
-      this.view.flxLoanTransactions.opacity = 0;
-    }
+    this.view.flxPage1.left = "0%";
+    this.view.flxPage2.left = "100%";
 
-    if (this.view.flxDueDate) {
-      this.view.flxDueDate.isVisible = false;
-      this.view.flxDueDate.opacity = 0;
-    }
+    this.configurePageSwipe();
 
     if (this.view.segLoanAccounts) {
       this.view.segLoanAccounts.widgetDataMap = {
@@ -69,7 +78,6 @@ define({
         flxLoanDashboard: "flxLoanDashboard",
         flxLoanCard: "flxLoanCard",
         flxLoanQuickMenu: "flxLoanQuickMenu",
-        flxLoanVisual: "flxLoanVisual",
         flxRemainingToPay: "flxRemainingToPay",
         lblRemainingToPay: "lblRemainingToPay",
         flxTypeOfLoan: "flxTypeOfLoan",
@@ -99,15 +107,11 @@ define({
     }
 
     this.setLoanData();
-
     this.setLoanAccountsData(this.loanData);
-
     this.setLoanDashboardData();
 
     this.configureCircularChart();
-
     this.configureTabs();
-
     this.configureTransactionTabs();
 
     this.transactionData = [
@@ -218,82 +222,388 @@ define({
     }
 
     this.createLoanIndicators();
-
-    this.updateLoanDots(0);
-
-    this.updateLoanRowVisibility(0, false);
+    this.updateLoanDots(1);
 
     this.view.forceLayout();
   },
 
   postShow: function () {
     this.view.circularchart.isVisible = true;
+
+    if (this.view.flxScrollMain) {
+      this.view.flxScrollMain.enableScrolling = false;
+    }
   },
 
-  animateLoanSection: function (widget, shouldShow, animationId) {
-    if (!widget) {
+  configurePageSwipe: function () {
+    var self = this;
+
+    if (this.pageSwipeConfigured) {
+      kony.print("LOAN :: Page swipe already configured");
       return;
     }
 
+    if (!this.view.flxPage1) {
+      kony.print("LOAN :: flxPage1 widget missing from view tree.");
+      return;
+    }
+
+    try {
+      var swipeConfig = {
+        fingers: 1,
+        swipedistance: 30,
+        swipevelocity: 60,
+      };
+
+      // 1. Page 1 Gesture: Swipe Left -> Go to Page 2
+      this.view.flxPage1.addGestureRecognizer(
+        constants.GESTURE_TYPE_SWIPE,
+        swipeConfig,
+        function (widgetRef, gestureInfo) {
+          if (!gestureInfo || self.isAnimatingPage) return;
+
+          if (gestureInfo.swipeDirection === 1) { // 1 = SWIPE_LEFT
+            self.onPage1SwipeLeft();
+          }
+        }
+      );
+
+      // 2. Attach Gesture directly to flxSwipeUse container
+      if (this.view.flxSwipeUse) {
+        this.view.flxSwipeUse.addGestureRecognizer(
+          constants.GESTURE_TYPE_SWIPE,
+          swipeConfig,
+          function (widgetRef, gestureInfo) {
+            if (!gestureInfo || self.isAnimatingPage) return;
+
+            if (gestureInfo.swipeDirection === 2) { // 2 = SWIPE_RIGHT
+              self.onPage2SwipeRight();
+            }
+          }
+        );
+      }
+
+      // 3. Fallback gesture on segLoanDashBoard for row 0 right-swipe
+      if (this.view.segLoanDashBoard) {
+        this.view.segLoanDashBoard.addGestureRecognizer(
+          constants.GESTURE_TYPE_SWIPE,
+          swipeConfig,
+          function (widgetRef, gestureInfo) {
+            if (!gestureInfo || self.isAnimatingPage) return;
+
+            if (gestureInfo.swipeDirection === 2 && self.currentLoanRow === 0) {
+              kony.print("LOAN :: Fallback gesture on Segment triggered Page 2 -> Page 1");
+              self.onPage2SwipeRight();
+            }
+          }
+        );
+      }
+
+      this.pageSwipeConfigured = true;
+      kony.print("LOAN :: Gestures attached cleanly");
+    } catch (err) {
+      kony.print("LOAN :: Error binding gesture engines: " + JSON.stringify(err));
+    }
+  },
+
+  onPage1SwipeLeft: function () {
+    if (this.isAnimatingPage) {
+      kony.print("LOAN :: Swipe ignored - page animation running");
+      return;
+    }
+
+    if (!this.view.flxPage1 || !this.view.flxPage2) {
+      return;
+    }
+
+    this.isAnimatingPage = true;
+    this.currentPage = 2;
     var self = this;
 
-    if (shouldShow) {
-      widget.isVisible = true;
-      widget.opacity = 0;
-
-      widget.animate(
-        kony.ui.createAnimation({
-          100: {
-            opacity: 1,
-          },
-        }),
-        {
-          duration: 0.28,
-          fillMode: kony.anim.FILL_MODE_FORWARDS,
-        },
-        {
-          animationEnd: function () {
-            if (animationId !== self.visibilityAnimationId) {
-              return;
-            }
-
-            widget.opacity = 1;
-            widget.isVisible = true;
-
-            self.view.forceLayout();
-          },
-        },
-      );
-    } else {
-      widget.animate(
-        kony.ui.createAnimation({
-          100: {
-            opacity: 0,
-          },
-        }),
-        {
-          duration: 0.22,
-          fillMode: kony.anim.FILL_MODE_FORWARDS,
-        },
-        {
-          animationEnd: function () {
-            if (animationId !== self.visibilityAnimationId) {
-              return;
-            }
-
-            widget.opacity = 0;
-            widget.isVisible = false;
-
-            self.view.forceLayout();
-          },
-        },
-      );
+    // Reset Page 2 tabs: select Activity tab (Index 0) and show transactionList
+    if (this.view.twotab && typeof this.view.twotab.setSelectedTab === "function") {
+      this.view.twotab.setSelectedTab(0);
+    } else if (this.view.twotab) {
+      this.configureTransactionTabs();
     }
+    if (this.view.transactionList) {
+      this.view.transactionList.isVisible = true;
+    }
+
+    kony.print("LOAN :: Moving Layout View from Page 1 -> Page 2");
+
+    var page1Animation = kony.ui.createAnimation({
+      100: {
+        left: "-100%",
+        stepConfig: { timingFunction: kony.anim.EASE_IN_OUT },
+      },
+    });
+
+    var page2Animation = kony.ui.createAnimation({
+      100: {
+        left: "0%",
+        stepConfig: { timingFunction: kony.anim.EASE_IN_OUT },
+      },
+    });
+
+    this.view.flxPage1.animate(
+      page1Animation,
+      { duration: 0.25, fillMode: kony.anim.FILL_MODE_FORWARDS },
+      {
+        animationEnd: function () {
+          self.view.flxPage1.left = "-100%";
+          self.view.flxPage2.left = "0%";
+
+          if (self.view.flxScrollMain) {
+            self.view.flxScrollMain.enableScrolling = false;
+          }
+
+          self.updateLoanDots(self.currentLoanRow + 1);
+          self.isAnimatingPage = false;
+          kony.print("LOAN :: Page 1 -> Page 2 completed");
+        },
+      }
+    );
+
+    this.view.flxPage2.animate(page2Animation, {
+      duration: 0.25,
+      fillMode: kony.anim.FILL_MODE_FORWARDS,
+    });
+  },
+
+  onPage2SwipeRight: function () {
+    if (this.isAnimatingPage) {
+      kony.print("LOAN :: Swipe ignored - page animation running");
+      return;
+    }
+
+    if (!this.view.flxPage1 || !this.view.flxPage2) {
+      return;
+    }
+
+    this.isAnimatingPage = true;
+    this.currentPage = 1;
+    var self = this;
+
+    // Reset Page 1 tabs: select "All" tab (Index 0) and display all accounts data
+    if (this.view.multipletab && typeof this.view.multipletab.setSelectedTab === "function") {
+      this.view.multipletab.setSelectedTab(0);
+    } else if (this.view.multipletab) {
+      this.configureTabs();
+    }
+    this.setLoanAccountsData(this.loanData);
+
+    kony.print("LOAN :: Moving Layout View from Page 2 -> Page 1");
+
+    var page1Animation = kony.ui.createAnimation({
+      100: {
+        left: "0%",
+        stepConfig: { timingFunction: kony.anim.EASE_IN_OUT },
+      },
+    });
+
+    var page2Animation = kony.ui.createAnimation({
+      100: {
+        left: "100%",
+        stepConfig: { timingFunction: kony.anim.EASE_IN_OUT },
+      },
+    });
+
+    this.view.flxPage1.animate(
+      page1Animation,
+      { duration: 0.25, fillMode: kony.anim.FILL_MODE_FORWARDS },
+      {
+        animationEnd: function () {
+          self.view.flxPage1.left = "0%";
+          self.view.flxPage2.left = "100%";
+
+          self.isAnimatingPage = false;
+          kony.print("LOAN :: Page 2 -> Page 1 completed");
+        },
+      }
+    );
+
+    this.view.flxPage2.animate(page2Animation, {
+      duration: 0.25,
+      fillMode: kony.anim.FILL_MODE_FORWARDS,
+    });
+  },
+
+  createLoanIndicators: function () {
+    if (!this.view.segLoanDashBoard) {
+      return;
+    }
+
+    if (this.view.flxDotsPage1) {
+      this.view.flxDotsPage1.removeAll();
+      this.view.flxDotsPage1.layoutType = kony.flex.FREE_FORM;
+    }
+    if (this.view.flxDots) {
+      this.view.flxDots.removeAll();
+      this.view.flxDots.layoutType = kony.flex.FREE_FORM;
+    }
+
+    this.indicatorsPage2 = [];
+
+    var data = this.view.segLoanDashBoard.data || [];
+    var totalDots = data.length + 1;
+
+    if (totalDots <= 0) {
+      return;
+    }
+
+    var normalWidthNum = 10;
+    var selectedWidthNum = 20;
+    var gapNum = 4;
+
+    var totalContentWidth =
+      selectedWidthNum +
+      (totalDots - 1) * normalWidthNum +
+      (totalDots - 1) * gapNum;
+
+    var createCenteredInnerWrapper = function (id) {
+      return new kony.ui.FlexContainer(
+        {
+          id: id,
+          width: totalContentWidth + "dp",
+          height: "20dp",
+          centerX: "50%",
+          centerY: "50%",
+          layoutType: kony.flex.FLOW_HORIZONTAL,
+          clipBounds: false,
+          zIndex: 10,
+        },
+        {},
+        {}
+      );
+    };
+
+    if (this.view.flxDotsPage1) {
+      var innerFlowP1 = createCenteredInnerWrapper("flxPage1DotsInnerFlow");
+
+      for (var i = 0; i < totalDots; i++) {
+        var isSelectedP1 = i === 0;
+
+        var dotP1 = new kony.ui.FlexContainer(
+          {
+            id: "flxLoanDotPage1_" + i,
+            centerY: "50%",
+            width: (isSelectedP1 ? selectedWidthNum : normalWidthNum) + "dp",
+            height: "10dp",
+            left: i === 0 ? "0dp" : gapNum + "dp",
+            skin: isSelectedP1 ? "sknDotSelected" : "sknDotUnselected",
+            clipBounds: false,
+          },
+          {},
+          {}
+        );
+
+        innerFlowP1.add(dotP1);
+      }
+
+      this.view.flxDotsPage1.add(innerFlowP1);
+      this.view.flxDotsPage1.forceLayout();
+    }
+
+    if (this.view.flxDots) {
+      var innerFlowP2 = createCenteredInnerWrapper("flxPage2DotsInnerFlow");
+
+      for (var j = 0; j < totalDots; j++) {
+        var isSelectedP2 = j === 1;
+
+        var dotP2 = new kony.ui.FlexContainer(
+          {
+            id: "flxLoanDotPage2_" + j,
+            centerY: "50%",
+            width: (isSelectedP2 ? selectedWidthNum : normalWidthNum) + "dp",
+            height: "10dp",
+            left: j === 0 ? "0dp" : gapNum + "dp",
+            skin: isSelectedP2 ? "sknDotSelected" : "sknDotUnselected",
+            clipBounds: false,
+          },
+          {},
+          {}
+        );
+
+        innerFlowP2.add(dotP2);
+        this.indicatorsPage2.push(dotP2);
+      }
+
+      this.view.flxDots.add(innerFlowP2);
+      this.view.flxDots.forceLayout();
+    }
+
+    kony.print(
+      "LOAN :: Indicators built cleanly with total width: " +
+        totalContentWidth +
+        "dp"
+    );
+  },
+
+  updateLoanDots: function (targetIndex) {
+    if (
+      !this.indicatorsPage2 ||
+      !this.indicatorsPage2.length ||
+      targetIndex < 1 ||
+      targetIndex >= this.indicatorsPage2.length
+    ) {
+      return;
+    }
+
+    for (var j = 0; j < this.indicatorsPage2.length; j++) {
+      if (j === 0) {
+        continue;
+      }
+
+      var dotWidget = this.indicatorsPage2[j];
+      var isSelected = j === targetIndex;
+
+      if (dotWidget) {
+        dotWidget.skin = isSelected ? "sknDotSelected" : "sknDotUnselected";
+
+        dotWidget.animate(
+          kony.ui.createAnimation({
+            100: {
+              width: isSelected ? "20dp" : "10dp",
+            },
+          }),
+          {
+            duration: 0.25,
+            fillMode: kony.anim.FILL_MODE_FORWARDS,
+          }
+        );
+      }
+    }
+
+    if (this.indicatorsPage2[0] && this.indicatorsPage2[0].parent) {
+      this.indicatorsPage2[0].parent.forceLayout();
+    }
+
+    this.activeDotIndex = targetIndex;
+  },
+
+  onLoanSwipeMove: function (widgetHandle, context) {
+    if (!context) {
+      kony.print("LOAN :: widgetSwipeMove callback without context");
+      return;
+    }
+
+    var rowIndex = Number(context.rowIndex);
+
+    if (isNaN(rowIndex)) {
+      return;
+    }
+
+    if (rowIndex < 0 || rowIndex >= this.loanData.length) {
+      return;
+    }
+
+    this.currentLoanRow = rowIndex;
+    this.updateLoanDots(rowIndex + 1);
   },
 
   configureCircularChart: function () {
     if (!this.view.circularchart) {
-      kony.print("LOAN :: circularchart component not found");
       return;
     }
 
@@ -305,9 +615,7 @@ define({
 
       var totalAmount =
         parseFloat(String(loan.totalAmount).replace(/,/g, "")) || 0;
-
       var paidInstallments = parseFloat(loan.paidInstallments) || 0;
-
       var totalInstallments = parseFloat(loan.totalInstallments) || 0;
 
       totalLoan += totalAmount;
@@ -317,14 +625,10 @@ define({
       }
     }
 
-    kony.print("LOAN :: Circular chart totalLoan = " + totalLoan);
-
-    kony.print("LOAN :: Circular chart totalPaid = " + totalPaid);
-
     this.view.circularchart.configure(
       totalLoan,
       totalPaid,
-      this.loanData.length,
+      this.loanData.length
     );
   },
 
@@ -332,68 +636,40 @@ define({
     var selectedLoan = this.loanData[this.currentLoanRow];
 
     if (!selectedLoan) {
-      kony.print("LOAN :: No selected loan found for postpone");
       return;
     }
 
-    kony.print("LOAN :: flxClick1 tapped | row = " + this.currentLoanRow);
-
-    kony.print("LOAN :: Selected loan = " + JSON.stringify(selectedLoan));
-
-    kony.print("LOAN :: Postpone status = " + selectedLoan.postponeStatus);
-
     if (selectedLoan.postponeStatus === "allowed") {
-      kony.print("LOAN :: Postpone allowed - navigating");
-
       new kony.mvc.Navigation("frmLoanPostpone").navigate({
         loan: selectedLoan,
         loanIndex: this.currentLoanRow,
       });
-
       return;
     }
 
     if (selectedLoan.postponeStatus === "not_allowed") {
-      kony.print("LOAN :: Postpone not allowed - showing warning");
-
       this.showPostponeNotification(
         "warning",
         "Unable to postpone",
-        "You've hit the limit (2 months per year) and can no longer postpone.",
+        "You've hit the limit (2 months per year) and can no longer postpone."
       );
-
       return;
     }
 
     if (selectedLoan.postponeStatus === "not_eligible") {
-      kony.print("LOAN :: Postpone not eligible - showing info");
-
       this.showPostponeNotification(
         "info",
         "Attention",
-        "You are not eligible for a loan postponement of this loan.",
+        "You are not eligible for a loan postponement of this loan."
       );
-
-      return;
     }
-
-    kony.print(
-      "LOAN :: Unknown postpone status = " + selectedLoan.postponeStatus,
-    );
   },
 
   showPostponeNotification: function (type, title, description) {
     if (!this.view.notification) {
-      kony.print("LOAN :: notification component not found");
-
       alert(description);
-
       return;
     }
-
-    kony.print(
-      "LOAN :: Showing notification | type = " + type + " | title = " + title,
-    );
 
     this.view.notification.show({
       type: type,
@@ -410,126 +686,12 @@ define({
 
   onMenuClick2: function () {
     kony.print("LOAN :: flxClick2 tapped | row = " + this.currentLoanRow);
-
     alert("Pay to unlock more features");
   },
 
   onMenuClick3: function () {
     kony.print("LOAN :: flxClick3 tapped | row = " + this.currentLoanRow);
-
     alert("Pay to unlock more features");
-  },
-
-  updateLoanRowVisibility: function (rowIndex, animateVisibility) {
-    var isFirstRow = rowIndex === 0;
-
-    if (typeof animateVisibility === "undefined") {
-      animateVisibility = true;
-    }
-
-    var isInitialSetup = this.previousLoanRow === -1;
-
-    var wasFirstRow = this.previousLoanRow === 0;
-
-    var layoutStateChanged = isInitialSetup || isFirstRow !== wasFirstRow;
-
-    //this.view.circularchart.isVisible = isFirstRow;
-
-    if (!layoutStateChanged) {
-      kony.print(
-        "LOAN :: No layout transition | previousRow = " +
-          this.previousLoanRow +
-          " | currentRow = " +
-          rowIndex,
-      );
-
-      this.previousLoanRow = rowIndex;
-
-      return;
-    }
-
-    this.visibilityAnimationId++;
-
-    var animationId = this.visibilityAnimationId;
-
-    var devHeight = this.screenHeight;
-
-    kony.print("LOAN :: devHeight = " + devHeight);
-
-    var isAndroid = kony.os.deviceInfo().name;
-
-    var page1Size = "";
-    var page2Size = "";
-
-    if (isAndroid === "android") {
-      page1Size = 228;
-      page2Size = 474;
-    } else {
-      page1Size = 362;
-      page2Size = 618;
-    }
-
-    if (!isFirstRow) {
-      this.view.flxLoanDetails.height = "448dp";
-
-      this.view.flxLoanTransactions.height = devHeight - page2Size;
-
-      this.view.flxTransList.height = this.view.flxLoanTransactions.height - 64;
-
-      kony.print("LOAN :: Transition 0 -> non-zero");
-    } else {
-      this.view.flxLoanDetails.height = "220dp";
-
-      this.view.flxLoanInfo.height = devHeight - page1Size;
-
-      kony.print("LOAN :: Transition non-zero -> 0");
-    }
-
-    if (this.view.flxLoanInfo) {
-      if (animateVisibility) {
-        this.animateLoanSection(this.view.flxLoanInfo, isFirstRow, animationId);
-      } else {
-        this.view.flxLoanInfo.isVisible = isFirstRow;
-        this.view.flxLoanInfo.opacity = isFirstRow ? 1 : 0;
-      }
-    }
-
-    if (this.view.flxLoanTransactions) {
-      if (animateVisibility) {
-        this.animateLoanSection(
-          this.view.flxLoanTransactions,
-          !isFirstRow,
-          animationId,
-        );
-      } else {
-        this.view.flxLoanTransactions.isVisible = !isFirstRow;
-        this.view.flxLoanTransactions.opacity = !isFirstRow ? 1 : 0;
-      }
-    }
-
-    if (this.view.flxDueDate) {
-      this.view.flxDueDate.isVisible = !isFirstRow;
-      this.view.flxDueDate.opacity = !isFirstRow ? 1 : 0;
-    }
-
-    this.view.forceLayout();
-
-    kony.print(
-      "LOAN :: Row visibility updated | previousRow = " +
-        this.previousLoanRow +
-        " | -- currentRow = " +
-        rowIndex +
-        " | -- flxLoanInfo = " +
-        isFirstRow +
-        " | -- flxLoanTransactions = " +
-        !isFirstRow +
-        " | -- flxDueDate = " +
-        !isFirstRow +
-        " |-- animated = " +
-        animateVisibility,
-    );
-
-    this.previousLoanRow = rowIndex;
   },
 
   onLoanDashboardSwipe: function (
@@ -537,41 +699,41 @@ define({
     sectionIndex,
     rowIndex,
     selectionState,
+    dir
   ) {
     kony.print(
-      "LOAN :: onSwipe sectionIndex = " +
+      "LOAN :: onSwipe | section=" +
         sectionIndex +
-        " | rowIndex = " +
-        rowIndex,
+        " | row=" +
+        rowIndex +
+        " | state=" +
+        selectionState+" dir "+dir
     );
 
-    if (typeof rowIndex !== "number") {
-      kony.print("LOAN :: Invalid rowIndex = " + rowIndex);
-
+    var rIndex = Number(rowIndex);
+    if (isNaN(rIndex)) {
       return;
     }
 
-    this.currentLoanRow = rowIndex;
+    var stateNum = Number(selectionState);
 
-    this.updateLoanRowVisibility(rowIndex, true);
+    /*
+     * ROW 0 SWIPE HANDLER:
+     * Swipe right (or left depending on state flags) at row 0 triggers transition back to Page 1
+     */
+    if ((rIndex === 0 || this.currentLoanRow === 0) && (stateNum === 2 || stateNum === 1) && !this.isAnimatingPage) {
+      kony.print("LOAN :: Row 0 Swipe -> Moving to Page 1");
+      this.onPage2SwipeRight();
+      return;
+    }
 
-    this.updateLoanDots(rowIndex);
-
-    kony.print("LOAN :: Current loan row = " + this.currentLoanRow);
-
-    kony.print(
-      "LOAN :: Current loan image = " +
-        (this.loanData[rowIndex] && this.loanData[rowIndex].imgTypeOfLoan
-          ? this.loanData[rowIndex].imgTypeOfLoan
-          : "EMPTY"),
-    );
-
-    kony.print(
-      "LOAN :: Current postpone status = " +
-        (this.loanData[rowIndex]
-          ? this.loanData[rowIndex].postponeStatus
-          : "EMPTY"),
-    );
+    /*
+     * Normal row tracking
+     */
+    if (rIndex >= 0 && rIndex < this.loanData.length) {
+      this.currentLoanRow = rIndex;
+      this.updateLoanDots(rIndex + 1);
+    }
   },
 
   setLoanData: function () {
@@ -664,9 +826,6 @@ define({
         transactions: [transaction],
       },
     ];
-
-    kony.print("LOAN :: Total loans = " + this.loanData.length);
-    kony.print("LOAN :: loanData = " + JSON.stringify(this.loanData));
   },
 
   setLoanAccountsData: function (data) {
@@ -698,42 +857,37 @@ define({
 
     if (personalLoans.length > 0) {
       sections.push([
-        {
-          lblSettingHeader: "Personal Loans",
-        },
+        { lblSettingHeader: "Personal Loans" },
         personalLoans,
       ]);
     }
 
     if (vehicleLoans.length > 0) {
       sections.push([
-        {
-          lblSettingHeader: "Vehicle Loans",
-        },
+        { lblSettingHeader: "Vehicle Loans" },
         vehicleLoans,
       ]);
     }
 
     if (mortgageLoans.length > 0) {
       sections.push([
-        {
-          lblSettingHeader: "Mortgage Loans",
-        },
+        { lblSettingHeader: "Mortgage Loans" },
         mortgageLoans,
       ]);
     }
 
-    this.view.segLoanAccounts.setData(sections);
+    if (this.view.segLoanAccounts) {
+      this.view.segLoanAccounts.setData(sections);
+    }
   },
 
   setLoanDashboardData: function () {
+    var self = this;
     var rows = [];
 
     for (var i = 0; i < this.loanData.length; i++) {
       var loan = this.loanData[i];
-
       var remainingBalance = loan.remainingBalance || "";
-
       var amountMain = remainingBalance;
       var amountDecimal = "";
 
@@ -741,199 +895,85 @@ define({
 
       if (decimalIndex !== -1) {
         amountMain = remainingBalance.substring(0, decimalIndex);
-
         amountDecimal = remainingBalance.substring(decimalIndex);
       }
 
       var percentage = 0;
-
       if (loan.totalInstallments > 0) {
         percentage = Math.round(
-          (loan.paidInstallments / loan.totalInstallments) * 100,
+          (loan.paidInstallments / loan.totalInstallments) * 100
         );
       }
 
-      if (percentage > 100) {
-        percentage = 100;
-      }
-
-      if (percentage < 0) {
-        percentage = 0;
-      }
+      if (percentage > 100) percentage = 100;
+      if (percentage < 0) percentage = 0;
 
       rows.push({
-        flxLoanVisual: {
-          isVisible: i === 0,
-        },
-
-        flxLoanCard: {
-          isVisible: i !== 0,
-        },
-
-        flxLoanQuickMenu: {
-          isVisible: i !== 0,
-        },
-
+        flxLoanDashboard: { isVisible: true },
+        flxLoanCard: { isVisible: true },
+        flxLoanQuickMenu: { isVisible: true },
+        flxRemainingToPay: { isVisible: true },
+        lblRemainingToPay: { text: "Remaining to Pay" },
+        flxTypeOfLoan: { isVisible: true },
+        lblTypeOfLoan: { text: loan.loanName || loan.loanType || "" },
+        imgTypeOfLoan: { src: loan.imgTypeOfLoan || "usericon.png" },
+        flxRemainingAmt: { isVisible: true },
+        lblRemainingAmount: { text: amountMain },
+        lblRemainingAmtDecimal: { text: amountDecimal },
+        flxPercentagePaid: { isVisible: true },
+        flxPaid: { isVisible: true },
+        lblPaid: { text: percentage + "% repaid" },
+        flxBottomLoan: { isVisible: true },
+        flxProgressBack: { isVisible: true },
+        flxProgressBar: { isVisible: true, width: percentage + "%" },
+        flxCompletedPayments: { isVisible: true },
+        lblPaymentCompleted: { text: "Payments Completed" },
+        lblTotalEMI: { text: loan.paidInstallments + " of " + loan.totalInstallments },
+        flxLoanAmount: { isVisible: true },
+        lblLoanAmount: { text: "Loan Amount" },
+        lblLoanAmountVal: { text: "QAR " + loan.totalAmount },
         flxClick1: {
-          isVisible: i !== 0,
-          onTouchEnd: this.onMenuClick1.bind(this),
+          isVisible: true,
+          onTouchEnd: function () {
+            self.onMenuClick1();
+          },
         },
-
         flxClick2: {
-          isVisible: i !== 0,
-          onTouchEnd: this.onMenuClick2.bind(this),
+          isVisible: true,
+          onTouchEnd: function () {
+            self.onMenuClick2();
+          },
         },
-
         flxClick3: {
-          isVisible: i !== 0,
-          onTouchEnd: this.onMenuClick3.bind(this),
-        },
-
-        flxLoanDashboard: {
           isVisible: true,
-        },
-
-        flxRemainingToPay: {
-          isVisible: true,
-        },
-
-        lblRemainingToPay: {
-          text: "Remaining to Pay",
-          isVisible: true,
-        },
-
-        flxTypeOfLoan: {
-          isVisible: true,
-        },
-
-        lblTypeOfLoan: {
-          text: loan.loanName || loan.loanType || "",
-          isVisible: true,
-        },
-
-        imgTypeOfLoan: {
-          src: loan.imgTypeOfLoan || "usericon.png",
-          isVisible: true,
-        },
-
-        flxRemainingAmt: {
-          isVisible: true,
-        },
-
-        lblRemainingAmount: {
-          text: amountMain,
-          isVisible: true,
-        },
-
-        lblRemainingAmtDecimal: {
-          text: amountDecimal,
-          isVisible: true,
-        },
-
-        flxPercentagePaid: {
-          isVisible: true,
-        },
-
-        flxPaid: {
-          isVisible: true,
-        },
-
-        lblPaid: {
-          text: percentage + "% repaid",
-          isVisible: true,
-        },
-
-        flxBottomLoan: {
-          isVisible: true,
-        },
-
-        flxProgressBack: {
-          isVisible: true,
-        },
-
-        flxProgressBar: {
-          isVisible: true,
-          width: percentage + "%",
-        },
-
-        flxCompletedPayments: {
-          isVisible: true,
-        },
-
-        lblPaymentCompleted: {
-          text: "Payments Completed",
-          isVisible: true,
-        },
-
-        lblTotalEMI: {
-          text: loan.paidInstallments + " of " + loan.totalInstallments,
-          isVisible: true,
-        },
-
-        flxLoanAmount: {
-          isVisible: true,
-        },
-
-        lblLoanAmount: {
-          text: "Loan Amount",
-          isVisible: true,
-        },
-
-        lblLoanAmountVal: {
-          text: "QAR " + loan.totalAmount,
-          isVisible: true,
+          onTouchEnd: function () {
+            self.onMenuClick3();
+          },
         },
       });
     }
 
     this.view.segLoanDashBoard.setData(rows);
-
     this.currentLoanRow = 0;
-
     kony.print("LOAN :: Dashboard rows = " + rows.length);
-
-    kony.print("LOAN :: ALL rows use flxLoanDashboard");
-
-    kony.print("LOAN :: Row 0 = flxLoanVisual visible");
-
-    kony.print("LOAN :: Rows 1+ = flxLoanCard + flxLoanQuickMenu visible");
   },
 
   configureTabs: function () {
     var self = this;
 
+    if (!this.view.multipletab) {
+      return;
+    }
+
     this.view.multipletab.initialize({
       selectedIndex: 0,
-
       flxFourTabSkin: "sknParent72PxBgf4f3f6",
-
       tabs: [
-        {
-          flx: "flxTab1",
-          lbl: "lblTab1",
-          text: "All",
-          enabled: true,
-        },
-        {
-          flx: "flxTab2",
-          lbl: "lblTab2",
-          text: "Personal",
-          enabled: true,
-        },
-        {
-          flx: "flxTab3",
-          lbl: "lblTab3",
-          text: "Vehicle",
-          enabled: true,
-        },
-        {
-          flx: "flxTab4",
-          lbl: "lblTab4",
-          text: "Mortgage",
-          enabled: true,
-        },
+        { flx: "flxTab1", lbl: "lblTab1", text: "All", enabled: true },
+        { flx: "flxTab2", lbl: "lblTab2", text: "Personal", enabled: true },
+        { flx: "flxTab3", lbl: "lblTab3", text: "Vehicle", enabled: true },
+        { flx: "flxTab4", lbl: "lblTab4", text: "Mortgage", enabled: true },
       ],
-
       onTabSelected: function (tab, index) {
         self.onTabSelected(tab, index);
       },
@@ -941,29 +981,25 @@ define({
   },
 
   onTabSelected: function (tab, index) {
-    kony.print("LOAN :: TAB " + tab.flx + " INDEX " + index);
-
     if (index === 0) {
       this.setLoanAccountsData(this.loanData);
-    } else if (index === 1) {
-      this.setLoanAccountsData(
-        this.loanData.filter(function (loan) {
-          return loan.loanType === "Personal";
-        }),
-      );
-    } else if (index === 2) {
-      this.setLoanAccountsData(
-        this.loanData.filter(function (loan) {
-          return loan.loanType === "Vehicle";
-        }),
-      );
-    } else if (index === 3) {
-      this.setLoanAccountsData(
-        this.loanData.filter(function (loan) {
-          return loan.loanType === "Mortgage";
-        }),
-      );
+      return;
     }
+
+    var type = "";
+    if (index === 1) {
+      type = "Personal";
+    } else if (index === 2) {
+      type = "Vehicle";
+    } else if (index === 3) {
+      type = "Mortgage";
+    }
+
+    this.setLoanAccountsData(
+      this.loanData.filter(function (loan) {
+        return loan.loanType === type;
+      })
+    );
   },
 
   configureTransactionTabs: function () {
@@ -975,24 +1011,11 @@ define({
 
     this.view.twotab.initialize({
       selectedIndex: 0,
-
       flxFourTabSkin: "sknParent72PxBgf4f3f6",
-
       tabs: [
-        {
-          flx: "flxTab1",
-          lbl: "lblTab1",
-          text: "Activity",
-          enabled: true,
-        },
-        {
-          flx: "flxTab2",
-          lbl: "lblTab2",
-          text: "Details",
-          enabled: true,
-        },
+        { flx: "flxTab1", lbl: "lblTab1", text: "Activity", enabled: true },
+        { flx: "flxTab2", lbl: "lblTab2", text: "Details", enabled: true },
       ],
-
       onTabSelected: function (tab, index) {
         self.onTransactionTabSelected(tab, index);
       },
@@ -1007,93 +1030,5 @@ define({
     }
 
     this.view.forceLayout();
-  },
-
-  createLoanIndicators: function () {
-    if (!this.view.flxDots) {
-      kony.print("LOAN :: flxDots not found");
-
-      return;
-    }
-
-    this.view.flxDots.removeAll();
-
-    this.indicators = [];
-
-    var data = this.view.segLoanDashBoard.data || [];
-
-    var pageCount = data.length;
-
-    kony.print("LOAN :: Creating " + pageCount + " indicators");
-
-    for (var i = 0; i < pageCount; i++) {
-      var dot = new kony.ui.FlexContainer(
-        {
-          id: "flxLoanDot" + i,
-
-          width: i === 0 ? "20dp" : "10dp",
-
-          height: "10dp",
-
-          left: i === 0 ? "140dp" : "4dp",
-
-          centerX: i === 0 ? "45%" : "",
-
-          centerY: "50%",
-
-          skin: i === 0 ? "sknDotSelected" : "sknDotUnselected",
-        },
-        {},
-        {},
-      );
-
-      this.view.flxDots.add(dot);
-
-      this.indicators.push(dot);
-    }
-
-    this.view.flxDots.forceLayout();
-
-    this.updateLoanDots(0);
-  },
-
-  updateLoanDots: function (currentPage) {
-    if (!this.view.flxDots) {
-      return;
-    }
-
-    if (!this.indicators || !this.indicators.length) {
-      return;
-    }
-
-    if (currentPage < 0 || currentPage >= this.indicators.length) {
-      kony.print("LOAN :: Invalid dot index = " + currentPage);
-
-      return;
-    }
-
-    for (var i = 0; i < this.indicators.length; i++) {
-      var dot = this.indicators[i];
-
-      var selected = i === currentPage;
-
-      dot.skin = selected ? "sknDotSelected" : "sknDotUnselected";
-
-      dot.animate(
-        kony.ui.createAnimation({
-          100: {
-            width: selected ? "20dp" : "10dp",
-          },
-        }),
-        {
-          duration: 0.3,
-          fillMode: kony.anim.FILL_MODE_FORWARDS,
-        },
-      );
-    }
-
-    this.view.flxDots.forceLayout();
-
-    kony.print("LOAN :: Active dot = " + currentPage);
   },
 });
