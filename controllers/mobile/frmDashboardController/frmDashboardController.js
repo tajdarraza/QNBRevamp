@@ -60,15 +60,24 @@ define(["Navigation"], function (Navigation) {
 
             try {
                 var st =
-                    res && res.status_getAcctListFx ? res.status_getAcctListFx.code : "?";
+                    res && res.status_getAcctListFx
+                        ? res.status_getAcctListFx.code
+                        : "?";
 
                 kony.print(
-                    "POC DASH: DashboardComposite status=" + status + " code=" + st,
+                    "POC DASH: DashboardComposite status=" +
+                        status +
+                        " code=" +
+                        st,
                 );
 
                 var accs = [];
 
-                if (res && res.data_getAcctListFx && res.data_getAcctListFx.units) {
+                if (
+                    res &&
+                    res.data_getAcctListFx &&
+                    res.data_getAcctListFx.units
+                ) {
                     var units = res.data_getAcctListFx.units;
 
                     for (var u = 0; u < units.length; u++) {
@@ -81,18 +90,21 @@ define(["Navigation"], function (Navigation) {
                 }
 
                 if (accs.length) {
-                    kony.print("POC DASH: raw acclist[0] = " + JSON.stringify(accs[0]));
+                    kony.print(
+                        "POC DASH: raw acclist[0] = " +
+                            JSON.stringify(accs[0]),
+                    );
 
                     self.serverAccounts = self.mapAccountRows(accs);
                     self.serverDashRows = self.mapDashboardRows(accs);
 
                     kony.print(
                         "POC DASH: mapped " +
-                        accs.length +
-                        " accounts, first balance='" +
-                        self.serverAccounts[0].lblAmount +
-                        "' " +
-                        self.serverAccounts[0].lblCurrency,
+                            accs.length +
+                            " accounts, first balance='" +
+                            self.serverAccounts[0].lblAmount +
+                            "' " +
+                            self.serverAccounts[0].lblCurrency,
                     );
                 } else {
                     kony.print(
@@ -110,7 +122,8 @@ define(["Navigation"], function (Navigation) {
             try {
                 kony.print("POC DASH: getLastLogin status=" + status);
 
-                var d = res && res.data && res.data.length ? res.data[0] : res;
+                var d =
+                    res && res.data && res.data.length ? res.data[0] : res;
 
                 if (d && nullCheck(d.tlp)) {
                     gblQNB.tlp = d.tlp;
@@ -142,7 +155,7 @@ define(["Navigation"], function (Navigation) {
 
             try {
                 this.view.loading.hideLoader(this);
-            } catch (e) { }
+            } catch (e) {}
 
             this.renderAll();
         },
@@ -170,7 +183,9 @@ define(["Navigation"], function (Navigation) {
                     ? ("" + a.accTypeDesc).toUpperCase()
                     : "";
 
-                var rawType = nullCheck(a.accType) ? ("" + a.accType).toUpperCase() : "";
+                var rawType = nullCheck(a.accType)
+                    ? ("" + a.accType).toUpperCase()
+                    : "";
 
                 if (
                     rawType === "CA" ||
@@ -195,17 +210,21 @@ define(["Navigation"], function (Navigation) {
 
                 kony.print(
                     "POC DASH :: ACCOUNT " +
-                    i +
-                    " :: type=" +
-                    accountType +
-                    " :: skin=" +
-                    separatorSkin,
+                        i +
+                        " :: type=" +
+                        accountType +
+                        " :: skin=" +
+                        separatorSkin,
                 );
 
                 rows.push({
                     accountType: accountType,
-                    lblAccName: nullCheck(a.accTypeDesc) ? a.accTypeDesc : "Account",
-                    lblAccNum: nullCheck(a.accNumFormat) ? a.accNumFormat : "",
+                    lblAccName: nullCheck(a.accTypeDesc)
+                        ? a.accTypeDesc
+                        : "Account",
+                    lblAccNum: nullCheck(a.accNumFormat)
+                        ? a.accNumFormat
+                        : "",
                     lblAmount: this.amountText(a.avlBal),
                     lblCurrency: nullCheck(a.curr) ? a.curr : "",
                     flxSeperator: {
@@ -252,7 +271,9 @@ define(["Navigation"], function (Navigation) {
                 var isCurrent =
                     acc.accType === "CA" ||
                     (nullCheck(acc.accTypeDesc) &&
-                        acc.accTypeDesc.toUpperCase().indexOf("CURRENT") > -1);
+                        acc.accTypeDesc
+                            .toUpperCase()
+                            .indexOf("CURRENT") > -1);
 
                 if (isCurrent) {
                     current += base;
@@ -274,14 +295,14 @@ define(["Navigation"], function (Navigation) {
 
             kony.print(
                 "POC DASH: total=" +
-                totalText +
-                " current=" +
-                formatAmount(current) +
-                " savings=" +
-                formatAmount(savings) +
-                " over " +
-                accs.length +
-                " accounts",
+                    totalText +
+                    " current=" +
+                    formatAmount(current) +
+                    " savings=" +
+                    formatAmount(savings) +
+                    " over " +
+                    accs.length +
+                    " accounts",
             );
 
             var amountSkin = this.amountSkinFor(tParts[0]);
@@ -315,7 +336,9 @@ define(["Navigation"], function (Navigation) {
                 var parts = full.split(".");
 
                 rows.push({
-                    lblAccountType: nullCheck(a.accTypeDesc) ? a.accTypeDesc : "Account",
+                    lblAccountType: nullCheck(a.accTypeDesc)
+                        ? a.accTypeDesc
+                        : "Account",
                     imgAccType: "eyevisible1.png",
                     lblAccBalance: {
                         text: parts[0],
@@ -324,7 +347,10 @@ define(["Navigation"], function (Navigation) {
                     lblDecimal: "." + (parts[1] || "00"),
                     lblCurr: nullCheck(a.curr) ? a.curr : "",
                     lblActualBal: "Actual balance  ",
-                    lblBalance: full + " " + (nullCheck(a.curr) ? a.curr : ""),
+                    lblBalance:
+                        full +
+                        " " +
+                        (nullCheck(a.curr) ? a.curr : ""),
                     lblAllAccounts: "All accounts",
                     imgAllAccount: "iconright1.png",
                     lblSavings: "",
@@ -363,7 +389,9 @@ define(["Navigation"], function (Navigation) {
             }
 
             while (rows.length > 0 && rows.length < 4) {
-                var pad = JSON.parse(JSON.stringify(rows[rows.length - 1]));
+                var pad = JSON.parse(
+                    JSON.stringify(rows[rows.length - 1]),
+                );
 
                 pad.id = rows.length + 1;
                 rows.push(pad);
@@ -529,16 +557,16 @@ define(["Navigation"], function (Navigation) {
 
                     kony.print(
                         "POC DASH: timed out with " +
-                        self.pendingCalls +
-                        " call(s) unanswered — " +
-                        "keeping fallback data. If POC_BYPASS_OTP is true, the pre-OTP token was likely rejected.",
+                            self.pendingCalls +
+                            " call(s) unanswered — " +
+                            "keeping fallback data. If POC_BYPASS_OTP is true, the pre-OTP token was likely rejected.",
                     );
 
                     self.pendingCalls = 0;
 
                     try {
                         self.view.loading.hideLoader(self);
-                    } catch (e) { }
+                    } catch (e) {}
                 },
                 45,
                 false,
@@ -548,9 +576,8 @@ define(["Navigation"], function (Navigation) {
         cancelDashWatchdog: function () {
             try {
                 kony.timer.cancel("pocDashWatchdog");
-            } catch (e) { }
+            } catch (e) {}
         },
-
 
         onNavigate: function (navData) {
             this.view.init = this.onInit;
@@ -572,11 +599,17 @@ define(["Navigation"], function (Navigation) {
 
             this.data = navData;
 
+            /*
+             * frmDashboard is the root of the flow.
+             * Do not push it here.
+             *
+             * If the stack is empty, start the flow by registering
+             * frmDashboard as the first stack entry.
+             */
             if (Navigation.getStack().length === 0) {
-                Navigation.startFlow("frmDashboard", navData);
+                Navigation.push("frmDashboard");
             }
         },
-
 
         setHeaderIdentity: function () {
             applyHeaderIdentity(this.view);
@@ -585,7 +618,7 @@ define(["Navigation"], function (Navigation) {
         hideRecentActivity: function () {
             try {
                 if (this.view.transactions) {
-                    this.view.transactions.setVisibility(false);
+                    //this.view.transactions.setVisibility(false);
                 }
             } catch (e) {
                 kony.print("hideRecentActivity :: " + e);
@@ -593,7 +626,9 @@ define(["Navigation"], function (Navigation) {
         },
 
         applyCardsSectionVisibility: function () {
-            var show = !!(this.serverCards && this.serverCards.length);
+            var show = !!(
+                this.serverCards && this.serverCards.length
+            );
 
             var ids = ["flxCardsHeader", "flxScrollCards"];
 
@@ -603,11 +638,18 @@ define(["Navigation"], function (Navigation) {
                         this.view[ids[i]].setVisibility(show);
                     }
                 } catch (e) {
-                    kony.print("applyCardsSectionVisibility " + ids[i] + " :: " + e);
+                    kony.print(
+                        "applyCardsSectionVisibility " +
+                            ids[i] +
+                            " :: " +
+                            e,
+                    );
                 }
             }
 
-            kony.print("POC DASH: My cards section visible=" + show);
+            kony.print(
+                "POC DASH: My cards section visible=" + show,
+            );
         },
 
         widgetMap: function () {
@@ -648,9 +690,13 @@ define(["Navigation"], function (Navigation) {
                     : this.getFallbackAccountData();
 
             if (this.serverAccounts && this.serverAccounts.length) {
-                kony.print("POC DASH: using server account data");
+                kony.print(
+                    "POC DASH: using server account data",
+                );
             } else {
-                kony.print("POC DASH: using fallback account data");
+                kony.print(
+                    "POC DASH: using fallback account data",
+                );
             }
 
             this.allAccounts = data;
@@ -661,28 +707,42 @@ define(["Navigation"], function (Navigation) {
 
         setAccountDashboardData: function () {
             var rows =
-                this.serverDashRows && this.serverDashRows.length
+                this.serverDashRows &&
+                this.serverDashRows.length
                     ? this.serverDashRows
                     : this.getFallbackDashboardData();
 
-            if (this.serverDashRows && this.serverDashRows.length) {
-                kony.print("POC DASH: using server dashboard data");
+            if (
+                this.serverDashRows &&
+                this.serverDashRows.length
+            ) {
+                kony.print(
+                    "POC DASH: using server dashboard data",
+                );
 
-                if (rows.length > this.maxCarouselAccounts) {
+                if (
+                    rows.length >
+                    this.maxCarouselAccounts
+                ) {
                     kony.print(
                         "POC DASH: carousel capped at " +
-                        this.maxCarouselAccounts +
-                        " of " +
-                        rows.length +
-                        " accounts — the rest are on All accounts",
+                            this.maxCarouselAccounts +
+                            " of " +
+                            rows.length +
+                            " accounts — the rest are on All accounts",
                     );
 
-                    rows = rows.slice(0, this.maxCarouselAccounts);
+                    rows = rows.slice(
+                        0,
+                        this.maxCarouselAccounts,
+                    );
                 }
 
                 rows = JSON.parse(JSON.stringify(rows));
             } else {
-                kony.print("POC DASH: using fallback dashboard data");
+                kony.print(
+                    "POC DASH: using fallback dashboard data",
+                );
             }
 
             if (
@@ -691,7 +751,8 @@ define(["Navigation"], function (Navigation) {
                 this.data.hideBalance
             ) {
                 for (var r = 0; r < rows.length; r++) {
-                    rows[r].lblAccBalance = "************";
+                    rows[r].lblAccBalance =
+                        "************";
                     rows[r].lblDecimal = "";
                     rows[r].lblCurr = "";
                 }
@@ -707,44 +768,71 @@ define(["Navigation"], function (Navigation) {
 
             for (var i = 0; i < rows.length; i++) {
                 rows[i].flxMenu1 = {
-                    onTouchEnd: function () {
-                        self.goTo("frmFawran", "Fawran");
+                    onClick: function () {
+                        self.goTo(
+                            "frmFawran",
+                            "Fawran",
+                        );
                     },
                 };
 
                 rows[i].flxMenu2 = {
-                    onTouchEnd: function () {
-                        self.goTo("frmPayments", "Pay Bill");
+                    onClick: function () {
+                        self.goTo(
+                            "frmPayments",
+                            "Pay Bill",
+                        );
                     },
                 };
 
                 rows[i].flxMenu3 = {
-                    onTouchEnd: function () {
-                        self.goTo("frmChooseCard", "Pay card");
+                    onClick: function () {
+                        self.goTo(
+                            "frmChooseCard",
+                            "Pay card",
+                        );
                     },
                 };
 
                 rows[i].flxMenu4 = {
-                    onTouchEnd: function () {
-                        self.goTo("frmMoreActions", "Menu");
+                    onClick: function () {
+                        self.goTo(
+                            "frmMoreActions",
+                            "More",
+                        );
                     },
                 };
 
                 rows[i].flxAllAccounts = {
-                    onTouchEnd: function () {
-                        self.goTo("frmAccounts", "All accounts");
+                    onClick: function () {
+                        self.goTo(
+                            "frmAccounts",
+                            "All accounts",
+                        );
                     },
                 };
             }
         },
 
         goTo: function (formName, label) {
-            kony.print("POC DASH: quick action " + label + " -> " + formName);
+            kony.print(
+                "POC DASH: quick action " +
+                    label +
+                    " -> " +
+                    formName,
+            );
 
             try {
-                Navigation.navigate(formName);
+                Navigation.push(formName);
+                Navigation.navigateTo(formName);
             } catch (e) {
-                kony.print("POC DASH: " + formName + " not available :: " + e);
+                kony.print(
+                    "POC DASH: " +
+                        formName +
+                        " not available :: " +
+                        e,
+                );
+
                 pocNotBuilt(label);
             }
         },
@@ -775,17 +863,29 @@ define(["Navigation"], function (Navigation) {
 
         initProgressView: function () {
             if (!this.view.circularchart) {
-                kony.print("POC DASH: circularchart component not found");
+                kony.print(
+                    "POC DASH: circularchart component not found",
+                );
                 return;
             }
 
             var totalLoan = 100000;
             var totalPaid = 35000;
 
-            kony.print("POC DASH: Circular chart totalLoan = " + totalLoan);
-            kony.print("POC DASH: Circular chart totalPaid = " + totalPaid);
+            kony.print(
+                "POC DASH: Circular chart totalLoan = " +
+                    totalLoan,
+            );
+            kony.print(
+                "POC DASH: Circular chart totalPaid = " +
+                    totalPaid,
+            );
 
-            this.view.circularchart.configure(totalLoan, totalPaid, 5);
+            this.view.circularchart.configure(
+                totalLoan,
+                totalPaid,
+                5,
+            );
         },
 
         preShow: function () {
@@ -794,14 +894,21 @@ define(["Navigation"], function (Navigation) {
 
                 if (this.view.circularchart) {
                     this.view.circularchart.setOnClick(
-                        this.navigateToLoan.bind(this)
+                        this.navigateToLoan.bind(this),
                     );
                 }
 
-                if (!USE_MOCK_SERVICES && !this.dataLoaded && this.pendingCalls === 0) {
+                if (
+                    !USE_MOCK_SERVICES &&
+                    !this.dataLoaded &&
+                    this.pendingCalls === 0
+                ) {
                     try {
-                        this.view.loading.show(this, "Loading...");
-                    } catch (e) { }
+                        this.view.loading.show(
+                            this,
+                            "Loading...",
+                        );
+                    } catch (e) {}
 
                     this.loadServerData();
                     return;
@@ -814,18 +921,32 @@ define(["Navigation"], function (Navigation) {
         },
 
         navigateToLoan: function () {
-            Navigation.navigate("frmLoanDashboard");
+            kony.print(
+                "POC DASH: navigate -> frmLoanDashboard",
+            );
+
+            Navigation.push("frmLoanDashboard");
+            Navigation.navigateTo("frmLoanDashboard");
         },
 
         renderAll: function () {
             this.setHeaderIdentity();
 
-            if (this.serverCards && this.serverCards.length) {
+            if (
+                this.serverCards &&
+                this.serverCards.length
+            ) {
                 this.cardData = this.serverCards;
-                kony.print("POC DASH: rendering server cards");
+                kony.print(
+                    "POC DASH: rendering server cards",
+                );
             } else {
-                this.cardData = this.getFallbackCardData();
-                kony.print("POC DASH: rendering fallback cards");
+                this.cardData =
+                    this.getFallbackCardData();
+
+                kony.print(
+                    "POC DASH: rendering fallback cards",
+                );
             }
 
             this.applyCardsSectionVisibility();
@@ -843,31 +964,35 @@ define(["Navigation"], function (Navigation) {
 
             this.updateDashboard();
 
-            var currentPage = this.view.segAccounts.selectedRowIndex
-                ? this.view.segAccounts.selectedRowIndex[1]
-                : 0;
+            var currentPage =
+                this.view.segAccounts.selectedRowIndex
+                    ? this.view.segAccounts.selectedRowIndex[1]
+                    : 0;
 
             this.updateIndicator(currentPage);
             this.updateAccountScrollView(0);
 
-            this.view.segAccounts.onSwipe = this.onSwipeAccounts.bind(this);
+            this.view.segAccounts.onSwipe =
+                this.onSwipeAccounts.bind(this);
         },
 
-        onPostShow: function () { },
+        onPostShow: function () {},
 
         onDeviceBack: function () {
             Navigation.goBack();
         },
 
-
         configureTabs: function () {
             var self = this;
 
-            kony.print("POC DASH :: CONFIGURING ACCOUNT TABS");
+            kony.print(
+                "POC DASH :: CONFIGURING ACCOUNT TABS",
+            );
 
             this.view.multipletab.initialize({
                 selectedIndex: 0,
-                flxFourTabSkin: "sknParent72PxBgf4f3f6",
+                flxFourTabSkin:
+                    "sknParent72PxBgf4f3f6",
                 tabs: [
                     {
                         flx: "flxTab1",
@@ -897,20 +1022,27 @@ define(["Navigation"], function (Navigation) {
                 onTabSelected: function (tab, index) {
                     kony.print(
                         "POC DASH :: TAB CALLBACK :: index=" +
-                        index +
-                        " tab=" +
-                        JSON.stringify(tab),
+                            index +
+                            " tab=" +
+                            JSON.stringify(tab),
                     );
 
                     self.onTabSelected(tab, index);
                 },
             });
 
-            kony.print("POC DASH :: MULTIPLETAB INITIALIZED");
+            kony.print(
+                "POC DASH :: MULTIPLETAB INITIALIZED",
+            );
         },
 
         onTabSelected: function (tab, index) {
-            kony.print("POC DASH :: TAB " + tab.flx + " INDEX " + index);
+            kony.print(
+                "POC DASH :: TAB " +
+                    tab.flx +
+                    " INDEX " +
+                    index,
+            );
 
             if (index === 0) {
                 this.filterAccounts("All");
@@ -922,66 +1054,100 @@ define(["Navigation"], function (Navigation) {
         },
 
         filterAccounts: function (type) {
-            kony.print("POC DASH :: FILTER ACCOUNTS :: " + type);
+            kony.print(
+                "POC DASH :: FILTER ACCOUNTS :: " +
+                    type,
+            );
 
             if (type === "All") {
-                this.view.segAllAccounts.setData(this.allAccounts);
+                this.view.segAllAccounts.setData(
+                    this.allAccounts,
+                );
 
-                kony.print("POC DASH :: ALL COUNT = " + this.allAccounts.length);
+                kony.print(
+                    "POC DASH :: ALL COUNT = " +
+                        this.allAccounts.length,
+                );
 
                 return;
             }
 
             var filteredData = [];
 
-            for (var i = 0; i < this.allAccounts.length; i++) {
-                if (this.allAccounts[i].accountType === type) {
-                    filteredData.push(this.allAccounts[i]);
+            for (
+                var i = 0;
+                i < this.allAccounts.length;
+                i++
+            ) {
+                if (
+                    this.allAccounts[i].accountType ===
+                    type
+                ) {
+                    filteredData.push(
+                        this.allAccounts[i],
+                    );
                 }
             }
 
-            kony.print("POC DASH :: " + type + " COUNT = " + filteredData.length);
+            kony.print(
+                "POC DASH :: " +
+                    type +
+                    " COUNT = " +
+                    filteredData.length,
+            );
 
-            this.view.segAllAccounts.setData(filteredData);
+            this.view.segAllAccounts.setData(
+                filteredData,
+            );
         },
 
         initializeCards: function () {
             this.cards = [
                 {
-                    mainContainer: this.view.flxCardContainer1,
+                    mainContainer:
+                        this.view.flxCardContainer1,
                     container: this.view.flxCard1,
                     imgCard: this.view.imgCard1,
                     lblCard: this.view.lblCard1,
-                    lblNickName: this.view.lblNickName1,
+                    lblNickName:
+                        this.view.lblNickName1,
                     lblName: this.view.lblName1,
-                    lblCardNumber: this.view.lblCardNumber1,
+                    lblCardNumber:
+                        this.view.lblCardNumber1,
                     lblDueDay: this.view.lblDueDay1,
                     lblPayNow: this.view.lblPayNow1,
                 },
                 {
-                    mainContainer: this.view.flxCardContainer2,
+                    mainContainer:
+                        this.view.flxCardContainer2,
                     container: this.view.flxCard2,
                     imgCard: this.view.imgCard2,
                     lblCard: this.view.lblCard2,
-                    lblNickName: this.view.lblNickName2,
+                    lblNickName:
+                        this.view.lblNickName2,
                     lblName: this.view.lblName2,
-                    lblCardNumber: this.view.lblCardNumber2,
+                    lblCardNumber:
+                        this.view.lblCardNumber2,
                     lblDueDay: this.view.lblDueDay2,
                     lblPayNow: this.view.lblPayNow2,
                 },
                 {
-                    mainContainer: this.view.flxCardContainer3,
+                    mainContainer:
+                        this.view.flxCardContainer3,
                     container: this.view.flxCard3,
                     imgCard: this.view.imgCard3,
                     lblCard: this.view.lblCard3,
-                    lblNickName: this.view.lblNickName3,
+                    lblNickName:
+                        this.view.lblNickName3,
                     lblName: this.view.lblName3,
-                    lblCardNumber: this.view.lblCardNumber3,
+                    lblCardNumber:
+                        this.view.lblCardNumber3,
                     lblDueDay: this.view.lblDueDay3,
                     lblPayNow: this.view.lblPayNow3,
                 },
                 {
-                    mainContainer: this.view.flxCardContainer4,
+                    mainContainer:
+                        this.view.flxCardContainer4,
                     container: this.view.flxCard4,
                     imgCard: this.view.imgCard4,
                     lblCard: this.view.lblCard4,
@@ -996,7 +1162,9 @@ define(["Navigation"], function (Navigation) {
             var isAndroid = kony.os.deviceInfo().name;
 
             if (isAndroid == "android") {
-                this.cards[this.cards.length - 1].mainContainer.width = "280dp";
+                this.cards[
+                    this.cards.length - 1
+                ].mainContainer.width = "280dp";
             }
         },
 
@@ -1006,40 +1174,65 @@ define(["Navigation"], function (Navigation) {
 
                 this.cards[i].container.cardIndex = i;
 
-                this.cards[i].container.cardData = cardData;
+                this.cards[i].container.cardData =
+                    cardData;
 
-                this.cards[i].container.onClick = this.onCardClick.bind(this);
+                this.cards[i].container.onClick =
+                    this.onCardClick.bind(this);
 
-                this.cards[i].lblPayNow.onTouchEnd = this.onPayNowClick.bind(this);
+                this.cards[i].lblPayNow.onTouchEnd =
+                    this.onPayNowClick.bind(this);
 
                 if (cardData) {
-                    this.loadCard(this.cards[i], cardData);
-                    this.cards[i].mainContainer.isVisible = true;
+                    this.loadCard(
+                        this.cards[i],
+                        cardData,
+                    );
+
+                    this.cards[
+                        i
+                    ].mainContainer.isVisible = true;
                 } else {
-                    this.cards[i].mainContainer.isVisible = false;
+                    this.cards[
+                        i
+                    ].mainContainer.isVisible = false;
                 }
             }
         },
 
         loadCard: function (card, data) {
             card.imgCard.src = data.cardImage;
-            card.lblCard.text = data.accountType + " card";
+            card.lblCard.text =
+                data.accountType + " card";
             card.lblNickName.text = data.nickName;
             card.lblName.text = data.holderName;
-            card.lblCardNumber.text = data.cardNumber;
+            card.lblCardNumber.text =
+                data.cardNumber;
             card.lblDueDay.text = data.dueDay;
             card.lblPayNow.text = data.payNow;
         },
 
         onPayNowClick: function () {
-            Navigation.navigate("frmChooseCard");
+            kony.print(
+                "POC DASH: Pay Now -> frmChooseCard",
+            );
+
+            Navigation.push("frmChooseCard");
+            Navigation.navigateTo("frmChooseCard");
         },
 
         onCardClick: function (widget) {
             var index = -1;
 
-            for (var i = 0; i < this.cards.length; i++) {
-                if (this.cards[i].container === widget) {
+            for (
+                var i = 0;
+                i < this.cards.length;
+                i++
+            ) {
+                if (
+                    this.cards[i].container ===
+                    widget
+                ) {
                     index = i;
                     break;
                 }
@@ -1052,131 +1245,292 @@ define(["Navigation"], function (Navigation) {
             var data = this.cardData[index];
         },
 
-        onSwipeAccounts: function (eventobject, sectionNumber, rowNumber) {
+        onSwipeAccounts: function (
+            eventobject,
+            sectionNumber,
+            rowNumber,
+        ) {
+            if (this.accountPage === rowNumber)
+                return;
+
             this.accountPage = rowNumber;
-
             this.updateIndicator(rowNumber);
-            this.updateAccountScrollView(rowNumber);
-        },
-
-        updateIndicator: function (currentPage) {
-            for (var i = 0; i < this.indicators.length; i++) {
-                var dot = this.indicators[i];
-
-                dot.skin = i === currentPage ? "sknDotSelected" : "sknDotUnselected";
-
-                dot.animate(
-                    kony.ui.createAnimation({
-                        100: {
-                            width: i === currentPage ? "20dp" : "10dp",
-                        },
-                    }),
-                    {
-                        duration: 0.3,
-                        fillMode: kony.anim.FILL_MODE_FORWARDS,
-                    },
-                );
-            }
-
-            this.view.flxDots.forceLayout();
+            this.updateAccountScrollView(
+                rowNumber,
+            );
         },
 
         createIndicators: function () {
+            if (!this.view.flxDots) {
+                return;
+            }
+
             this.view.flxDots.removeAll();
+            this.view.flxDots.layoutType =
+                kony.flex.FREE_FORM;
             this.indicators = [];
 
-            var accData = this.view.segAccounts.data;
+            var accData =
+                this.view.segAccounts
+                    ? this.view.segAccounts.data
+                    : [];
 
-            var pageCount = accData && accData.length ? accData.length : 0;
+            var totalDots =
+                accData && accData.length
+                    ? accData.length
+                    : 0;
 
-            for (var i = 0; i < pageCount; i++) {
-                var dot = new kony.ui.FlexContainer(
+            if (totalDots <= 0) {
+                return;
+            }
+
+            var normalWidthNum = 10;
+            var selectedWidthNum = 20;
+            var gapNum = 4;
+
+            var totalContentWidth =
+                selectedWidthNum +
+                (totalDots - 1) *
+                    normalWidthNum +
+                (totalDots - 1) * gapNum;
+
+            var innerFlow =
+                new kony.ui.FlexContainer(
                     {
-                        id: "flxDot" + i,
-                        width: i === 0 ? "20dp" : "10dp",
-                        height: "10dp",
-                        left: i === 0 ? "140dp" : "4dp",
-                        centerX: i === 0 ? "45%" : "",
+                        id: "flxDotsInnerFlow",
+                        width:
+                            totalContentWidth +
+                            "dp",
+                        height: "20dp",
+                        centerX: "50%",
                         centerY: "50%",
-                        skin: i === 0 ? "sknDotSelected" : "sknDotUnselected",
+                        layoutType:
+                            kony.flex.FLOW_HORIZONTAL,
+                        clipBounds: false,
+                        zIndex: 10,
                     },
                     {},
                     {},
                 );
 
-                this.view.flxDots.add(dot);
+            for (
+                var i = 0;
+                i < totalDots;
+                i++
+            ) {
+                var isSelected = i === 0;
+
+                var dot =
+                    new kony.ui.FlexContainer(
+                        {
+                            id:
+                                "flxDot_" +
+                                i,
+                            centerY: "50%",
+                            width:
+                                (isSelected
+                                    ? selectedWidthNum
+                                    : normalWidthNum) +
+                                "dp",
+                            height: "10dp",
+                            left:
+                                i === 0
+                                    ? "0dp"
+                                    : gapNum +
+                                      "dp",
+                            skin: isSelected
+                                ? "sknDotSelected"
+                                : "sknDotUnselected",
+                            clipBounds: false,
+                        },
+                        {},
+                        {},
+                    );
+
+                innerFlow.add(dot);
                 this.indicators.push(dot);
             }
 
+            this.view.flxDots.add(
+                innerFlow,
+            );
             this.view.flxDots.forceLayout();
-            this.updateIndicator(0);
         },
 
-        onScrollCardsEnd: function (eventobject) {
-            var scrollX = eventobject.contentOffsetMeasured.x;
+        updateIndicator: function (currentPage) {
+            if (
+                !this.indicators ||
+                !this.indicators.length ||
+                currentPage < 0 ||
+                currentPage >=
+                    this.indicators.length
+            ) {
+                return;
+            }
+
+            for (
+                var i = 0;
+                i < this.indicators.length;
+                i++
+            ) {
+                var dot = this.indicators[i];
+                var isSelected =
+                    i === currentPage;
+
+                if (dot) {
+                    dot.skin =
+                        isSelected
+                            ? "sknDotSelected"
+                            : "sknDotUnselected";
+
+                    dot.animate(
+                        kony.ui.createAnimation(
+                            {
+                                100: {
+                                    width:
+                                        isSelected
+                                            ? "20dp"
+                                            : "10dp",
+                                },
+                            },
+                        ),
+                        {
+                            duration: 0.25,
+                            fillMode:
+                                kony.anim
+                                    .FILL_MODE_FORWARDS,
+                        },
+                    );
+                }
+            }
+
+            if (
+                this.indicators[0] &&
+                this.indicators[0].parent
+            ) {
+                this.indicators[
+                    0
+                ].parent.forceLayout();
+            }
+        },
+
+        onScrollCardsEnd: function (
+            eventobject,
+        ) {
+            var scrollX =
+                eventobject.contentOffsetMeasured
+                    .x;
 
             var nearestPage = this.cardPage;
-            var minDistance = Number.MAX_VALUE;
+            var minDistance =
+                Number.MAX_VALUE;
 
-            for (var i = 0; i < this.cards.length; i++) {
-                var distance = Math.abs(scrollX - this.getSnapPoint(i));
+            for (
+                var i = 0;
+                i < this.cards.length;
+                i++
+            ) {
+                var distance = Math.abs(
+                    scrollX -
+                        this.getSnapPoint(i),
+                );
 
-                if (distance < minDistance) {
+                if (
+                    distance < minDistance
+                ) {
                     minDistance = distance;
                     nearestPage = i;
                 }
             }
 
-            if (nearestPage !== this.cardPage) {
-                this.cardPage = nearestPage;
+            if (
+                nearestPage !==
+                this.cardPage
+            ) {
+                this.cardPage =
+                    nearestPage;
             }
 
             this.view.flxScrollCards.setContentOffset(
                 {
-                    x: this.getSnapPoint(this.cardPage),
+                    x: this.getSnapPoint(
+                        this.cardPage,
+                    ),
                     y: 0,
                 },
                 true,
             );
 
-            this.animateCards(this.cardPage);
+            this.animateCards(
+                this.cardPage,
+            );
         },
 
         animateCards: function (page) {
-            for (var i = 0; i < this.cards.length; i++) {
-                var transform = kony.ui.makeAffineTransform();
+            for (
+                var i = 0;
+                i < this.cards.length;
+                i++
+            ) {
+                var transform =
+                    kony.ui.makeAffineTransform();
 
                 if (i === page) {
                     transform.scale(1, 1);
                 } else {
-                    transform.scale(0.96, 0.96);
+                    transform.scale(
+                        0.96,
+                        0.96,
+                    );
                 }
 
-                this.cards[i].mainContainer.animate(
-                    kony.ui.createAnimation({
-                        100: {
-                            transform: transform,
-                            opacity: i === page ? 1 : 0.85,
+                this.cards[
+                    i
+                ].mainContainer.animate(
+                    kony.ui.createAnimation(
+                        {
+                            100: {
+                                transform:
+                                    transform,
+                                opacity:
+                                    i === page
+                                        ? 1
+                                        : 0.85,
+                            },
                         },
-                    }),
+                    ),
                     {
                         duration: 0.18,
-                        fillMode: kony.anim.FILL_MODE_FORWARDS,
+                        fillMode:
+                            kony.anim
+                                .FILL_MODE_FORWARDS,
                     },
                     null,
                 );
             }
         },
 
-        updateAccountScrollView: function (selectedIndex) {
-            kony.print("POC DASH: updateAccountScrollView(" + selectedIndex + ")");
+        updateAccountScrollView: function (
+            selectedIndex,
+        ) {
+            kony.print(
+                "POC DASH: updateAccountScrollView(" +
+                    selectedIndex +
+                    ")",
+            );
 
             if (selectedIndex === 0) {
-                this.view.flxScrollAccounts.isVisible = true;
-                this.view.flxBottomInfo.isVisible = false;
+                this.view.flxScrollAccounts.isVisible =
+                    true;
+
+                this.view.flxBottomInfo.isVisible =
+                    false;
             } else {
-                this.view.flxScrollAccounts.isVisible = false;
-                this.view.flxBottomInfo.isVisible = true;
+                this.view.flxScrollAccounts.isVisible =
+                    false;
+
+                this.view.flxBottomInfo.isVisible =
+                    true;
             }
 
             this.view.forceLayout();
@@ -1185,13 +1539,23 @@ define(["Navigation"], function (Navigation) {
         getSnapPoint: function (index) {
             this.view.forceLayout();
 
-            var viewportWidth = this.view.flxScrollCards.frame.width;
+            var viewportWidth =
+                this.view.flxScrollCards.frame
+                    .width;
 
-            var cardWidth = this.cards[index].mainContainer.frame.width;
+            var cardWidth =
+                this.cards[index].mainContainer
+                    .frame.width;
 
-            var sidePadding = (viewportWidth - cardWidth) / 2;
+            var sidePadding =
+                (viewportWidth -
+                    cardWidth) /
+                2;
 
-            var snap = this.cards[index].mainContainer.frame.x - sidePadding;
+            var snap =
+                this.cards[index]
+                    .mainContainer.frame.x -
+                sidePadding;
 
             return Math.max(0, snap);
         },
