@@ -39,7 +39,7 @@
         "value": "50%"
     },
     "children": [
-        "flxAccountName",
+        "lblAccName",
         "flxDepositAmt",
         "FlexContainer0e8bdd8263cf840"
     ],

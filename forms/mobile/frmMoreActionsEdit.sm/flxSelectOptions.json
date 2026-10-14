@@ -1,8 +1,8 @@
 {
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "220dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
@@ -25,23 +25,21 @@
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "16dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
         "value": "90%"
     },
     "allboxes": [],
+    "autogrowmode": 1,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
         "value": "50%"
     },
-    "children": [
-        "lblOtherActions",
-        "flxSelectMenu"
-    ],
-    "clipbounds": false,
+    "children": [],
+    "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxSelectOptions",
@@ -51,7 +49,7 @@
     "kuid": "d8ec19ce6f65493e979343dd66324786",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxParent",
+    "parent": "flxScrollMain",
     "pf": "frmMoreActionsEdit",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

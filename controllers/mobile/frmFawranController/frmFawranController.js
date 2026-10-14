@@ -33,7 +33,7 @@ define({
 
     safeTap: function (id, fn) {
         try {
-            if (this.view[id]) { this.view[id].onTouchEnd = fn; }
+            if (this.view[id]) { this.view[id].onClick = fn; }
         } catch (e) {
             kony.print("frmFawran safeTap " + id + " :: " + e);
         }

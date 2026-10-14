@@ -47,7 +47,7 @@
     "id": "flxCardFrontView",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "f5dea08f10394ff0a80231e0161f3247",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",

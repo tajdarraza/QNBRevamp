@@ -824,11 +824,6 @@ renderDraft: function () {
             return;
         }
 
-        /*
-         * Preserve the existing behavior:
-         * sub-purpose is optional at this stage because
-         * the original controller did not validate it here.
-         */
         fawranDraft.aliasValue = val;
 
         fawranDraft.currency =

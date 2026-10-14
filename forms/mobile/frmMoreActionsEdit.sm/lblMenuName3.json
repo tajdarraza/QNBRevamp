@@ -61,7 +61,7 @@
     "isvisible": false,
     "kuid": "b3304484061b4054b7fea8806c9b1a2f",
     "name": "kony.ui.Label",
-    "parent": "flxMenu3",
+    "parent": "flxFavMenu3",
     "pf": "frmMoreActionsEdit",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

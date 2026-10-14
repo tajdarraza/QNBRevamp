@@ -1,0 +1,140 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_right_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "9%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "40%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 1,
+    "canUpdateUI": true,
+    "clipbounds": true,
+    "containerweight": 0,
+    "dataDiffs": {
+        "flxMain": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "e30d18df40b347c2832ed762749c695f",
+                "srcKUID": "a2889947b64b4011a7e48e8ef4695284",
+                "wType": "FlexContainer"
+            }
+        },
+        "segSlideList": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "d8a5e94b936b4c5fb0f1a5516fd3124b",
+                "srcKUID": "fd506faf6db9433baef1e42de49ec966",
+                "wType": "Segment"
+            }
+        },
+        "slide": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "d308fdb5b1e24439abd248d51dd63f8f",
+                "srcKUID": "ec7fa0d14e704fadad99c4369611ac43",
+                "wType": "FlexContainer"
+            },
+            "autogrowMode": {
+                "Default": 1
+            },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "height": {
+                "Default": {
+                    "type": "ref",
+                    "value": "preferred"
+                }
+            },
+            "isVisible": false,
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "right": {
+                "Default": {
+                    "type": "string",
+                    "value": "5%"
+                }
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "9%"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "40%"
+                }
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "slide",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": false,
+    "kuid": "d308fdb5b1e24439abd248d51dd63f8f",
+    "layouttype": 4,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "frmLogin",
+    "pf": "frmLogin",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "ec7fa0d14e704fadad99c4369611ac43",
+    "wType": "UserWidgetInstance",
+    "zindex": 100
+}

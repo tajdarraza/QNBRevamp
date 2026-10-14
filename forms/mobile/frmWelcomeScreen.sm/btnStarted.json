@@ -3,15 +3,11 @@
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "200dp"
+        "value": "0dp"
     },
     "_height_": {
         "type": "string",
         "value": "48dp"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "0"
     },
     "_margin_": [
         6,
@@ -25,11 +21,19 @@
         0,
         0
     ],
+    "_right_": {
+        "type": "string",
+        "value": "0"
+    },
     "_skin_": "s6333ce0276142449b36e7630b41c362",
     "_text_": "Get Started",
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
     "_width_": {
         "type": "string",
-        "value": "345dp"
+        "value": "90%"
     },
     "canUpdateUI": true,
     "centerx": {
@@ -46,7 +50,7 @@
     "isvisible": true,
     "kuid": "bb1c2b74a2114d72806957775518bd71",
     "name": "kony.ui.Button",
-    "parent": "flxMain",
+    "parent": "flxAction",
     "pf": "frmWelcomeScreen",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

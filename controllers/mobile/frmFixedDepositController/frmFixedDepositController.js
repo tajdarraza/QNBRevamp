@@ -469,8 +469,6 @@ define({
   configureAccountName: function () {
     var accountHolderName = "Mohammad Tajdar Raza";
     this.view.lblAccName.text = accountHolderName;
-    var labelWidth = this.view.lblAccName.frame.width;
-    this.view.flxAccountName.width = labelWidth + 32 + "dp";
     this.view.forceLayout();
   },
 });

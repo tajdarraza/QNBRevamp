@@ -4,10 +4,6 @@
         "type": "ref",
         "value": "preferred"
     },
-    "_left_": {
-        "type": "string",
-        "value": "8dp"
-    },
     "_margin_": [
         0,
         0,
@@ -22,11 +18,11 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
-    "_top_": {
+    "_right_": {
         "type": "string",
-        "value": "0"
+        "value": "0dp"
     },
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_width_": {
         "type": "string",
         "value": "82dp"
@@ -34,11 +30,19 @@
     "allboxes": [],
     "autogrowmode": 1,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "85%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
         "imgMenu4",
         "lblMenu4"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerId": true,
     "containerweight": 100,
     "enablescrolling": true,

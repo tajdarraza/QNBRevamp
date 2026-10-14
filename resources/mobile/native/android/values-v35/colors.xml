@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">@android:color/transparent</color>
+    <color name="colorAccent">#2A59BD</color>
+
+    <color name="lightGrey">#D3D3D3</color>
+    <color name="blueColor">#010f34</color>
+    <color name="marron">#7D1350</color>
+    <color name="statusBarColor">#010F34</color>
+
+    <color name="text_color_1">#000000</color>
+    <color name="text_color_5">#e74c3c</color>
+    <color name="red">#FF0000</color>
+    <color name="transparentgr">#FFFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

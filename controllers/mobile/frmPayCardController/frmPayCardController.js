@@ -41,7 +41,7 @@ define({
   bindTap: function (id, fn) {
     try {
       if (this.view[id]) {
-        this.view[id].onTouchEnd = fn;
+        this.view[id].onClick = fn;
 
         kony.print("POC PAYCARD: bound tap on " + id);
       } else {
@@ -432,7 +432,7 @@ define({
         this.view.flxBusy.setVisibility(on);
 
         if (on) {
-          this.view.flxBusy.onTouchEnd = function () {};
+          this.view.flxBusy.onClick = function () {};
         }
         this.view.forceLayout();
         kony.print(

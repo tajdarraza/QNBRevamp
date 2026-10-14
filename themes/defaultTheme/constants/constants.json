@@ -17,6 +17,60 @@
         },
         "type": "color"
     },
+    "QNBSansBold": {
+        "color": {
+            "value": "000000ff"
+        },
+        "name": {
+            "value": "System"
+        },
+        "size": {
+            "value": 150
+        },
+        "style": {
+            "value": "normal"
+        },
+        "type": "font",
+        "weight": {
+            "value": "normal"
+        }
+    },
+    "QNBSansNormal": {
+        "color": {
+            "value": "000000ff"
+        },
+        "name": {
+            "value": "QNBSansAR"
+        },
+        "size": {
+            "value": 150
+        },
+        "style": {
+            "value": "normal"
+        },
+        "type": "font",
+        "weight": {
+            "value": "normal"
+        }
+    },
+    "QNBSansSemiBold": {
+        "color": {
+            "value": "000000ff"
+        },
+        "name": {
+            "value": "System"
+        },
+        "size": {
+            "value": 150
+        },
+        "style": {
+            "value": "normal"
+        },
+        "type": "font",
+        "weight": {
+            "value": "normal"
+        }
+    },
     "Red": {
         "color": {
             "value": "ff0000ff"
@@ -43,23 +97,5 @@
             "value": "one"
         },
         "type": "color"
-    },
-    "font1": {
-        "color": {
-            "value": "000000ff"
-        },
-        "name": {
-            "value": "QNBSansAR"
-        },
-        "size": {
-            "value": 150
-        },
-        "style": {
-            "value": "normal"
-        },
-        "type": "font",
-        "weight": {
-            "value": "normal"
-        }
     }
 }

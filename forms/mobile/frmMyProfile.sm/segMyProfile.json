@@ -1,0 +1,235 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        [
+            {
+                "lblSettingHeader": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Financial services"
+                }
+            },
+            [
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QID Details"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                },
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QID Details"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                },
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QID Details"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                }
+            ]
+        ],
+        [
+            {
+                "lblSettingHeader": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Credit limits"
+                }
+            },
+            [
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QID Details"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                },
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QID Details"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                },
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QID Details"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                },
+                {
+                    "imgIcon": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "digitalwallet.png"
+                    },
+                    "imgMenuName": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "QID Details"
+                    },
+                    "imgTrail": {
+                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                        "src": "traling.png"
+                    }
+                }
+            ]
+        ]
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "counter": "13",
+    "disabledSkins": {
+        "alternateRowSkin": "s4c65bd92e544f419427154ab9d468aa",
+        "widgetSkin": "s291387c4aa74377a23348ad853605cb"
+    },
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": true,
+    "id": "segMyProfile",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "none"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "c86e16086d4144e28f669261e84f3946",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flxMyProfile",
+    "pf": "frmMyProfile",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "g773de83f06242f4b26518240b1b6b42",
+    "rowcounter": 3,
+    "rowexpandable": false,
+    "rowfocusskin": "s2954acbe692423388f2177837594cc7",
+    "rowskin": "sc8a2ccfa3fd4a5886d636584697a786",
+    "rowtemplate": "flxSettingMenu",
+    "screenlevelwidget": false,
+    "seccounter": 1,
+    "sectionHeaderTemplateId": "cb20dc1c72454a69a2c5a7531414c1ac",
+    "sectionheaderskin": "sad5121e70a245c7850053b0d529a993",
+    "sectionheadertemplate": "tempFlxHeader",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorrequired": false,
+    "separatorthickness": 0,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxContainerBottom": "flxContainerBottom",
+        "flxContainerTop": "flxContainerTop",
+        "flxMenuOptions": "flxMenuOptions",
+        "flxSettingMenu": "flxSettingMenu",
+        "imgIcon": "imgIcon",
+        "imgMenuName": "imgMenuName",
+        "imgTrail": "imgTrail",
+        "lblSettingHeader": "lblSettingHeader",
+        "tempFlxHeader": "tempFlxHeader"
+    },
+    "zindex": 100
+}

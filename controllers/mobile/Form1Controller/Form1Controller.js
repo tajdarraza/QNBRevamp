@@ -14,7 +14,6 @@ define(["Navigation"], function (Navigation) {
         },
 
         preShow: function () {
-            Navigation.navigate("frmAccounts","","")
             alert("preShow");
         },
 

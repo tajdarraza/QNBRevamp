@@ -934,19 +934,19 @@ this.view.flxSwipeUse.height = (this.availableHeight-devH)+"dp"
         lblLoanAmountVal: { text: "QAR " + loan.totalAmount },
         flxClick1: {
           isVisible: true,
-          onTouchEnd: function () {
+          onClick: function () {
             self.onMenuClick1();
           },
         },
         flxClick2: {
           isVisible: true,
-          onTouchEnd: function () {
+          onClick: function () {
             self.onMenuClick2();
           },
         },
         flxClick3: {
           isVisible: true,
-          onTouchEnd: function () {
+          onClick: function () {
             self.onMenuClick3();
           },
         },

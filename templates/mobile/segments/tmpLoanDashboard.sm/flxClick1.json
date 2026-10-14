@@ -38,7 +38,6 @@
         "imgMenu1"
     ],
     "clipbounds": false,
-    "containerId": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxClick1",

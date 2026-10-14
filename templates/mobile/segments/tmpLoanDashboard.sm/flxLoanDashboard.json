@@ -35,9 +35,7 @@
     "autogrowmode": 1,
     "canUpdateUI": true,
     "children": [
-        "flxLoanCard",
-        "flxLoanQuickMenu",
-        "flxLoanVisual"
+        "flxMain"
     ],
     "clipbounds": true,
     "containerId": true,

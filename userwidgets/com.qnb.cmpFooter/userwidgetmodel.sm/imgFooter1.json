@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "32dp"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -26,13 +26,21 @@
     "_src_": "selectedhome.png",
     "_top_": {
         "type": "string",
-        "value": "12dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
         "value": "48dp"
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "id": "imgFooter1",
     "imagescalemode": 1,
@@ -42,7 +50,7 @@
     "isvisible": true,
     "kuid": "j0b67d1342e44c3fb104587b54d0c089",
     "name": "kony.ui.Image2",
-    "parent": "flxFooter",
+    "parent": "flxFooter1",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

@@ -38,7 +38,7 @@
         "flxProgressIndicator",
         "flxLoanValues"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxLoanProgressBar",
@@ -46,7 +46,7 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "j1f5e3386ec34290aeca133de1b5a03a",
-    "layouttype": 2,
+    "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "circularchart",
     "pf": "userwidgetmodel",

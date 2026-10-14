@@ -1,5 +1,9 @@
 {
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "2dp"
+    },
     "_height_": {
         "type": "string",
         "value": "88dp"
@@ -25,7 +29,7 @@
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "16dp"
+        "value": "12dp"
     },
     "_width_": {
         "type": "string",
@@ -54,7 +58,7 @@
     "kuid": "f913e242bdbb47d690032cfca4f6769a",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxLoanDashboard",
+    "parent": "flxMain",
     "pf": "tmpLoanDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

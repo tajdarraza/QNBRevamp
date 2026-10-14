@@ -56,7 +56,7 @@
     "kuid": "f1da9b94bfa84df59edcf90cfba8d30f",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxLoanDashboard",
+    "parent": "flxMain",
     "pf": "tmpLoanDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

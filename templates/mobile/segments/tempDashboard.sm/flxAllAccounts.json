@@ -1,5 +1,9 @@
 {
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "8dp"
+    },
     "_height_": {
         "type": "string",
         "value": "32dp"
@@ -25,7 +29,7 @@
     "_skin_": "s2921d5168314f4fbb4786e8227c3924",
     "_top_": {
         "type": "string",
-        "value": "20dp"
+        "value": "14dp"
     },
     "_width_": {
         "type": "string",

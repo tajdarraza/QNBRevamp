@@ -35,8 +35,8 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flxMenuIcon",
-        "lblMenuName"
+        "flxMenuIcon1",
+        "lblMenuName1"
     ],
     "clipbounds": false,
     "containerweight": 100,

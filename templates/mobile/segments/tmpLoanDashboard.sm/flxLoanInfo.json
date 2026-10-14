@@ -47,7 +47,6 @@
         "flxLoanAmount"
     ],
     "clipbounds": true,
-    "containerId": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxLoanInfo",

@@ -57,11 +57,15 @@ define(function () {
       }
     },
     setOnClick: function (callback) {
-      this.view.onTouchEnd = callback;
+        try{
+      this.view.onClick = callback;
 
       if (this.view.flxMain) {
-        this.view.flxLoanProgressBar.onTouchEnd = callback;
+        this.view.flxLoanProgressBar.onClick = callback;
       }
+        }catch(e){
+            kony.print("setOnClick -- catch "+JSON.stringify(e))
+        }
     },
   };
 });

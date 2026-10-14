@@ -36,9 +36,9 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flxMenu1",
-        "flxMenu2",
-        "flxMenu3"
+        "flxFavMenu1",
+        "flxFavMenu2",
+        "flxFavMenu3"
     ],
     "clipbounds": false,
     "containerweight": 100,

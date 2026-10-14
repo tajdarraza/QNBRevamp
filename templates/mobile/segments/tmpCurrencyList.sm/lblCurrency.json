@@ -1,6 +1,10 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "8dp"
+    },
     "_height_": {
         "type": "ref",
         "value": "preferred"
@@ -23,9 +27,13 @@
     ],
     "_skin_": "scf9d03dc5724684a9e73e10b4070720",
     "_text_": "QAR",
+    "_top_": {
+        "type": "string",
+        "value": "8dp"
+    },
     "_width_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "90%"
     },
     "_wrapping_": 2,
     "android": {
@@ -35,10 +43,6 @@
         }
     },
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,

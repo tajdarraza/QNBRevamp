@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "20dp"
+        "value": "24dp"
     },
     "_left_": {
         "type": "string",
@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "se6a173f9bb04594b0f8ee528971a4ae",
+    "_skin_": "s7d9af7483d14b93b38382b7cf49466c",
     "_text_": "Current account 1",
     "_top_": {
         "type": "string",

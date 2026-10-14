@@ -37,7 +37,7 @@ define({
   onDeviceBack: function () {},
 
   preShow: function () {
-    this.view.flxAccountList.onTouchEnd = this.flxAccountListOnClick;
+    this.view.flxAccountList.onClick = this.flxAccountListOnClick;
 
     this.view.segAccountDropDown.onRowClick = this.onAccountRowClick;
 

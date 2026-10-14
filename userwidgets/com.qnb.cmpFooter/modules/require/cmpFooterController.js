@@ -33,7 +33,7 @@ define(function () {
                 widgetId: "imgFooter5",
                 selectedImage: "selectedmenu.png",
                 unselectedImage: "navigationmenu.png",
-                formId: "frmMoreActions"
+                formId: "frmProfileMenu"
             }
         },
 
@@ -43,21 +43,21 @@ define(function () {
             kony.print("========================================");
             kony.print("FOOTER :: INITIALIZE START");
 
-            if (!this.view.imgFooter1 ||
-                !this.view.imgFooter2 ||
-                !this.view.imgFooter3 ||
-                !this.view.imgFooter4 ||
-                !this.view.imgFooter5) {
+            if (!this.view.flxFooter1 ||
+                !this.view.flxFooter2 ||
+                !this.view.flxFooter3 ||
+                !this.view.flxFooter4 ||
+                !this.view.flxFooter5) {
 
                 kony.print("FOOTER :: REQUIRED WIDGETS NOT FOUND");
                 return;
             }
 
-            this.view.imgFooter1.onTouchEnd = this.onHomeClick.bind(this);
-            this.view.imgFooter2.onTouchEnd = this.onCardsClick.bind(this);
-            this.view.imgFooter3.onTouchEnd = this.onPaymentsClick.bind(this);
-            this.view.imgFooter4.onTouchEnd = this.onTransferClick.bind(this);
-            this.view.imgFooter5.onTouchEnd = this.onMenuClick.bind(this);
+            this.view.flxFooter1.onClick = this.onHomeClick.bind(this);
+            this.view.flxFooter2.onClick = this.onCardsClick.bind(this);
+            this.view.flxFooter3.onClick = this.onPaymentsClick.bind(this);
+            this.view.flxFooter4.onClick = this.onTransferClick.bind(this);
+            this.view.flxFooter5.onClick = this.onMenuClick.bind(this);
 
             kony.print("FOOTER :: TOUCH EVENTS ATTACHED");
 

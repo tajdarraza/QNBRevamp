@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "92dp"
+        "value": "86dp"
     },
     "_left_": {
         "type": "string",
@@ -25,7 +25,7 @@
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_top_": {
         "type": "string",
-        "value": "8dp"
+        "value": "4dp"
     },
     "_width_": {
         "type": "string",
@@ -53,7 +53,7 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "d8c7607ee283481f952f564c5bcff8db",
-    "layouttype": 3,
+    "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxTopInfo",
     "pf": "tempDashboard",

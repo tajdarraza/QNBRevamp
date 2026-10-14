@@ -1,8 +1,12 @@
 {
     "DNDConfig": null,
-    "_height_": {
+    "_bottom_": {
         "type": "string",
-        "value": "196dp"
+        "value": "4dp"
+    },
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
@@ -25,10 +29,10 @@
     "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
     "_width_": {
         "type": "string",
-        "value": "345dp"
+        "value": "90%"
     },
     "allboxes": [],
-    "autogrowmode": 0,
+    "autogrowmode": 1,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",

@@ -31,5 +31,11 @@ backward-compatibility can go here.
 <style name="AppTheme2" parent="Theme.AppCompat.NoActionBar">
 <!-- Opt out of edge-to-edge enforcement -->
 <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+<item name="colorPrimary">@color/colorPrimary</item>
+<!-- <item name="colorPrimaryDark">@color/colorPrimaryDark</item> -->
+<item name="colorAccent">@color/colorAccent</item>
+<item name="android:statusBarColor">#010F34</item>
+<item name="android:windowLightStatusBar">true</item>
+
 </style>
 </resources>

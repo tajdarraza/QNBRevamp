@@ -18,7 +18,7 @@
     "_pxMenuIndex": [
         0,
         1,
-        17
+        25
     ],
     "_skin_": "s9ddb48ef36f47e9b0e147e124fda003",
     "_title_": null,
@@ -39,7 +39,8 @@
     "bounces": false,
     "canUpdateUI": true,
     "children": [
-        "flxParent"
+        "flxParent",
+        "slide"
     ],
     "configureExtendBottom": true,
     "configureExtendTop": false,
@@ -55,7 +56,7 @@
     "desktopweb": {
         "needAppMenu": false
     },
-    "device": "iPhoneSE",
+    "device": "iPhone15",
     "displayorientation": 1,
     "enabledforidletimeout": true,
     "enablescrolling": false,
@@ -121,7 +122,7 @@
     "needappmenu": false,
     "paddinginpixel": false,
     "platform": "iphone",
-    "prevDevice": "iPhone16",
+    "prevDevice": "Pixel3",
     "prevPlatform": "android",
     "requiresTopSafeAreaInset": true,
     "retaincontentalignment": false,

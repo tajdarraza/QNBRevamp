@@ -57,7 +57,7 @@ define({
         lblCardName: "Visa credit card",
         lblCardUser: "James Lee",
         lblNameBackCard: "James Lee",
-        lblCreditCard: "Credit card",
+        lblCreditCard: " Credit card ",
         lblCardNumber: "**** 0467",
         lblBackCard: "4657 6757 7667 0467",
         imgCard: "qnb_visa.png",
@@ -66,7 +66,7 @@ define({
         lblMenu1: "Pay card",
         lblMenu2: "Smart installments",
         lblMenu3: "Case speed",
-        lblMenu4: "Menu",
+        lblMenu4: "More",
         imgMenu1: "iconplaceholder2.png",
         imgMenu2: "iconplaceholder3.png",
         imgMenu3: "iconplaceholder4.png",
@@ -94,24 +94,24 @@ define({
           onTouchEnd: this.flipCard.bind(this),
         },
         flxMenu4: {
-          onTouchEnd: this.onMenu4Click,
+          onClick: this.onMenu4Click,
         },
         flxMenu1: {
-          onTouchEnd: this.onClickPayCard,
+          onClick: this.onClickPayCard,
         },
       },
 
       {
         lblCardName: "Visa credit card",
         lblCardUser: "Tajdar Raza",
-        lblCreditCard: "Credit card",
+        lblCreditCard: " Credit card ",
         lblBackCard: "4657 6757 7667 1709",
         lblCardNumber: "**** 1709",
         imgCard: "qnb_visa.png",
         lblMenu1: "Pay card",
         lblMenu2: "Smart installments",
         lblMenu3: "Case speed",
-        lblMenu4: "Menu",
+        lblMenu4: "More",
         lblBal: "90,000.00",
         lblAvlblBal: "Available balance",
         lblNameBackCard: "Tajdar Raza",
@@ -141,10 +141,10 @@ define({
           onTouchEnd: this.flipCard.bind(this),
         },
         flxMenu4: {
-          onTouchEnd: this.onMenu4Click,
+          onClick: this.onMenu4Click,
         },
         flxMenu1: {
-          onTouchEnd: this.onClickPayCard,
+          onClick: this.onClickPayCard,
         },
       },
     ];
@@ -222,10 +222,10 @@ define({
         onTouchEnd: this.onToggleCvv.bind(this, i),
       };
       this.cardData[i].flxMenu4 = {
-        onTouchEnd: this.onMenu4Click,
+        onClick: this.onMenu4Click,
       };
       this.cardData[i].flxMenu1 = {
-        onTouchEnd: this.onClickPayCard,
+        onClick: this.onClickPayCard,
       };
     }
 

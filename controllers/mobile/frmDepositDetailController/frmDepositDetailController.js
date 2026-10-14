@@ -94,13 +94,13 @@ define({
   },
 
   preShow: function () {
-    this.view.flxAccountList.onTouchEnd = this.flxAccountListOnClick.bind(this);
-    this.view.flxCurrency.onTouchEnd = this.flxCurrencyOnClick.bind(this);
-    this.view.flxDepositTypeList.onTouchEnd =
+    this.view.flxAccountList.onClick = this.flxAccountListOnClick.bind(this);
+    this.view.flxCurrency.onClick = this.flxCurrencyOnClick.bind(this);
+    this.view.flxDepositTypeList.onClick =
       this.flxDepositTypeListOnClick.bind(this);
-    this.view.flxDepositPeriodList.onTouchEnd =
+    this.view.flxDepositPeriodList.onClick =
       this.flxDepositPeriodListOnClick.bind(this);
-    this.view.flxAutoRenewToggle.onTouchEnd =
+    this.view.flxAutoRenewToggle.onClick =
       this.flxAutoRenewToggleOnClick.bind(this);
     this.view.btnContinue.onClick = this.btnContinueOnClick.bind(this);
 

@@ -28,14 +28,13 @@ define(["Navigation"], function (Navigation) {
         init: function() {},
 
         preShow: function() {
-            this.view.flxAccountType5.onTouchEnd =
-                this.onClickFixedDeposit.bind(this);
+            this.view.flxAccountType5.onClick = this.onClickFixedDeposit.bind(this);
         },
 
         postShow: function() {},
 
         onClickFixedDeposit: function() {
-            Navigation.navigate("frmDepositDetail");
+            Navigation.navigateTo("frmDepositDetail");
         },
 
         onDeviceBack: function() {

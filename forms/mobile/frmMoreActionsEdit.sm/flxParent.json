@@ -35,12 +35,11 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flxHeader",
-        "flxFavourites",
-        "flxSelectOptions",
-        "Segment0fae560f1d14b41"
+        "commonheader",
+        "flxScrollMain",
+        "flxButtonActions"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxParent",

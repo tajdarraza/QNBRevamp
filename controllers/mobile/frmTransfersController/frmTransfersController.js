@@ -22,7 +22,7 @@ define({
     //missing widget should cost one tile, not the whole screen.
     safeTap: function (id, fn) {
         try {
-            if (this.view[id]) { this.view[id].onTouchEnd = fn; }
+            if (this.view[id]) { this.view[id].onClick = fn; }
         } catch (e) {
             kony.print("frmTransfers safeTap " + id + " :: " + e);
         }

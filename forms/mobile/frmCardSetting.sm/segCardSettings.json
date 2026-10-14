@@ -161,7 +161,6 @@
     "counter": "13",
     "disabledSkins": {
         "alternateRowSkin": "s4c65bd92e544f419427154ab9d468aa",
-        "rowFocusSkin": "s2954acbe692423388f2177837594cc7",
         "widgetSkin": "s291387c4aa74377a23348ad853605cb"
     },
     "focusedindex": null,
@@ -177,7 +176,7 @@
     },
     "iphone": {
         "psp": {
-            "indicator": "rowselect"
+            "indicator": "none"
         }
     },
     "iscustomlayout": false,
@@ -199,6 +198,7 @@
     "rowTemplateId": "b9dca75e1edf426e8a6524bdb3487a66",
     "rowcounter": 3,
     "rowexpandable": false,
+    "rowfocusskin": "s2954acbe692423388f2177837594cc7",
     "rowskin": "sc8a2ccfa3fd4a5886d636584697a786",
     "rowtemplate": "flxSettings",
     "screenlevelwidget": false,

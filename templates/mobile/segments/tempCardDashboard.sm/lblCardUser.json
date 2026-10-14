@@ -1,9 +1,13 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0"
+    },
     "_height_": {
         "type": "string",
-        "value": "20dp"
+        "value": "24dp"
     },
     "_left_": {
         "type": "string",
@@ -23,10 +27,6 @@
     ],
     "_skin_": "s50523639f574fcb915287bfa72f53bc",
     "_text_": "James Lee",
-    "_top_": {
-        "type": "string",
-        "value": "20dp"
-    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "containerId": true,
     "containerweight": 100,
-    "contentalignment": 4,
+    "contentalignment": 1,
     "id": "lblCardUser",
     "info": null,
     "ipad": {

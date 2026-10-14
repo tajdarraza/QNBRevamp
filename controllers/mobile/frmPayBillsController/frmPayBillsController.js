@@ -15,7 +15,7 @@ define({
     this.view.cmpFooter.initializeFooter();
     this.view.cmpFooter.setSelectedTab("payments");
 
-    this.view.flxListProvider.onTouchEnd = this.onProviderClick;
+    this.view.flxListProvider.onClick = this.onProviderClick;
 
     this.view.billprovider.onProviderSelected =
       this.onProviderSelected.bind(this);

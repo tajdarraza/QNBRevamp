@@ -34,7 +34,7 @@ define({
     },
 
     safeTap: function (id, fn) {
-        try { if (this.view[id]) { this.view[id].onTouchEnd = fn; } }
+        try { if (this.view[id]) { this.view[id].onClick = fn; } }
         catch (e) { kony.print("frmFawranAmount safeTap " + id + " :: " + e); }
     },
 

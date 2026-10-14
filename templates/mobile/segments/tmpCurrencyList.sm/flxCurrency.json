@@ -1,8 +1,12 @@
 {
     "DNDConfig": null,
-    "_height_": {
+    "_bottom_": {
         "type": "string",
-        "value": "90%"
+        "value": "4dp"
+    },
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
@@ -25,19 +29,15 @@
     "_skin_": "s05e3357f4c446b9ac804b815c66f200",
     "_top_": {
         "type": "string",
-        "value": "0"
+        "value": "4dp"
     },
     "_width_": {
         "type": "string",
         "value": "100%"
     },
     "allboxes": [],
-    "autogrowmode": 0,
+    "autogrowmode": 1,
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "children": [
         "lblCurrency"
     ],
@@ -51,6 +51,10 @@
     "isvisible": true,
     "kuid": "h93f15452a254c7db67b2ff067b9508f",
     "layouttype": 2,
+    "minheight": {
+        "type": "string",
+        "value": "48dp"
+    },
     "name": "kony.ui.FlexContainer",
     "parent": "flxCurrencyList",
     "pf": "tmpCurrencyList",

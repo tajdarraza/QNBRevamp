@@ -46,6 +46,9 @@
                 "kuid": "ha20e665412348588dc0cc66cba89c9b",
                 "srcKUID": "df4929c38eba4b738b0e1fcdcabad8cf",
                 "wType": "FlexContainer"
+            },
+            "zIndex": {
+                "Default": 100
             }
         },
         "flxCountries": {
@@ -175,5 +178,5 @@
     "snaptogrid": true,
     "sourceUserWidget": "df4929c38eba4b738b0e1fcdcabad8cf",
     "wType": "UserWidgetInstance",
-    "zindex": 1
+    "zindex": 100
 }

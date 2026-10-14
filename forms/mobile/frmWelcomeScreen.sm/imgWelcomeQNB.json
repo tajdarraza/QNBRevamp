@@ -4,11 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "200dp"
+        "value": "30%"
     },
     "_left_": {
         "type": "string",
-        "value": "0"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -24,10 +24,6 @@
     ],
     "_skin_": "s46f4cc5af674c87a6552260c65fd4ef",
     "_src_": "cards1.png",
-    "_top_": {
-        "type": "string",
-        "value": "101dp"
-    },
     "_width_": {
         "type": "string",
         "value": "345dp"
@@ -36,6 +32,10 @@
     "centerx": {
         "type": "string",
         "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "20%"
     },
     "containerweight": 100,
     "id": "imgWelcomeQNB",

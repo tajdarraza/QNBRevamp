@@ -2,12 +2,12 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "28dp"
     },
     "_left_": {
         "type": "string",
-        "value": "16dp"
+        "value": "0dp"
     },
     "_margin_": [
         1,
@@ -16,13 +16,17 @@
         1
     ],
     "_padding_": [
+        12,
         0,
-        0,
-        0,
+        12,
         0
     ],
-    "_skin_": "s9691a35c58043e6b2f3c9c178deaf6b",
-    "_text_": "Tajdar Raza",
+    "_skin_": "s7fdd82b9ce14406af4eb4d02829bd3e",
+    "_text_": "Mohammad  Tajdar Raza",
+    "_top_": {
+        "type": "string",
+        "value": "32dp"
+    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -35,10 +39,6 @@
         }
     },
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerweight": 100,
     "contentalignment": 4,
     "id": "lblAccName",
@@ -55,9 +55,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "afdd61f2d47f4143878f0724c2e1322e",
+    "kuid": "b5c6a207c08a4c469ee2cc2c44f0cf34",
     "name": "kony.ui.Label",
-    "parent": "flxAccountName",
+    "paddinginpixel": true,
+    "parent": "flxFixedDeposit",
     "pf": "frmFixedDeposit",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

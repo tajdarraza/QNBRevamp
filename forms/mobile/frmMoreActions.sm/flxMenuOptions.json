@@ -37,8 +37,8 @@
     "canUpdateUI": true,
     "children": [
         "flxMenu1",
-        "CopyflxMenu0f5ed2ace6dc24a",
-        "CopyflxMenu0hf14c8e7455648"
+        "flxMenu2",
+        "flxMenu3"
     ],
     "clipbounds": false,
     "containerweight": 100,

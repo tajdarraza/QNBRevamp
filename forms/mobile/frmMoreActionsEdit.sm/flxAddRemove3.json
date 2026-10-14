@@ -47,7 +47,7 @@
     "kuid": "h9ede6e61e2d41329e104e1905baaf02",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMenu3",
+    "parent": "flxFavMenu3",
     "pf": "frmMoreActionsEdit",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

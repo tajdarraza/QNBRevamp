@@ -36,12 +36,10 @@
     "canUpdateUI": true,
     "children": [
         "imgWelcomeQNB",
-        "btnStarted",
-        "btnLogin",
-        "lblWelcome",
-        "lblMobileBanking"
+        "flxWelcomeBanking",
+        "flxAction"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxMain",

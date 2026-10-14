@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "28dp"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -26,13 +26,21 @@
     "_src_": "selectedtransfer.png",
     "_top_": {
         "type": "string",
-        "value": "12dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
         "value": "48dp"
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "id": "imgFooter4",
     "imagescalemode": 1,
@@ -42,7 +50,7 @@
     "isvisible": true,
     "kuid": "b86a61a125d543d9b1154d916c752ee9",
     "name": "kony.ui.Image2",
-    "parent": "flxFooter",
+    "parent": "flxFooter4",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

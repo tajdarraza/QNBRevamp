@@ -51,7 +51,7 @@ define({
                 kony.print("frmFawranReview: WIDGET NOT FOUND -> " + id);
                 return false;
             }
-            this.view[id].onTouchEnd = fn;
+            this.view[id].onClick = fn;
             return true;
         } catch (e) {
             kony.print("frmFawranReview safeTap " + id + " :: " + e);
@@ -304,7 +304,7 @@ define({
             if (this.view.flxBusy) {
                 this.view.flxBusy.setVisibility(on);
                 if (on) {
-                    this.view.flxBusy.onTouchEnd = function () { };
+                    this.view.flxBusy.onClick = function () { };
                 }
                 this.view.forceLayout();
             }

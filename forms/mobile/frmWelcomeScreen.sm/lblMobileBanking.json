@@ -1,10 +1,6 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "295dp"
-    },
     "_height_": {
         "type": "ref",
         "value": "preferred"
@@ -23,6 +19,10 @@
     ],
     "_skin_": "s55e9581266f4d9f9c95b2f4c742e916",
     "_text_": "QNB Mobile Banking",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -57,7 +57,7 @@
     "isvisible": true,
     "kuid": "he51db31d73242fe81a40aac1e65b042",
     "name": "kony.ui.Label",
-    "parent": "flxMain",
+    "parent": "flxWelcomeBanking",
     "pf": "frmWelcomeScreen",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

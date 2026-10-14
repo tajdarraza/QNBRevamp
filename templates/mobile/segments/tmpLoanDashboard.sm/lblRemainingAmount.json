@@ -43,7 +43,6 @@
         }
     },
     "canUpdateUI": true,
-    "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
     "id": "lblRemainingAmount",

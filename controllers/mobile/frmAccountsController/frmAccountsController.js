@@ -22,19 +22,27 @@ define(["Navigation"], function (Navigation) {
             });
 
             this.view.cmpFooter.initializeFooter();
-            this.view.cmpFooter.setSelectedTab("menu");
+            this.view.cmpFooter.setSelectedTab("home");
             this.data = navData;
         },
 
         onDeviceBack: function () {
+            kony.print(
+                "ACCOUNTS NAV STACK = " +
+                JSON.stringify(Navigation.getStack())
+            );
+
             Navigation.goBack();
         },
 
         onAddClick: function () {
-            Navigation.navigate("frmNewAccount");
+            kony.print("ACCOUNTS: Add -> frmNewAccount");
+
+            Navigation.push("frmNewAccount");
+            Navigation.navigateTo("frmNewAccount");
         },
 
-        init: function () {},
+        init: function () { },
 
         preShow: function () {
             this.view.segAccounts.widgetDataMap = {
@@ -58,13 +66,14 @@ define(["Navigation"], function (Navigation) {
                 flxSeparator2: "flxSeparator2",
             };
 
-            this.view.segAccounts.onRowClick = this.onAccountRowClick.bind(this);
+            this.view.segAccounts.onRowClick =
+                this.onAccountRowClick.bind(this);
 
             this.setDummyAccounts();
             this.configureTabs();
         },
 
-        postShow: function () {},
+        postShow: function () { },
 
         createAccountRow: function (
             accountName,
@@ -213,7 +222,10 @@ define(["Navigation"], function (Navigation) {
             if (this.currentAccounts.length > 0) {
                 data.push([
                     {
-                        lblAccountHeader: "Current (" + this.currentAccounts.length + ")",
+                        lblAccountHeader:
+                            "Current (" +
+                            this.currentAccounts.length +
+                            ")",
                     },
                     this.currentAccounts,
                 ]);
@@ -222,7 +234,10 @@ define(["Navigation"], function (Navigation) {
             if (this.savingsAccounts.length > 0) {
                 data.push([
                     {
-                        lblAccountHeader: "Savings (" + this.savingsAccounts.length + ")",
+                        lblAccountHeader:
+                            "Savings (" +
+                            this.savingsAccounts.length +
+                            ")",
                     },
                     this.savingsAccounts,
                 ]);
@@ -231,7 +246,10 @@ define(["Navigation"], function (Navigation) {
             if (this.delegatedAccounts.length > 0) {
                 data.push([
                     {
-                        lblAccountHeader: "Delegated (" + this.delegatedAccounts.length + ")",
+                        lblAccountHeader:
+                            "Delegated (" +
+                            this.delegatedAccounts.length +
+                            ")",
                     },
                     this.delegatedAccounts,
                 ]);
@@ -244,7 +262,10 @@ define(["Navigation"], function (Navigation) {
             var data = [
                 [
                     {
-                        lblAccountHeader: "Current (" + this.currentAccounts.length + ")",
+                        lblAccountHeader:
+                            "Current (" +
+                            this.currentAccounts.length +
+                            ")",
                     },
                     this.currentAccounts,
                 ],
@@ -257,7 +278,10 @@ define(["Navigation"], function (Navigation) {
             var data = [
                 [
                     {
-                        lblAccountHeader: "Savings (" + this.savingsAccounts.length + ")",
+                        lblAccountHeader:
+                            "Savings (" +
+                            this.savingsAccounts.length +
+                            ")",
                     },
                     this.savingsAccounts,
                 ],
@@ -270,7 +294,10 @@ define(["Navigation"], function (Navigation) {
             var data = [
                 [
                     {
-                        lblAccountHeader: "Delegated (" + this.delegatedAccounts.length + ")",
+                        lblAccountHeader:
+                            "Delegated (" +
+                            this.delegatedAccounts.length +
+                            ")",
                     },
                     this.delegatedAccounts,
                 ],
@@ -284,7 +311,8 @@ define(["Navigation"], function (Navigation) {
 
             this.view.multipletab.initialize({
                 selectedIndex: 0,
-                flxFourTabSkin: "sknFlx32pxRoundWhiteBgE4E2ED",
+                flxFourTabSkin:
+                    "sknFlx32pxRoundWhiteBgE4E2ED",
 
                 tabs: [
                     {
@@ -320,7 +348,12 @@ define(["Navigation"], function (Navigation) {
         },
 
         onTabSelected: function (tab, index) {
-            kony.print("ACCOUNTS :: TAB " + tab.flx + " INDEX " + index);
+            kony.print(
+                "ACCOUNTS :: TAB " +
+                tab.flx +
+                " INDEX " +
+                index
+            );
 
             if (index === 0) {
                 this.showAllAccounts();
@@ -333,10 +366,20 @@ define(["Navigation"], function (Navigation) {
             }
         },
 
-        onAccountRowClick: function (segmentWidget, sectionIndex, rowIndex) {
-            var rowData = segmentWidget.data[sectionIndex][1][rowIndex];
+        onAccountRowClick: function (
+            segmentWidget,
+            sectionIndex,
+            rowIndex
+        ) {
+            var rowData =
+                segmentWidget.data[sectionIndex][1][rowIndex];
 
-            Navigation.navigate("frmFixedDeposit");
+            kony.print(
+                "ACCOUNTS: selected account -> frmFixedDeposit"
+            );
+
+            Navigation.push("frmFixedDeposit");
+            Navigation.navigateTo("frmFixedDeposit");
         },
     };
 });

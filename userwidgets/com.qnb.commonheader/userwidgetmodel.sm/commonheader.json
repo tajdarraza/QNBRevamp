@@ -37,7 +37,7 @@
     "children": [
         "flxHeader"
     ],
-    "clipbounds": false,
+    "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "commonheader",
