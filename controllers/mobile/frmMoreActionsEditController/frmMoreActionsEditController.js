@@ -18,6 +18,13 @@ define(["MockData/MenuConfig"], function (MenuConfig) {
             } else {
                 this.menuData = MenuConfig.getMenuData();
             }
+
+            this.view.commonheader.configure({
+                title: "More actions",
+                action1: function () {
+                    new kony.mvc.Navigation("frmMoreActions").navigate();
+            },
+        });
         },
 
         onInit: function () {

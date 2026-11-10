@@ -63,6 +63,14 @@
                 "Default": 10
             }
         },
+        "flxAddService": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "be038ccf98ce4ffab7bd835a9ff0ca58",
+                "srcKUID": "d34a63929efc4a049a7ada6dbe517386",
+                "wType": "FlexContainer"
+            }
+        },
         "flxCountries": {
             "__events__": {},
             "__info__": {

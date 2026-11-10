@@ -1,0 +1,69 @@
+{
+  "android": {
+    "font_name": "QNBSansAR",
+    "font_size": 139,
+    "isForked": true
+  },
+  "androidwearos": {
+    "font_name": "QNBSansAR",
+    "font_size": 179,
+    "isForked": true
+  },
+  "background_color": "376cd2ff",
+  "bg_type": "one",
+  "border_color": "376cd2ff",
+  "border_radius": 24,
+  "border_style": "custom",
+  "border_type": 0,
+  "border_width": 1,
+  "desktopweb": {
+    "bottom_left_border_color": "376cd2ff",
+    "bottom_left_border_radius": 24,
+    "bottom_left_border_style": "rc",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "376cd2ff",
+    "bottom_right_border_radius": 24,
+    "bottom_right_border_style": "rc",
+    "bottom_right_border_width": 1,
+    "font_name": "QNBSansAR",
+    "font_size": 313,
+    "isForked": true,
+    "top_left_border_color": "376cd2ff",
+    "top_left_border_radius": 24,
+    "top_left_border_style": "rc",
+    "top_left_border_width": 1,
+    "top_right_border_color": "376cd2ff",
+    "top_right_border_radius": 24,
+    "top_right_border_style": "rc",
+    "top_right_border_width": 1
+  },
+  "fontSizeInPx": true,
+  "font_color": "ffffffff",
+  "font_name": "iphoneSystem",
+  "font_size": 100,
+  "font_style": "normal",
+  "font_weight": "400",
+  "ipad": {
+    "font_name": "QNBSansAR",
+    "font_size": 179,
+    "isForked": true
+  },
+  "iphone": {
+    "font_name": "QNBSansAR",
+    "font_size": 125,
+    "isForked": true
+  },
+  "isDefaultSkin": false,
+  "kuid": "s6333ce0276142449b36e7630b41c362",
+  "tabrcandroid": {
+    "font_name": "QNBSansAR",
+    "font_size": 296,
+    "isForked": true
+  },
+  "wType": "Button",
+  "watchos": {
+    "font_name": "QNBSansAR",
+    "font_size": 179,
+    "isForked": true
+  }
+}

@@ -3,12 +3,14 @@
     "font_color": "1b124bff",
     "font_name": "QNBSansAR-SemiBold",
     "font_size": 80,
+    "font_style": "underline",
     "isForked": true
   },
   "androidwearos": {
     "font_color": "1b124bff",
     "font_name": "QNBSansAR-SemiBold",
     "font_size": 80,
+    "font_style": "underline",
     "isForked": true
   },
   "background_color": "00000000",
@@ -27,6 +29,7 @@
     "font_color": "1b124bff",
     "font_name": "QNBSansAR-SemiBold",
     "font_size": 80,
+    "font_style": "underline",
     "isForked": true,
     "top_left_border_color": "424242ff",
     "top_left_border_style": "plain",
@@ -59,6 +62,7 @@
     "font_color": "1b124bff",
     "font_name": "QNBSansAR-SemiBold",
     "font_size": 80,
+    "font_style": "underline",
     "isForked": true
   },
   "wType": "Label",

@@ -13,10 +13,18 @@ define({
       firstName: "Mohammad",
       lastName: "Raza",
       notificationCount: 5,
+       callbacks: {
+        add: this.onCardHeaderAddClick.bind(this),
+    }
     });
+
 
     this.view.segCards.onSwipe = this.onSwipeCards;
     this.data = navData;
+  },
+
+  onCardHeaderAddClick: function(){
+ new kony.mvc.Navigation("frmQuickActions").navigate();
   },
 
   //onDeviceBack was assigned above but never defined, so hardware back did nothing here.

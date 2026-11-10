@@ -10,23 +10,23 @@ define(["Navigation"], function (Navigation) {
         },
 
         init: function () {
-            alert("init");
+            kony.print("init");
         },
 
         preShow: function () {
-            alert("preShow");
+            kony.print("preShow");
         },
 
         postShow: function () {
-            alert("postShow");
+            kony.print("postShow");
         },
 
         onHide: function () {
-            alert("onHide");
+            kony.print("onHide");
         },
 
         backNavigation: function () {
-            alert("backNavigation");
+            kony.print("backNavigation");
         }
     }
 });

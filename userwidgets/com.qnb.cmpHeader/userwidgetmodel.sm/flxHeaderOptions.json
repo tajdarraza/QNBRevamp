@@ -41,7 +41,7 @@
     "children": [
         "flxInitialsNotifi",
         "flxCountries",
-        "imgAdd",
+        "flxAddService",
         "imgLangLogo"
     ],
     "clipbounds": true,

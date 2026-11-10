@@ -1,0 +1,104 @@
+{
+  "android": {
+    "background_color": "f4f3f6ff",
+    "bg_type": "one",
+    "font_name": "default",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000000",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "androidwearos": {
+    "background_color": "f4f3f6ff",
+    "bg_type": "one",
+    "font_name": "default",
+    "isForked": true
+  },
+  "background_gradient_bottom_color": "e4e2edff",
+  "background_gradient_top_color": "ffffffff",
+  "background_style": "vg",
+  "bg_type": "two",
+  "border_color": "000000ff",
+  "border_style": "plain",
+  "border_type": 0,
+  "border_width": 0,
+  "desktopweb": {
+    "background_color": "f4f3f6ff",
+    "bg_type": "one",
+    "bottom_left_border_color": "000000ff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 0,
+    "bottom_right_border_color": "000000ff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 0,
+    "font_name": "Helvetica",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000000",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    },
+    "top_left_border_color": "000000ff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 0,
+    "top_right_border_color": "000000ff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 0
+  },
+  "ipad": {
+    "background_color": "f4f3f6ff",
+    "bg_type": "one",
+    "font_name": "System",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000000",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "iphone": {
+    "background_color": "f4f3f6ff",
+    "bg_type": "one",
+    "font_name": "System",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000000",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "isDefaultSkin": false,
+  "kuid": "sd24f846ec0b4fe8bb38338a12bada22",
+  "tabrcandroid": {
+    "background_color": "f4f3f6ff",
+    "bg_type": "one",
+    "font_name": "default",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000000",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "wType": "FlexContainer",
+  "watchos": {
+    "font_name": "System"
+  }
+}

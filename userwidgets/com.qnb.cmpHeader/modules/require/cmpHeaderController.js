@@ -3,8 +3,7 @@ define(function () {
         currentMode: "normal",
         callbacks: {},
         /*
-         *
-         * Parent controller:
+         * Parent controller example usage:
          *
          * this.view.cmpHeader.configure({
          *     mode: "normal",
@@ -18,7 +17,6 @@ define(function () {
          *         language: this.onLanguageClick.bind(this)
          *     }
          * });
-         *
          */
 
         initializeHeader: function () {
@@ -45,8 +43,8 @@ define(function () {
                 kony.print("HEADER :: imgLangLogo NOT FOUND");
             }
 
-            if (this.view.imgAdd) {
-                this.view.imgAdd.onTouchEnd = this.onAddClick.bind(this);
+            if (this.view.flxAddService) {
+                this.view.flxAddService.onClick = this.onAddClick.bind(this);
                 kony.print("HEADER :: ADD EVENT BOUND");
             }
 
@@ -75,8 +73,8 @@ define(function () {
                 this.view.imgLangLogo.isVisible = false;
             }
 
-            if (this.view.imgAdd) {
-                this.view.imgAdd.isVisible = true;
+            if (this.view.flxAddService) {
+                this.view.flxAddService.isVisible = true;
             }
 
             if (this.view.imgSearch) {
@@ -107,8 +105,8 @@ define(function () {
                 this.view.imgLangLogo.src = "globe_language.png";
             }
 
-            if (this.view.imgAdd) {
-                this.view.imgAdd.isVisible = false;
+            if (this.view.flxAddService) {
+                this.view.flxAddService.isVisible = false;
             }
 
             if (this.view.imgSearch) {
@@ -205,13 +203,6 @@ define(function () {
             kony.print("HEADER :: LANGUAGE CLICKED");
             kony.print("HEADER :: CURRENT MODE = " + this.currentMode);
 
-            /*
-             * If parent supplied a callback, let the parent
-             * handle the language click.
-             *
-             * Otherwise keep the existing language logic.
-             */
-
             if (typeof this.callbacks.language === "function") {
                 this.callbacks.language();
                 return;
@@ -232,20 +223,10 @@ define(function () {
                 }
 
                 var currentLocale = kony.i18n.getCurrentLocale();
-
                 kony.print("HEADER :: CURRENT LOCALE = " + currentLocale);
 
-                var set_locale;
-
-                if (currentLocale === "en") {
-                    set_locale = "ar";
-                } else {
-                    set_locale = "en";
-                }
-
+                var set_locale = (currentLocale === "en") ? "ar" : "en";
                 kony.print("HEADER :: CHANGING LOCALE TO = " + set_locale);
-
-                var self = this;
 
                 kony.i18n.setCurrentLocaleAsync(
                     set_locale,
@@ -253,7 +234,6 @@ define(function () {
                         kony.print("HEADER :: LOCALE CHANGE SUCCESS");
 
                         var newLocale = kony.i18n.getCurrentLocale();
-
                         kony.store.setItem("current_locale", newLocale);
 
                         try {
@@ -262,10 +242,6 @@ define(function () {
                             kony.print("HEADER :: DUMMY NAV ERROR = " + e);
                         }
 
-                        /*
-                         * Destroy forms
-                         */
-
                         try {
                             kony.application.destroyForm("frmLogin");
                             kony.application.destroyForm("frmWelcomeScreen");
@@ -273,10 +249,6 @@ define(function () {
                         } catch (e2) {
                             kony.print("HEADER :: DESTROY ERROR = " + e2);
                         }
-
-                        /*
-                         * Navigate to Login
-                         */
 
                         kony.timer.schedule(
                             "languageChangeTimer",
@@ -306,12 +278,6 @@ define(function () {
             }
         },
 
-        /*
-         * =====================================================
-         * ADD
-         * =====================================================
-         */
-
         onAddClick: function () {
             kony.print("HEADER :: ADD CLICKED");
 
@@ -332,7 +298,13 @@ define(function () {
 
         onInitialsNotificationClick: function () {
             kony.print("HEADER :: INITIALS/NOTIFICATION CLICKED");
-new kony.mvc.Navigation("frmMyProfile").navigate()
+
+            try {
+                new kony.mvc.Navigation("frmMyProfile").navigate();
+            } catch (e) {
+                kony.print("HEADER :: PROFILE NAV ERROR = " + e);
+            }
+
             if (typeof this.callbacks.initialsNotification === "function") {
                 this.callbacks.initialsNotification();
                 return;
@@ -346,36 +318,18 @@ new kony.mvc.Navigation("frmMyProfile").navigate()
             }
 
             var image = isOpen ? "iconright.png" : "iconright1.png";
+            kony.print("HEADER :: Setting arrow image to: " + image);
 
-            if (!animate) {
-                this.view.imgArrowDown.src = image;
-                return;
+            // Direct assignment safe-guarded for iOS rendering thread
+            this.view.imgArrowDown.src = image;
+
+            // Force a redraw layout if needed, or let iOS handle it natively
+            if (this.view.forceLayout) {
+                // Do NOT use forceLayout() on iOS, but setting the src directly 
+                // will update the image property cleanly.
             }
-
-            this.view.imgArrowDown.animate(
-                kony.ui.createAnimation({
-                    "0": {
-                        transform: kony.ui.makeAffineTransform()
-                    },
-                    "100": {
-                        transform: kony.ui.makeAffineTransform()
-                    }
-                }),
-                {
-                    duration: 0.15,
-                    iterationCount: 1,
-                    delay: 0,
-                    fillMode: kony.anim.FILL_MODE_FORWARDS
-                },
-                {
-                    animationEnd: function () {
-                        if (this.view.imgArrowDown) {
-                            this.view.imgArrowDown.src = image;
-                        }
-                    }.bind(this)
-                }
-            );
         },
+
         setCountryArrowState: function (isOpen, animate) {
             this.setCountryArrow(
                 isOpen,
@@ -383,5 +337,4 @@ new kony.mvc.Navigation("frmMyProfile").navigate()
             );
         },
     };
-
 });

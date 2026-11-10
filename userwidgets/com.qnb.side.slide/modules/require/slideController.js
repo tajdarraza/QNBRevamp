@@ -133,7 +133,8 @@ define(function () {
 
             this.view.isVisible = true;
             this.view.flxMain.isVisible = true;
-            this.view.forceLayout();
+            
+            // forceLayout() removed here to prevent iOS layer conflict
 
             var startTransform =
                 kony.ui.makeAffineTransform();

@@ -5,12 +5,17 @@ define(["MockData/MenuConfig"], function (MenuConfig) {
         onNavigate: function (params) {
             this.view.init = this.onInit;
             this.view.preShow = this.preShow;
+            this.view.onDeviceBack = this.onDeviceBack;
+            this.view.commonheader.configure({
+                title: "More actions",
+                backAction: "frmDashboard",
+                action1: this.onDeviceBack
+        });
         },
         onInit: function(){
 
         },
         preShow: function () {
-            this.view.commonheader.configure({ title: "More actions" });
             this.view.lblEditActions.onTouchEnd = this.onEditClick;
 
             // Fetch single source of truth using the imported MenuConfig
@@ -84,6 +89,11 @@ define(["MockData/MenuConfig"], function (MenuConfig) {
 
         onEditClick: function () {
             new kony.mvc.Navigation("frmMoreActionsEdit").navigate();
+        },
+        onDeviceBack: function () {
+
+                new kony.mvc.Navigation("frmDashboard").navigate();
+
         }
     };
 });

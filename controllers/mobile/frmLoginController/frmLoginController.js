@@ -6,74 +6,92 @@ define(["AccountEntity/AccountEntity"], function (AccountEntity) {
         isExpanded: true,
         dummy: "",
         loginUserName: "",
-
+        isCountryDropdownOpen: false,
 
         onNavigate: function (params) {
             this.view.init = this.onInit;
             this.view.preShow = this.preShow;
             this.view.onDeviceBack = this.onDeviceBack;
 
-            this.view.cmpHeader.configure({
-                mode: "guest",
-                country: "Qatar",
-                callbacks: {
-                    country: this.onCountryClick.bind(this)
-                }
-            });
+            kony.print("FRMLOGIN :: POSTSHOW");
+
+            // Configure the header component and bind its callbacks
+            if (this.view.cmpHeader && typeof this.view.cmpHeader.configure === "function") {
+                this.view.cmpHeader.configure({
+                    mode: "login",
+                    country: "Qatar",
+                    callbacks: {
+                        country: this.onCountryClick.bind(this),
+                        language: this.onLanguageClick.bind(this),
+                        initialsNotification: this.onNotificationClick.bind(this)
+                    }
+                });
+                kony.print("FRMLOGIN :: cmpHeader CONFIGURED");
+            } else {
+                kony.print("FRMLOGIN :: ERROR - cmpHeader not found on postShow!");
+            }
         },
+
+
+
+        // INSIDE YOUR FORM CONTROLLER (frmLogin / TestForm):
 
         onCountryClick: function () {
-            kony.print("TESTFORM :: COUNTRY CLICKED");
+            kony.print("FORM :: COUNTRY CLICKED VIA CALLBACK");
 
-            if (!this.view.slide) {
-                kony.print("TESTFORM :: slide INSTANCE NOT FOUND");
-                return;
+            var self = this;
+            self.isCountryDropdownOpen = !self.isCountryDropdownOpen;
+
+            // 1. Tell cmpHeader to flip arrow
+            if (self.view.cmpHeader && typeof self.view.cmpHeader.setCountryArrowState === "function") {
+                self.view.cmpHeader.setCountryArrowState(self.isCountryDropdownOpen, true);
             }
 
-            var isOpening = !this.view.slide.isOpen;
+            // 2. Tell slide component to show/hide
+            if (self.isCountryDropdownOpen) {
+                if (self.view.slide && typeof self.view.slide.show === "function") {
+                    self.view.slide.show({
+                        data: [
+                            { name: "Qatar", logo: "flag_qar.png" },
+                            { name: "KSA", logo: "flag_sar.png" },
+                            { name: "Kuwait", logo: "flag_kwd.png" },
+                            { name: "England", logo: "flag_gbp.png" }
+                        ],
+                        onSelected: function (selectedItem) {
+                            kony.print("FORM :: Selected Country = " + selectedItem.name);
 
-            this.view.slide.toggle({
-                data: [
-                    {
-                        name: "Qatar",
-                        logo: "flag_qar.png"
-                    },
-                    {
-                        name: "KSA",
-                        logo: "flag_sar.png"
-                    },
-                    {
-                        name: "Kuwait",
-                        logo: "flag_kwd.png"
-                    },
-                    {
-                        name: "England",
-                        logo: "flag_gbp.png"
-                    }
-                ],
+                            if (self.view.cmpHeader && typeof self.view.cmpHeader.setCountry === "function") {
+                                self.view.cmpHeader.setCountry(selectedItem.name);
+                            }
 
-                onSelected: function (country) {
-                    if (!country) {
-                        return;
-                    }
-
-                    alert(country.name);
-
-                    kony.print(
-                        "TESTFORM :: COUNTRY SELECTED :: " +
-                        JSON.stringify(country)
-                    );
+                            self.isCountryDropdownOpen = false;
+                            if (self.view.cmpHeader && typeof self.view.cmpHeader.setCountryArrowState === "function") {
+                                self.view.cmpHeader.setCountryArrowState(false, true);
+                            }
+                        }
+                    });
                 }
-            });
-
-            this.view.cmpHeader.setCountryArrowState(
-                isOpening,
-                true
-            );
+            } else {
+                if (self.view.slide && typeof self.view.slide.hide === "function") {
+                    self.view.slide.hide();
+                }
+            }
         },
+
+        onLanguageClick: function () {
+            kony.print("FRMLOGIN :: LANGUAGE CLICKED VIA CALLBACK");
+            // Handle language action if needed, or let component handle it
+        },
+
+        onNotificationClick: function () {
+            kony.print("FRMLOGIN :: NOTIFICATION CLICKED VIA CALLBACK");
+            // Handle profile/notification navigation here if needed
+        },
+
 
 
         onInit: function () {
+            kony.print("FRMLOGIN :: INIT");
             this.view.flxChckbox.onClick = this.toggleCheckbox;
             this.view.imgVisibility.onTouchEnd = this.toggleMasking;
             this.view.btnLogin.onClick = this.btnLogin;
@@ -87,9 +105,9 @@ define(["AccountEntity/AccountEntity"], function (AccountEntity) {
             this.view.flxFindUs.onTouchEnd = this.onTouchEnd2;
             this.view.flxQNBNews.onTouchEnd = this.onTouchEnd3;
             this.view.flxLifeRewards.onClick = this.onRewardClick;
-            
+
             this.view.flxFindUs.onClick = this.onFindUsClick;
-            
+
             this.view.flxQNBNews.onClick = this.onQNBNewsClick;
 
             //switch
@@ -150,15 +168,15 @@ define(["AccountEntity/AccountEntity"], function (AccountEntity) {
             this.view.flxQNBNews.skin = "skn16PxBgWhiteOp50Outlinec7c2d9";
         },
 
-        onTouchEnd1: function(){
+        onTouchEnd1: function () {
             this.view.flxLifeRewards.skin = "sknBgWhite16PxBorderc7c2d9";
         },
 
-        onTouchEnd2: function(){
+        onTouchEnd2: function () {
             this.view.flxFindUs.skin = "sknBgWhite16PxBorderc7c2d9";
         },
 
-        onTouchEnd3: function(){
+        onTouchEnd3: function () {
             this.view.flxQNBNews.skin = "sknBgWhite16PxBorderc7c2d9";
         },
 
@@ -320,7 +338,7 @@ define(["AccountEntity/AccountEntity"], function (AccountEntity) {
             this.loginUserName = user;
 
             if (USE_MOCK_SERVICES) {
-                self.runMockLogin();
+                //self.runMockLogin();
                 return;
             }
 

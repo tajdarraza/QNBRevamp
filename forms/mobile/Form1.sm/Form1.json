@@ -38,7 +38,7 @@
     },
     "canUpdateUI": true,
     "children": [
-        "commonheader"
+        "flxParent"
     ],
     "configureExtendBottom": true,
     "configureExtendTop": false,

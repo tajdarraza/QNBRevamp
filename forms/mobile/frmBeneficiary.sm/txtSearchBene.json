@@ -1,0 +1,84 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "40dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "30dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Search",
+    "_right_": {
+        "type": "string",
+        "value": "4dp"
+    },
+    "_skin_": "sa23cb4b8c4c4f70be707e639c81d940",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "86%"
+    },
+    "android": {
+        "psp": {
+            "keyboardActionLabel": 3
+        }
+    },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "disabledSkins": {},
+    "focusskin": "sa23cb4b8c4c4f70be707e639c81d940",
+    "id": "txtSearchBene",
+    "info": null,
+    "inputAccessoryViewType": 1,
+    "iphone": {
+        "psp": {
+            "inputAccessoryViewType": 1
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardtype": "A",
+    "kuid": "b159ed5eff844e7abf7da73865bd047b",
+    "mode": "A",
+    "name": "kony.ui.TextBox2",
+    "parent": "flxSearchBene",
+    "pf": "frmBeneficiary",
+    "placeholderskin": "sa23cb4b8c4c4f70be707e639c81d940",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": false,
+    "textinputmode": "A",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField",
+    "zindex": 10
+}

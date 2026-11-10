@@ -29,6 +29,7 @@ define({
     },
 
     bindTiles: function () {
+        var self = this;
         //Fawran is the only rail built in this prototype. Everything else answers rather than
         //sitting dead — a dead tap reads as a broken build.
         this.safeTap("flxTileFawran", this.onFawran);
@@ -43,7 +44,7 @@ define({
         this.safeTap("flxTileToBroker", function () { pocNotBuilt("Transfer to broker"); });
 
         this.safeTap("flxMngAutoTransfers", function () { pocNotBuilt("Automatic transfers"); });
-        this.safeTap("flxMngBeneficiaries", function () { pocNotBuilt("Manage beneficiaries"); });
+        this.safeTap("flxMngBeneficiaries", function () { self.navigateToBeneficiary()});
         this.safeTap("flxMngLimits", function () { pocNotBuilt("Transfer limits"); });
     },
 
@@ -56,6 +57,10 @@ define({
             kony.print("frmFawran not available yet :: " + e);
             pocNotBuilt("Fawran");
         }
+    },
+
+    navigateToBeneficiary: function(){
+        new kony.mvc.Navigation("frmBeneficiary").navigate();        
     },
 
     bindFooter: function () {

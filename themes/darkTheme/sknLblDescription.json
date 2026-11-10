@@ -1,0 +1,50 @@
+{
+    "android": {
+        "font_name": "default",
+        "font_size": 92,
+        "isForked": false
+    },
+    "androidwearos": {
+        "font_name": "default"
+    },
+    "background_color": "00000000",
+    "bg_type": "one",
+    "border_color": "424242ff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "desktopweb": {
+        "font_name": "Helvetica",
+        "font_size": 92,
+        "isForked": false
+    },
+    "fontSizeInPx": false,
+    "font_color": "575757ff",
+    "font_name": "Helvetica",
+    "font_size": 92,
+    "font_style": "normal",
+    "font_weight": "normal",
+    "ipad": {
+        "font_name": "System",
+        "font_size": 92,
+        "isForked": false
+    },
+    "iphone": {
+        "font_name": "System",
+        "font_size": 92,
+        "isForked": false
+    },
+    "isDefaultSkin": false,
+    "kuid": "sed51189e10e47388d97670d1366924c",
+    "tabrcandroid": {
+        "font_name": "default",
+        "font_size": 92,
+        "isForked": false
+    },
+    "wType": "Label",
+    "watchos": {
+        "font_name": "System",
+        "font_size": 92,
+        "isForked": false
+    }
+}

@@ -1,0 +1,159 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2accb80cd4f4d7a8343abebfc9624fb",
+    "_top_": {
+        "type": "string",
+        "value": "32dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 1,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "flxError": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "hc96785fa9df4456bbcb15a1114249e8",
+                "srcKUID": "f7774c8d36cf4df2bdc3e29597e1f109",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxErrorBackground": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b182908abfa241f990a5122ab31f1d93",
+                "srcKUID": "jd79fc3b44b74855ba09c15201996275",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxErrorDescription": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "c72f075646a043bfba9ef621cf21c632",
+                "srcKUID": "ga790700ac7646bc9b97c7e521d376de",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxForeground": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "a74d03442fdc425d881ad9fd7a048f18",
+                "srcKUID": "d6fc34f0b5334843ad7e1be6969b8813",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxSeperator1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "a6c80ddb17f34fb6bc075a91695f2ac8",
+                "srcKUID": "g7462c4591584348b45b9fd22f119743",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxSeperator2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ae8082a4a902446a9ebce95fe38b5c3f",
+                "srcKUID": "a7fcb0136a5143cfadcb779dfeaf59e7",
+                "wType": "FlexContainer"
+            }
+        },
+        "imgErrorDesc": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "d676b05c6bb94c9bad7413c0c656b7c0",
+                "srcKUID": "gc20893c983b4bd0aaecb923f6100bc9",
+                "wType": "Image"
+            }
+        },
+        "lblErrorDesc": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "a346cb23a8ff42678fa385795494bc33",
+                "srcKUID": "g51c57a5e04c4c8fa62ffda71f71c44b",
+                "wType": "Label"
+            },
+            "text": "This virtual card cannot be used domestically."
+        },
+        "wallError": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "af057241379d4d4a944882192b5ca6d4",
+                "srcKUID": "aa87339abcd04de09e2abc11ad73ac7c",
+                "wType": "FlexContainer"
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "32dp"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "90%"
+                }
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "wallError",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "af057241379d4d4a944882192b5ca6d4",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxMain",
+    "pf": "frmCurrencyCard",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "aa87339abcd04de09e2abc11ad73ac7c",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

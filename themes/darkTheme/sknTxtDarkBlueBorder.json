@@ -1,0 +1,98 @@
+{
+    "android": {
+        "background_color": "00000000",
+        "bg_type": "one",
+        "font_color": "1d2652ff",
+        "font_name": "CordaleCorp-Regular",
+        "font_size": 89,
+        "isForked": true
+    },
+    "androidwearos": {
+        "background_color": "00000000",
+        "bg_type": "one",
+        "font_color": "1d2652ff",
+        "font_name": "CordaleArabic-Regular",
+        "font_size": 114,
+        "isForked": true
+    },
+    "background_color": "ffffff7f",
+    "bg_type": "one",
+    "border_color": "abb5c2ff",
+    "border_radius": 4,
+    "border_style": "custom",
+    "border_type": 0,
+    "border_width": 1,
+    "delinkedPltfrms": {
+        "androidwear": [],
+        "desktop": [],
+        "mobile": [
+            "iphone"
+        ],
+        "tablet": [],
+        "watch": []
+    },
+    "desktopweb": {
+        "background_color": "00000000",
+        "bg_type": "one",
+        "bottom_left_border_color": "abb5c2ff",
+        "bottom_left_border_radius": 4,
+        "bottom_left_border_style": "rc",
+        "bottom_left_border_width": 1,
+        "bottom_right_border_color": "abb5c2ff",
+        "bottom_right_border_radius": 4,
+        "bottom_right_border_style": "rc",
+        "bottom_right_border_width": 1,
+        "font_color": "1d2652ff",
+        "font_name": "CordaleArabic-Regular",
+        "font_size": 200,
+        "isForked": true,
+        "top_left_border_color": "abb5c2ff",
+        "top_left_border_radius": 4,
+        "top_left_border_style": "rc",
+        "top_left_border_width": 1,
+        "top_right_border_color": "abb5c2ff",
+        "top_right_border_radius": 4,
+        "top_right_border_style": "rc",
+        "top_right_border_width": 1
+    },
+    "fontSizeInPx": true,
+    "font_color": "1d2652ff",
+    "font_name": "iphoneSystem",
+    "font_size": 131,
+    "font_style": "normal",
+    "font_weight": "400",
+    "ipad": {
+        "background_color": "00000000",
+        "bg_type": "one",
+        "font_color": "1d2652ff",
+        "font_name": "CordaleCorp-Regular",
+        "font_size": 114,
+        "isForked": true
+    },
+    "iphone": {
+        "background_color": "00000000",
+        "bg_type": "one",
+        "font_color": "1d2652ff",
+        "font_name": "CordaleCorp-Regular",
+        "font_size": 103,
+        "font_style": "normal",
+        "font_weight": 400,
+        "isForked": true
+    },
+    "isDefaultSkin": false,
+    "kuid": "s6827cf5172447c4b930a2e915f45c0a",
+    "tabrcandroid": {
+        "background_color": "00000000",
+        "bg_type": "one",
+        "font_color": "1d2652ff",
+        "font_name": "CordaleCorp-Regular",
+        "font_size": 190,
+        "isForked": true
+    },
+    "wType": "TextField",
+    "watchos": {
+        "font_name": "System",
+        "font_size": 136,
+        "isForked": false
+    }
+}

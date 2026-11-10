@@ -1,0 +1,351 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_bounces_": false,
+    "_data_": [
+        {
+            "imgAccType": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "intl_bene.png"
+            },
+            "imgActivation": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "usericon.png"
+            },
+            "imgBeneficiaryOption": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "three_dots.png"
+            },
+            "lblAccNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "23774109985234220"
+            },
+            "lblActivateBene": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Activate beneficiary"
+            },
+            "lblActivation": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Needs activation"
+            },
+            "lblBeneBank": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "QNB Qatar"
+            },
+            "lblBeneName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Mohammad Raza tryttytyutyutyutytyutu"
+            },
+            "lblBeneficiaryInitial": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "MR"
+            }
+        },
+        {
+            "imgAccType": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "intl_bene.png"
+            },
+            "imgActivation": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "usericon.png"
+            },
+            "imgBeneficiaryOption": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "three_dots.png"
+            },
+            "lblAccNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "23774109985234220"
+            },
+            "lblActivateBene": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Activate beneficiary"
+            },
+            "lblActivation": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Needs activation"
+            },
+            "lblBeneBank": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "QNB Qatar"
+            },
+            "lblBeneName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Mohammad Raza tryttytyutyutyutytyutu"
+            },
+            "lblBeneficiaryInitial": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "MR"
+            }
+        },
+        {
+            "imgAccType": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "intl_bene.png"
+            },
+            "imgActivation": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "usericon.png"
+            },
+            "imgBeneficiaryOption": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "three_dots.png"
+            },
+            "lblAccNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "23774109985234220"
+            },
+            "lblActivateBene": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Activate beneficiary"
+            },
+            "lblActivation": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Needs activation"
+            },
+            "lblBeneBank": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "QNB Qatar"
+            },
+            "lblBeneName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Mohammad Raza tryttytyutyutyutytyutu"
+            },
+            "lblBeneficiaryInitial": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "MR"
+            }
+        },
+        {
+            "imgAccType": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "intl_bene.png"
+            },
+            "imgActivation": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "usericon.png"
+            },
+            "imgBeneficiaryOption": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "three_dots.png"
+            },
+            "lblAccNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "23774109985234220"
+            },
+            "lblActivateBene": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Activate beneficiary"
+            },
+            "lblActivation": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Needs activation"
+            },
+            "lblBeneBank": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "QNB Qatar"
+            },
+            "lblBeneName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Mohammad Raza tryttytyutyutyutytyutu"
+            },
+            "lblBeneficiaryInitial": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "MR"
+            }
+        },
+        {
+            "imgAccType": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "intl_bene.png"
+            },
+            "imgActivation": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "usericon.png"
+            },
+            "imgBeneficiaryOption": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "three_dots.png"
+            },
+            "lblAccNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "23774109985234220"
+            },
+            "lblActivateBene": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Activate beneficiary"
+            },
+            "lblActivation": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Needs activation"
+            },
+            "lblBeneBank": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "QNB Qatar"
+            },
+            "lblBeneName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Mohammad Raza tryttytyutyutyutytyutu"
+            },
+            "lblBeneficiaryInitial": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "MR"
+            }
+        },
+        {
+            "imgAccType": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "intl_bene.png"
+            },
+            "imgActivation": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "usericon.png"
+            },
+            "imgBeneficiaryOption": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "three_dots.png"
+            },
+            "lblAccNumber": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "23774109985234220"
+            },
+            "lblActivateBene": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Activate beneficiary"
+            },
+            "lblActivation": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Needs activation"
+            },
+            "lblBeneBank": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "QNB Qatar"
+            },
+            "lblBeneName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Mohammad Raza tryttytyutyutyutytyutu"
+            },
+            "lblBeneficiaryInitial": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "MR"
+            }
+        }
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "86%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "2%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "counter": "05",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segBeneficiaryList",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "bounces": false,
+            "indicator": "none"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "edeaebc8290b41368d6a875ccb5b6c74",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flxMainBottom",
+    "pf": "frmBeneficiary",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "beba13392d054f56bf913363a2d0d655",
+    "rowcounter": 5,
+    "rowexpandable": false,
+    "rowfocusskin": "s2954acbe692423388f2177837594cc7",
+    "rowskin": "sb87b86b8e5942b9818f8db955f022a6",
+    "rowtemplate": "flxBenefeciaryMain",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s28a7bd0c54c4f64808927aba209e384",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorrequired": false,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxActivateBene": "flxActivateBene",
+        "flxActivation": "flxActivation",
+        "flxBeneInitials": "flxBeneInitials",
+        "flxBenefeciary": "flxBenefeciary",
+        "flxBenefeciaryAccount": "flxBenefeciaryAccount",
+        "flxBenefeciaryDetails": "flxBenefeciaryDetails",
+        "flxBenefeciaryInfo": "flxBenefeciaryInfo",
+        "flxBenefeciaryMain": "flxBenefeciaryMain",
+        "flxBenefeciaryTop": "flxBenefeciaryTop",
+        "flxBeneficiaryInfo": "flxBeneficiaryInfo",
+        "flxBeneficiaryOption": "flxBeneficiaryOption",
+        "flxSeperator": "flxSeperator",
+        "imgAccType": "imgAccType",
+        "imgActivation": "imgActivation",
+        "imgBeneficiaryOption": "imgBeneficiaryOption",
+        "lblAccNumber": "lblAccNumber",
+        "lblActivateBene": "lblActivateBene",
+        "lblActivation": "lblActivation",
+        "lblBeneBank": "lblBeneBank",
+        "lblBeneName": "lblBeneName",
+        "lblBeneficiaryInitial": "lblBeneficiaryInitial"
+    }
+}

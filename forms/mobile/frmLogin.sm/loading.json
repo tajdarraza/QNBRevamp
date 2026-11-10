@@ -39,14 +39,6 @@
     "clipbounds": false,
     "containerweight": 0,
     "dataDiffs": {
-        "Image0a6d3899d94ba44": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "cfac96db29e145b29ef4fbd5a4fbb708",
-                "srcKUID": "j9a99733a8f1483585b87cac8981dc4b",
-                "wType": "Image"
-            }
-        },
         "flxCard": {
             "__events__": {},
             "__info__": {
